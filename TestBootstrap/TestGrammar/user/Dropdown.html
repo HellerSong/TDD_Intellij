@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="../css/bootstrap-theme.css">
     <script type="text/javascript" src="../js/jquery.js"></script>
     <script type="text/javascript" src="../js/bootstrap.js"></script>
+
 </head>
 <body>
 <div class="container">
+    <!-- The dropdown menu example -->
     <div class="dropdown">
         <div class="btn-group">
             <button class="btn btn-primary" type="button">Web Dev</button>
@@ -29,11 +31,12 @@
         </div>
     </div>
 
-    <!-- The menu drop up -->
+    <!-- The menu of dropping up -->
     <div style="margin-top: 70px">
         <div class="dropdown dropup">
             <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
-                Web Dev&nbsp;<span class="caret"></span>
+                Web Dev
+                <span class="caret" style="margin-left: 7px;"></span>
             </button>
             <ul class="dropdown-menu">
                 <li><a href="javascript: void(0)">HTML5</a></li>
@@ -42,5 +45,10 @@
         </div>
     </div>
 </div>
+<script>
+    $('.dropdown-menu li a').click(function () {
+        alert($(this).html());
+    });
+</script>
 </body>
 </html>
