@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Nav Tab Html</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <!-- Self using files -->
+    <link rel="stylesheet" href="../css/user.css">
+    <script type="text/javascript" src="../js/user/index.js"></script>
+</head>
+<body style="padding-top: 70px;">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" style="margin-right: 21px;">
+                <img alt="Brand" src="../images/dragon01.jpg" style="width: 77px;"/>
+            </a>
+        </div>
+        <ul class="nav navbar-nav" role="tablist">
+            <li role="presentation" class="active"><a href="#" title="Home">Home</a></li>
+            <li role="presentation"><a href="#" title="Profile">Profiles</a></li>
+            <li role="presentation"><a href="#" title="Setting">Settings</a></li>
+        </ul>
+        <div class="navbar-right" style="margin-right: 21px">
+            <a href="SingUp.html">
+                <button class="btn btn-default navbar-btn">Sign Up</button>
+            </a>
+            <a href="Login.html">
+                <button class="btn btn-default navbar-btn">Log In</button>
+            </a>
+        </div>
+    </div>
+</nav>
+<div class="html-content" style="display: none;"></div>
+<script>
+    $('nav ul a').click(function () {
+        $(this).tab('show');
+        var tabContent = $('.html-content');
+        tabContent.css('display', 'none');
+        tabContent.load($(this).attr('title') + '.html', null, function () {
+            tabContent.fadeIn('slow');
+        });
+    });
+    $('li.active a').click();
+</script>
+</body>
+</html>

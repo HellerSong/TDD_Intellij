@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Transition</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <style>
+        #mainDiv {
+            background: red;
+            transition: width 1s;
+        }
+        #mainDiv:hover {
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="mainDiv">Test Button</div>
+    <script>
+        docutment.getElementById('mainDiv').addEventListener("transitionend", function(e) {
+            this.innerHTML = "Transition Triggered -- Transition End";
+        });
+    </script>
+</body>
+</html>

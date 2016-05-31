@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/TestBootgrid/TestBootgrid.iml" filepath="$PROJECT_DIR$/TestBootgrid/TestBootgrid.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestBootstrap.iml" filepath="$PROJECT_DIR$/TestBootstrap.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestGrammar/TestGrammar.iml" filepath="$PROJECT_DIR$/TestGrammar/TestGrammar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestNavigation/TestNavigation.iml" filepath="$PROJECT_DIR$/TestNavigation/TestNavigation.iml" />
     </modules>
   </component>
 </project>
