@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e8c390e-1e00-4781-be2f-3c4c0722cc6a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestNavigation/images/dragon03.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestNavigation/images/dragon04.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestNavigation/images/dragon05.png" />
+    <list default="true" id="0e8c390e-1e00-4781-be2f-3c4c0722cc6a" name="Default" comment="update test navigation">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../DevLibrary/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TestNavigation/images/dragon01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TestNavigation/user/Navbar.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestGrammar/user/Dropdown.html" afterPath="$PROJECT_DIR$/TestGrammar/user/Dropdown.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestGrammar/user/From.html" afterPath="$PROJECT_DIR$/TestGrammar/user/From.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestNavigation/user/NavHtml.html" afterPath="$PROJECT_DIR$/TestNavigation/user/NavHtml.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestNavigation/user/NavPath.html" afterPath="$PROJECT_DIR$/TestNavigation/user/NavPath.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestNavigation/user/NavTab.html" afterPath="$PROJECT_DIR$/TestNavigation/user/NavTab.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TestNavigation/user/CollapseNav.html" afterPath="$PROJECT_DIR$/TestNavigation/user/CollapseNavbar.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TestNavigation/user/Home.html" afterPath="$PROJECT_DIR$/TestNavigation/user/NavHtml-Home.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TestNavigation/user/Login.html" afterPath="$PROJECT_DIR$/TestNavigation/user/NavHtml-Login.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TestNavigation/user/Profile.html" afterPath="$PROJECT_DIR$/TestNavigation/user/NavHtml-Profile.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TestNavigation/user/Setting.html" afterPath="$PROJECT_DIR$/TestNavigation/user/NavHtml-Setting.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TestNavigation/user/SingUp.html" afterPath="$PROJECT_DIR$/TestNavigation/user/NavHtml-SingUp.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TestBootstrap.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -113,8 +97,8 @@
       <file leaf-file-name="CollapseNavbar.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TestNavigation/user/CollapseNavbar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="17" column="79" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
+            <state relative-caret-position="563">
+              <caret line="41" column="72" selection-start-line="41" selection-start-column="72" selection-end-line="41" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -144,6 +128,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -891,12 +878,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1464569125755</updated>
-      <workItem from="1464569127259" duration="18723000" />
+      <workItem from="1464569127259" duration="18899000" />
     </task>
+    <task id="LOCAL-00001" summary="update test navigation">
+      <created>1464684723063</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1464684723063</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18723000" />
+    <option name="totallyTimeSpent" value="18899000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="916" extended-state="6" />
@@ -940,6 +935,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update test navigation" />
+    <option name="LAST_COMMIT_MESSAGE" value="update test navigation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1066,8 +1065,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TestNavigation/user/CollapseNavbar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="17" column="79" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
+        <state relative-caret-position="563">
+          <caret line="41" column="72" selection-start-line="41" selection-start-column="72" selection-end-line="41" selection-end-column="72" />
           <folding />
         </state>
       </provider>
