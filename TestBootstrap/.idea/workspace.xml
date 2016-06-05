@@ -137,10 +137,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="PUSH_TAGS">
-      <GitPushTagMode>
-        <option name="argument" value="--follow-tags" />
-        <option name="title" value="Current Branch" />
-      </GitPushTagMode>
+      <GitPushTagMode />
     </option>
   </component>
   <component name="GradleLocalSettings">
@@ -839,7 +836,7 @@
       <workItem from="1464826262875" duration="1180000" />
       <workItem from="1464827547588" duration="283000" />
       <workItem from="1464827856192" duration="1599000" />
-      <workItem from="1465166682541" duration="108000" />
+      <workItem from="1465166682541" duration="143000" />
     </task>
     <task id="LOCAL-00001" summary="update test navigation">
       <created>1464684723063</created>
@@ -897,11 +894,25 @@
       <option name="project" value="LOCAL" />
       <updated>1465166788760</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update test bootstrap">
+      <created>1465166794956</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1465166794956</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update test bootstrap">
+      <created>1465166812402</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1465166812402</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25574000" />
+    <option name="totallyTimeSpent" value="25609000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1456" height="916" extended-state="6" />
