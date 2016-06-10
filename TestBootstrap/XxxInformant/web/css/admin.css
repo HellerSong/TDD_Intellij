@@ -1,0 +1,313 @@
+@charset "gb2312";
+body {
+    font-family: "Microsoft YaHei UI";
+}
+
+.index-head, .index-head-time {
+    width: 1300px;
+    margin: 0 auto;
+    padding-right: 8px;
+}
+
+.index-head {
+    width: auto;
+    height: 123px;
+    background: url(../images/index_1_01.png) repeat-x;
+}
+
+.index-head-time {
+    background: url(../images/index_1_11.png) repeat-x;
+    height: 35px;
+    font-size: 12px;
+    color: #017ad3;
+    padding-top: 8px;
+}
+
+.index-head-time span {
+    float: right;
+    margin-left: 5px;
+}
+
+.left {
+    float: left
+}
+
+.right {
+    float: right
+}
+
+.index-underline {
+    margin-top: 5px
+}
+
+.common2 {
+    margin-bottom: 10px
+}
+
+.a:link {
+    text-decoration: none
+}
+
+.a:hover {
+    text-decoration: none
+}
+
+.a:visited {
+    text-decoration: none
+}
+
+.input1 {
+    height: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px
+}
+
+.input2 {
+    height: 25px;
+}
+
+.input3 {
+    height: 25px;
+    width: 130px
+}
+
+.font1 {
+    font-size: 12px;
+    color: #000;
+}
+
+.username {
+    margin-top: 5px;
+    color: white;
+}
+
+.username span {
+    font-size: 12px;
+}
+
+.username span a:link {
+    color: #FFF;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.username span a:hover {
+    color: #FFF;
+    text-decoration: underline;
+    padding-left: 10px;
+}
+
+.username span a:visited {
+    color: #FFF;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.icon_off {
+    background: url(../images/index_1_06.jpg) no-repeat;
+    width: 17px;
+    height: 15px;
+    display: block;
+    float: right;
+    margin-top: 5px;
+    margin-left: 2px;
+}
+
+.content {
+    width: 1300px;
+    margin: 5px auto;
+}
+
+.sideBar {
+    width: 258px;
+}
+
+.sdmenu {
+    background: url(../images/index_1_20.png) repeat-y;
+    text-align: left;
+    overflow: hidden;
+    margin-top: -5px;
+}
+
+.sdmenu span {
+    background: url(../images/sdmenu.jpg) no-repeat;
+    font-size: 14px;
+    font-weight: normal;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    padding-left: 30px;
+    padding-right: 100px;
+    margin-left: 30px;
+}
+
+.sdmenu ul {
+    margin-left: -20px;
+    margin-top: 5px
+}
+
+.sdmenu ul li {
+    font-size: 12px;
+    list-style: none;
+    border-bottom: dotted 1px #CCC;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    text-align: left
+}
+
+.sdmenu ul li a:link {
+    background: url(../images/sdlink.png) no-repeat;
+    width: 197px;
+    height: 28px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding-left: 35px;
+    padding-top: 5px
+}
+
+.sdmenu ul li a:hover {
+    background: url(../images/sdhover.png) no-repeat;
+    width: 197px;
+    height: 28px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    color: #185f91;
+    padding-left: 35px;
+    padding-top: 5px
+}
+
+.sdmenu ul li a:visited {
+    background: url(../images/sdlink.png) no-repeat;
+    width: 197px;
+    height: 28px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding-left: 35px;
+    padding-top: 5px
+}
+
+.sdmenu ul li a.focus {
+    background: url(../images/sdhover.png) no-repeat;
+    width: 197px;
+    height: 28px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    color: #185f91;
+    padding-left: 35px;
+    padding-top: 5px
+}
+
+.main {
+    width: 1025px;
+}
+
+.index-main-title {
+    background: url(../images/index_1_12.png) no-repeat;
+    overflow: hidden;
+    padding-top: 11px;
+    font-size: 14px;
+    color: #0061c8;
+    padding-bottom: 11px;
+    padding-left: 25px
+}
+
+.index-main-title a {
+    color: #0061c8;
+    text-decoration: none;
+}
+
+.index-main-content {
+    border-left: solid 1px #c8dbf6;
+    border-right: solid 1px #c8dbf6;
+    overflow: hidden;
+    font-size: 12px;
+    padding-bottom: 50px;
+    padding-left: 21px;
+    padding-right: 21px;
+    border-bottom: none;
+}
+
+table.main2 {
+    border-collapse: collapse;
+    border: #c8dcf6 solid 1px;
+    text-align: center
+}
+
+table.main2 th {
+    border: 1px solid #c8dcf6;
+    height: 35px
+}
+
+table.main2 td {
+    border: 1px solid #c8dcf6;
+}
+
+.main2 a:link {
+    color: #000;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px
+}
+
+.main2 a:hover {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: underline
+}
+
+.main2 a:visited {
+    color: #000;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px
+}
+
+/*ÐÂ½¨´°¿Ú*/
+.title2 {
+    width: 984px;
+    background: url(../images/title1.jpg) no-repeat;
+    color: #0061c8;
+    letter-spacing: 4px;
+    padding-top: 6px;
+    padding-bottom: 8px;
+    margin-top: 20px
+}
+
+.title2 span {
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.box1 {
+    border-left: solid 1px #c8dbf6;
+    border-right: solid 1px #c8dbf6;
+    width: 982px;
+    overflow: hidden;
+}
+
+.box2 {
+    width: 945px;
+    margin: 0 auto
+}
+
+.clueList-action-btn-group {
+    margin: 14px 0;
+}
+
+.clueList-action-btn-group a {
+    width: 80px;
+}
+
+.cluelist-search-btn-group {
+    margin: 7px 0;
+}
+
+.cluelist-search-btn-group a {
+    width: 80px;
+}
