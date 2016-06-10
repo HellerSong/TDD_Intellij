@@ -5,8 +5,10 @@
       <module fileurl="file://$PROJECT_DIR$/TestAbcTemplate/TestAbcTemplate.iml" filepath="$PROJECT_DIR$/TestAbcTemplate/TestAbcTemplate.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestBootgrid/TestBootgrid.iml" filepath="$PROJECT_DIR$/TestBootgrid/TestBootgrid.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestBootstrap.iml" filepath="$PROJECT_DIR$/TestBootstrap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestEasyUI/TestEasyUI.iml" filepath="$PROJECT_DIR$/TestEasyUI/TestEasyUI.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestGrammar/TestGrammar.iml" filepath="$PROJECT_DIR$/TestGrammar/TestGrammar.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestNavigation/TestNavigation.iml" filepath="$PROJECT_DIR$/TestNavigation/TestNavigation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XxxInformant/XxxInformant.iml" filepath="$PROJECT_DIR$/XxxInformant/XxxInformant.iml" />
     </modules>
   </component>
 </project>
