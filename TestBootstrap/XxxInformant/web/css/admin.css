@@ -1,10 +1,9 @@
 @charset "gb2312";
 body {
-    font-family: "Microsoft YaHei UI";
+    font-family: "Microsoft YaHei UI", serif;
 }
 
 .index-head, .index-head-time {
-    width: 1300px;
     margin: 0 auto;
     padding-right: 8px;
 }
@@ -133,11 +132,11 @@ body {
     background: url(../images/sdmenu.jpg) no-repeat;
     font-size: 14px;
     font-weight: normal;
-    padding-top: 5px;
+    padding-top: 8px;
     padding-bottom: 10px;
-    overflow: hidden;
     padding-left: 30px;
     padding-right: 100px;
+    overflow: hidden;
     margin-left: 30px;
 }
 
@@ -231,6 +230,11 @@ body {
     padding-left: 21px;
     padding-right: 21px;
     border-bottom: none;
+}
+
+.index-main-bottom {
+    margin-top: -5px;
+    margin-bottom: 10px;
 }
 
 table.main2 {
