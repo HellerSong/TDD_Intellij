@@ -1,15 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e8c390e-1e00-4781-be2f-3c4c0722cc6a" name="Default" comment="create new XxxInformant">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Test/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Test/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Test/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Test/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Test/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Test/Test.iml" afterPath="" />
+    <list default="true" id="0e8c390e-1e00-4781-be2f-3c4c0722cc6a" name="Default" comment="Merge remote-tracking branch 'origin/hellersong' into hellersong&#10;&#10;# Conflicts:&#10;#&#9;TestBootstrap/.idea/workspace.xml&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestGrammar/images/head.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/web/WEB-INF/lib/commons-fileupload-1.3.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/web/WEB-INF/lib/commons-io-2.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/web/WEB-INF/lib/gson-2.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/web/WEB-INF/lib/log4j-1.2.14.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/web/WEB-INF/lib/mysql-connector-5.1.18.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestGrammar/user/ListGroup.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestGrammar/user/MediaList.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/dao/BaseDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/dao/BaseViewDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/dao/Code_tDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/dao/CodelocalDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/dao/DaoConverter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/dao/DaoMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/dao/DropdownDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/dao/IDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/dao/JbkjxslyDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/dao/OrgmemberinfoDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/dao/OrgnizeDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/dao/RoleinfoDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/dao/XsclDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/pojo/Code_tPojo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/pojo/CodelocalPojo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/pojo/JbkjxslyPojo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/pojo/OrgmemberinfoPojo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/pojo/OrgnizePojo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/pojo/RoleinfoPojo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/pojo/XsclPojo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/utils/DevLog.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/utils/DevRandom.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/utils/DevRegex.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/utils/MySqlUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/utils/Parser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/utils/StrOM.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/dbconfig.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/log4j.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/test/com/unittest/TestBaseDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/web/admin/NewClue.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestGrammar/images/thumbnail01.png" afterPath="$PROJECT_DIR$/TestGrammar/images/thumbnail01.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../DevLibrary/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../DevLibrary/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../DevLibrary/DevLib/src/com/hstdd/dao/DaoConverter.java" afterPath="$PROJECT_DIR$/../DevLibrary/DevLib/src/com/hstdd/dao/DaoConverter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestGrammar/user/Alert.html" afterPath="$PROJECT_DIR$/TestGrammar/user/Alert.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestGrammar/user/ProgressBar.html" afterPath="$PROJECT_DIR$/TestGrammar/user/ProgressBar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/XxxInformant.iml" afterPath="$PROJECT_DIR$/XxxInformant/XxxInformant.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/admin/ClueList.html" afterPath="$PROJECT_DIR$/XxxInformant/web/admin/ClueList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/admin/Index.html" afterPath="$PROJECT_DIR$/XxxInformant/web/admin/Index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/css/admin.css" afterPath="$PROJECT_DIR$/XxxInformant/web/css/admin.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/js/admin/clueList.js" afterPath="$PROJECT_DIR$/XxxInformant/web/js/admin/clueList.js" />
     </list>
     <ignored path="TestBootstrap.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,6 +72,13 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="TestBootstrap" />
@@ -35,28 +88,8 @@
       <file leaf-file-name="Index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/Index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/admin/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="clueList.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/admin/clueList.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+            <state relative-caret-position="918">
+              <caret line="51" column="37" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -65,11 +98,52 @@
       <file leaf-file-name="ClueList.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/ClueList.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="65" column="23" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="23" />
+            <state relative-caret-position="288">
+              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DropdownDao.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/DropdownDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
               <folding>
-                <element signature="n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Code_tDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/Code_tDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CodelocalDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/CodelocalDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewClue.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/NewClue.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -78,8 +152,23 @@
       <file leaf-file-name="admin.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/XxxInformant/web/css/admin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5598">
-              <caret line="311" column="16" selection-start-line="311" selection-start-column="16" selection-end-line="311" selection-end-column="16" />
+            <state relative-caret-position="3870">
+              <caret line="238" column="0" selection-start-line="238" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
+              <folding>
+                <element signature="e#3283#3478#0" expanded="false" />
+                <element signature="e#3500#3550#0" expanded="false" />
+                <element signature="e#3572#3791#0" expanded="false" />
+                <element signature="e#3812#3862#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/XxxInformant/src/log4j.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -93,6 +182,7 @@
         <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -111,19 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TestGrammar/user/From.html" />
-        <option value="$PROJECT_DIR$/TestGrammar/user/Dropdown.html" />
-        <option value="$PROJECT_DIR$/TestNavigation/user/NavTab.html" />
-        <option value="$PROJECT_DIR$/TestNavigation/user/NavPath.html" />
-        <option value="$PROJECT_DIR$/TestNavigation/user/NavHtml.html" />
-        <option value="$PROJECT_DIR$/TestNavigation/user/CollapseNavbar.html" />
-        <option value="$PROJECT_DIR$/TestAbcTemplate/web/index.jsp" />
-        <option value="$PROJECT_DIR$/TestGrammar/user/Thumbnail.html" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/TestEasyUI/user/index_1.html" />
-        <option value="$PROJECT_DIR$/TestEasyUI/js/user/index.js" />
-        <option value="$PROJECT_DIR$/TestAbcTemplate/web/user/Index.html" />
-        <option value="$PROJECT_DIR$/TestEasyUI/css/demo.css" />
         <option value="$PROJECT_DIR$/TestEasyUI/user/Index.html" />
         <option value="$PROJECT_DIR$/TestEasyUI/css/user.css" />
         <option value="$PROJECT_DIR$/TestEasyUI/user/ClueList.html" />
@@ -141,14 +218,40 @@
         <option value="$PROJECT_DIR$/XxxInformant/web/admin/ClueMgmt.html" />
         <option value="$PROJECT_DIR$/XxxInformant/web/css/linkbutton.css" />
         <option value="$PROJECT_DIR$/Test/index_1.html" />
-        <option value="$PROJECT_DIR$/XxxInformant/web/js/admin/clueList.js" />
         <option value="$PROJECT_DIR$/XxxInformant/web/css/icon.css" />
         <option value="$PROJECT_DIR$/XxxInformant/web/css/user.css" />
         <option value="$PROJECT_DIR$/XxxInformant/web/css/easyui.css" />
+        <option value="$PROJECT_DIR$/XxxInformant/web/js/admin/index.js" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/utils/StrOM.java" />
+        <option value="$PROJECT_DIR$/TestGrammar/user/Alert.html" />
+        <option value="$PROJECT_DIR$/TestGrammar/user/ProgressBar.html" />
+        <option value="$PROJECT_DIR$/TestGrammar/user/MediaList.html" />
+        <option value="$PROJECT_DIR$/TestGrammar/user/ListGroup.html" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/BaseViewDao.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/DaoMapper.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/IDao.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/BaseDao.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/unittest/TestDao.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/utils/MySqlUtil.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/utils/DevRegex.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/JbkjxslyDao.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/dbconfig.properties" />
+        <option value="$PROJECT_DIR$/XxxInformant/test/com/unittest/TestBaseDao.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/DaoConverter.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/OrgmemberinfoDao.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/RoleinfoDao.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/OrgnizeDao.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/XsclDao.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/log4j.properties" />
         <option value="$PROJECT_DIR$/XxxInformant/web/admin/Index.html" />
         <option value="$PROJECT_DIR$/XxxInformant/web/css/admin.css" />
+        <option value="$PROJECT_DIR$/XxxInformant/web/admin/NewClue.html" />
+        <option value="$PROJECT_DIR$/XxxInformant/web/js/admin/clueList.js" />
         <option value="$PROJECT_DIR$/XxxInformant/web/admin/ClueList.html" />
-        <option value="$PROJECT_DIR$/XxxInformant/web/js/admin/index.js" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/Code_tDao.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/CodelocalDao.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/DictDao.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/DropdownDao.java" />
       </list>
     </option>
   </component>
@@ -189,6 +292,9 @@
             <id>Android Lint</id>
           </State>
           <State>
+            <id>CSS</id>
+          </State>
+          <State>
             <id>Internationalization issues</id>
           </State>
           <State>
@@ -203,7 +309,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>Android</id>
+            <id>CssOptimizeSimilarProperties</id>
           </State>
         </selected-state>
       </profile-state>
@@ -234,6 +340,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -276,7 +383,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TestEasyUI" />
+              <option name="myItemId" value="XxxInformant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -290,7 +401,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TestEasyUI" />
+              <option name="myItemId" value="XxxInformant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -308,41 +423,239 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TestBootgrid" />
+              <option name="myItemId" value="XxxInformant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XxxInformant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XxxInformant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XxxInformant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="unittest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XxxInformant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XxxInformant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XxxInformant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pojo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XxxInformant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DevLibrary" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/GitHub/TDD_Intellij/TestBootstrap/XxxInformant/web/admin/ClueList.html" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.dao" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\Test" />
-      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\XxxInformant\web\css" />
-      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\XxxInformant\web\js" />
+      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\XxxInformant\web\admin" />
+      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\XxxInformant\src\com\pojo" />
       <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\TestGrammar\user" />
-      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\TestBootgrid" />
+      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\TestGrammar\images" />
+      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\XxxInformant\src\com\dao" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0">
+  <component name="RunManager" selected="JUnit.TestBaseDao.test_read_data">
+    <configuration default="false" name="TestBaseDao.test_read_data" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.unittest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="XxxInformant" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.unittest" />
+      <option name="MAIN_CLASS_NAME" value="com.unittest.TestBaseDao" />
+      <option name="METHOD_NAME" value="test_read_data" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <deployment />
       <server-settings />
@@ -843,9 +1156,15 @@
         </option>
       </method>
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 9.0" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TestBaseDao.test_read_data" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TestBaseDao.test_read_data" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -874,7 +1193,11 @@
       <workItem from="1465390336826" duration="7132000" />
       <workItem from="1465430320537" duration="208000" />
       <workItem from="1465430644221" duration="26714000" />
-      <workItem from="1465521973168" duration="680000" />
+      <workItem from="1465521973168" duration="3124000" />
+      <workItem from="1465601196598" duration="2904000" />
+      <workItem from="1465604651015" duration="17356000" />
+      <workItem from="1465636802260" duration="7543000" />
+      <workItem from="1465684235664" duration="607000" />
     </task>
     <task id="LOCAL-00001" summary="update test navigation">
       <created>1464684723063</created>
@@ -974,15 +1297,49 @@
       <option name="project" value="LOCAL" />
       <updated>1465522259249</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Merge remote-tracking branch 'origin/hellersong' into hellersong&#10;&#10;# Conflicts:&#10;#&#9;TestBootstrap/.idea/workspace.xml&#10;">
+      <created>1465522680773</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1465522680773</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Merge remote-tracking branch 'origin/hellersong' into hellersong&#10;&#10;# Conflicts:&#10;#&#9;TestBootstrap/.idea/workspace.xml&#10;">
+      <created>1465522710009</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1465522710009</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="TestBaseDao_test_read_data - 2016.06.11 at 16h 40m 51s.xml">
+      <configuration name="TestBaseDao.test_read_data" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestBaseDao_test_read_data - 2016.06.11 at 16h 46m 11s.xml">
+      <configuration name="TestBaseDao.test_read_data" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestBaseDao_test_read_data - 2016.06.11 at 17h 20m 32s.xml">
+      <configuration name="TestBaseDao.test_read_data" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestBaseDao_test_read_data - 2016.06.11 at 17h 22m 48s.xml">
+      <configuration name="TestBaseDao.test_read_data" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestBaseDao_test_read_data - 2016.06.11 at 17h 23m 34s.xml">
+      <configuration name="TestBaseDao.test_read_data" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestBaseDao_test_read_data - 2016.06.11 at 17h 24m 20s.xml">
+      <configuration name="TestBaseDao.test_read_data" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60638000" />
+    <option name="totallyTimeSpent" value="91492000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1456" height="916" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -996,7 +1353,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18402778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18402778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1008,9 +1365,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34703946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1030,7 +1387,8 @@
     <MESSAGE value="update test navigation" />
     <MESSAGE value="update test bootstrap" />
     <MESSAGE value="create new XxxInformant" />
-    <option name="LAST_COMMIT_MESSAGE" value="create new XxxInformant" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/hellersong' into hellersong&#10;&#10;# Conflicts:&#10;#&#9;TestBootstrap/.idea/workspace.xml&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/hellersong' into hellersong&#10;&#10;# Conflicts:&#10;#&#9;TestBootstrap/.idea/workspace.xml&#10;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1043,246 +1401,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/css/demo.css" />
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/images/boder-bottom.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/images/index_1_18.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/images/sdhover.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/images/index_1_21.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/images/index_1_22.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/images/index_1_26.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/images/index_1_29.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/images/index_1_31.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/images/index_1_20.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/css/user.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1356">
-          <caret line="246" column="19" selection-start-line="246" selection-start-column="19" selection-end-line="246" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/images/layout.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/js/admin/newClue.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/js/admin/clueMgmt.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding>
-            <element signature="n#!!doc;n#initializeClueList#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/admin/ClueMgmt.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/admin/RoleAccess.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/admin/OrgMember.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/admin/Report.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="9" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/admin/OfficerMgmt.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/admin/BureauClueMgmt.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestNavigation/user/NavHtml.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="53" column="7" selection-start-line="46" selection-start-column="4" selection-end-line="53" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/js/admin/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/admin/Index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestEasyUI/admin/OrgStructure.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestBootgrid/OrgStructure.html" />
-    <entry file="file://$PROJECT_DIR$/TestGrammar/user/OrgStructure.html" />
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/OrgMemberList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/css/icons/search.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/css/color.css" />
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/css/default/linkbutton.css" />
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/css/linkbutton.css" />
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/easyloader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="148" column="93" selection-start-line="148" selection-start-column="93" selection-end-line="148" selection-end-column="93" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/jquery.easyui.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Test.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/index_1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1440">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/css/icons/back.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/css/icons/edit_add.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/XxxInformant/web/css/icon.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
           <caret line="73" column="31" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1300,7 +1422,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="498">
           <caret line="501" column="0" selection-start-line="501" selection-start-column="0" selection-end-line="501" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1318,54 +1439,321 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/Index.html">
+    <entry file="file://$PROJECT_DIR$/Test/New.html" />
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/utils/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/utils/DevRandom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/utils/DevLog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestGrammar/user/Alert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestGrammar/user/Dropdown.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestGrammar/user/From.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestGrammar/user/ProgressBar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestGrammar/images/thumbnail01.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestGrammar/user/MediaList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="972">
+          <caret line="54" column="47" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestGrammar/user/ListGroup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/BaseViewDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/pojo/OrgmemberinfoPojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/pojo/XsclPojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/pojo/Code_tPojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/pojo/CodelocalPojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/CodeIDE/Java/jdk1.6.0_43/src.zip!/java/text/DateFormat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1710">
+          <caret line="125" column="22" selection-start-line="125" selection-start-column="22" selection-end-line="125" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/DaoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="84" column="45" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/unittest/TestDao.java" />
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/dbconfig.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/JbkjxslyDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="62" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/pojo/JbkjxslyPojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6732">
+          <caret line="73" column="28" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/DaoConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="98" column="13" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/utils/StrOM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/pojo/RoleinfoPojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/test/com/unittest/TestBaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/IDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/utils/DevRegex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="59" column="46" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/utils/MySqlUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/RoleinfoDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/XsclDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/XxxInformant/web/css/admin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5598">
-          <caret line="311" column="16" selection-start-line="311" selection-start-column="16" selection-end-line="311" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/ClueList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="65" column="23" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="23" />
+        <state relative-caret-position="3870">
+          <caret line="238" column="0" selection-start-line="238" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
           <folding>
-            <element signature="n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3283#3478#0" expanded="false" />
+            <element signature="e#3500#3550#0" expanded="false" />
+            <element signature="e#3572#3791#0" expanded="false" />
+            <element signature="e#3812#3862#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/admin/clueList.js">
+    <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/NewClue.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+        <state relative-caret-position="108">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/OrgmemberinfoDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="72" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/OrgnizeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/pojo/OrgnizePojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="51" column="37" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/admin/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        <state relative-caret-position="392">
+          <caret line="23" column="50" selection-start-line="22" selection-start-column="8" selection-end-line="23" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/admin/clueList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/ClueList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/New.html">
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/Code_tDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
+        <state relative-caret-position="54">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/CodelocalDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/DropdownDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1436,6 +1824,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>lib</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

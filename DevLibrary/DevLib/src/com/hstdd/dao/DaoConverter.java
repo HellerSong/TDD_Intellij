@@ -66,7 +66,7 @@ class DaoConverter {
 	}
 
 	private String mainKeyName;
-	private List<EntityConvertModel> modelList = new ArrayList<>();
+	private List<EntityConvertModel> modelList = new ArrayList<EntityConvertModel>();
 
 	DaoConverter(Class<?> entityClass, String mainKeyName) {
 		//// Some scenario should exclude main key as auto increment
