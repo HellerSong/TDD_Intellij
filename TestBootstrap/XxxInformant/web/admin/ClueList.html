@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>举报网后台 - 线索管理</title>
+    <link rel="stylesheet" type="text/css" href="../css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../css/icon.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+    <!-- Self using files -->
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+<div class="main-content">
+    <form>
+        <table>
+            <tr>
+                <td class="font1">关键字：</td>
+                <td bgcolor="#FFFFFF"><input type="text" border="1" class="input1"/></td>
+                <td class="font1">受理日期：从</td>
+                <td><input type="text" border="1" class="input1"/>到</td>
+                <td><input type="text" border="1" class="input1"/></td>
+                <td class="font1">案发地区：</td>
+                <td>
+                    <select class="input2">
+                        <option>四川</option>
+                        <option>重庆</option>
+                        <option>河南</option>
+                        <option>山东</option>
+                    </select>
+                </td>
+                <td class="font1">线索类型：</td>
+                <td>
+                    <select class="input2">
+                        <option>全部</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </td>
+                <td class="font1">处理状态：</td>
+                <td>
+                    <select class="input2">
+                        <option>全部</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div class="cluelist-search-btn-group">
+        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'">搜索</a>
+        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-clear'">重置</a>
+        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-filter'">更多检索</a>
+    </div>
+    <div><img src="../images/double.jpg"/></div>
+    <div class="clueList-action-btn-group">
+        <a href="#NewClue" class="easyui-linkbutton" data-options="iconCls:'icon-add'"
+           onclick="loadNewCluePage()">新建</a>
+        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-remove'">删除</a>
+        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-down'">导入</a>
+        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-up'">导出</a>
+        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-sum'">批处理</a>
+    </div>
+    <table class="table table-condensed table-hover table-striped" width="985"
+           data-options="singleSelect:true,collapsible:true,url:'datagrid_data1.json',method:'get'">
+        <thead>
+        <tr>
+            <td width="36"><input type="checkbox"/></td>
+            <td width="86">受理日期</td>
+            <td width="86">处理日期</td>
+            <td width="106">举报人姓名</td>
+            <td width="126">被举报人姓名</td>
+            <td width="86">单位住址</td>
+            <td width="45">职级</td>
+            <td width="126">主要涉嫌性质</td>
+            <td width="86">举报方式</td>
+            <td width="65">承办人</td>
+            <td colspan="2">操作选项</td>
+        </tr>
+        </thead>
+
+        <tr style="height:35px">
+            <td><input type="checkbox"/></td>
+            <td>**</td>
+            <td>*1</td>
+            <td>张三</td>
+            <td>李四</td>
+            <td>***</td>
+            <td>***</td>
+            <td>***</td>
+            <td>电话</td>
+            <td>张毅</td>
+            <td><a href="#">修改</a><a href="#">删除</a></td>
+        </tr>
+        <tr style="height:35px">
+            <td><input type="checkbox"/></td>
+            <td>**</td>
+            <td>**</td>
+            <td>张三</td>
+            <td>李四</td>
+            <td>***</td>
+            <td>***</td>
+            <td>***</td>
+            <td>电话</td>
+            <td>张毅</td>
+            <td><a href="#">修改</a><a href="#">删除</a></td>
+        </tr>
+        <tr style="height:35px">
+            <td><input type="checkbox"/></td>
+            <td>**</td>
+            <td>**</td>
+            <td>张三</td>
+            <td>李四</td>
+            <td>***</td>
+            <td>***</td>
+            <td>***</td>
+            <td>电话</td>
+            <td>张毅</td>
+            <td><a href="#">修改</a><a href="#">删除</a></td>
+        </tr>
+        <tr style="height:35px">
+            <td><input type="checkbox"/></td>
+            <td>**</td>
+            <td>**</td>
+            <td>张三</td>
+            <td>李四</td>
+            <td>***</td>
+            <td>***</td>
+            <td>***</td>
+            <td>电话</td>
+            <td>张毅</td>
+            <td><a href="#">修改</a><a href="#">删除</a></td>
+        </tr>
+        <tr style="height:35px">
+            <td><input type="checkbox"/></td>
+            <td>**</td>
+            <td>**</td>
+            <td>张三</td>
+            <td>李四</td>
+            <td>***</td>
+            <td>***</td>
+            <td>***</td>
+            <td>电话</td>
+            <td>张毅</td>
+            <td><a href="#">修改</a><a href="#">删除</a></td>
+        </tr>
+        <tr style="height:35px">
+            <td><input type="checkbox"/></td>
+            <td>**</td>
+            <td>**</td>
+            <td>张三</td>
+            <td>李四</td>
+            <td>***</td>
+            <td>***</td>
+            <td>***</td>
+            <td>电话</td>
+            <td>张毅</td>
+            <td><a href="#">修改</a><a href="#">删除</a></td>
+        </tr>
+        <tr style="height:35px">
+            <td><input type="checkbox"/></td>
+            <td>**</td>
+            <td>**</td>
+            <td>张三</td>
+            <td>李四</td>
+            <td>***</td>
+            <td>***</td>
+            <td>***</td>
+            <td>电话</td>
+            <td>张毅</td>
+            <td><a href="#">修改</a><a href="#">删除</a></td>
+        </tr>
+        <tr style="height:35px">
+            <td><input type="checkbox"/></td>
+            <td>**</td>
+            <td>**</td>
+            <td>张三</td>
+            <td>李四</td>
+            <td>***</td>
+            <td>***</td>
+            <td>***</td>
+            <td>电话</td>
+            <td>张毅</td>
+            <td><a href="#">修改</a><a href="#">删除</a></td>
+        </tr>
+        <tr style="height:35px">
+            <td><input type="checkbox"/></td>
+            <td>**</td>
+            <td>**</td>
+            <td>张三</td>
+            <td>李四</td>
+            <td>***</td>
+            <td>***</td>
+            <td>***</td>
+            <td>电话</td>
+            <td>张毅</td>
+            <td><a href="#">修改</a><a href="#">删除</a></td>
+        </tr>
+        <tr style="height:35px">
+            <td><input type="checkbox"/></td>
+            <td>**</td>
+            <td>**</td>
+            <td>张三</td>
+            <td>李四</td>
+            <td>***</td>
+            <td>***</td>
+            <td>***</td>
+            <td>电话</td>
+            <td>张毅</td>
+            <td><a href="#">修改</a><a href="#">删除</a></td>
+        </tr>
+        <tr style="height:35px">
+            <td><input type="checkbox"/></td>
+            <td>**</td>
+            <td>**</td>
+            <td>张三</td>
+            <td>李四</td>
+            <td>***</td>
+            <td>***</td>
+            <td>***</td>
+            <td>电话</td>
+            <td>张毅</td>
+            <td><a href="#">修改</a><a href="#">删除</a></td>
+        </tr>
+        <tr style="height:35px">
+            <td><input type="checkbox"/></td>
+            <td>**</td>
+            <td>**</td>
+            <td>张三</td>
+            <td>李四</td>
+            <td>***</td>
+            <td>***</td>
+            <td>***</td>
+            <td>电话</td>
+            <td>张毅</td>
+            <td><a href="#">修改</a><a href="#">删除</a></td>
+        </tr>
+    </table>
+
+</div>
+</body>
+</html>

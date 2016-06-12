@@ -2,20 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="528fe906-06c4-42ab-b2c9-eb5d33207216" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/TestGrammar/images/head.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/XxxInformant/web/WEB-INF/lib/commons-fileupload-1.3.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/XxxInformant/web/WEB-INF/lib/commons-io-2.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/XxxInformant/web/WEB-INF/lib/gson-2.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/XxxInformant/web/WEB-INF/lib/log4j-1.2.14.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/XxxInformant/web/WEB-INF/lib/mysql-connector-5.1.18.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/.idea/libraries/lib.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/TestGrammar/user/ListGroup.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/TestGrammar/user/MediaList.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/XxxInformant/src/com/dao/BaseDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/XxxInformant/src/com/dao/BaseViewDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/XxxInformant/src/com/dao/DaoConverter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/XxxInformant/src/com/dao/DaoMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/XxxInformant/src/com/dao/IDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/XxxInformant/src/com/utils/DevLog.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/XxxInformant/src/com/utils/DevRandom.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/XxxInformant/src/com/utils/DevRegex.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/XxxInformant/src/com/utils/MySqlUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/XxxInformant/src/com/utils/Parser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/XxxInformant/src/com/utils/StrOM.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/XxxInformant/src/dbconfig.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/XxxInformant/src/log4j.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestBootstrap/XxxInformant/test/com/unittest/TestBaseDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TestBootstrap/TestGrammar/images/thumbnail01.png" afterPath="$PROJECT_DIR$/../TestBootstrap/TestGrammar/images/thumbnail01.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevLib/DevLib.iml" afterPath="$PROJECT_DIR$/DevLib/DevLib.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DevLib/src/com/hstdd/dao/DaoConverter.java" afterPath="$PROJECT_DIR$/DevLib/src/com/hstdd/dao/DaoConverter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TestBootstrap/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../TestBootstrap/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TestBootstrap/TestAbcTemplate/web/index.jsp" afterPath="$PROJECT_DIR$/../TestBootstrap/TestAbcTemplate/web/index.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/DevLib/unittest/com/hstdd/test/dao/TestBaseDao.java" afterPath="$PROJECT_DIR$/DevLib/test/com/hstdd/test/dao/TestBaseDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/DevLib/unittest/com/hstdd/test/dao/TestBaseViewDao.java" afterPath="$PROJECT_DIR$/DevLib/test/com/hstdd/test/dao/TestBaseViewDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/DevLib/unittest/com/hstdd/test/dao/UserDao.java" afterPath="$PROJECT_DIR$/DevLib/test/com/hstdd/test/dao/UserDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/DevLib/unittest/com/hstdd/test/dao/VUserPojoDao.java" afterPath="$PROJECT_DIR$/DevLib/test/com/hstdd/test/dao/VUserPojoDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/DevLib/unittest/com/hstdd/test/pojo/UserPojo.java" afterPath="$PROJECT_DIR$/DevLib/test/com/hstdd/test/pojo/UserPojo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/DevLib/unittest/com/hstdd/test/pojo/UserTypePojo.java" afterPath="$PROJECT_DIR$/DevLib/test/com/hstdd/test/pojo/UserTypePojo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/DevLib/unittest/com/hstdd/test/pojo/VUserPojo.java" afterPath="$PROJECT_DIR$/DevLib/test/com/hstdd/test/pojo/VUserPojo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/DevLib/unittest/com/hstdd/test/utils/TestDevRegex.java" afterPath="$PROJECT_DIR$/DevLib/test/com/hstdd/test/utils/TestDevRegex.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/DevLib/unittest/com/hstdd/test/utils/TestMySqlUtil.java" afterPath="$PROJECT_DIR$/DevLib/test/com/hstdd/test/utils/TestMySqlUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/DevLib/unittest/com/hstdd/test/utils/TestStrOM.java" afterPath="$PROJECT_DIR$/DevLib/test/com/hstdd/test/utils/TestStrOM.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TestBootstrap/TestGrammar/user/Alert.html" afterPath="$PROJECT_DIR$/../TestBootstrap/TestGrammar/user/Alert.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TestBootstrap/TestGrammar/user/ProgressBar.html" afterPath="$PROJECT_DIR$/../TestBootstrap/TestGrammar/user/ProgressBar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../TestBootstrap/XxxInformant/XxxInformant.iml" afterPath="$PROJECT_DIR$/../TestBootstrap/XxxInformant/XxxInformant.iml" />
     </list>
     <ignored path="DevLibrary.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,6 +61,9 @@
             <state relative-caret-position="144">
               <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
               <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#7815#7816#0" expanded="false" />
+                <element signature="e#7854#7855#0" expanded="false" />
                 <marker date="1464045908881" expanded="true" signature="1950:1980" ph="select count... " />
                 <marker date="1464045908881" expanded="true" signature="2595:2726" ph="insert into missingValue... " />
                 <marker date="1464045908881" expanded="true" signature="3243:3355" ph="update missi... " />
@@ -58,18 +78,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DevLog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DevLib/src/com/hstdd/utils/DevLog.java">
+      <file leaf-file-name="TestBaseDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DevLib/test/com/hstdd/test/dao/TestBaseDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+            <state relative-caret-position="234">
+              <caret line="17" column="24" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DevLib/src/log4j.properties">
+      <file leaf-file-name="DaoConverter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DevLib/src/com/hstdd/dao/DaoConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="666">
+              <caret line="68" column="81" selection-start-line="68" selection-start-column="81" selection-end-line="68" selection-end-column="81" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#887#888#0" expanded="false" />
+                <element signature="e#912#913#0" expanded="false" />
+                <element signature="e#953#954#0" expanded="false" />
+                <element signature="e#988#989#0" expanded="false" />
+                <element signature="e#1017#1018#0" expanded="false" />
+                <element signature="e#1042#1043#0" expanded="false" />
+                <element signature="e#1085#1086#0" expanded="false" />
+                <element signature="e#1120#1121#0" expanded="false" />
+                <element signature="e#1150#1151#0" expanded="false" />
+                <element signature="e#1178#1179#0" expanded="false" />
+                <element signature="e#1225#1226#0" expanded="false" />
+                <element signature="e#1266#1267#0" expanded="false" />
+                <element signature="e#1296#1297#0" expanded="false" />
+                <element signature="e#1324#1325#0" expanded="false" />
+                <element signature="e#1371#1372#0" expanded="false" />
+                <element signature="e#1412#1413#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DevLibrary.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DevLibrary.iml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -78,11 +126,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestBaseDao.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DevLib/test/com/hstdd/test/dao/TestBaseDao.java">
+      <file leaf-file-name="TestBootstrap.iml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../TestBootstrap/TestBootstrap.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="17" column="24" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="24" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -93,7 +141,28 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="e#237#238#0" expanded="false" />
+                <element signature="e#257#258#0" expanded="false" />
+                <element signature="e#295#296#0" expanded="false" />
+                <element signature="e#322#323#0" expanded="false" />
+                <element signature="e#354#355#0" expanded="false" />
+                <element signature="e#376#377#0" expanded="false" />
+                <element signature="e#421#422#0" expanded="false" />
+                <element signature="e#452#453#0" expanded="false" />
+                <element signature="e#483#484#0" expanded="false" />
+                <element signature="e#507#508#0" expanded="false" />
+                <element signature="e#553#554#0" expanded="false" />
+                <element signature="e#588#589#0" expanded="false" />
+                <element signature="e#622#623#0" expanded="false" />
+                <element signature="e#645#646#0" expanded="false" />
+                <element signature="e#693#694#0" expanded="false" />
+                <element signature="e#726#727#0" expanded="false" />
+                <element signature="e#761#762#0" expanded="false" />
+                <element signature="e#783#784#0" expanded="false" />
+                <element signature="e#831#832#0" expanded="false" />
+                <element signature="e#862#863#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,7 +172,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
               <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,6 +227,7 @@
       <list>
         <option value="$PROJECT_DIR$/DevLib/web/index.jsp" />
         <option value="$PROJECT_DIR$/DevLib/test/com/hstdd/test/dao/TestBaseDao.java" />
+        <option value="$PROJECT_DIR$/DevLib/src/com/hstdd/dao/DaoConverter.java" />
       </list>
     </option>
   </component>
@@ -210,9 +282,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -231,110 +301,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DevLibrary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DevLibrary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DevLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DevLibrary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DevLibrary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DevLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DevLibrary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DevLibrary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DevLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DevLibrary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DevLibrary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DevLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DevLibrary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DevLibrary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DevLib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hstdd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -344,7 +314,9 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/OneDrive/GitHub/TDD_Intellij/TestBootstrap" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -982,6 +954,10 @@
       <workItem from="1464789998029" duration="1996000" />
       <workItem from="1464793619583" duration="1519000" />
       <workItem from="1464826187955" duration="25000" />
+      <workItem from="1465522548477" duration="1159000" />
+      <workItem from="1465601023032" duration="123000" />
+      <workItem from="1465601167467" duration="672000" />
+      <workItem from="1465604598412" duration="679000" />
     </task>
     <task id="LOCAL-00001" summary="Create new DevLibrary project.">
       <created>1464794064348</created>
@@ -1008,7 +984,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3540000" />
+    <option name="totallyTimeSpent" value="6173000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1456" height="916" extended-state="6" />
@@ -1068,11 +1044,22 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/DebRes/config/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DevLib/src/com/hstdd/dao/BaseDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#7815#7816#0" expanded="false" />
+            <element signature="e#7854#7855#0" expanded="false" />
             <marker date="1464045908881" expanded="true" signature="1950:1980" ph="select count... " />
             <marker date="1464045908881" expanded="true" signature="2595:2726" ph="insert into missingValue... " />
             <marker date="1464045908881" expanded="true" signature="3243:3355" ph="update missi... " />
@@ -1090,7 +1077,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1098,7 +1084,138 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DevLib/test/com/hstdd/test/dao/TestBaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DevLib/src/com/hstdd/dao/DaoConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#887#888#0" expanded="false" />
+            <element signature="e#912#913#0" expanded="false" />
+            <element signature="e#953#954#0" expanded="false" />
+            <element signature="e#988#989#0" expanded="false" />
+            <element signature="e#1017#1018#0" expanded="false" />
+            <element signature="e#1042#1043#0" expanded="false" />
+            <element signature="e#1085#1086#0" expanded="false" />
+            <element signature="e#1120#1121#0" expanded="false" />
+            <element signature="e#1150#1151#0" expanded="false" />
+            <element signature="e#1178#1179#0" expanded="false" />
+            <element signature="e#1225#1226#0" expanded="false" />
+            <element signature="e#1266#1267#0" expanded="false" />
+            <element signature="e#1296#1297#0" expanded="false" />
+            <element signature="e#1324#1325#0" expanded="false" />
+            <element signature="e#1371#1372#0" expanded="false" />
+            <element signature="e#1412#1413#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DevLib/test/com/hstdd/test/pojo/UserPojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#237#238#0" expanded="false" />
+            <element signature="e#257#258#0" expanded="false" />
+            <element signature="e#295#296#0" expanded="false" />
+            <element signature="e#322#323#0" expanded="false" />
+            <element signature="e#354#355#0" expanded="false" />
+            <element signature="e#376#377#0" expanded="false" />
+            <element signature="e#421#422#0" expanded="false" />
+            <element signature="e#452#453#0" expanded="false" />
+            <element signature="e#483#484#0" expanded="false" />
+            <element signature="e#507#508#0" expanded="false" />
+            <element signature="e#553#554#0" expanded="false" />
+            <element signature="e#588#589#0" expanded="false" />
+            <element signature="e#622#623#0" expanded="false" />
+            <element signature="e#645#646#0" expanded="false" />
+            <element signature="e#693#694#0" expanded="false" />
+            <element signature="e#726#727#0" expanded="false" />
+            <element signature="e#761#762#0" expanded="false" />
+            <element signature="e#783#784#0" expanded="false" />
+            <element signature="e#831#832#0" expanded="false" />
+            <element signature="e#862#863#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DevLib/test/com/hstdd/test/utils/TestDevRegex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DevLib/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DebRes/db/hstdd.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DebRes/config/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DevLib/src/com/hstdd/dao/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#7815#7816#0" expanded="false" />
+            <element signature="e#7854#7855#0" expanded="false" />
+            <marker date="1464045908881" expanded="true" signature="1950:1980" ph="select count... " />
+            <marker date="1464045908881" expanded="true" signature="2595:2726" ph="insert into missingValue... " />
+            <marker date="1464045908881" expanded="true" signature="3243:3355" ph="update missi... " />
+            <marker date="1464045908881" expanded="true" signature="3939:4017" ph="update missi... " />
+            <marker date="1464045908881" expanded="true" signature="4593:4671" ph="update missi... " />
+            <marker date="1464045908881" expanded="true" signature="5168:5227" ph="select * fro... missingValue" />
+            <marker date="1464045908881" expanded="true" signature="5844:5903" ph="select * fro... missingValue" />
+            <marker date="1464045908881" expanded="true" signature="6562:6699" ph="select disti... missingValue" />
+            <marker date="1464045908881" expanded="true" signature="7299:7388" ph="select disti... missingValue" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DevLib/src/com/hstdd/utils/DevLog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DevLib/src/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1114,7 +1231,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#237#238#0" expanded="false" />
+            <element signature="e#257#258#0" expanded="false" />
+            <element signature="e#295#296#0" expanded="false" />
+            <element signature="e#322#323#0" expanded="false" />
+            <element signature="e#354#355#0" expanded="false" />
+            <element signature="e#376#377#0" expanded="false" />
+            <element signature="e#421#422#0" expanded="false" />
+            <element signature="e#452#453#0" expanded="false" />
+            <element signature="e#483#484#0" expanded="false" />
+            <element signature="e#507#508#0" expanded="false" />
+            <element signature="e#553#554#0" expanded="false" />
+            <element signature="e#588#589#0" expanded="false" />
+            <element signature="e#622#623#0" expanded="false" />
+            <element signature="e#645#646#0" expanded="false" />
+            <element signature="e#693#694#0" expanded="false" />
+            <element signature="e#726#727#0" expanded="false" />
+            <element signature="e#761#762#0" expanded="false" />
+            <element signature="e#783#784#0" expanded="false" />
+            <element signature="e#831#832#0" expanded="false" />
+            <element signature="e#862#863#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1122,7 +1260,115 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DevLib/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DebRes/db/hstdd.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DebRes/config/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DevLib/src/com/hstdd/dao/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#7815#7816#0" expanded="false" />
+            <element signature="e#7854#7855#0" expanded="false" />
+            <marker date="1464045908881" expanded="true" signature="1950:1980" ph="select count... " />
+            <marker date="1464045908881" expanded="true" signature="2595:2726" ph="insert into missingValue... " />
+            <marker date="1464045908881" expanded="true" signature="3243:3355" ph="update missi... " />
+            <marker date="1464045908881" expanded="true" signature="3939:4017" ph="update missi... " />
+            <marker date="1464045908881" expanded="true" signature="4593:4671" ph="update missi... " />
+            <marker date="1464045908881" expanded="true" signature="5168:5227" ph="select * fro... missingValue" />
+            <marker date="1464045908881" expanded="true" signature="5844:5903" ph="select * fro... missingValue" />
+            <marker date="1464045908881" expanded="true" signature="6562:6699" ph="select disti... missingValue" />
+            <marker date="1464045908881" expanded="true" signature="7299:7388" ph="select disti... missingValue" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DevLib/src/com/hstdd/utils/DevLog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DevLib/src/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DevLib/test/com/hstdd/test/dao/TestBaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DevLib/test/com/hstdd/test/pojo/UserPojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#237#238#0" expanded="false" />
+            <element signature="e#257#258#0" expanded="false" />
+            <element signature="e#295#296#0" expanded="false" />
+            <element signature="e#322#323#0" expanded="false" />
+            <element signature="e#354#355#0" expanded="false" />
+            <element signature="e#376#377#0" expanded="false" />
+            <element signature="e#421#422#0" expanded="false" />
+            <element signature="e#452#453#0" expanded="false" />
+            <element signature="e#483#484#0" expanded="false" />
+            <element signature="e#507#508#0" expanded="false" />
+            <element signature="e#553#554#0" expanded="false" />
+            <element signature="e#588#589#0" expanded="false" />
+            <element signature="e#622#623#0" expanded="false" />
+            <element signature="e#645#646#0" expanded="false" />
+            <element signature="e#693#694#0" expanded="false" />
+            <element signature="e#726#727#0" expanded="false" />
+            <element signature="e#761#762#0" expanded="false" />
+            <element signature="e#783#784#0" expanded="false" />
+            <element signature="e#831#832#0" expanded="false" />
+            <element signature="e#862#863#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DevLib/test/com/hstdd/test/utils/TestDevRegex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1162,6 +1408,9 @@
         <state relative-caret-position="144">
           <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#7815#7816#0" expanded="false" />
+            <element signature="e#7854#7855#0" expanded="false" />
             <marker date="1464045908881" expanded="true" signature="1950:1980" ph="select count... " />
             <marker date="1464045908881" expanded="true" signature="2595:2726" ph="insert into missingValue... " />
             <marker date="1464045908881" expanded="true" signature="3243:3355" ph="update missi... " />
@@ -1179,7 +1428,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1187,7 +1435,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1203,7 +1450,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#237#238#0" expanded="false" />
+            <element signature="e#257#258#0" expanded="false" />
+            <element signature="e#295#296#0" expanded="false" />
+            <element signature="e#322#323#0" expanded="false" />
+            <element signature="e#354#355#0" expanded="false" />
+            <element signature="e#376#377#0" expanded="false" />
+            <element signature="e#421#422#0" expanded="false" />
+            <element signature="e#452#453#0" expanded="false" />
+            <element signature="e#483#484#0" expanded="false" />
+            <element signature="e#507#508#0" expanded="false" />
+            <element signature="e#553#554#0" expanded="false" />
+            <element signature="e#588#589#0" expanded="false" />
+            <element signature="e#622#623#0" expanded="false" />
+            <element signature="e#645#646#0" expanded="false" />
+            <element signature="e#693#694#0" expanded="false" />
+            <element signature="e#726#727#0" expanded="false" />
+            <element signature="e#761#762#0" expanded="false" />
+            <element signature="e#783#784#0" expanded="false" />
+            <element signature="e#831#832#0" expanded="false" />
+            <element signature="e#862#863#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1211,7 +1479,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1234,7 +1504,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1242,7 +1511,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1251,6 +1519,9 @@
         <state relative-caret-position="144">
           <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#7815#7816#0" expanded="false" />
+            <element signature="e#7854#7855#0" expanded="false" />
             <marker date="1464045908881" expanded="true" signature="1950:1980" ph="select count... " />
             <marker date="1464045908881" expanded="true" signature="2595:2726" ph="insert into missingValue... " />
             <marker date="1464045908881" expanded="true" signature="3243:3355" ph="update missi... " />
@@ -1268,7 +1539,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#237#238#0" expanded="false" />
+            <element signature="e#257#258#0" expanded="false" />
+            <element signature="e#295#296#0" expanded="false" />
+            <element signature="e#322#323#0" expanded="false" />
+            <element signature="e#354#355#0" expanded="false" />
+            <element signature="e#376#377#0" expanded="false" />
+            <element signature="e#421#422#0" expanded="false" />
+            <element signature="e#452#453#0" expanded="false" />
+            <element signature="e#483#484#0" expanded="false" />
+            <element signature="e#507#508#0" expanded="false" />
+            <element signature="e#553#554#0" expanded="false" />
+            <element signature="e#588#589#0" expanded="false" />
+            <element signature="e#622#623#0" expanded="false" />
+            <element signature="e#645#646#0" expanded="false" />
+            <element signature="e#693#694#0" expanded="false" />
+            <element signature="e#726#727#0" expanded="false" />
+            <element signature="e#761#762#0" expanded="false" />
+            <element signature="e#783#784#0" expanded="false" />
+            <element signature="e#831#832#0" expanded="false" />
+            <element signature="e#862#863#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1276,7 +1568,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1313,8 +1607,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DevLib/test/com/hstdd/test/dao/TestBaseDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
+        <state relative-caret-position="234">
           <caret line="17" column="24" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DevLib/src/com/hstdd/dao/DaoConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="68" column="81" selection-start-line="68" selection-start-column="81" selection-end-line="68" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#887#888#0" expanded="false" />
+            <element signature="e#912#913#0" expanded="false" />
+            <element signature="e#953#954#0" expanded="false" />
+            <element signature="e#988#989#0" expanded="false" />
+            <element signature="e#1017#1018#0" expanded="false" />
+            <element signature="e#1042#1043#0" expanded="false" />
+            <element signature="e#1085#1086#0" expanded="false" />
+            <element signature="e#1120#1121#0" expanded="false" />
+            <element signature="e#1150#1151#0" expanded="false" />
+            <element signature="e#1178#1179#0" expanded="false" />
+            <element signature="e#1225#1226#0" expanded="false" />
+            <element signature="e#1266#1267#0" expanded="false" />
+            <element signature="e#1296#1297#0" expanded="false" />
+            <element signature="e#1324#1325#0" expanded="false" />
+            <element signature="e#1371#1372#0" expanded="false" />
+            <element signature="e#1412#1413#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DevLibrary.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TestBootstrap/TestBootstrap.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
