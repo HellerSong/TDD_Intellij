@@ -12,47 +12,53 @@
 </head>
 <body>
 <div class="main-content">
-    <form>
+    <form class="clueList-search-form">
         <table>
             <tr>
-                <td class="font1">关键字：</td>
-                <td bgcolor="#FFFFFF"><input type="text" border="1" class="input1"/></td>
-                <td class="font1">受理日期：从</td>
-                <td><input type="text" border="1" class="input1"/>到</td>
-                <td><input type="text" border="1" class="input1"/></td>
-                <td class="font1">案发地区：</td>
                 <td>
-                    <select class="input2">
-                        <option>四川</option>
-                        <option>重庆</option>
-                        <option>河南</option>
-                        <option>山东</option>
+                    <label class="clueList-label-top">关键字:</label>
+                    <input class="easyui-textbox" name="keyword" data-options="prompt:'请输入查询关键字'"
+                           style="width:100%;height:26px;">
+                </td>
+                <td>
+                    <label class="clueList-label-top">受理日期(起):</label>
+                    <input class="easyui-datebox" name="JBKJXSLY_CBRCLRQ_Start" style="width:100%;height:26px;">
+                </td>
+                <td>
+                    <label class="clueList-label-top">受理日期(止):</label>
+                    <input class="easyui-datebox" name="JBKJXSLY_CBRCLRQ_End" style="width:100%;height:26px;">
+                </td>
+                <td>
+                    <label class="clueList-label-top">案发地区:</label>
+                    <select class="easyui-combobox" name="JBKJXSLY_AFDQ" style="width:60%;height:26px;">
+                        <option value="0" selected>全部</option>
+                        <option value="1">四川</option>
+                        <option value="2">重庆</option>
+                        <option value="3">河南</option>
+                        <option value="4">山东</option>
                     </select>
                 </td>
-                <td class="font1">线索类型：</td>
                 <td>
-                    <select class="input2">
-                        <option>全部</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
+                    <label class="clueList-label-top">线索类型:</label>
+                    <select class="easyui-combobox" name="JBKJXSLY_LYFS" style="width:60%;height:26px;">
+                        <option value="0" selected>全部</option>
                     </select>
                 </td>
-                <td class="font1">处理状态：</td>
                 <td>
-                    <select class="input2">
-                        <option>全部</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
+                    <label class="clueList-label-top">处理状态:</label>
+                    <select class="easyui-combobox" name="JBKJXSLY_CLZT" style="width:60%;height:26px;">
+                        <option value="0" selected>全部</option>
+                        <option value="1">待处理</option>
+                        <option value="2">已处理</option>
                     </select>
                 </td>
             </tr>
         </table>
     </form>
     <div class="cluelist-search-btn-group">
-        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'">搜索</a>
-        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-clear'">重置</a>
+        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'" onclick="submitClueListSearchForm()">搜索</a>
+        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-clear'"
+           onclick="resetClueListSearchForm()">重置</a>
         <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-filter'">更多检索</a>
     </div>
     <div><img src="../images/double.jpg"/></div>
@@ -64,181 +70,9 @@
         <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-up'">导出</a>
         <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-sum'">批处理</a>
     </div>
-    <table class="table table-condensed table-hover table-striped" width="985"
-           data-options="singleSelect:true,collapsible:true,url:'datagrid_data1.json',method:'get'">
-        <thead>
-        <tr>
-            <td width="36"><input type="checkbox"/></td>
-            <td width="86">受理日期</td>
-            <td width="86">处理日期</td>
-            <td width="106">举报人姓名</td>
-            <td width="126">被举报人姓名</td>
-            <td width="86">单位住址</td>
-            <td width="45">职级</td>
-            <td width="126">主要涉嫌性质</td>
-            <td width="86">举报方式</td>
-            <td width="65">承办人</td>
-            <td colspan="2">操作选项</td>
-        </tr>
-        </thead>
-
-        <tr style="height:35px">
-            <td><input type="checkbox"/></td>
-            <td>**</td>
-            <td>*1</td>
-            <td>张三</td>
-            <td>李四</td>
-            <td>***</td>
-            <td>***</td>
-            <td>***</td>
-            <td>电话</td>
-            <td>张毅</td>
-            <td><a href="#">修改</a><a href="#">删除</a></td>
-        </tr>
-        <tr style="height:35px">
-            <td><input type="checkbox"/></td>
-            <td>**</td>
-            <td>**</td>
-            <td>张三</td>
-            <td>李四</td>
-            <td>***</td>
-            <td>***</td>
-            <td>***</td>
-            <td>电话</td>
-            <td>张毅</td>
-            <td><a href="#">修改</a><a href="#">删除</a></td>
-        </tr>
-        <tr style="height:35px">
-            <td><input type="checkbox"/></td>
-            <td>**</td>
-            <td>**</td>
-            <td>张三</td>
-            <td>李四</td>
-            <td>***</td>
-            <td>***</td>
-            <td>***</td>
-            <td>电话</td>
-            <td>张毅</td>
-            <td><a href="#">修改</a><a href="#">删除</a></td>
-        </tr>
-        <tr style="height:35px">
-            <td><input type="checkbox"/></td>
-            <td>**</td>
-            <td>**</td>
-            <td>张三</td>
-            <td>李四</td>
-            <td>***</td>
-            <td>***</td>
-            <td>***</td>
-            <td>电话</td>
-            <td>张毅</td>
-            <td><a href="#">修改</a><a href="#">删除</a></td>
-        </tr>
-        <tr style="height:35px">
-            <td><input type="checkbox"/></td>
-            <td>**</td>
-            <td>**</td>
-            <td>张三</td>
-            <td>李四</td>
-            <td>***</td>
-            <td>***</td>
-            <td>***</td>
-            <td>电话</td>
-            <td>张毅</td>
-            <td><a href="#">修改</a><a href="#">删除</a></td>
-        </tr>
-        <tr style="height:35px">
-            <td><input type="checkbox"/></td>
-            <td>**</td>
-            <td>**</td>
-            <td>张三</td>
-            <td>李四</td>
-            <td>***</td>
-            <td>***</td>
-            <td>***</td>
-            <td>电话</td>
-            <td>张毅</td>
-            <td><a href="#">修改</a><a href="#">删除</a></td>
-        </tr>
-        <tr style="height:35px">
-            <td><input type="checkbox"/></td>
-            <td>**</td>
-            <td>**</td>
-            <td>张三</td>
-            <td>李四</td>
-            <td>***</td>
-            <td>***</td>
-            <td>***</td>
-            <td>电话</td>
-            <td>张毅</td>
-            <td><a href="#">修改</a><a href="#">删除</a></td>
-        </tr>
-        <tr style="height:35px">
-            <td><input type="checkbox"/></td>
-            <td>**</td>
-            <td>**</td>
-            <td>张三</td>
-            <td>李四</td>
-            <td>***</td>
-            <td>***</td>
-            <td>***</td>
-            <td>电话</td>
-            <td>张毅</td>
-            <td><a href="#">修改</a><a href="#">删除</a></td>
-        </tr>
-        <tr style="height:35px">
-            <td><input type="checkbox"/></td>
-            <td>**</td>
-            <td>**</td>
-            <td>张三</td>
-            <td>李四</td>
-            <td>***</td>
-            <td>***</td>
-            <td>***</td>
-            <td>电话</td>
-            <td>张毅</td>
-            <td><a href="#">修改</a><a href="#">删除</a></td>
-        </tr>
-        <tr style="height:35px">
-            <td><input type="checkbox"/></td>
-            <td>**</td>
-            <td>**</td>
-            <td>张三</td>
-            <td>李四</td>
-            <td>***</td>
-            <td>***</td>
-            <td>***</td>
-            <td>电话</td>
-            <td>张毅</td>
-            <td><a href="#">修改</a><a href="#">删除</a></td>
-        </tr>
-        <tr style="height:35px">
-            <td><input type="checkbox"/></td>
-            <td>**</td>
-            <td>**</td>
-            <td>张三</td>
-            <td>李四</td>
-            <td>***</td>
-            <td>***</td>
-            <td>***</td>
-            <td>电话</td>
-            <td>张毅</td>
-            <td><a href="#">修改</a><a href="#">删除</a></td>
-        </tr>
-        <tr style="height:35px">
-            <td><input type="checkbox"/></td>
-            <td>**</td>
-            <td>**</td>
-            <td>张三</td>
-            <td>李四</td>
-            <td>***</td>
-            <td>***</td>
-            <td>***</td>
-            <td>电话</td>
-            <td>张毅</td>
-            <td><a href="#">修改</a><a href="#">删除</a></td>
-        </tr>
-    </table>
+    <div style="height: 400px;">
+        <table class="easyui-datagrid clueList-datagrid"></table>
+    </div>
 
 </div>
 </body>

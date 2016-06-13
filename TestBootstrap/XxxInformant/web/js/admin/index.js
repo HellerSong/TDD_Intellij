@@ -4,7 +4,7 @@
 $(function () {
     setInterval(function () {
         var now = (new Date()).toLocaleString();
-        $('.index-head-datetime').html(now);
+        $('.index-head-datetime').html('日期：' + now);
     }, 1000);
 
     loadRightPanelContent('ClueList.html');

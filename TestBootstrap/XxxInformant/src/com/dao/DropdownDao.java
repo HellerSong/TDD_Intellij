@@ -15,7 +15,7 @@ public class DropdownDao {
 
     static {
         Hashtable<String, String> mappingTable = new Hashtable<String, String>();
-        mappingTable.put("举报方式代码", "JBKJXSLY_LXFS");
+        mappingTable.put("举报方式代码", "JBKJXSLY_LYFS");
 
         List<Code_tPojo> code_tList = new Code_tDao().getAll();
         List<CodelocalPojo> codelocalList = new CodelocalDao().getAll();

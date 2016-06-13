@@ -3,4 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+    <display-name>Informant</display-name>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+
+    <servlet>
+        <description>后台加载线索列表</description>
+        <servlet-name>AdminLoadClueList</servlet-name>
+        <servlet-class>com.servlet.AdminLoadClueList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoadClueList</servlet-name>
+        <url-pattern>/admin/AdminLoadClueList</url-pattern>
+    </servlet-mapping>
 </web-app>
