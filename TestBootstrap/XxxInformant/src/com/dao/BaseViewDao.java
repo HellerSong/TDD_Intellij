@@ -39,7 +39,7 @@ public abstract class BaseViewDao<T> {
         if (id <= 0)
             throw new InvalidParameterException();
 
-        T t = null;
+        Object obj = null;
 
         try {
             String sql = "select * from " + mainTableName + " " + joinString + " where " + mainKeyName + "=? ";
@@ -52,13 +52,13 @@ public abstract class BaseViewDao<T> {
             pstmt.setInt(1, id);
             rs = pstmt.executeQuery();
             if (rs.next()) {
-                t = daoConvert.convertDatabaseDataToEntityForGetting(myClass.newInstance(), rs);
+                obj = daoConvert.convertDatabaseDataToEntityForGetting(myClass.newInstance(), rs);
             }
         } catch (Exception e) {
             DevLog.write("Get entity by id failed.");
         }
 
-        return t;
+        return (T) obj;
     }
 
     public T getBySegmentValue(String segmentName, String segmentValue) {
@@ -66,7 +66,7 @@ public abstract class BaseViewDao<T> {
             return null;
         }
 
-        T t = null;
+        Object obj = null;
 
         try {
             String sql = "select * from " + mainTableName + joinString + " where " + segmentName + "=?";
@@ -79,13 +79,13 @@ public abstract class BaseViewDao<T> {
             pstmt.setString(1, segmentValue);
             rs = pstmt.executeQuery();
             if (rs.next()) {
-                t = daoConvert.convertDatabaseDataToEntityForGetting(myClass.newInstance(), rs);
+                obj = daoConvert.convertDatabaseDataToEntityForGetting(myClass.newInstance(), rs);
             }
         } catch (Exception e) {
             DevLog.write("Get entity by segment value failed.");
         }
 
-        return t;
+        return (T) obj;
     }
 
     public List<T> getAll(String sWhere) {

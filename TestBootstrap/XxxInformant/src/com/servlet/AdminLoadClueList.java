@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.pojo.JbkjxslyPojo;
 import com.utils.DevLog;
+import com.utils.Parser;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -24,7 +25,8 @@ import java.util.Map;
 public class AdminLoadClueList extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String keyword = request.getParameter("keyword");
-        DevLog.write(keyword);
+        int pageNumber = Parser.parseInt(request.getParameter("pageNumber"));
+        int pageSize = Parser.parseInt(request.getParameter("pageSize"));
 
 //        String acceptDateStart = request.getParameter("acceptDateStart");
 //        String acceptDateEnd = request.getParameter("acceptDateEnd");
@@ -53,14 +55,15 @@ public class AdminLoadClueList extends HttpServlet {
 //
         List<JbkjxslyPojo> list = new ArrayList<JbkjxslyPojo>();
         JbkjxslyDao dao = new JbkjxslyDao();
-        list = dao.getAll();
+        int totalCount = dao.totalCount;
+        list = dao.getAll(pageNumber, pageSize, "");
         dao.closeAll();
 
         //// Result data transfer
         response.setContentType("text/plain");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
-        map.put("total", list.size());
+        map.put("total", totalCount);
         map.put("rows", list);
         String json = gson.toJson(map);
         DevLog.write(json);

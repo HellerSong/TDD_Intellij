@@ -27,6 +27,10 @@ body {
     margin-left: 5px;
 }
 
+.index-head-time-value {
+    margin-top: 2px;
+}
+
 .left {
     float: left
 }
@@ -327,4 +331,8 @@ body {
 
 .cluelist-search-btn-group a {
     width: 80px;
+}
+
+.clueList-datagrid-content {
+    height: 500px;
 }

@@ -22,15 +22,18 @@
                 </td>
                 <td>
                     <label class="clueList-label-top">受理日期(起):</label>
-                    <input class="easyui-datebox" name="JBKJXSLY_CBRCLRQ_Start" style="width:100%;height:26px;">
+                    <input class="easyui-datebox" name="JBKJXSLY_CBRCLRQ_Start" data-options="prompt:'开始时间'"
+                           style="width:100%;height:26px;">
                 </td>
                 <td>
                     <label class="clueList-label-top">受理日期(止):</label>
-                    <input class="easyui-datebox" name="JBKJXSLY_CBRCLRQ_End" style="width:100%;height:26px;">
+                    <input class="easyui-datebox" name="JBKJXSLY_CBRCLRQ_End" data-options="prompt:'结束时间'"
+                           style="width:100%;height:26px;">
                 </td>
                 <td>
                     <label class="clueList-label-top">案发地区:</label>
-                    <select class="easyui-combobox" name="JBKJXSLY_AFDQ" style="width:60%;height:26px;">
+                    <select class="easyui-combobox" id="cbJBKJXSLY_AFDQ" name="JBKJXSLY_AFDQ"
+                            style="width:60%;height:26px;">
                         <option value="0" selected>全部</option>
                         <option value="1">四川</option>
                         <option value="2">重庆</option>
@@ -40,8 +43,8 @@
                 </td>
                 <td>
                     <label class="clueList-label-top">线索类型:</label>
-                    <select class="easyui-combobox" name="JBKJXSLY_LYFS" style="width:60%;height:26px;">
-                        <option value="0" selected>全部</option>
+                    <select class="easyui-combobox" id="cbJBKJXSLY_LYFS" name="JBKJXSLY_LYFS"
+                            style="width:80%;height:26px;">
                     </select>
                 </td>
                 <td>
@@ -56,24 +59,23 @@
         </table>
     </form>
     <div class="cluelist-search-btn-group">
-        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'" onclick="submitClueListSearchForm()">搜索</a>
-        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-clear'"
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-search'" onclick="submitClueListSearchForm()">搜索</a>
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-clear'"
            onclick="resetClueListSearchForm()">重置</a>
-        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-filter'">更多检索</a>
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-filter'">更多检索</a>
     </div>
     <div><img src="../images/double.jpg"/></div>
     <div class="clueList-action-btn-group">
-        <a href="#NewClue" class="easyui-linkbutton" data-options="iconCls:'icon-add'"
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-add'"
            onclick="loadNewCluePage()">新建</a>
-        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-remove'">删除</a>
-        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-down'">导入</a>
-        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-up'">导出</a>
-        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-sum'">批处理</a>
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-remove'">删除</a>
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-down'">导入</a>
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-up'">导出</a>
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-sum'">批处理</a>
     </div>
-    <div style="height: 400px;">
+    <div class="clueList-datagrid-content">
         <table class="easyui-datagrid clueList-datagrid"></table>
     </div>
-
 </div>
 </body>
 </html>

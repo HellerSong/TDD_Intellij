@@ -2,11 +2,7 @@
  * Created by Heller Song on 6/9/2016.
  */
 $(function () {
-    setInterval(function () {
-        var now = (new Date()).toLocaleString();
-        $('.index-head-datetime').html('日期：' + now);
-    }, 1000);
-
+    setHeadDatetime();
     loadRightPanelContent('ClueList.html');
 
     $('div.sdmenu a').click(function () {
@@ -23,8 +19,6 @@ $(function () {
         var titlePath = '<a href="#">' + rootName + '</a>&nbsp;>&nbsp;<a href="#">' + subName + '</a>';
         $('div.index-main-title').html(titlePath);
     });
-
-
 });
 
 function loadRightPanelContent(htmlFile) {
@@ -35,4 +29,13 @@ function loadRightPanelContent(htmlFile) {
         var initMethodName = 'initialize' + htmlFile.substring(0, htmlFile.indexOf('.'));
         window[initMethodName]();
     });
+}
+
+function setHeadDatetime() {
+    var headTimeElement = $('.index-head-datetime');
+    headTimeElement.html('日期：' + (new Date()).toLocaleString());
+    setInterval(function () {
+        var now = (new Date()).toLocaleString();
+        headTimeElement.html('日期：' + now);
+    }, 1000);
 }
