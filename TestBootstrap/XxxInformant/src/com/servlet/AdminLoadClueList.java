@@ -1,9 +1,9 @@
 package com.servlet;
 
-import com.dao.JbkjxslyDao;
+import com.dao.VClueListDao;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.pojo.JbkjxslyPojo;
+import com.pojo.VClueListPojo;
 import com.utils.DevLog;
 import com.utils.Parser;
 
@@ -53,11 +53,12 @@ public class AdminLoadClueList extends HttpServlet {
 //        if(status > 0)
 //            sWhere += " and status='" + status + "'";
 //
-        List<JbkjxslyPojo> list = new ArrayList<JbkjxslyPojo>();
-        JbkjxslyDao dao = new JbkjxslyDao();
+        List<VClueListPojo> list = new ArrayList<VClueListPojo>();
+        VClueListDao dao = new VClueListDao();
         int totalCount = dao.totalCount;
         list = dao.getAll(pageNumber, pageSize, "");
         dao.closeAll();
+
 
         //// Result data transfer
         response.setContentType("text/plain");

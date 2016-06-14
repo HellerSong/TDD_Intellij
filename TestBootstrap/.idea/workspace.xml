@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e8c390e-1e00-4781-be2f-3c4c0722cc6a" name="Default" comment="update all infromant v2 project&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/dao/VClueListDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/pojo/VClueListPojo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/src/com/dao/BaseViewDao.java" afterPath="$PROJECT_DIR$/XxxInformant/src/com/dao/BaseViewDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/src/com/pojo/JbkjxslyPojo.java" afterPath="$PROJECT_DIR$/XxxInformant/src/com/pojo/JbkjxslyPojo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/src/com/servlet/AdminLoadClueList.java" afterPath="$PROJECT_DIR$/XxxInformant/src/com/servlet/AdminLoadClueList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/admin/ClueList.html" afterPath="$PROJECT_DIR$/XxxInformant/web/admin/ClueList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/admin/Index.html" afterPath="$PROJECT_DIR$/XxxInformant/web/admin/Index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/css/admin.css" afterPath="$PROJECT_DIR$/XxxInformant/web/css/admin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/js/admin/clueList.js" afterPath="$PROJECT_DIR$/XxxInformant/web/js/admin/clueList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/js/admin/index.js" afterPath="$PROJECT_DIR$/XxxInformant/web/js/admin/index.js" />
     </list>
     <ignored path="TestBootstrap.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,6 +25,33 @@
     <option name="SORT_POSITIONED" value="false" />
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
+  </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="BaseDao.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/BaseDao.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="612">
+                    <caret line="65" column="5" selection-start-line="45" selection-start-column="4" selection-end-line="65" selection-end-column="5" />
+                    <folding>
+                      <element signature="e#6505#6535#1" expanded="true" />
+                      <marker date="1465860936063" expanded="true" signature="1523:1553" ph="select count... " />
+                      <marker date="1465860936063" expanded="true" signature="2325:2491" ph="insert into missingValue... " />
+                      <marker date="1465860936063" expanded="true" signature="3121:3233" ph="update missi... " />
+                      <marker date="1465860936063" expanded="true" signature="3904:3982" ph="update missi... " />
+                      <marker date="1465860936063" expanded="true" signature="5386:5445" ph="select * fro... missingValue" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -66,8 +82,8 @@
       <file leaf-file-name="JbkjxslyPojo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/pojo/JbkjxslyPojo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="96" column="35" selection-start-line="5" selection-start-column="4" selection-end-line="96" selection-end-column="35" />
+            <state relative-caret-position="176">
+              <caret line="82" column="30" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -76,9 +92,12 @@
       <file leaf-file-name="AdminLoadClueList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/servlet/AdminLoadClueList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
-              <folding />
+            <state relative-caret-position="162">
+              <caret line="57" column="40" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#2368#2383#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,32 +105,36 @@
       <file leaf-file-name="VClueListDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/VClueListDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseViewDao.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaseViewDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/BaseViewDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1152">
-              <caret line="87" column="22" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
+            <state relative-caret-position="130">
+              <caret line="37" column="10" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="10" />
               <folding>
-                <marker date="1465826577240" expanded="true" signature="1327:1409" ph="select * fro... missingValue" />
-                <marker date="1465826577240" expanded="true" signature="2197:2273" ph="select * fro... missingValuemissingValue" />
-                <marker date="1465826577240" expanded="true" signature="2945:3012" ph="select * fro... missingValuemissingValuemissingValue" />
+                <marker date="1465862630036" expanded="true" signature="1215:1245" ph="select count... " />
+                <marker date="1465862630036" expanded="true" signature="1215:1267" ph="select count... " />
+                <marker date="1465862630036" expanded="true" signature="1891:1973" ph="select * fro... missingValue" />
+                <marker date="1465862630036" expanded="true" signature="2994:3017" ph="select disti... missingValue" />
+                <marker date="1465862630036" expanded="true" signature="2994:3189" ph="select disti... missingValuemissingValue" />
+                <marker date="1465862630036" expanded="true" signature="3863:3930" ph="select * fro... missingValuemissingValuemissingValue" />
+                <marker date="1465862630036" expanded="true" signature="3863:3954" ph="select * fro... missingValuemissingValuemissingValue" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VClueListPojo.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="VClueListPojo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/pojo/VClueListPojo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+            <state relative-caret-position="324">
+              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
               <folding>
                 <element signature="e#3484#3485#0" expanded="true" />
                 <element signature="e#3518#3519#0" expanded="true" />
@@ -493,26 +516,9 @@
       <file leaf-file-name="XsclPojo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/pojo/XsclPojo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
+            <state relative-caret-position="468">
               <caret line="26" column="34" selection-start-line="5" selection-start-column="4" selection-end-line="26" selection-end-column="34" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClueList.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/ClueList.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1206">
-              <caret line="67" column="41" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="41" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#td#0;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#td#2;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#td#3;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#td#4;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#td#5;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -572,7 +578,6 @@
         <option value="$PROJECT_DIR$/TestGrammar/user/ListGroup.html" />
         <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/DaoMapper.java" />
         <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/IDao.java" />
-        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/BaseDao.java" />
         <option value="$PROJECT_DIR$/XxxInformant/src/com/unittest/TestDao.java" />
         <option value="$PROJECT_DIR$/XxxInformant/src/com/utils/MySqlUtil.java" />
         <option value="$PROJECT_DIR$/XxxInformant/src/com/utils/DevRegex.java" />
@@ -600,11 +605,12 @@
         <option value="$PROJECT_DIR$/XxxInformant/web/admin/ClueList.html" />
         <option value="$PROJECT_DIR$/XxxInformant/web/css/admin.css" />
         <option value="$PROJECT_DIR$/XxxInformant/src/com/pojo/JbkjxslyPojo.java" />
-        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/BaseViewDao.java" />
         <option value="$PROJECT_DIR$/XxxInformant/web/js/admin/clueList.js" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/BaseDao.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/VClueListDao.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/BaseViewDao.java" />
         <option value="$PROJECT_DIR$/XxxInformant/src/com/servlet/AdminLoadClueList.java" />
         <option value="$PROJECT_DIR$/XxxInformant/src/com/pojo/VClueListPojo.java" />
-        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/VClueListDao.java" />
       </list>
     </option>
   </component>
@@ -763,84 +769,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestBootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestBootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="XxxInformant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestBootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestBootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="XxxInformant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pojo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestBootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestBootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="XxxInformant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1517,7 +1445,7 @@
       <workItem from="1465815580799" duration="10776000" />
       <workItem from="1465827867942" duration="1324000" />
       <workItem from="1465857274170" duration="80000" />
-      <workItem from="1465857378396" duration="2812000" />
+      <workItem from="1465857378396" duration="5269000" />
     </task>
     <task id="LOCAL-00001" summary="update test navigation">
       <created>1464684723063</created>
@@ -1659,7 +1587,21 @@
       <option name="project" value="LOCAL" />
       <updated>1465812712194</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="update all infromant v2 project&#10;">
+      <created>1465860212673</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1465860212673</updated>
+    </task>
+    <task id="LOCAL-00022" summary="update all infromant v2 project&#10;">
+      <created>1465862635633</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1465862635633</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1683,7 +1625,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139293000" />
+    <option name="totallyTimeSpent" value="141750000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1696,11 +1638,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32820514" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.60683763" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1708,7 +1650,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32820514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32820514" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37606838" sideWeight="0.5" order="12" side_tool="false" content_ui="combo" x="-1420" y="207" width="1412" height="399" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37606838" sideWeight="0.5" order="12" side_tool="false" content_ui="combo" x="-1420" y="207" width="1412" height="399" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1853,20 +1795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="62" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/DaoConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="98" column="13" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/BaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -2041,21 +1969,13 @@
         <state relative-caret-position="1206">
           <caret line="67" column="41" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="41" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#td#0;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#2;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#td#3;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#td#4;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#td#5;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#0;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#td#2;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#select#0;n#td#3;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#select#0;n#td#4;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#select#0;n#td#5;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/Index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="38" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2075,26 +1995,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/pojo/JbkjxslyPojo.java">
+    <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/Index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="96" column="35" selection-start-line="5" selection-start-column="4" selection-end-line="96" selection-end-column="35" />
+        <state relative-caret-position="432">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="38" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/DaoConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="328" column="56" selection-start-line="328" selection-start-column="45" selection-end-line="328" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="65" column="5" selection-start-line="45" selection-start-column="4" selection-end-line="65" selection-end-column="5" />
+          <folding>
+            <element signature="e#6505#6535#1" expanded="true" />
+            <marker date="1465860936063" expanded="true" signature="1523:1553" ph="select count... " />
+            <marker date="1465860936063" expanded="true" signature="2325:2491" ph="insert into missingValue... " />
+            <marker date="1465860936063" expanded="true" signature="3121:3233" ph="update missi... " />
+            <marker date="1465860936063" expanded="true" signature="3904:3982" ph="update missi... " />
+            <marker date="1465860936063" expanded="true" signature="5386:5445" ph="select * fro... missingValue" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/BaseViewDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="37" column="10" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="10" />
+          <folding>
+            <marker date="1465862630036" expanded="true" signature="1215:1245" ph="select count... " />
+            <marker date="1465862630036" expanded="true" signature="1215:1267" ph="select count... " />
+            <marker date="1465862630036" expanded="true" signature="1891:1973" ph="select * fro... missingValue" />
+            <marker date="1465862630036" expanded="true" signature="2994:3017" ph="select disti... missingValue" />
+            <marker date="1465862630036" expanded="true" signature="2994:3189" ph="select disti... missingValuemissingValue" />
+            <marker date="1465862630036" expanded="true" signature="3863:3930" ph="select * fro... missingValuemissingValuemissingValue" />
+            <marker date="1465862630036" expanded="true" signature="3863:3954" ph="select * fro... missingValuemissingValuemissingValue" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/VClueListDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/servlet/AdminLoadClueList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="57" column="40" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2368#2383#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/pojo/XsclPojo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
+        <state relative-caret-position="468">
           <caret line="26" column="34" selection-start-line="5" selection-start-column="4" selection-end-line="26" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/pojo/JbkjxslyPojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="82" column="30" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/pojo/VClueListPojo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+        <state relative-caret-position="324">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
           <folding>
             <element signature="e#3484#3485#0" expanded="true" />
             <element signature="e#3518#3519#0" expanded="true" />
@@ -2468,34 +2454,6 @@
             <element signature="e#21086#21087#0" expanded="true" />
             <element signature="e#21153#21154#0" expanded="true" />
             <element signature="e#21209#21210#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/servlet/AdminLoadClueList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/VClueListDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/BaseViewDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="87" column="22" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
-          <folding>
-            <marker date="1465826577240" expanded="true" signature="1327:1409" ph="select * fro... missingValue" />
-            <marker date="1465826577240" expanded="true" signature="2197:2273" ph="select * fro... missingValuemissingValue" />
-            <marker date="1465826577240" expanded="true" signature="2945:3012" ph="select * fro... missingValuemissingValuemissingValue" />
           </folding>
         </state>
       </provider>

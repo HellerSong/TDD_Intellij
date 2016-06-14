@@ -157,7 +157,7 @@ public class BaseDao<T, PK> implements IDao<T, PK> {
         if (id == null)
             throw new InvalidParameterException();
 
-        T t = null;
+        Object obj = null;
 
         try {
             String sql = "select * from " + tableName + " where " + mainKeyName + "=? ";
@@ -175,13 +175,13 @@ public class BaseDao<T, PK> implements IDao<T, PK> {
             }
             rs = pstmt.executeQuery();
             if (rs.next()) {
-                t = daoConvert.convertDatabaseDataToEntityForGetting(clazz.newInstance(), rs);
+                obj = daoConvert.convertDatabaseDataToEntityForGetting(clazz.newInstance(), rs);
             }
         } catch (Exception e) {
             DevLog.write("Get entity by id failed.");
         }
 
-        return t;
+        return (T) obj;
     }
 
     private List<T> getAllRecords(String sql) throws Exception {
@@ -222,7 +222,7 @@ public class BaseDao<T, PK> implements IDao<T, PK> {
             throw new InvalidParameterException();
 
         try {
-            String sql = "select distinct * from " + tableName + " " + sWhere + ";";
+            String sql = "select distinct * from " + tableName + " " + sWhere + " order by " + mainKeyName + " desc;";
             DevLog.write(sql);
 
             return getAllRecords(sql);
@@ -234,7 +234,7 @@ public class BaseDao<T, PK> implements IDao<T, PK> {
 
     public List<T> getAll() {
         try {
-            String sql = "select distinct * from " + tableName + ";";
+            String sql = "select distinct * from " + tableName + " order by " + mainKeyName + " desc;";
             DevLog.write(sql);
 
             return getAllRecords(sql);
