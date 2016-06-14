@@ -95,6 +95,7 @@ public class JbkjxslyPojo {
     private String JBKJXSLY_ZYSXXZDM;
     private String JBKJXSLY_ZZMM;
     private String JBKJXSLY_ZZMMDM;
+    private int JBKJXSLY_CLZT;
 
 
     public int getJBKJXSLY_ID() {
@@ -833,4 +834,11 @@ public class JbkjxslyPojo {
         this.JBKJXSLY_ZZMMDM = JBKJXSLY_ZZMMDM;
     }
 
+    public int getJBKJXSLY_CLZT() {
+        return JBKJXSLY_CLZT;
+    }
+
+    public void setJBKJXSLY_CLZT(int JBKJXSLY_CLZT) {
+        this.JBKJXSLY_CLZT = JBKJXSLY_CLZT;
+    }
 }
