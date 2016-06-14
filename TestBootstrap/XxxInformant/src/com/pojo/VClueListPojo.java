@@ -2,7 +2,11 @@ package com.pojo;
 
 import java.sql.Timestamp;
 
-public class JbkjxslyPojo {
+/**
+ * <p>Summary : </p>
+ * <p>Authors : Heller Song (HellerSong@Outlook.com)</p>
+ */
+public class VClueListPojo {
     private int JBKJXSLY_ID;
     private String JBKJXSLY_AFDQ;
     private String JBKJXSLY_AFDQDM;
@@ -95,6 +99,9 @@ public class JbkjxslyPojo {
     private String JBKJXSLY_ZYSXXZDM;
     private String JBKJXSLY_ZZMM;
     private String JBKJXSLY_ZZMMDM;
+
+
+    private Timestamp JBKJXSLY_CBRCLRQ;
 
 
     public int getJBKJXSLY_ID() {
@@ -833,4 +840,11 @@ public class JbkjxslyPojo {
         this.JBKJXSLY_ZZMMDM = JBKJXSLY_ZZMMDM;
     }
 
+    public Timestamp getJBKJXSLY_CBRCLRQ() {
+        return JBKJXSLY_CBRCLRQ;
+    }
+
+    public void setJBKJXSLY_CBRCLRQ(Timestamp JBKJXSLY_CBRCLRQ) {
+        this.JBKJXSLY_CBRCLRQ = JBKJXSLY_CBRCLRQ;
+    }
 }
