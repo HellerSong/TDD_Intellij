@@ -27,6 +27,7 @@ public class AdminLoadClueList extends HttpServlet {
         String keyword = request.getParameter("keyword");
         int pageNumber = Parser.parseInt(request.getParameter("pageNumber"));
         int pageSize = Parser.parseInt(request.getParameter("pageSize"));
+        int clueStatus = Parser.parseInt(request.getParameter("JBKJXSLY_CLZT"));
 
 //        String acceptDateStart = request.getParameter("acceptDateStart");
 //        String acceptDateEnd = request.getParameter("acceptDateEnd");
@@ -36,7 +37,7 @@ public class AdminLoadClueList extends HttpServlet {
 //
         Map<String, Object> map = new HashMap<String, Object>();
         Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
-        String sWhere = "where status != '-1'";
+        String sWhere = "where JBKJXSLY_CLZT != '-1'";
 //
 //        if (keyword != null && keyword.length() > 0) {
 //            sWhere += " and clueContent like '%" + keyword + "%'";
@@ -50,13 +51,13 @@ public class AdminLoadClueList extends HttpServlet {
 //        }
 //        if(informantKindValue > 0)
 //            sWhere += " and informantKindValue='" + informantKindValue + "'";
-//        if(status > 0)
-//            sWhere += " and status='" + status + "'";
-//
+        if (clueStatus > 0)
+            sWhere += " and JBKJXSLY_CLZT='" + clueStatus + "'";
+
         List<VClueListPojo> list = new ArrayList<VClueListPojo>();
         VClueListDao dao = new VClueListDao();
-        int totalCount = dao.totalCount;
-        list = dao.getAll(pageNumber, pageSize, "");
+        int totalCount = dao.getTotalRecordCount(sWhere);
+        list = dao.getAll(pageNumber, pageSize, sWhere);
         dao.closeAll();
 
 

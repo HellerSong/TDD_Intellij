@@ -7,7 +7,7 @@ function initializeClueList() {
     $('.easyui-datebox').datebox({});
     $('.easyui-combobox').combobox({});
 
-    var clueListGrid = $('.clueList-datagrid').datagrid({
+    $('#clueListDg').datagrid({
         fit: true,
         striped: true,
         border: 1,
@@ -17,13 +17,14 @@ function initializeClueList() {
         columns: [[
             // { field: 'bookId', title: '', checkbox:true, width: 50, align:'center' },
             {field: 'JBKJXSLY_SLRQ', title: '受理日期', width: 80, align: 'center'},
-            {field: 'JBKJXSLY_CBRCLRQ', title: '处理日期', width: 80, align: 'center'},
+            {field: 'CBRCLRQ', title: '处理日期', width: 80, align: 'center'},
             {field: 'JBKJXSLY_BJBRXM', title: '被举报人姓名', width: 100, align: 'center'},
             {field: 'JBKJXSLY_BJBRDWZZ', title: '单位住址', width: 100, align: 'center'},
             {field: 'JBKJXSLY_ZJ', title: '职级', width: 100, align: 'center'},
             {field: 'JBKJXSLY_ZYSXXZ', title: '主要涉嫌性质', width: 100, align: 'center'},
             {field: 'JBKJXSLY_LYFS', title: '举报方式', width: 60, align: 'center'},
-            {field: 'JBKJXSLY_CBR', title: '承办人', width: 120, align: 'left'},
+            {field: 'CBR', title: '承办人', width: 120, align: 'left'},
+            {field: 'JBKJXSLY_CLZT', title: '状态', width: 80, align: 'left', formatter: statusFormatter},
             {field: 'action', title: '操作选项', width: 60, align: 'center', formatter: actionFormatter}
         ]],
         rownumbers: false,
@@ -32,7 +33,7 @@ function initializeClueList() {
         pageSize: 20,
         onLoadSuccess: onDataGridLoadSuccess
     });
-    queryClueList(1, clueListGrid.datagrid('getPager').pageSize);
+    queryClueListDefaultData();
 
     //var myData = $.parseJSON(jsondata);
     //$('.clueList-datagrid').datagrid("loadData", myData);
@@ -48,9 +49,17 @@ function actionFormatter() {
     return '<a href="#">修改</a>&nbsp;&nbsp;<a href="#">删除</a>'
 }
 
+function statusFormatter(value) {
+    if (value == 1) {
+        return "未处理";
+    } else if (value == 2) {
+        return "已处理";
+    }
+}
+
 function submitClueListSearchForm() {
     if (validate()) {
-        queryClueList(1, 10);
+        queryClueListDefaultData();
     }
 }
 
@@ -58,6 +67,7 @@ function resetClueListSearchForm() {
     $('.easyui-textbox').textbox('clear');
     $('.easyui-datebox').datebox('clear');
     $('.easyui-combobox').combobox('select', 0);
+    queryClueListDefaultData();
 }
 
 
@@ -68,7 +78,10 @@ function loadNewCluePage() {
     $('div.index-main-title').html(titlePath);
 }
 
-// 查询申请管理列表
+function queryClueListDefaultData() {
+    queryClueList(1, $('#clueListDg').datagrid('options').pageSize);
+}
+
 function queryClueList(pageNumber, pageSize) {
     var url = 'AdminLoadClueList';
     var values = $('.clueList-search-form').serialize();
@@ -77,10 +90,11 @@ function queryClueList(pageNumber, pageSize) {
         result = (new Function('return ' + result))();
 
         if (result.total > 0) {
-            var grid = $('.clueList-datagrid');
-            grid.datagrid('loadData', result.rows);
+            var dg = $('#clueListDg');
 
-            grid.datagrid('getPager').pagination({
+            dg.datagrid('loadData', result.rows);
+
+            dg.datagrid('getPager').pagination({
                 total: result.total, pageNumber: pageNumber, pageSize: pageSize
             });
         }
@@ -88,7 +102,7 @@ function queryClueList(pageNumber, pageSize) {
 }
 
 
-//加载成功触发
+//加载成功触发事件的挂载
 function onDataGridLoadSuccess() {
     var page = $(this).datagrid("getPager");
     page.pagination({

@@ -35,11 +35,14 @@ public abstract class BaseViewDao<T, PK> {
         daoConvert = new DaoConverter(clazz, mainKeyName);
     }
 
-    public int getTotalRecordCount() {
+    public int getTotalRecordCount(String sWhere) {
+        if (sWhere == null)
+            throw new InvalidParameterException();
+
         int count = 0;
 
         try {
-            String sql = "select count(*) as count from " + mainTableName + " " + joinString;
+            String sql = "select count(*) as count from " + mainTableName + " " + joinString + " " + sWhere;
             DevLog.write(sql);
 
             if (conn == null) {

@@ -12,8 +12,8 @@ public class VClueListDao extends BaseViewDao<VClueListPojo, Integer> {
     public VClueListDao() {
         mainTableName = "jbkjxsly";
         mainKeyName = "JBKJXSLY_ID";
-        joinString = "join xscl on (jbkjxsly.JBKJXSLY_XH = xscl.JBKJXSLY_XH) ";
+        joinString = "left join xscl on (jbkjxsly.JBKJXSLY_XH = xscl.JBKJXSLY_XH) ";
 
-        totalCount = getTotalRecordCount();
+        totalCount = getTotalRecordCount("");
     }
 }

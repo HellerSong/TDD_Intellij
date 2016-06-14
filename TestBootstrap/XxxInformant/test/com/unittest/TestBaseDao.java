@@ -1,6 +1,8 @@
 package com.unittest;
 
+import com.dao.JbkjxslyDao;
 import com.dao.RoleinfoDao;
+import com.pojo.JbkjxslyPojo;
 import com.pojo.RoleinfoPojo;
 import org.junit.Test;
 
@@ -17,5 +19,12 @@ public class TestBaseDao {
 
         System.out.println(pojo.getRoleName());
         System.out.println(pojo.getRoleId());
+    }
+
+    @Test
+    public void test_read_clue_data() {
+        JbkjxslyDao dao = new JbkjxslyDao();
+        JbkjxslyPojo pojo = dao.getById(23);
+        System.out.println(pojo.getJBKJXSLY_CLZT());
     }
 }
