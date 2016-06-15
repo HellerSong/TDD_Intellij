@@ -3,7 +3,16 @@
  */
 $(function () {
     setHeadDatetime();
-    loadRightPanelContent('ClueList.html');
+    //loadRightPanelContent('ClueList.html');
+
+    loadRightPanelContent('NewClue.html');
+    // $.post('LoadDropdown', null, function (result) {
+    //     result = (new Function('return ' + result))();
+    //
+    //     // if (result.total > 0) {
+    //     //
+    //     // }
+    // });
 
     $('div.sdmenu a').click(function () {
         // Load exactly html page
@@ -32,7 +41,7 @@ function loadRightPanelContent(htmlFile) {
 }
 
 function setHeadDatetime() {
-    var headTimeElement = $('.index-head-datetime');
+    var headTimeElement = $('.index-head-time-value');
     headTimeElement.html('日期：' + (new Date()).toLocaleString());
     setInterval(function () {
         var now = (new Date()).toLocaleString();

@@ -19,4 +19,14 @@
         <servlet-name>AdminLoadClueList</servlet-name>
         <url-pattern>/admin/AdminLoadClueList</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <description>加载所有下拉框</description>
+        <servlet-name>LoadDropdown</servlet-name>
+        <servlet-class>com.servlet.LoadDropdown</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoadDropdown</servlet-name>
+        <url-pattern>/admin/LoadDropdown</url-pattern>
+    </servlet-mapping>
 </web-app>
