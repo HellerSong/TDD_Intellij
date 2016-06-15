@@ -2,12 +2,9 @@
  * Created by Heller Song on 6/9/2016.
  */
 function initializeClueList() {
-    $('.easyui-linkbutton').linkbutton({});
-    $('.easyui-textbox').textbox({});
-    $('.easyui-datebox').datebox({});
-    $('.easyui-combobox').combobox({});
-
-    $('#clueListDg').datagrid({
+    $.parser.parse();
+    $('.easyui-combobox').combobox({panelHeight: 'auto'});
+    $('#clueList_Dg').datagrid({
         fit: true,
         striped: true,
         border: 1,
@@ -75,11 +72,11 @@ function loadNewCluePage() {
     loadRightPanelContent('NewClue.html');
     var titlePathElement = $('div.index-main-title');
     var titlePath = titlePathElement.html() + '&nbsp;>&nbsp;<a href="#">新建窗口</a>';
-    $('div.index-main-title').html(titlePath);
+    titlePathElement.html(titlePath);
 }
 
 function queryClueListDefaultData() {
-    queryClueList(1, $('#clueListDg').datagrid('options').pageSize);
+    queryClueList(1, $('#clueList_Dg').datagrid('options').pageSize);
 }
 
 function queryClueList(pageNumber, pageSize) {
@@ -90,7 +87,7 @@ function queryClueList(pageNumber, pageSize) {
         result = (new Function('return ' + result))();
 
         if (result.total > 0) {
-            var dg = $('#clueListDg');
+            var dg = $('#clueList_Dg');
 
             dg.datagrid('loadData', result.rows);
 

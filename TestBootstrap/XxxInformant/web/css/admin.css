@@ -1,4 +1,5 @@
-@charset "gb2312";
+@charset "UTF-8";
+
 body {
     font-family: "Microsoft YaHei UI", serif;
 }
@@ -215,8 +216,8 @@ body {
     margin-bottom: 10px;
 }
 
-/*ÐÂ½¨´°¿Ú*/
-.title2 {
+/* NewClue.html Page Style */
+.newClue-title {
     width: 984px;
     background: url(../images/title1.jpg) no-repeat;
     color: #0061c8;
@@ -225,19 +226,18 @@ body {
     padding-bottom: 8px;
 }
 
-.title2 span {
+.newClue-title span {
     padding-left: 10px;
-    font-family: "Î¢ÈíÑÅºÚ";
     font-size: 14px;
 }
 
-.box1 {
+.newClue-box {
     border-left: solid 1px #c8dbf6;
     border-right: solid 1px #c8dbf6;
     overflow: hidden;
     border-bottom: solid 1px #c8dbf6;
     padding-bottom: 15px;
-    margin-top: 20px
+    margin-bottom: 20px
 }
 
 .box2 {
@@ -301,22 +301,20 @@ body {
     float: left
 }
 
-.submit {
+.newClue-submit {
     text-align: center;
     margin-top: 25px
 }
 
-.submit a {
-    color: #FFF;
-    background: #2185f6;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-family: "Î¢ÈíÑÅºÚ";
-    text-decoration: none
+.newClue-submit a {
+    width: 80px;
 }
 
+.newClue-table-content {
+    margin: 10px;
+}
+
+/*ClueList.html Page Style*/
 .clueList-action-btn-group {
     margin: 14px 0;
 }
