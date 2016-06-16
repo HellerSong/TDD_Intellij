@@ -13,11 +13,11 @@
 </head>
 <body>
 <div class="main-content">
-    <form>
-        <div class="newClue-box">
-            <div class="newClue-title">
-                <span>举报线索情况</span>
-            </div>
+    <div class="newClue-box">
+        <div class="newClue-title">
+            <span>举报线索情况</span>
+        </div>
+        <form id="newClue_XS">
             <table border="0">
                 <tr>
                     <td width="80" class="font1 title3">*举报方式：</td>
@@ -59,7 +59,7 @@
                         </select>
                     </td>
                 </tr>
-                <tr height="10">
+                <tr>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
@@ -77,316 +77,314 @@
                     </td>
                 </tr>
             </table>
+        </form>
+    </div>
+    <div class="newClue-box" style="padding-bottom: 0;">
+        <div class="newClue-title">
+            <span>举报人基本情况</span>
         </div>
-        <div class="newClue-box" style="padding-bottom: 0;">
-            <div class="newClue-title">
-                <span>举报人基本情况</span>
-            </div>
-            <div id="newClue_jbrTabContent" hidden>
-                <table class="newClue-table-content">
-                    <tr>
-                        <td width="90">姓名</td>
-                        <td width="115">
-                            <input type="text" name="keyword">
-                        </td>
-                        <td width="30">&nbsp;</td>
-                        <td width="90">*是否署名:</td>
-                        <td width="141">
-                            <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;
-                            <input type="radio"/>&nbsp;否
-                        </td>
-                        <td>&nbsp;</td>
-                        <td width="100">身份证号：</td>
-                        <td width="145">
-                            <input type="text" name="keyword">
-                        </td>
-                        <td width="30">&nbsp;</td>
-                        <td width="90">单位、住址:</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td width="90">联系电话:</td>
-                        <td width="115">
-                            <input type="text" name="keyword">
-                        </td>
-                        <td width="30">&nbsp;</td>
-                        <td width="90">来信地区：</td>
-                        <td width="145">
-                            <select style="width: 95%;">
-                                <option>浙江-嘉兴-海盐</option>
-                                <option>重庆</option>
-                                <option>河南</option>
-                                <option>山东</option>
-                            </select>
-                        </td>
-                        <td width="30">&nbsp;</td>
-                        <td width="100">其他举报人:</td>
-                        <td width="141">
-                            <input type="text" name="keyword">
-                        </td>
-                        <td>&nbsp;</td>
-                        <td width="">
-                            <input type="text" name="keyword">
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div id="newClue_JbrTabs" style="height:auto;"></div>
-            <div id="newClue_JbrTabTools">
-                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'"
-                   onclick="addJbrPanel()"></a>
-                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-remove'"
-                   onclick="removeJbrPanel()"></a>
-            </div>
-        </div>
-        <div class="newClue-box" style="padding-bottom: 0;">
-            <div class="newClue-title">
-                <span>被举报人基本情况</span>
-            </div>
-            <div id="newClue_BjbrTabs" class="easyui-tabs" data-options="tools:'#newClue_BjbrTabTools'"
-                 style="height:430px">
-                <div id="bjbrTab1" title="被举报人1">
-                    <div class="newClue-tab-content">
-                        <table>
-                            <tr>
-                                <td width="47">*姓名：</td>
-                                <td width="138">
-                                    <input type="text"/>
-                                </td>
-                                <td width="25">&nbsp;</td>
-                                <td width="71">性别:</td>
-                                <td width="136">
-                                    <select style="width: 60%;">
-                                        <option>未知</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                    </select></td>
-                                <td>&nbsp;</td>
-                                <td width="78">民族：</td>
-                                <td width="130">
-                                    <select style="width: 60%;">
-                                        <option>汉族</option>
-                                        <option>重庆</option>
-                                        <option>河南</option>
-                                        <option>山东</option>
-                                    </select>
-                                </td>
-                                <td width="21">&nbsp;</td>
-                                <td width="82">政治面貌:</td>
-                                <td width="160">
-                                    <select style="width: 80%;">
-                                        <option>群众</option>
-                                        <option>重庆</option>
-                                        <option>河南</option>
-                                        <option>山东</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="11">&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td>*职级:</td>
-                                <td>
-                                    <select style="width: 100%;">
-                                        <option>政治局常委</option>
-                                        <option>重庆</option>
-                                        <option>河南</option>
-                                        <option>山东</option>
-                                    </select>
-                                </td>
-                                <td>&nbsp;</td>
-                                <td colspan="8">*案发地区：
-                                    <select style="width: 10%;">
-                                        <option>书记</option>
-                                        <option>重庆</option>
-                                        <option>河南</option>
-                                        <option>山东</option>
-                                    </select>
-                                    &nbsp;&nbsp;&nbsp;
-                                    单位、住址：
-                                    <input type="text" size="55"/></td>
-                            </tr>
-                            <tr>
-                                <td colspan="11">&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td width="47" class="font1">*身份:</td>
-                                <td width="138"><select class="input3">
-                                    <option></option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                </select></td>
-                                <td>&nbsp;</td>
-                                <td width="71" class="font1">特殊身份：</td>
-                                <td width="136">
-                                    <select class="input3">
-                                        <option>全国人大代表</option>
-                                        <option>重庆</option>
-                                        <option>河南</option>
-                                        <option>山东</option>
-                                    </select>
-                                </td>
-                                <td width="3">&nbsp;</td>
-                                <td width="71" class="font1">职务：</td>
-                                <td width="142">
-                                    <select class="input3">
-                                        <option>书记</option>
-                                        <option>重庆</option>
-                                        <option>河南</option>
-                                        <option>山东</option>
-                                    </select>
-                                </td>
-                                <td width="11">&nbsp;</td>
-                                <td width="78" class="font1">其他职务:</td>
-                                <td width="130">
-                                    <select class="input3">
-                                        <option>群众</option>
-                                        <option>重庆</option>
-                                        <option>河南</option>
-                                        <option>山东</option>
-                                    </select>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td width="97" class="font1 title3">*主要涉嫌性质：</td>
-                                <td width="132">
-                                    <select class="input5">
-                                        <option>一般违法</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                    </select>
-                                </td>
-                                <td width="94" class="font1">其他涉嫌性质:</td>
-                                <td width="90">
-                                    <select class="input5">
-                                        <option>一般违法</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                    </select></td>
-                                <td width="54">&nbsp;</td>
-                                <td width="68" class="font1">涉嫌领域：</td>
-                                <td width="152">
-                                    <select class="input3">
-                                        <option>工程建设</option>
-                                        <option>重庆</option>
-                                        <option>河南</option>
-                                        <option>山东</option>
-                                    </select>
-                                </td>
-
-                                <td width="8">&nbsp;</td>
-                                <td width="56" class="font1">涉嫌金额:</td>
-                                <td width="152">
-                                    <input type="text" border="1" class="input1" size="18"/>
-                                </td>
-
-                            </tr>
-
-
-                        </table>
-                        <table>
-                            <tr>
-                                <td width="97" class="font1 title3">*内容是否具体：</td>
-                                <td width="133">
-                                    <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;
-                                    <input type="radio"/>&nbsp;否
-                                </td>
-
-                                <td width="10">&nbsp;</td>
-                                <td width="83" class="font1">是否携款潜逃:</td>
-                                <td width="126">
-                                    <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;
-                                    <input type="radio"/>&nbsp;否
-                                </td>
-                                <td width="87" class="font1">其他举报人:</td>
-                                <td width="379">
-                                    <input type="text" border="1" class="input1" size="25"/>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td width="107" class="font1 title3">*是否属机关检察：</td>
-                                <td width="121">
-                                    <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;
-                                    <input type="radio"/>&nbsp;否
-                                </td>
-                                <td width="75" class="font1">*是否控告:</td>
-                                <td width="132">
-                                    <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;
-                                    <input type="radio"/>&nbsp;否
-                                </td>
-                                <td width="3">&nbsp;</td>
-                                <td width="71" class="font1">*是否申诉：</td>
-                                <td width="142">
-                                    <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;
-                                    <input type="radio"/>&nbsp;否
-                                </td>
-                                <td width="12">&nbsp;</td>
-                                <td width="81" class="font1">*是否其他:</td>
-                                <td width="159">
-                                    <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;
-                                    <input type="radio"/>&nbsp;否
-                                </td>
-
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td width="90" valign="top" class="font1 title3">*举报内容：</td>
-                                <td></td>
-                                <td>
-                                    <textarea name="" cols="" rows="" class="input6"> </textarea>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td colspan="11">&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td width="90" valign="top" class="font1 title3">*举报内容摘要：</td>
-                                <td></td>
-                                <td>
-                                    <textarea name="" cols="" rows="" class="input6"> </textarea>
-                                </td>
-                            </tr>
-                        </table>
-                        <div class="fujian">
-                            <li style="background:url(../images/upload.jpg) no-repeat; width:92px; height:28px; font-size:14px; font-family:'微软雅黑'; color:#FFF; text-decoration:none; padding-top:3px; padding-left:18px">
-                                <a href="#">附件上传</a></li>
-                            <li style="padding-top:8px">0个</li>
-                            <li style=" padding-top:8px; padding-left:30px"><a href="#"
-                                                                               style="color:#4ec0fa; font-weight:bold;text-decoration:none">查看附件</a>
-                            </li>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="newClue_BjbrTabTools">
-                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'"
-                   onclick="addBjbrPanel()"></a>
-                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-remove'"
-                   onclick="removeBjbrPanel()"></a>
-            </div>
-        </div>
-        <div class="newClue-box">
-            <div class="newClue-title">
-                <span>办理情况</span>
-            </div>
-            <table width="980" border="0" class="box2">
+        <div id="newClue_jbrTabContent" hidden>
+            <table class="newClue-jbr-table">
                 <tr>
-                    <td width="71" class="font1 title3">*处理方式：</td>
-                    <td width="134">
+                    <td width="90">姓名</td>
+                    <td width="115">
+                        <input type="text" name="keyword">
+                    </td>
+                    <td width="30">&nbsp;</td>
+                    <td width="90">*是否署名:</td>
+                    <td width="141">
+                        <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;
+                        <input type="radio"/>&nbsp;否
+                    </td>
+                    <td>&nbsp;</td>
+                    <td width="100">身份证号：</td>
+                    <td width="145">
+                        <input type="text" name="keyword">
+                    </td>
+                    <td width="30">&nbsp;</td>
+                    <td width="90">单位、住址:</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td width="90">联系电话:</td>
+                    <td width="115">
+                        <input type="text" name="keyword">
+                    </td>
+                    <td width="30">&nbsp;</td>
+                    <td width="90">来信地区：</td>
+                    <td width="145">
+                        <select style="width: 95%;">
+                            <option>浙江-嘉兴-海盐</option>
+                            <option>重庆</option>
+                            <option>河南</option>
+                            <option>山东</option>
+                        </select>
+                    </td>
+                    <td width="30">&nbsp;</td>
+                    <td width="100">其他举报人:</td>
+                    <td width="141">
+                        <input type="text" name="keyword">
+                    </td>
+                    <td>&nbsp;</td>
+                    <td width="">
+                        <input type="text" name="keyword">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="newClue_JbrTabs" style="height:auto;"></div>
+        <div id="newClue_JbrTabTools">
+            <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'"
+               onclick="addJbrPanel()"></a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-remove'"
+               onclick="removeJbrPanel()"></a>
+        </div>
+    </div>
+    <div class="newClue-box" style="padding-bottom: 0;">
+        <div class="newClue-title">
+            <span>被举报人基本情况</span>
+        </div>
+        <div id="newClue_bjbrTabContent" hidden>
+            <table>
+                <tr>
+                    <td width="47">*姓名：</td>
+                    <td width="138">
+                        <input type="text"/>
+                    </td>
+                    <td width="25">&nbsp;</td>
+                    <td width="71">性别:</td>
+                    <td width="136">
+                        <select style="width: 60%;">
+                            <option>未知</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select></td>
+                    <td>&nbsp;</td>
+                    <td width="78">民族：</td>
+                    <td width="130">
+                        <select style="width: 60%;">
+                            <option>汉族</option>
+                            <option>重庆</option>
+                            <option>河南</option>
+                            <option>山东</option>
+                        </select>
+                    </td>
+                    <td width="21">&nbsp;</td>
+                    <td width="82">政治面貌:</td>
+                    <td width="160">
+                        <select style="width: 80%;">
+                            <option>群众</option>
+                            <option>重庆</option>
+                            <option>河南</option>
+                            <option>山东</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="11">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>*职级:</td>
+                    <td>
+                        <select style="width: 100%;">
+                            <option>政治局常委</option>
+                            <option>重庆</option>
+                            <option>河南</option>
+                            <option>山东</option>
+                        </select>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td colspan="8">*案发地区：
+                        <select style="width: 10%;">
+                            <option>书记</option>
+                            <option>重庆</option>
+                            <option>河南</option>
+                            <option>山东</option>
+                        </select>
+                        &nbsp;&nbsp;&nbsp;
+                        单位、住址：
+                        <input type="text" size="55"/></td>
+                </tr>
+                <tr>
+                    <td colspan="11">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td width="47" class="font1">*身份:</td>
+                    <td width="138"><select class="input3">
+                        <option></option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select></td>
+                    <td>&nbsp;</td>
+                    <td width="71" class="font1">特殊身份：</td>
+                    <td width="136">
                         <select class="input3">
+                            <option>全国人大代表</option>
+                            <option>重庆</option>
+                            <option>河南</option>
+                            <option>山东</option>
+                        </select>
+                    </td>
+                    <td width="3">&nbsp;</td>
+                    <td width="71" class="font1">职务：</td>
+                    <td width="142">
+                        <select class="input3">
+                            <option>书记</option>
+                            <option>重庆</option>
+                            <option>河南</option>
+                            <option>山东</option>
+                        </select>
+                    </td>
+                    <td width="11">&nbsp;</td>
+                    <td width="78" class="font1">其他职务:</td>
+                    <td width="130">
+                        <select class="input3">
+                            <option>群众</option>
+                            <option>重庆</option>
+                            <option>河南</option>
+                            <option>山东</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td width="97" class="font1 title3">*主要涉嫌性质：</td>
+                    <td width="132">
+                        <select class="input5">
+                            <option>一般违法</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </td>
+                    <td width="94" class="font1">其他涉嫌性质:</td>
+                    <td width="90">
+                        <select class="input5">
+                            <option>一般违法</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select></td>
+                    <td width="54">&nbsp;</td>
+                    <td width="68" class="font1">涉嫌领域：</td>
+                    <td width="152">
+                        <select class="input3">
+                            <option>工程建设</option>
+                            <option>重庆</option>
+                            <option>河南</option>
+                            <option>山东</option>
+                        </select>
+                    </td>
+
+                    <td width="8">&nbsp;</td>
+                    <td width="56" class="font1">涉嫌金额:</td>
+                    <td width="152">
+                        <input type="text" border="1" class="input1" size="18"/>
+                    </td>
+
+                </tr>
+
+
+            </table>
+            <table>
+                <tr>
+                    <td width="97" class="font1 title3">*内容是否具体：</td>
+                    <td width="133">
+                        <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;
+                        <input type="radio"/>&nbsp;否
+                    </td>
+
+                    <td width="10">&nbsp;</td>
+                    <td width="83" class="font1">是否携款潜逃:</td>
+                    <td width="126">
+                        <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;
+                        <input type="radio"/>&nbsp;否
+                    </td>
+                    <td width="87" class="font1">其他举报人:</td>
+                    <td width="379">
+                        <input type="text" border="1" class="input1" size="25"/>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td width="107" class="font1 title3">*是否属机关检察：</td>
+                    <td width="121">
+                        <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;
+                        <input type="radio"/>&nbsp;否
+                    </td>
+                    <td width="75" class="font1">*是否控告:</td>
+                    <td width="132">
+                        <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;
+                        <input type="radio"/>&nbsp;否
+                    </td>
+                    <td width="3">&nbsp;</td>
+                    <td width="71" class="font1">*是否申诉：</td>
+                    <td width="142">
+                        <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;
+                        <input type="radio"/>&nbsp;否
+                    </td>
+                    <td width="12">&nbsp;</td>
+                    <td width="81" class="font1">*是否其他:</td>
+                    <td width="159">
+                        <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;
+                        <input type="radio"/>&nbsp;否
+                    </td>
+
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td width="90" valign="top" class="font1 title3">*举报内容：</td>
+                    <td></td>
+                    <td>
+                        <textarea name="" cols="" rows="" class="input6"> </textarea>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td colspan="11">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td width="90" valign="top" class="font1 title3">*举报内容摘要：</td>
+                    <td></td>
+                    <td>
+                        <textarea name="" cols="" rows="" class="input6"> </textarea>
+                    </td>
+                </tr>
+            </table>
+            <div class="fujian">
+                <li style="background:url(../images/upload.jpg) no-repeat; width:92px; height:28px; font-size:14px; font-family:'微软雅黑'; color:#FFF; text-decoration:none; padding-top:3px; padding-left:18px">
+                    <a href="#">附件上传</a></li>
+                <li style="padding-top:8px">0个</li>
+                <li style=" padding-top:8px; padding-left:30px"><a href="#"
+                                                                   style="color:#4ec0fa; font-weight:bold;text-decoration:none">查看附件</a>
+                </li>
+            </div>
+        </div>
+        <div id="newClue_BjbrTabs" style="height:auto;"></div>
+        <div id="newClue_BjbrTabTools">
+            <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'"
+               onclick="addBjbrPanel()"></a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-remove'"
+               onclick="removeBjbrPanel()"></a>
+        </div>
+    </div>
+    <div class="newClue-box">
+        <div class="newClue-title">
+            <span>办理情况</span>
+        </div>
+        <form id="newClue_CL">
+            <table>
+                <tr>
+                    <td width="71">*处理方式：</td>
+                    <td width="134">
+                        <select>
                             <option>交办</option>
                             <option>1</option>
                             <option>2</option>
@@ -561,15 +559,14 @@
                     <td width="90" valign="top" class="font1 title3">备注：</td>
                     <td></td>
                     <td>
-                        <textarea name="" cols="" rows="" class="input6"> </textarea>
+                        <textarea name="BZ" cols="" rows="" class="input6"> </textarea>
                     </td>
                 </tr>
             </table>
-
-        </div>
-    </form>
+        </form>
+    </div>
     <div class="newClue-submit">
-        <a class="easyui-linkbutton" data-options="iconCls:'icon-ok'">提交</a>
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-ok'" onclick="submitNewClueForm()">提交</a>
         <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'"
            onclick="loadRightPanelContent('ClueList.html')">取消</a>
     </div>

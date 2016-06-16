@@ -19,13 +19,13 @@ import java.util.Map;
 /**
  * Created by v-hesong on 6/14/2016.
  */
-public class LoadDropdown extends HttpServlet {
+public class LoadSearchDropdown extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Map<String, Object> map = new HashMap<String, Object>();
 
         DropdownDao dao = new DropdownDao();
-        // Normal dropdown
-        Hashtable<String, List<DropdownItemPojo>> dropdownHt = dao.getDropdownHt();
+        // This kind of dropdown is with "All" option value
+        Hashtable<String, List<DropdownItemPojo>> dropdownHt = dao.getSearchDropdownHt();
 
         //// Result data transfer
         response.setContentType("text/plain");

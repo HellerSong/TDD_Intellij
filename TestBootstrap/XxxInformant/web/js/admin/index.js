@@ -1,19 +1,44 @@
-/**
- * Created by Heller Song on 6/9/2016.
- */
+window.dropdownJson = '';
+window.searchDdropdownJson = '';
+
+
 $(function () {
+    //// Load all dropdown json string
+    $.ajax({
+        type: 'post',
+        url: 'LoadDropdown',
+        // data: values,
+        async: false,
+        success: function (result) {
+            result = (new Function('return ' + result))();
+
+            if (result.total > 0) {
+                window.searchDdropdownJson = result.rows;
+                //alert(result.rows.JBKJXSLY_LYFS[0].optionHtmlContent);
+            }
+        }
+    });
+
+    $.ajax({
+        type: 'post',
+        url: 'LoadSearchDropdown',
+        // data: values,
+        async: false,
+        success: function (result) {
+            result = (new Function('return ' + result))();
+
+            if (result.total > 0) {
+                window.searchDdropdownJson = result.rows;
+            }
+        }
+    });
+
     setHeadDatetime();
-    //loadRightPanelContent('ClueList.html');
 
-    loadRightPanelContent('NewClue.html');
-    // $.post('LoadDropdown', null, function (result) {
-    //     result = (new Function('return ' + result))();
-    //
-    //     // if (result.total > 0) {
-    //     //
-    //     // }
-    // });
+    loadRightPanelContent('ClueList.html');
+    //loadRightPanelContent('NewClue.html');
 
+    //// Set click action for left panel item
     $('div.sdmenu a').click(function () {
         // Load exactly html page
         loadRightPanelContent($(this).attr('title'));
