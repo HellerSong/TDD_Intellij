@@ -1,8 +1,9 @@
 package com.dao;
 
 import com.pojo.Code_tPojo;
-import com.pojo.CodelocalPojo;
+import com.pojo.DropdownItemPojo;
 
+import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
 
@@ -11,32 +12,59 @@ import java.util.List;
  * <p>Authors : Heller Song (HellerSong@Outlook.com)</p>
  */
 public class DropdownDao {
-    public Hashtable<String, List<Hashtable<String, String>>> dropdownTable = new Hashtable<String, List<Hashtable<String, String>>>();
+    private Hashtable<String, List<DropdownItemPojo>> regionDropdownHt = new Hashtable<String, List<DropdownItemPojo>>();
+    private Hashtable<String, String> mappingHt = new Hashtable<String, String>();
 
     public DropdownDao() {
-        Hashtable<String, String> mappingTable = new Hashtable<String, String>();
-        mappingTable.put("举报方式代码", "JBKJXSLY_LYFS");
+        //// Code_t库表中的下拉选项的处理
+        mappingHt.put("JBKJXSLY_LYFS", "举报方式代码");
 
+        Code_tDao code_tDao = new Code_tDao();
 
-        List<Code_tPojo> code_tList = new Code_tDao().getAll();
-        List<CodelocalPojo> codelocalList = new CodelocalDao().getAll();
-
-        for (Code_tPojo pojo : code_tList) {
-
-            if (mappingTable.containsKey(pojo.getOptionName())) {
-                Hashtable<String, String> tempHt = new Hashtable<String, String>();
-                tempHt.put(pojo.getCodeId(), pojo.getContent());
-                //dropdownTable.put(mappingTable.get(pojo.getOptionName()), tempHt);
+        for (String key : mappingHt.keySet()) {
+            String optionType = mappingHt.get(key);
+            List<DropdownItemPojo> itemList = new ArrayList<DropdownItemPojo>();
+            List<Code_tPojo> pojoList = code_tDao.getAll("where OptionName='" + optionType + "'");
+            for (Code_tPojo p : pojoList) {
+                DropdownItemPojo dropdownItemPojo = new DropdownItemPojo();
+                dropdownItemPojo.setOptionType(p.getOptionName());
+                dropdownItemPojo.setOptionValue(p.getCodeId());
+                dropdownItemPojo.setOptionHtmlContent(p.getContent());
+                itemList.add(dropdownItemPojo);
             }
-        }
-//        for (CodelocalPojo pojo : codelocalList) {
-//            Hashtable<String, String> tempHt = new Hashtable<String, String>();
-//            tempHt.put(pojo.getCodeID(), pojo.getCONTENT());
-//            if (mappingTable.containsKey(pojo.getOPTIONNAME())) {
-//                dropdownTable.put(mappingTable.get(pojo.getOPTIONNAME()), tempHt);
-//            }
-//        }
 
-        // 转往单位单独处理
+            regionDropdownHt.put(key, itemList);
+        }
+
+
+        //// Codelocal库表中的下拉选项的处理
+
+        CodelocalDao codelocalDao = new CodelocalDao();
+
+
+        // 转往单位下拉选项单独处理
+    }
+
+    public Hashtable<String, List<DropdownItemPojo>> getDropdownHt() {
+        return regionDropdownHt;
+    }
+
+    public Hashtable<String, List<DropdownItemPojo>> getSearchDropdownHt() {
+        String[] searchDropdownArray = new String[]{"JBKJXSLY_LYFS"};
+        Hashtable<String, List<DropdownItemPojo>> resultTable = new Hashtable<String, List<DropdownItemPojo>>();
+
+        for (String s : searchDropdownArray) {
+            // Add "All" item to dropdown item list
+            List<DropdownItemPojo> itemList = regionDropdownHt.get(s);
+            DropdownItemPojo dropdownItemPojo = new DropdownItemPojo();
+            dropdownItemPojo.setOptionType(mappingHt.get(s));
+            dropdownItemPojo.setOptionValue("0");
+            dropdownItemPojo.setOptionHtmlContent("全部");
+            itemList.add(0, dropdownItemPojo);
+
+            resultTable.put(s, itemList);
+        }
+
+        return resultTable;
     }
 }

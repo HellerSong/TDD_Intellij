@@ -240,8 +240,8 @@ body {
     margin-bottom: 20px
 }
 
-.box2 {
-    margin: 0 auto
+.newClue-box form {
+    margin-top: 10px;
 }
 
 .box_tab {
@@ -310,7 +310,7 @@ body {
     width: 80px;
 }
 
-.newClue-table-content {
+.newClue-jbr-table, .newClue-bjbr-table {
     margin: 10px;
 }
 

@@ -1,9 +1,10 @@
-/**
- * Created by Heller Song on 6/9/2016.
- */
 function initializeClueList() {
+    //// Main elements setting
     $.parser.parse();
     $('.easyui-combobox').combobox({panelHeight: 'auto'});
+
+
+    //// Load the data grid data
     $('#clueList_Dg').datagrid({
         fit: true,
         striped: true,
@@ -32,14 +33,18 @@ function initializeClueList() {
     });
     queryClueListDefaultData();
 
-    //var myData = $.parseJSON(jsondata);
-    //$('.clueList-datagrid').datagrid("loadData", myData);
 
-    // $('#cbJBKJXSLY_LYFS').combobox({
-    //     data: myData,
-    //     valueField: 'id',
-    //     textField: 'JBKJXSLY_BJBRXM'
-    // });
+    //// Load all dropdown data
+    var cbLXFS = $('#cbJBKJXSLY_LYFS');
+    cbLXFS.combobox({
+        data: window.searchDdropdownJson.JBKJXSLY_LYFS,
+        valueField: 'optionValue',
+        textField: 'optionHtmlContent',
+        onLoadSuccess: function () {
+            var data = cbLXFS.combobox('getData');
+            cbLXFS.combobox('select', data[0].optionValue);
+        }
+    });
 }
 
 function actionFormatter() {

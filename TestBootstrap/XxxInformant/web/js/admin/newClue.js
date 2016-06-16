@@ -1,6 +1,3 @@
-/**
- * Created by Heller Song on 6/9/2016.
- */
 var jbrIndex = 1;
 var bjbrIndex = 1;
 
@@ -9,16 +6,6 @@ function initializeNewClue() {
     $('.easyui-combobox').combobox({panelHeight: 'auto'});
 
     initJbrTabs();
-    $('#newClue_BjbrTabs').tabs({
-        onBeforeClose: function () {
-            bjbrIndex--;
-        }
-    });
-    // JS修饰Input，Select等防止样式加载两次的BUG
-    // $('#newClue_JbrTabs input[type="text"]').textbox();
-    // $('#newClue_JbrTabs select').combobox({panelHeight: 'auto'});
-    // $('#newClue_BjbrTabs input[type="text"]').textbox();
-    // $('#newClue_BjbrTabs select').combobox({panelHeight: 'auto'});
 }
 
 function initJbrTabs() {
@@ -57,6 +44,7 @@ function removeJbrPanel() {
     }
 }
 
+
 function addBjbrPanel() {
     bjbrIndex++;
     $('#newClue_BjbrTabs').tabs('add', {
@@ -74,4 +62,10 @@ function removeBjbrPanel() {
         mainTabs.tabs('close', index);
         bjbrIndex--;
     }
+}
+
+function submitNewClueForm() {
+    //$('input[name="JBRXM"]').val('test');
+    //alert($('#newClue_XS').serialize());
+    alert($('#newClue_CL').serialize());
 }
