@@ -40,28 +40,34 @@
     </script>
 </head>
 <body style="overflow-y: hidden">
-<h2>The links of the following navbar is going to be highlighted</h2>
-<p>Scroll the area below and watch the navigation update. The dropdown sub items will be highlighted as well. Try
-    it!</p>
-<nav class="navbar navbar-inverse navbar-static-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">w3resource</a>
+<!--1. Import bootstrap.js-->
+<!--2. Navigation bar which fixed on top;-->
+<!--3. Set scroll content data-target and height;-->
+<!--4. data-spy="scroll", data-offset="10" (Default)-->
+<header>
+    <h2>The links of the following navbar is going to be highlighted</h2>
+    <p>Scroll the area below and watch the navigation update. The dropdown sub items will be highlighted as well. Try
+        it!</p>
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">w3resource</a>
+            </div>
+            <ul class="nav navbar-nav" role="tablist">
+                <li class="active"><a href="#php">PHP</a></li>
+                <li class=""><a href="#js">JS</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Databases<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li class=""><a href="#mysql">MySQL</a></li>
+                        <li class=""><a href="#pgsql">PostgreSQL</a></li>
+                        <li class=""><a href="#mgdb">MongoDB</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-        <ul class="nav navbar-nav" role="tablist">
-            <li class="active"><a href="#php">PHP</a></li>
-            <li class=""><a href="#js">JS</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Databases<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li class=""><a href="#mysql">MySQL</a></li>
-                    <li class=""><a href="#pgsql">PostgreSQL</a></li>
-                    <li class=""><a href="#mgdb">MongoDB</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-</nav>
+    </nav>
+</header>
 <div class="scroll-content" data-spy="scroll" data-target="nav.navbar" data-offset="50">
     <div class="container" id="php">
         <h4>PHP</h4>

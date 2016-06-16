@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Loading Button</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script>
+        $(function () {
+            $('#btnLoad').click(function () {
+                $(this).button('loading');
+
+                setTimeout(function () {
+                    $('#btnLoad').button('reset');
+                }, 3000);
+                //$(this).button('complete');
+            });
+        })
+    </script>
+</head>
+<body>
+<div class="container">
+    <h3>This is a loading button:</h3>
+    <button class="btn btn-primary" id="btnLoad" data-complete-text="Complete" data-loading-text="Loading">Load</button>
+</div>
+</body>
+</html>

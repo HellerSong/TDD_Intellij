@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Collapse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container">
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#myCollapse">Hide</button>
+    <br/>
+    <div id="myCollapse" class="collapse in">Collapse Content</div>
+
+    <div class="panel-group" id="panelContainer">
+        <div class="panel panel-default">
+            <div class="panel-heading" data-toggle="collapse" data-parent="#panelContainer" data-target="#collapse1">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#panelContainer" href="#collapse1">Title1</a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in">
+                <div class="panel-body">Title1 Mapping Content</div>
+            </div>
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#panelContainer" href="#collapse2">Title2</a>
+                </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">Title1 Mapping Content</div>
+            </div>
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#panelContainer" href="#collapse3">Title1</a>
+                </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+                <div class="panel-body">Title1 Mapping Content</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
