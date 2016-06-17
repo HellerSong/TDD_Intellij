@@ -244,52 +244,6 @@ body {
     margin-top: 10px;
 }
 
-.box_tab {
-    margin-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    text-align: center;
-}
-
-.box_tab a:link {
-    width: 83px;
-    height: 24px;
-    background: url(../images/boxtablink.jpg) repeat-x;
-    color: #5c5c5c;
-    text-decoration: none;
-    margin-right: 15px;
-    overflow: hidden;
-    display: block;
-    float: left;
-    padding-top: 5px
-}
-
-.box_tab a:hover {
-    width: 83px;
-    height: 24px;
-    background: url(../images/boxtab.jpg) repeat-x;
-    color: #FFF;
-    text-decoration: none;
-    margin-right: 15px;
-    overflow: hidden;
-    display: block;
-    float: left;
-    padding-top: 5px
-}
-
-.box_tab a:visited {
-    width: 83px;
-    height: 24px;
-    background: url(../images/boxtablink.jpg) repeat-x;
-    color: #FFF;
-    text-decoration: none;
-    margin-right: 15px;
-    overflow: hidden;
-    display: block;
-    float: left;
-    padding-top: 5px
-}
-
 .fujian {
     width: 250px;
     float: right;
@@ -310,7 +264,7 @@ body {
     width: 80px;
 }
 
-.newClue-jbr-table, .newClue-bjbr-table {
+.newClue-table, .newClue-jbr-table, .newClue-bjbr-table {
     margin: 10px;
 }
 

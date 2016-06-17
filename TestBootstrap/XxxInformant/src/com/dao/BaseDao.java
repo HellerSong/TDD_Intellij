@@ -222,7 +222,7 @@ public class BaseDao<T, PK> implements IDao<T, PK> {
             throw new InvalidParameterException();
 
         try {
-            String sql = "select distinct * from " + tableName + " " + sWhere;
+            String sql = "select * from " + tableName + " " + sWhere;
             DevLog.write(sql);
 
             return getAllRecords(sql);

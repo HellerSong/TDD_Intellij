@@ -13,7 +13,7 @@ $(function () {
             result = (new Function('return ' + result))();
 
             if (result.total > 0) {
-                window.searchDdropdownJson = result.rows;
+                window.dropdownJson = result.rows;
                 //alert(result.rows.JBKJXSLY_LYFS[0].optionHtmlContent);
             }
         }
@@ -35,8 +35,8 @@ $(function () {
 
     setHeadDatetime();
 
-    loadRightPanelContent('ClueList.html');
-    //loadRightPanelContent('NewClue.html');
+    //loadRightPanelContent('ClueList.html');
+    loadRightPanelContent('NewClue.html');
 
     //// Set click action for left panel item
     $('div.sdmenu a').click(function () {
@@ -65,6 +65,33 @@ function loadRightPanelContent(htmlFile) {
     });
 }
 
+function loadDropdown(selectElementId) {
+    var cb = $('#' + selectElementId);
+    var selectElementName = selectElementId.substring(2, selectElementId.length);
+    cb.combobox({
+        data: window.dropdownJson[selectElementName],
+        valueField: 'optionValue',
+        textField: 'optionHtmlContent',
+        onLoadSuccess: function () {
+            var data = cb.combobox('getData');
+            cb.combobox('select', data[0].optionValue);
+        }
+    });
+}
+
+function loadSearchDropdown(selectElementId) {
+    var cb = $('#' + selectElementId);
+    var selectElementName = selectElementId.substring(2, selectElementId.length);
+    cb.combobox({
+        data: window.searchDdropdownJson[selectElementName],
+        valueField: 'optionValue',
+        textField: 'optionHtmlContent',
+        onLoadSuccess: function () {
+            var data = cb.combobox('getData');
+            cb.combobox('select', data[0].optionValue);
+        }
+    });
+}
 function setHeadDatetime() {
     var headTimeElement = $('.index-head-time-value');
     headTimeElement.html('日期：' + (new Date()).toLocaleString());

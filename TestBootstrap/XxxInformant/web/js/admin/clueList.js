@@ -35,16 +35,7 @@ function initializeClueList() {
 
 
     //// Load all dropdown data
-    var cbLXFS = $('#cbJBKJXSLY_LYFS');
-    cbLXFS.combobox({
-        data: window.searchDdropdownJson.JBKJXSLY_LYFS,
-        valueField: 'optionValue',
-        textField: 'optionHtmlContent',
-        onLoadSuccess: function () {
-            var data = cbLXFS.combobox('getData');
-            cbLXFS.combobox('select', data[0].optionValue);
-        }
-    });
+    loadSearchDropdown('cbJBKJXSLY_LYFS');
 }
 
 function actionFormatter() {

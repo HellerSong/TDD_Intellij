@@ -3,12 +3,9 @@ package com.pojo;
 public class OrgnizePojo {
     private String ID;
     private String MemberType;
-    private String LoginId;
-    private String PASSWORDS;
     private String DisplayName;
     private String IsGoOut;
     private String OwnerID;
-    private String IsOperator;
     private String LeaderID;
     private String IsZWDW;
     private String JCYDM;
@@ -29,22 +26,6 @@ public class OrgnizePojo {
 
     public void setMemberType(String MemberType) {
         this.MemberType = MemberType;
-    }
-
-    public String getLoginId() {
-        return LoginId;
-    }
-
-    public void setLoginId(String LoginId) {
-        this.LoginId = LoginId;
-    }
-
-    public String getPASSWORDS() {
-        return PASSWORDS;
-    }
-
-    public void setPASSWORDS(String PASSWORDS) {
-        this.PASSWORDS = PASSWORDS;
     }
 
     public String getDisplayName() {
@@ -69,14 +50,6 @@ public class OrgnizePojo {
 
     public void setOwnerID(String OwnerID) {
         this.OwnerID = OwnerID;
-    }
-
-    public String getIsOperator() {
-        return IsOperator;
-    }
-
-    public void setIsOperator(String IsOperator) {
-        this.IsOperator = IsOperator;
     }
 
     public String getLeaderID() {
