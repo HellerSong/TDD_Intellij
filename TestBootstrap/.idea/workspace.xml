@@ -5,7 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e8c390e-1e00-4781-be2f-3c4c0722cc6a" name="Default" comment="update all infromant v2 project&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/web/images/footer_1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/web/images/login1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/web/images/login2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/web/images/login3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/web/images/login3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/web/images/login4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/web/images/password.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/web/images/username.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/servlet/AdminDeleteClue.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/servlet/AdminLogin.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/servlet/AdminLogout.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/web/CheckLoginFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/src/com/web/UserRewriteFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/web/admin/Login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/web/css/adminlogin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/web/js/admin/login.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/web/js/easyui-lang-zh_CN.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XxxInformant/web/js/jquery.session.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestGrammar/user/Alert.html" afterPath="$PROJECT_DIR$/TestGrammar/user/Alert.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestGrammar/user/Carousel.html" afterPath="$PROJECT_DIR$/TestGrammar/user/Carousel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestGrammar/user/Collapse.html" afterPath="$PROJECT_DIR$/TestGrammar/user/Collapse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestGrammar/user/LoadingButton.html" afterPath="$PROJECT_DIR$/TestGrammar/user/LoadingButton.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/src/com/dao/DropdownDao.java" afterPath="$PROJECT_DIR$/XxxInformant/src/com/dao/DropdownDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/src/com/servlet/LoadDropdown.java" afterPath="$PROJECT_DIR$/XxxInformant/src/com/servlet/LoadDropdown.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/src/com/servlet/LoadSearchDropdown.java" afterPath="$PROJECT_DIR$/XxxInformant/src/com/servlet/LoadSearchDropdown.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/XxxInformant/web/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/admin/ClueList.html" afterPath="$PROJECT_DIR$/XxxInformant/web/admin/ClueList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/admin/Index.html" afterPath="$PROJECT_DIR$/XxxInformant/web/admin/Index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/admin/NewClue.html" afterPath="$PROJECT_DIR$/XxxInformant/web/admin/NewClue.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/css/admin.css" afterPath="$PROJECT_DIR$/XxxInformant/web/css/admin.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/index.jsp" afterPath="$PROJECT_DIR$/XxxInformant/web/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/js/admin/clueList.js" afterPath="$PROJECT_DIR$/XxxInformant/web/js/admin/clueList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/js/admin/index.js" afterPath="$PROJECT_DIR$/XxxInformant/web/js/admin/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/js/admin/newClue.js" afterPath="$PROJECT_DIR$/XxxInformant/web/js/admin/newClue.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/js/shared.js" afterPath="$PROJECT_DIR$/XxxInformant/web/js/shared.js" />
     </list>
     <ignored path="TestBootstrap.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,92 +71,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="newClue.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/admin/newClue.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-              <folding>
-                <element signature="n#!!block;n#initJbrTabs#0" expanded="false" />
-                <element signature="n#!!block;n#addJbrPanel#0" expanded="false" />
-                <element signature="n#!!block;n#removeJbrPanel#0" expanded="false" />
-                <element signature="n#!!block;n#initBjbrTabs#0" expanded="false" />
-                <element signature="n#!!block;n#addBjbrPanel#0" expanded="false" />
-                <element signature="n#!!block;n#removeBjbrPanel#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="NewClue.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/NewClue.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="100" column="46" selection-start-line="100" selection-start-column="46" selection-end-line="100" selection-end-column="46" />
+            <state relative-caret-position="2790">
+              <caret line="160" column="109" selection-start-line="160" selection-start-column="109" selection-end-line="160" selection-end-column="109" />
               <folding>
                 <element signature="n#style#0;n#select#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#select#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#select#0;n#td#4;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#select#0;n#td#7;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#select#0;n#td#10;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#td#1;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#td#3;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#td#5;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#table#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#table#1;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#table#2;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#table#3;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#table#4;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#li#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#td#4;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#td#7;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#select#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#td#4;n#tr#0;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#select#0;n#td#7;n#tr#0;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#td#10;n#tr#0;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#select#0;n#td#1;n#tr#2;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#td#3;n#tr#2;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#td#5;n#tr#2;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#table#3;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#table#4;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#table#5;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#table#6;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#table#7;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#table#8;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#input#0;n#td#4;n#tr#2;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#td#7;n#tr#2;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#td#1;n#tr#1;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#td#3;n#tr#1;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#td#6;n#tr#1;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#td#4;n#tr#2;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#td#1;n#tr#3;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#td#3;n#tr#3;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#td#1;n#tr#5;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#td#3;n#tr#5;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#td#1;n#tr#8;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#td#1;n#tr#9;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#td#3;n#tr#9;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#td#1;n#tr#11;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Carousel.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TestGrammar/user/Carousel.html">
+      <file leaf-file-name="newClue.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/admin/newClue.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-              <folding />
+            <state relative-caret-position="4014">
+              <caret line="263" column="43" selection-start-line="263" selection-start-column="43" selection-end-line="263" selection-end-column="43" />
+              <folding>
+                <element signature="n#!!block;n#getJbrTableElement#0" expanded="false" />
+                <element signature="n#!!block;n#removeJbrPanel#0" expanded="false" />
+                <marker date="1466255235282" expanded="true" signature="1674:1686" ph="..." />
+                <marker date="1466255235282" expanded="true" signature="2147:2159" ph="..." />
+                <marker date="1466255235282" expanded="true" signature="2372:2384" ph="..." />
+                <marker date="1466255235282" expanded="true" signature="4001:4012" ph="..." />
+                <marker date="1466255235282" expanded="true" signature="4441:4452" ph="..." />
+                <marker date="1466255235282" expanded="true" signature="4636:4647" ph="..." />
+                <marker date="1466255235282" expanded="true" signature="4923:4934" ph="..." />
+                <marker date="1466255235282" expanded="true" signature="5117:5128" ph="..." />
+                <marker date="1466255235282" expanded="true" signature="5350:5360" ph="..." />
+                <marker date="1466255235282" expanded="true" signature="5626:5637" ph="..." />
+                <marker date="1466255235282" expanded="true" signature="5821:5832" ph="..." />
+                <marker date="1466255235282" expanded="true" signature="6014:6025" ph="..." />
+                <marker date="1466255235282" expanded="true" signature="6209:6220" ph="..." />
+                <marker date="1466255235282" expanded="true" signature="6502:6513" ph="..." />
+                <marker date="1466255235282" expanded="true" signature="6688:6699" ph="..." />
+                <marker date="1466255235282" expanded="true" signature="6872:6883" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dropdown.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestGrammar/user/Dropdown.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="69" selection-start-line="5" selection-start-column="4" selection-end-line="9" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="admin.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/XxxInformant/web/css/admin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="266" column="16" selection-start-line="266" selection-start-column="16" selection-end-line="266" selection-end-column="16" />
+            <state relative-caret-position="-363">
+              <caret line="115" column="33" selection-start-line="115" selection-start-column="33" selection-end-line="115" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="easyui.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/XxxInformant/web/css/easyui.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="11916">
+              <caret line="662" column="4" selection-start-line="662" selection-start-column="4" selection-end-line="662" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -129,8 +164,48 @@
       <file leaf-file-name="Index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/Index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+            <state relative-caret-position="332">
+              <caret line="56" column="28" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClueList.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/ClueList.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1404">
+              <caret line="78" column="48" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="48" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#td#4;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#td#7;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#td#1;n#tr#1;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#td#4;n#tr#1;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#td#7;n#tr#1;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="clueList.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/admin/clueList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="990">
+              <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+              <folding>
+                <element signature="n#!!block;n#deleteAllSelectedRows#0" expanded="false" />
+                <element signature="n#!!block;n#deleteCurrentRow#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/admin/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="738">
+              <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -141,10 +216,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
+        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="Class" />
-        <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -165,15 +240,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TestGrammar/user/ProgressBar.html" />
-        <option value="$PROJECT_DIR$/TestGrammar/user/MediaList.html" />
-        <option value="$PROJECT_DIR$/TestGrammar/user/ListGroup.html" />
-        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/DaoMapper.java" />
-        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/IDao.java" />
-        <option value="$PROJECT_DIR$/XxxInformant/src/com/unittest/TestDao.java" />
-        <option value="$PROJECT_DIR$/XxxInformant/src/com/utils/MySqlUtil.java" />
-        <option value="$PROJECT_DIR$/XxxInformant/src/com/utils/DevRegex.java" />
-        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/JbkjxslyDao.java" />
         <option value="$PROJECT_DIR$/XxxInformant/src/dbconfig.properties" />
         <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/DaoConverter.java" />
         <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/OrgmemberinfoDao.java" />
@@ -183,8 +249,6 @@
         <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/Code_tDao.java" />
         <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/CodelocalDao.java" />
         <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/DictDao.java" />
-        <option value="$PROJECT_DIR$/XxxInformant/web/index.jsp" />
-        <option value="$PROJECT_DIR$/XxxInformant/web/js/shared.js" />
         <option value="$PROJECT_DIR$/XxxInformant/src/com/pojo/JbkjxslyPojo.java" />
         <option value="$PROJECT_DIR$/XxxInformant/test/com/unittest/TestBaseDao.java" />
         <option value="$PROJECT_DIR$/XxxInformant/src/com/pojo/VClueListPojo.java" />
@@ -196,26 +260,37 @@
         <option value="$PROJECT_DIR$/TestGrammar/user/From.html" />
         <option value="$PROJECT_DIR$/XxxInformant/src/com/pojo/DropdownItemPojo.java" />
         <option value="$PROJECT_DIR$/TestGrammar/user/Transition.html" />
-        <option value="$PROJECT_DIR$/XxxInformant/src/com/servlet/LoadSearchDropdown.java" />
-        <option value="$PROJECT_DIR$/XxxInformant/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/XxxInformant/web/admin/Index.html" />
         <option value="$PROJECT_DIR$/TestNavigation/user/ScrollNav.html" />
-        <option value="$PROJECT_DIR$/TestGrammar/user/LoadingButton.html" />
-        <option value="$PROJECT_DIR$/TestGrammar/user/Collapse.html" />
-        <option value="$PROJECT_DIR$/XxxInformant/web/admin/ClueList.html" />
         <option value="$PROJECT_DIR$/XxxInformant/web/admin/new.html" />
-        <option value="$PROJECT_DIR$/XxxInformant/web/css/style.css" />
-        <option value="$PROJECT_DIR$/XxxInformant/web/js/admin/clueList.js" />
         <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/BaseDao.java" />
-        <option value="$PROJECT_DIR$/XxxInformant/src/com/servlet/LoadDropdown.java" />
-        <option value="$PROJECT_DIR$/XxxInformant/web/js/admin/index.js" />
-        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/DropdownDao.java" />
         <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/OrgnizeDao.java" />
         <option value="$PROJECT_DIR$/XxxInformant/src/com/pojo/OrgnizePojo.java" />
-        <option value="$PROJECT_DIR$/XxxInformant/web/js/admin/newClue.js" />
-        <option value="$PROJECT_DIR$/XxxInformant/web/css/admin.css" />
-        <option value="$PROJECT_DIR$/XxxInformant/web/admin/NewClue.html" />
         <option value="$PROJECT_DIR$/TestGrammar/user/Carousel.html" />
+        <option value="$PROJECT_DIR$/TestGrammar/user/LoadingButton.html" />
+        <option value="$PROJECT_DIR$/TestGrammar/user/Collapse.html" />
+        <option value="$PROJECT_DIR$/TestGrammar/user/Alert.html" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/DropdownDao.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/web/js/shared.js" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/servlet/LoadDropdown.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/servlet/LoadSearchDropdown.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/servlet/AdminLogin.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/servlet/AdminLogout.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/web/index.jsp" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/web/UserRewriteFilter.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/web/admin/login2.html" />
+        <option value="$PROJECT_DIR$/XxxInformant/web/css/adminlogin.css" />
+        <option value="$PROJECT_DIR$/XxxInformant/web/admin/Login.html" />
+        <option value="$PROJECT_DIR$/XxxInformant/web/js/admin/login.js" />
+        <option value="$PROJECT_DIR$/XxxInformant/web/admin/ClueList.html" />
+        <option value="$PROJECT_DIR$/XxxInformant/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/XxxInformant/src/com/servlet/AdminDeleteClue.java" />
+        <option value="$PROJECT_DIR$/XxxInformant/web/css/style.css" />
+        <option value="$PROJECT_DIR$/XxxInformant/web/js/admin/clueList.js" />
+        <option value="$PROJECT_DIR$/XxxInformant/web/js/admin/index.js" />
+        <option value="$PROJECT_DIR$/XxxInformant/web/admin/Index.html" />
+        <option value="$PROJECT_DIR$/XxxInformant/web/js/admin/newClue.js" />
+        <option value="$PROJECT_DIR$/XxxInformant/web/admin/NewClue.html" />
+        <option value="$PROJECT_DIR$/XxxInformant/web/css/admin.css" />
       </list>
     </option>
   </component>
@@ -242,8 +317,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1456" />
-    <option name="height" value="876" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -301,7 +376,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
@@ -311,10 +385,6 @@
               <option name="myItemId" value="TestBootstrap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -336,19 +406,60 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TestGrammar" />
+              <option name="myItemId" value="XxxInformant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XxxInformant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XxxInformant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
@@ -356,7 +467,12 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/GitHub/TDD_Intellij/TestBootstrap/XxxInformant/web/admin/ClueList.html" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/GitHub/TDD_Intellij/TestBootstrap/XxxInformant/web/admin/NewClue.html" />
+  </component>
+  <component name="Push.Settings">
+    <force-push-targets>
+      <force-push-target remote-path="origin" branch="hellersong" />
+    </force-push-targets>
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -364,11 +480,11 @@
       <recent name="com.dao" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\TestGrammar\images" />
       <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\XxxInformant\web\css" />
+      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\XxxInformant\src\com\servlet" />
+      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\XxxInformant\web\js" />
+      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\XxxInformant\web\images" />
       <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\XxxInformant\web\admin" />
-      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\TestGrammar\js" />
-      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\TestGrammar\user" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat6.0">
@@ -836,10 +952,10 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <configuration default="false" name="Tomcat6.0" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 6.0.45" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration default="false" name="Tomcat6.0" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 6.0.45" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.6">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8 " />
-      <option name="UPDATING_POLICY" value="restart-server" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="XxxInformant:war exploded">
           <settings>
@@ -978,7 +1094,12 @@
       <workItem from="1466083201494" duration="5216000" />
       <workItem from="1466116857863" duration="7538000" />
       <workItem from="1466129230839" duration="1023000" />
-      <workItem from="1466130419918" duration="8658000" />
+      <workItem from="1466130419918" duration="14642000" />
+      <workItem from="1466162965446" duration="16646000" />
+      <workItem from="1466183420691" duration="2226000" />
+      <workItem from="1466204803302" duration="15583000" />
+      <workItem from="1466227390123" duration="23605000" />
+      <workItem from="1466260690286" duration="111000" />
     </task>
     <task id="LOCAL-00001" summary="update test navigation">
       <created>1464684723063</created>
@@ -1183,7 +1304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1466146802945</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="update all infromant v2 project&#10;">
+      <created>1466146953320</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1466146953320</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1210,7 +1338,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243471000" />
+    <option name="totallyTimeSpent" value="307626000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1222,12 +1350,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6066946" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1235,23 +1362,24 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32775453" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32820514" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43514645" sideWeight="0.5" order="12" side_tool="false" content_ui="combo" x="-1420" y="207" width="1412" height="399" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1969914" sideWeight="0.49109414" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19515885" sideWeight="0.49109414" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19969743" sideWeight="0.5089058" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19969743" sideWeight="0.5089058" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6051282" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43418804" sideWeight="0.5" order="12" side_tool="false" content_ui="combo" x="-1420" y="207" width="1412" height="399" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1288,116 +1416,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/Code_tDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/images/layout.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/jquery.easyui.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250686">
-          <caret line="13927" column="0" selection-start-line="13927" selection-start-column="0" selection-end-line="13927" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/DaoConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="328" column="56" selection-start-line="328" selection-start-column="45" selection-end-line="328" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/OneDrive/GitHub/TDD_ExcelVBA/XsclPojo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/JbkjxslyDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="62" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/pojo/Code_tPojo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/pojo/XsclPojo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/test/com/unittest/TestBaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/pojo/VClueListPojo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="1025" column="0" selection-start-line="1025" selection-start-column="0" selection-end-line="1025" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/pojo/RoleinfoPojo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/BaseViewDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/VClueListDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/DaoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="97" column="56" selection-start-line="97" selection-start-column="56" selection-end-line="97" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/shared.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TestGrammar/user/ListGroup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1406,13 +1424,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TestGrammar/user/MediaList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestGrammar/user/ModalDialog.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1430,13 +1441,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestGrammar/user/Tooltip.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -1461,47 +1465,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/servlet/AdminLoadClueList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TestGrammar/user/Transition.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
           <caret line="47" column="7" selection-start-line="42" selection-start-column="4" selection-end-line="47" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestGrammar/user/Alert.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="69" selection-start-line="5" selection-start-column="4" selection-end-line="9" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestGrammar/user/Collapse.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-81">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestGrammar/user/LoadingButton.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="9" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1512,89 +1479,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/ClueList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="34" column="71" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/new.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2214">
-          <caret line="171" column="0" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="451" column="1" selection-start-line="381" selection-start-column="0" selection-end-line="451" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/new.html" />
     <entry file="file://$PROJECT_DIR$/XxxInformant/web/css/icon.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/css/easyui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53856">
-          <caret line="2992" column="4" selection-start-line="2992" selection-start-column="4" selection-end-line="2995" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/servlet/LoadSearchDropdown.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/servlet/LoadDropdown.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/admin/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
-          <folding>
-            <element signature="n#!!block;n#loadRightPanelContent#0" expanded="false" />
-            <element signature="n#!!block;n#setHeadDatetime#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/admin/clueList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/BaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="219" column="19" selection-start-line="219" selection-start-column="19" selection-end-line="219" selection-end-column="19" />
-          <folding>
-            <marker date="1466125883331" expanded="true" signature="1523:1553" ph="select count... " />
-            <marker date="1466125883331" expanded="true" signature="2325:2491" ph="insert into missingValue... " />
-            <marker date="1466125883331" expanded="true" signature="3121:3233" ph="update missi... " />
-            <marker date="1466125883331" expanded="true" signature="3904:3982" ph="update missi... " />
-            <marker date="1466125883331" expanded="true" signature="5386:5445" ph="select * fro... missingValue" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1602,18 +1491,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/DropdownDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding>
-            <element signature="e#1230#1248#0" expanded="true" />
-            <element signature="e#2219#2237#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1621,95 +1498,337 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestGrammar/user/Dropdown.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestGrammar/user/Carousel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestGrammar/user/Tooltip.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestGrammar/user/ModalDialog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestGrammar/user/LoadingButton.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestGrammar/user/Alert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="52" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestGrammar/user/Collapse.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestGrammar/user/Table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/DropdownDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/web/images/footer_1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/shared.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="24" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/jquery.session.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/servlet/LoadDropdown.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/servlet/LoadSearchDropdown.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="21" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/servlet/AdminLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="44" column="44" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="36" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/web/CheckLoginFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-288">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/web/UserRewriteFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/login2.html" />
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/servlet/AdminLoadClueList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="23" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/web/css/adminlogin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="64" column="17" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/Login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="46" column="64" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/easyui-lang-zh_CN.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/admin/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/servlet/AdminLogout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="65" column="37" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/dao/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="118" column="66" selection-start-line="118" selection-start-column="66" selection-end-line="118" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/servlet/AdminDeleteClue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/web/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="345" column="0" selection-start-line="345" selection-start-column="0" selection-end-line="363" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/web-forms.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="66" column="22" selection-start-line="66" selection-start-column="22" selection-end-line="66" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/admin/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/admin/clueList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+          <folding>
+            <element signature="n#!!block;n#deleteAllSelectedRows#0" expanded="false" />
+            <element signature="n#!!block;n#deleteCurrentRow#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/web/css/easyui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11916">
+          <caret line="662" column="4" selection-start-line="662" selection-start-column="4" selection-end-line="662" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/admin/newClue.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        <state relative-caret-position="4014">
+          <caret line="263" column="43" selection-start-line="263" selection-start-column="43" selection-end-line="263" selection-end-column="43" />
           <folding>
-            <element signature="n#!!block;n#initJbrTabs#0" expanded="false" />
-            <element signature="n#!!block;n#addJbrPanel#0" expanded="false" />
+            <element signature="n#!!block;n#getJbrTableElement#0" expanded="false" />
             <element signature="n#!!block;n#removeJbrPanel#0" expanded="false" />
-            <element signature="n#!!block;n#initBjbrTabs#0" expanded="false" />
-            <element signature="n#!!block;n#addBjbrPanel#0" expanded="false" />
-            <element signature="n#!!block;n#removeBjbrPanel#0" expanded="false" />
+            <marker date="1466255235282" expanded="true" signature="1674:1686" ph="..." />
+            <marker date="1466255235282" expanded="true" signature="2147:2159" ph="..." />
+            <marker date="1466255235282" expanded="true" signature="2372:2384" ph="..." />
+            <marker date="1466255235282" expanded="true" signature="4001:4012" ph="..." />
+            <marker date="1466255235282" expanded="true" signature="4441:4452" ph="..." />
+            <marker date="1466255235282" expanded="true" signature="4636:4647" ph="..." />
+            <marker date="1466255235282" expanded="true" signature="4923:4934" ph="..." />
+            <marker date="1466255235282" expanded="true" signature="5117:5128" ph="..." />
+            <marker date="1466255235282" expanded="true" signature="5350:5360" ph="..." />
+            <marker date="1466255235282" expanded="true" signature="5626:5637" ph="..." />
+            <marker date="1466255235282" expanded="true" signature="5821:5832" ph="..." />
+            <marker date="1466255235282" expanded="true" signature="6014:6025" ph="..." />
+            <marker date="1466255235282" expanded="true" signature="6209:6220" ph="..." />
+            <marker date="1466255235282" expanded="true" signature="6502:6513" ph="..." />
+            <marker date="1466255235282" expanded="true" signature="6688:6699" ph="..." />
+            <marker date="1466255235282" expanded="true" signature="6872:6883" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/ClueList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1404">
+          <caret line="78" column="48" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="48" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#td#4;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#td#7;n#tr#0;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#1;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#4;n#tr#1;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#td#7;n#tr#1;n#table#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/NewClue.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2790">
+          <caret line="160" column="109" selection-start-line="160" selection-start-column="109" selection-end-line="160" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#select#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#td#4;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#td#7;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#td#10;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#4;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#7;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#select#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#4;n#tr#0;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#td#7;n#tr#0;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#10;n#tr#0;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#td#1;n#tr#2;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#4;n#tr#2;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#7;n#tr#2;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#1;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#3;n#tr#1;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#td#6;n#tr#1;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#4;n#tr#2;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#3;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#3;n#tr#3;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#5;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#3;n#tr#5;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#8;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#9;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#3;n#tr#9;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#11;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/Index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+        <state relative-caret-position="332">
+          <caret line="56" column="28" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/XxxInformant/web/css/admin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="266" column="16" selection-start-line="266" selection-start-column="16" selection-end-line="266" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/admin/NewClue.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="100" column="46" selection-start-line="100" selection-start-column="46" selection-end-line="100" selection-end-column="46" />
-          <folding>
-            <element signature="n#style#0;n#select#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#select#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#select#0;n#td#4;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#td#7;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#td#10;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#3;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#5;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#table#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#table#1;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#table#2;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#table#3;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#table#4;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#li#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#4;n#tr#0;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#td#7;n#tr#0;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#10;n#tr#0;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#td#1;n#tr#2;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#3;n#tr#2;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#5;n#tr#2;n#table#0;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#table#3;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#table#4;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#table#5;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#table#6;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#table#7;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#table#8;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestGrammar/user/Dropdown.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="69" selection-start-line="5" selection-start-column="4" selection-end-line="9" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestGrammar/user/Carousel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+        <state relative-caret-position="-363">
+          <caret line="115" column="33" selection-start-line="115" selection-start-column="33" selection-end-line="115" selection-end-column="33" />
           <folding />
         </state>
       </provider>

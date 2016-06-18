@@ -17,9 +17,12 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by v-hesong on 6/14/2016.
+ * <p>Summary : </p>
+ * <p>Authors : Heller Song (HellerSong@Outlook.com)</p>
  */
 public class LoadSearchDropdown extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Map<String, Object> map = new HashMap<String, Object>();
 

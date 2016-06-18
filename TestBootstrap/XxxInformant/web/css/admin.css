@@ -113,11 +113,7 @@ body {
     background: url(../images/sdmenu.jpg) no-repeat;
     font-size: 14px;
     font-weight: normal;
-    padding-top: 8px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    padding-right: 100px;
-    overflow: hidden;
+    padding: 8px 100px 10px 30px;
     margin-left: 30px;
 }
 
@@ -202,13 +198,19 @@ body {
     text-decoration: none;
 }
 
+.index-main-title .right a {
+    width: 80px;
+    margin-right: 14px;
+}
+
 .index-main-content {
     border-left: solid 1px #c8dbf6;
     border-right: solid 1px #c8dbf6;
     overflow: hidden;
     font-size: 12px;
-    padding: 14px 50px 21px 21px;
+    padding: 14px 21px;
     border-bottom: none;
+    margin: 0 0;
 }
 
 .index-main-bottom {
@@ -218,7 +220,7 @@ body {
 
 /* NewClue.html Page Style */
 .newClue-title {
-    width: 984px;
+    width: 993px;
     background: url(../images/title1.jpg) no-repeat;
     color: #0061c8;
     letter-spacing: 4px;
@@ -236,23 +238,51 @@ body {
     border-right: solid 1px #c8dbf6;
     overflow: hidden;
     border-bottom: solid 1px #c8dbf6;
-    padding-bottom: 15px;
-    margin-bottom: 20px
+    margin: 0 0 20px 0;
 }
 
-.newClue-box form {
+.newClue-attachment {
+    width: 250px;
+    float: right;
     margin-top: 10px;
 }
 
-.fujian {
-    width: 250px;
-    float: right;
-    margin-top: 20px
+.newClue-attachment li {
+    list-style: none;
+    float: left;
 }
 
-.fujian li {
-    list-style: none;
-    float: left
+.newClue-attachment li a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.newClue-attachment-select-file {
+    background: url(../images/upload.jpg) no-repeat;
+    width: 92px;
+    height: 28px;
+    font-size: 14px;
+    color: #FFF;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-left: 18px;
+}
+
+.newClue-attachment-select-file a {
+    color: #FFFFFF;
+}
+
+.newClue-attachment-count {
+    padding-top: 8px;
+}
+
+.newClue-attachment-view {
+    padding-top: 8px;
+    padding-left: 30px;
+}
+
+.newClue-attachment-view a {
+    color: #4ec0fa;
 }
 
 .newClue-submit {
@@ -262,10 +292,26 @@ body {
 
 .newClue-submit a {
     width: 80px;
+    margin-right: 14px;
 }
 
-.newClue-table, .newClue-jbr-table, .newClue-bjbr-table {
-    margin: 10px;
+.newClue-table {
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.newClue-table td.label {
+    font-weight: bold;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+#newClue_jbrTabs input, #newClue_jbrTabs select, #newClue_jbrTabs textarea {
+    border: 1px solid #95B8E7;
+}
+
+#newClue_bjbrTabs input, #newClue_bjbrTabs select, #newClue_bjbrTabs textarea {
+    border: 1px solid #95B8E7;
 }
 
 /*ClueList.html Page Style*/
@@ -286,5 +332,36 @@ body {
 }
 
 .clueList-datagrid-content {
-    height: 500px;
+    height: 580px;
 }
+
+.datagrid-header-row {
+    font-weight: bold;
+}
+
+.clueList-search-form table td.label {
+    font-weight: bold;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+.clueList-datagrid-content a:link {
+    color: #017ad3;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px
+}
+
+.clueList-datagrid-content a:hover {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: underline
+}
+
+.clueList-datagrid-content a:visited {
+    color: #017ad3;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px
+}
+

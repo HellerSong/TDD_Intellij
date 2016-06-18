@@ -25,6 +25,10 @@ public class DropdownDao {
         code_tMappingHt.put("JBKJXSLY_LYFS", "举报方式代码");
         code_tMappingHt.put("JBKJXSLY_LYZL", "举报函件种类");
         code_tMappingHt.put("JBKJXSLY_BJBRZTLB", "申诉主体代码");
+        code_tMappingHt.put("CLYJ", "举报线索处理方式");
+        code_tMappingHt.put("JBKJXSLY_JYLX", "机要类型");
+
+
         Code_tDao code_tDao = new Code_tDao();
 
         for (String key : code_tMappingHt.keySet()) {
@@ -51,19 +55,25 @@ public class DropdownDao {
 
 
         //// 转往单位下拉选项单独处理
-        orgnizeMappingHt.put("JBKJXSLY_ZJDW", "转往单位");
-        String key = "JBKJXSLY_ZJDW";
         OrgnizeDao orgnizeDao = new OrgnizeDao();
         List<DropdownItemPojo> itemList = new ArrayList<DropdownItemPojo>();
         List<OrgnizePojo> pojoList = orgnizeDao.getAll("where IsZWDW='1'");
         for (OrgnizePojo p : pojoList) {
             DropdownItemPojo dropdownItemPojo = new DropdownItemPojo();
-            dropdownItemPojo.setOptionType(orgnizeMappingHt.get(key));
+            dropdownItemPojo.setOptionType("转往单位");
             dropdownItemPojo.setOptionValue(p.getID());
             dropdownItemPojo.setOptionHtmlContent(p.getDisplayName());
             itemList.add(dropdownItemPojo);
         }
-        regionDropdownHt.put(key, itemList);
+
+        orgnizeMappingHt.put("JBKJXSLY_ZJDW", "转往单位");
+        regionDropdownHt.put("JBKJXSLY_ZJDW", itemList);
+        orgnizeMappingHt.put("ZWDW", "转往单位");
+        regionDropdownHt.put("ZWDW", itemList);
+        orgnizeMappingHt.put("CSDW", "转往单位");
+        regionDropdownHt.put("CSDW", itemList);
+
+
         mappingHt.putAll(orgnizeMappingHt);
         orgnizeDao.closeAll();
     }

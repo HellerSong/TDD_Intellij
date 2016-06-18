@@ -1,1 +1,1 @@
-<script>location.href = "admin/Index.html";</script>
+<script>location.href = "admin/Login.html";</script>

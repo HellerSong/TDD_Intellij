@@ -13,27 +13,54 @@
 <body>
 <div class="main-content">
     <form class="clueList-search-form">
-        <table>
+        <table border="0" width="100%">
             <tr>
+                <td class="label">关键字:</td>
+                <td><input type="text" class="easyui-textbox" name="keyword" data-options="prompt:'请输入查询关键字'"
+                           style="width:100%;height:26px;"></td>
+                <td width="20">&nbsp;</td>
+                <td class="label">线索类型:</td>
+                <td><select class="easyui-combobox" id="cbJBKJXSLY_LYFS" name="JBKJXSLY_LYFS"
+                            style="width:100%;height:26px;">
+                    <option value="0" selected>全部</option>
+                </select>
+                </td>
+                <td width="20">&nbsp;</td>
+                <td class="label">处理状态:</td>
                 <td>
-                    <label class="clueList-label-top">关键字:</label>
-                    <input type="text" class="easyui-textbox" name="keyword" data-options="prompt:'请输入查询关键字'"
-                           style="width:100%;height:26px;">
+                    <select class="easyui-combobox" name="JBKJXSLY_CLZT" style="width:100%;height:26px;">
+                        <option value="0" selected>全部</option>
+                        <option value="1">待处理</option>
+                        <option value="2">已处理</option>
+                    </select>
+                </td>
+                <td width="20">&nbsp;</td>
+                <td>
+                    <div class="cluelist-search-btn-group">
+                        <a class="easyui-linkbutton" data-options="iconCls:'icon-search'"
+                           onclick="submitClueListSearchForm()">搜索</a>
+                    </div>
                 </td>
                 <td>
-                    <label class="clueList-label-top">受理日期(起):</label>
-                    <input class="easyui-datebox" name="JBKJXSLY_CBRCLRQ_Start" data-options="prompt:'开始时间'"
-                           style="width:100%;height:26px;">
+                    <div class="cluelist-search-btn-group">
+                        <a class="easyui-linkbutton" data-options="iconCls:'icon-clear'"
+                           onclick="resetClueListSearchForm()">重置</a>
+                    </div>
                 </td>
+            </tr>
+            <tr>
+                <td class="label">受理日期(起):</td>
+                <td><input class="easyui-datebox" name="JBKJXSLY_CBRCLRQ_Start" data-options="prompt:'开始时间'"
+                           style="width:100%;height:26px;"></td>
+                <td width="20">&nbsp;</td>
+                <td class="label">受理日期(止):</td>
+                <td><input class="easyui-datebox" name="JBKJXSLY_CBRCLRQ_End" data-options="prompt:'结束时间'"
+                           style="width:100%;height:26px;"></td>
+                <td width="20">&nbsp;</td>
+                <td class="label">案发地区:</td>
                 <td>
-                    <label class="clueList-label-top">受理日期(止):</label>
-                    <input class="easyui-datebox" name="JBKJXSLY_CBRCLRQ_End" data-options="prompt:'结束时间'"
-                           style="width:100%;height:26px;">
-                </td>
-                <td>
-                    <label class="clueList-label-top">案发地区:</label>
                     <select class="easyui-combobox" id="cbJBKJXSLY_AFDQ" name="JBKJXSLY_AFDQ"
-                            style="width:80%;height:26px;">
+                            style="width:100%;height:26px;">
                         <option value="0" selected>全部</option>
                         <option value="1">四川</option>
                         <option value="2">重庆</option>
@@ -41,34 +68,20 @@
                         <option value="4">山东</option>
                     </select>
                 </td>
-                <td>
-                    <label class="clueList-label-top">线索类型:</label>
-                    <select class="easyui-combobox" id="cbJBKJXSLY_LYFS" name="JBKJXSLY_LYFS"
-                            style="width:80%;height:26px;">
-                    </select>
-                </td>
-                <td>
-                    <label class="clueList-label-top">处理状态:</label>
-                    <select class="easyui-combobox" name="JBKJXSLY_CLZT" style="width:80%;height:26px;">
-                        <option value="0" selected>全部</option>
-                        <option value="1">待处理</option>
-                        <option value="2">已处理</option>
-                    </select>
+                <td width="20">&nbsp;</td>
+                <td colspan="2">
+                    <div class="cluelist-search-btn-group">
+                        <a class="easyui-linkbutton" data-options="iconCls:'icon-filter'">更多检索</a>
+                    </div>
                 </td>
             </tr>
         </table>
     </form>
-    <div class="cluelist-search-btn-group">
-        <a class="easyui-linkbutton" data-options="iconCls:'icon-search'" onclick="submitClueListSearchForm()">搜索</a>
-        <a class="easyui-linkbutton" data-options="iconCls:'icon-clear'"
-           onclick="resetClueListSearchForm()">重置</a>
-        <a class="easyui-linkbutton" data-options="iconCls:'icon-filter'">更多检索</a>
-    </div>
     <div><img src="../images/double.jpg"/></div>
     <div class="clueList-action-btn-group">
         <a class="easyui-linkbutton" data-options="iconCls:'icon-add'"
            onclick="loadNewCluePage()">新建</a>
-        <a class="easyui-linkbutton" data-options="iconCls:'icon-remove'">删除</a>
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-remove'" onclick="deleteAllSelectedRows()">删除</a>
         <a class="easyui-linkbutton" data-options="iconCls:'icon-down'">导入</a>
         <a class="easyui-linkbutton" data-options="iconCls:'icon-up'">导出</a>
         <a class="easyui-linkbutton" data-options="iconCls:'icon-sum'">批处理</a>

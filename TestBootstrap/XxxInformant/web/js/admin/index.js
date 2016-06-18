@@ -33,7 +33,10 @@ $(function () {
         }
     });
 
+    $('.index-main-title .right a').linkbutton();
+
     setHeadDatetime();
+    $('#index_currentAdminName').html($.session.get('currentAdminName'));
 
     //loadRightPanelContent('ClueList.html');
     loadRightPanelContent('NewClue.html');
@@ -91,12 +94,4 @@ function loadSearchDropdown(selectElementId) {
             cb.combobox('select', data[0].optionValue);
         }
     });
-}
-function setHeadDatetime() {
-    var headTimeElement = $('.index-head-time-value');
-    headTimeElement.html('日期：' + (new Date()).toLocaleString());
-    setInterval(function () {
-        var now = (new Date()).toLocaleString();
-        headTimeElement.html('日期：' + now);
-    }, 1000);
 }

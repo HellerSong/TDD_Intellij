@@ -17,113 +17,49 @@
         <div class="newClue-title">
             <span>举报线索情况</span>
         </div>
-        <form id="newClue_XS">
-            <table border="0">
+        <form id="newClue_formXS">
+            <table class="newClue-table" border="0" width="100%">
                 <tr>
-                    <td width="90">*举报方式：</td>
-                    <td width="135">
-                        <select class="easyui-combobox" id="cbJBKJXSLY_LYFS" name="JBKJXSLY_LYFS" style="width:90%;">
-                            <option>来信</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                        </select>
+                    <td class="label">*举报方式：</td>
+                    <td width="100"><select class="easyui-combobox" name="JBKJXSLY_LYFS" style="width: 100%;"></select>
                     </td>
-                    <td width="30">&nbsp;</td>
-                    <td width="90">举报种类:</td>
-                    <td width="141">
-                        <select class="easyui-combobox" id="cbJBKJXSLY_LYZL" name="JBKJXSLY_LYZL"
-                                style="width:90%;"></select>
+                    <td>&nbsp;</td>
+                    <td class="label">举报种类：</td>
+                    <td width="100"><select class="easyui-combobox" name="JBKJXSLY_LYFS" style="width: 100%;"></select>
                     </td>
-                    <td width="30">&nbsp;</td>
-                    <td width="90">主体类别：</td>
-                    <td width="145">
-                        <select class="easyui-combobox" id="cbJBKJXSLY_BJBRZTLB" name="JBKJXSLY_BJBRZTLB"
-                                style="width:90%;"></select>
+                    <td>&nbsp;</td>
+                    <td class="label">主体类别：</td>
+                    <td width="100"><select class="easyui-combobox" name="JBKJXSLY_LYFS" style="width: 100%;"></select>
                     </td>
-                    <td width="30">&nbsp;</td>
-                    <td width="90">转交单位:</td>
-                    <td width="138">
-                        <select class="easyui-combobox" id="cbJBKJXSLY_ZJDW" name="JBKJXSLY_ZJDW"
-                                style="width:90%;"></select>
+                    <td>&nbsp;</td>
+                    <td class="label">转交单位：</td>
+                    <td width="100"><select class="easyui-combobox" name="JBKJXSLY_LYFS" style="width: 100%;"></select>
                     </td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td width="90">受理日期：</td>
-                    <td colspan="2">
-                        <input class="easyui-datebox" name="JBKJXSLY_SLRQ" style="width: 90%;">
-                    </td>
-                    <td width="90">交办人：</td>
-                    <td colspan="2">
-                        <input class="easyui-textbox" type="text" name="JBKJXSLY_ZJR" style="width: 90%;">
-                    </td>
-                    <td width="90">线索编号：</td>
-                    <td colspan="2">
-                        <input class="easyui-textbox" type="text" name="JBKJXSLY_OutId" style="width: 90%;">
-                    </td>
+                    <td class="label">受理日期：</td>
+                    <td width="100"><input class="easyui-datebox" name="JBKJXSLY_SLRQ" style="width: 100%;"></td>
+                    <td>&nbsp;</td>
+                    <td class="label">交办人：</td>
+                    <td width="100"><input class="easyui-textbox" type="text" name="JBKJXSLY_ZJR"
+                                           style="width: 100%;"></select></td>
+                    <td>&nbsp;</td>
+                    <td class="label">线索编号：</td>
+                    <td width="100"><input class="easyui-textbox" type="text" name="JBKJXSLY_OutId"
+                                           style="width: 100%;"></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
                 </tr>
             </table>
         </form>
     </div>
-    <div class="newClue-box" style="padding-bottom: 0;">
+    <div class="newClue-box">
         <div class="newClue-title">
             <span>举报人基本情况</span>
-        </div>
-        <div id="newClue_jbrTabContent" hidden>
-            <div class="newClue-jbr-table">
-                <table border="0">
-                    <tr>
-                        <td width="90">姓名:</td>
-                        <td width="60">
-                            <input type="text" name="JBKJXSLY_JBRXM"/>
-                        </td>
-                        <td width="30">&nbsp;</td>
-                        <td width="90">*是否署名:</td>
-                        <td width="160">
-                            <input type="radio" checked="checked" name="JBKJXSLY_SFSM"/>&nbsp;是&nbsp;&nbsp;
-                            <input type="radio" name="JBKJXSLY_SFSM"/>&nbsp;否
-                        </td>
-                        <td width="30">&nbsp;</td>
-                        <td width="90">身份证号：</td>
-                        <td width="145">
-                            <input type="text" name="JBKJXSLY_JBRSFZH"/>
-                        </td>
-                        <td width="30">&nbsp;</td>
-                        <td width="100">单位、住址:</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td width="90">联系电话:</td>
-                        <td width="100">
-                            <input type="text" name="JBKJXSLY_JBRDH"/>
-                        </td>
-                        <td width="30">&nbsp;</td>
-                        <td width="100">来信地区：</td>
-                        <td width="160">
-                            <select name="JBKJXSLY_LXDQ" id="cbJBKJXSLY_LXDQ">
-                                <option>浙江-嘉兴-海盐</option>
-                                <option>重庆</option>
-                                <option>河南</option>
-                                <option>山东</option>
-                            </select>
-                        </td>
-                        <td width="30">&nbsp;</td>
-                        <td width="100">其他举报人:</td>
-                        <td width="130">
-                            <input type="text" name="JBKJXSLY_QTJBRXM"/>
-                        </td>
-                        <td width="30">&nbsp;</td>
-                        <td width="">
-                            <input type="text" name="JBKJXSLY_JBRDWZZ"/>
-                        </td>
-                    </tr>
-                </table>
-            </div>
         </div>
         <div id="newClue_jbrTabs" style="height:auto;"></div>
         <div id="newClue_jbrTabTools">
@@ -133,232 +69,9 @@
                onclick="removeJbrPanel()"></a>
         </div>
     </div>
-    <div class="newClue-box" style="padding-bottom: 0;">
+    <div class="newClue-box">
         <div class="newClue-title">
             <span>被举报人基本情况</span>
-        </div>
-        <div id="newClue_bjbrTabContent" hidden>
-            <div class="newClue-bjbr-table">
-                <table width="980" border="0" class="box2">
-                    <tr>
-                        <td width="47" class="font1 title3">*姓名：</td>
-                        <td width="138">
-                            <input type="text" border="1" class="input1" size="18"/>
-
-                        </td>
-                        <td width="25">&nbsp;</td>
-                        <td width="71" class="font1">性别:</td>
-                        <td width="136"><select class="input3">
-                            <option>未知</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                        </select></td>
-                        <td>&nbsp;</td>
-                        <td width="78" class="font1">民族：</td>
-                        <td width="130">
-                            <select class="input3">
-                                <option>汉族</option>
-                                <option>重庆</option>
-                                <option>河南</option>
-                                <option>山东</option>
-                            </select>
-                        </td>
-                        <td width="21">&nbsp;</td>
-                        <td width="82" class="font1">政治面貌:</td>
-                        <td width="160">
-                            <select class="input3">
-                                <option>群众</option>
-                                <option>重庆</option>
-                                <option>河南</option>
-                                <option>山东</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="11" class="font1 title3">&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td class="font1 title3">*职级:</td>
-                        <td>
-                            <select class="input4">
-                                <option>政治局常委</option>
-                                <option>重庆</option>
-                                <option>河南</option>
-                                <option>山东</option>
-                            </select>
-                        </td>
-                        <td>&nbsp;</td>
-                        <td colspan="8" class="font1">*案发地区：
-                            <select class="input3">
-                                <option>书记</option>
-                                <option>重庆</option>
-                                <option>河南</option>
-                                <option>山东</option>
-                            </select>
-                            &nbsp;&nbsp;&nbsp;
-                            单位、住址：
-                            <input type="text" border="1" class="input1" size="55"/></td>
-                    </tr>
-                    <tr>
-                        <td colspan="11">&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td width="47" class="font1">*身份:</td>
-                        <td width="138"><select class="input3">
-                            <option></option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                        </select></td>
-                        <td>&nbsp;</td>
-                        <td width="71" class="font1">特殊身份：</td>
-                        <td width="136">
-                            <select class="input3">
-                                <option>全国人大代表</option>
-                                <option>重庆</option>
-                                <option>河南</option>
-                                <option>山东</option>
-                            </select>
-                        </td>
-                        <td width="3">&nbsp;</td>
-                        <td width="71" class="font1">职务：</td>
-                        <td width="142">
-                            <select class="input3">
-                                <option>书记</option>
-                                <option>重庆</option>
-                                <option>河南</option>
-                                <option>山东</option>
-                            </select>
-                        </td>
-                        <td width="11">&nbsp;</td>
-                        <td width="78" class="font1">其他职务:</td>
-                        <td width="130">
-                            <select class="input3">
-                                <option>群众</option>
-                                <option>重庆</option>
-                                <option>河南</option>
-                                <option>山东</option>
-                            </select>
-                        </td>
-                    </tr>
-                </table>
-                <table width="980" border="0" class="box2">
-                    <tr>
-                        <td width="97" class="font1 title3">*主要涉嫌性质：</td>
-                        <td width="132">
-                            <select class="input5">
-                                <option>一般违法</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </select>
-                        </td>
-                        <td width="94" class="font1">其他涉嫌性质:</td>
-                        <td width="90">
-                            <select class="input5">
-                                <option>一般违法</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </select></td>
-                        <td width="54">&nbsp;</td>
-                        <td width="68" class="font1">涉嫌领域：</td>
-                        <td width="152">
-                            <select class="input3">
-                                <option>工程建设</option>
-                                <option>重庆</option>
-                                <option>河南</option>
-                                <option>山东</option>
-                            </select>
-                        </td>
-
-                        <td width="8">&nbsp;</td>
-                        <td width="56" class="font1">涉嫌金额:</td>
-                        <td width="152">
-                            <input type="text" border="1" class="input1" size="18"/>
-                        </td>
-
-                    </tr>
-
-
-                </table>
-                <table width="980" border="0" class="box2">
-                    <tr>
-                        <td width="97" class="font1 title3">*内容是否具体：</td>
-                        <td width="133">
-                            <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;
-                            <input type="radio"/>&nbsp;否
-                        </td>
-
-                        <td width="10">&nbsp;</td>
-                        <td width="83" class="font1">是否携款潜逃:</td>
-                        <td width="126">
-                            <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;
-                            <input type="radio"/>&nbsp;否
-                        </td>
-                        <td width="87" class="font1">其他举报人:</td>
-                        <td width="379">
-                            <input type="text" border="1" class="input1" size="25"/>
-                        </td>
-                    </tr>
-                </table>
-                <table width="980" border="0" class="box2">
-                    <tr>
-                        <td width="107" class="font1 title3">*是否属机关检察：</td>
-                        <td width="121">
-                            <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;
-                            <input type="radio"/>&nbsp;否
-                        </td>
-                        <td width="75" class="font1">*是否控告:</td>
-                        <td width="132">
-                            <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;
-                            <input type="radio"/>&nbsp;否
-                        </td>
-                        <td width="3">&nbsp;</td>
-                        <td width="71" class="font1">*是否申诉：</td>
-                        <td width="142">
-                            <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;
-                            <input type="radio"/>&nbsp;否
-                        </td>
-                        <td width="12">&nbsp;</td>
-                        <td width="81" class="font1">*是否其他:</td>
-                        <td width="159">
-                            <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;
-                            <input type="radio"/>&nbsp;否
-                        </td>
-
-                    </tr>
-                </table>
-                <table width="803" border="0" class="box2">
-                    <tr>
-                        <td width="90" valign="top" class="font1 title3">*举报内容：</td>
-                        <td></td>
-                        <td>
-                            <textarea name="" cols="" rows="" class="input6"> </textarea>
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td colspan="11">&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td width="90" valign="top" class="font1 title3">*举报内容摘要：</td>
-                        <td></td>
-                        <td>
-                            <textarea name="" cols="" rows="" class="input6"> </textarea>
-                        </td>
-                    </tr>
-                </table>
-                <div class="fujian">
-                    <li style="background:url(../images/upload.jpg) no-repeat; width:92px; height:28px; font-size:14px; font-family:'微软雅黑'; color:#FFF; text-decoration:none; padding-top:3px; padding-left:18px">
-                        <a href="#">附件上传</a></li>
-                    <li style="padding-top:8px">0个</li>
-                    <li style=" padding-top:8px; padding-left:30px"><a href="#"
-                                                                       style="color:#4ec0fa; font-weight:bold;text-decoration:none">查看附件</a>
-                    </li>
-                </div>
-            </div>
         </div>
         <div id="newClue_bjbrTabs" style="height:auto;"></div>
         <div id="newClue_bjbrTabTools">
@@ -372,194 +85,117 @@
         <div class="newClue-title">
             <span>办理情况</span>
         </div>
-        <form id="newClue_CL" class="newClue-table">
-            <table border="0">
+        <form id="newClue_formCL">
+            <table class="newClue-table" border="0" width="100%">
                 <tr>
-                    <td width="100">*处理方式：</td>
-                    <td width="134">
-                        <select class="easyui-combobox" id="cbJBKJXSLY_CLFS" name="JBKJXSLY_CLYJ"
-                                style="width:90%;">
-                            <option>交办</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                        </select>
+                    <td class="label">*处理方式：</td>
+                    <td width="100"><select class="easyui-combobox" name="JBKJXSLY_LYFS" style="width: 100%;"></select>
                     </td>
-                    <td width="30">&nbsp;</td>
-                    <td width="80">承办人：</td>
-                    <td width="140">
-                        <input class="easyui-textbox" type="text" name="JBKJXSLY_ZJR" style="width: 90%;"/></td>
-                    <td width="30">&nbsp;</td>
-                    <td width="80">转往单位：</td>
-                    <td width="142">
-                        <select class="easyui-combobox" name="JBKJXSLY_BJBRZTLB" style="width:90%;">
-                            <option>高检反贪贿赂总局</option>
-                            <option>重庆</option>
-                            <option>河南</option>
-                            <option>山东</option>
-                        </select>
+                    <td>&nbsp;</td>
+                    <td class="label">承办人：</td>
+                    <td width="100"><input class="easyui-textbox" type="text" name="CBR" style="width: 100%;"/></td>
+                    <td>&nbsp;</td>
+                    <td class="label">转往单位：</td>
+                    <td width="100"><select class="easyui-combobox" name="JBKJXSLY_LYFS" style="width: 100%;"></select>
                     </td>
-                    <td width="30">&nbsp;</td>
-                    <td width="40">编号:</td>
-                    <td width="157">
-                        <input class="easyui-textbox" type="text" name="JBKJXSLY_ZJR" style="width: 90%;"/>
-                    </td>
+                    <td>&nbsp;</td>
+                    <td class="label">编号：</td>
+                    <td width="100"><input class="easyui-textbox" type="text" name="JBKJXSLY_OutId"
+                                           style="width: 100%;"/></td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td width="100">抄送单位：</td>
-                    <td colspan="2">
-                        <select class="easyui-combobox" name="JBKJXSLY_BJBRZTLB" style="width:90%;">
-                            <option>高检反贪贿赂总局</option>
-                            <option>重庆</option>
-                            <option>河南</option>
-                            <option>山东</option>
-                        </select></td>
-                    <td width="100">抄送日期：</td>
-                    <td colspan="2">
-                        <input class="easyui-datebox" type="text" name="JBKJXSLY_ZJR" style="width: 90%;"/>
+                    <td class="label">抄送单位：</td>
+                    <td width="100"><select class="easyui-combobox" name="JBKJXSLY_LYFS" style="width: 100%;"></select>
                     </td>
-                    <td width="100">处理日期：</td>
-                    <td colspan="2">
-                        <input class="easyui-datebox" type="text" name="JBKJXSLY_ZJR" style="width: 90%;"/>
-                    </td>
+                    <td>&nbsp;</td>
+                    <td class="label">抄送日期：</td>
+                    <td width="100"><input class="easyui-datebox" type="text" name="CSRQ" style="width: 100%;"/></td>
+                    <td>&nbsp;</td>
+                    <td class="label">处理日期：</td>
+                    <td width="100"><input class="easyui-datebox" type="text" name="CSRQ" style="width: 100%;"/></td>
                 </tr>
             </table>
-            <table border="0">
+            <table class="newClue-table" border="0">
                 <tr>
-                    <td width="130">举报检察干警违法违纪:</td>
-                    <td width="700">
-                        <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;
-                        <input type="radio"/>&nbsp;否
-                    </td>
-                </tr>
-            </table>
-            <table width="803" border="0" class="box2">
-                <tr>
-                    <td width="90" valign="top" class="font1 title3">*举报内容：</td>
-                    <td></td>
+                    <td class="label">举报检察干警违法违纪：</td>
                     <td>
-                        <textarea name="" cols="" rows="" class="input6"> </textarea>
+                        <input type="radio" name="JBKJXSLY_JBJCGJWFWJ" checked="checked"/>&nbsp;是&nbsp;&nbsp;
+                        <input type="radio" name="JBKJXSLY_JBJCGJWFWJ"/>&nbsp;否
                     </td>
                 </tr>
             </table>
-            <table width="803" border="0" class="box2">
+            <table class="newClue-table" border="0" width="100%">
                 <tr>
-                    <td width="104" rowspan="4" valign="top" class="font1 title3">处领导批示：</td>
-                    <td width="356" rowspan="4"><textarea name="" cols="" rows="" class="input7"> </textarea>
-                    </td>
-                    <td width="10">&nbsp;</td>
-                    <td width="80" class="font1 title3">批示日期：</td>
-                    <td width="138"><input type="text" border="1" class="input1" size="18"/></td>
-                    <td width="17">&nbsp;</td>
-                    <td width="73" class="font1 title3">机要类型：</td>
-                    <td width="133">
-                        <select class="input3">
-                            <option>急转</option>
-                            <option>重庆</option>
-                            <option>河南</option>
-                            <option>山东</option>
-                        </select>
-                    </td>
+                    <td class="label">*承办人意见：</td>
+                    <td colspan="7"><input class="easyui-textbox" name="message" data-options="multiline:true"
+                                           style="width:825px;height:70px;"/></td>
                 </tr>
                 <tr>
-                    <td rowspan="3">&nbsp;</td>
-                    <td rowspan="3">&nbsp;</td>
-                    <td rowspan="3">&nbsp;</td>
-                    <td rowspan="3">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td height="26" class="font1 title3">机要号：</td>
-                    <td><input type="text" border="1" class="input1" size="17"/></td>
+                    <td class="label" rowspan="2">处领导批示：</td>
+                    <td rowspan="2"><input class="easyui-textbox" name="message" data-options="multiline:true"
+                                           style="width:300px;height:60px;"/></td>
+                    <td class="label">批示日期：</td>
+                    <td width="100"><input class="easyui-datebox" type="text" name="CZSPRQ" style="width: 100%;"/></td>
+                    <td width="20">&nbsp;</td>
+                    <td class="label">机要类型：</td>
+                    <td width="100"><select class="easyui-combobox" id="cbJBKJXSLY_JYLX" name="JBKJXSLY_JYLX"
+                                            style="width: 100%;"></select></td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
-                </tr>
-            </table>
-            <table width="803" border="0" class="box2">
-                <tr>
-                    <td width="99" rowspan="4" valign="top" class="font1 title3">举报中心领导批示：</td>
-                    <td width="361" rowspan="4"><textarea name="" cols="" rows="" class="input7"> </textarea>
-                    </td>
-                    <td width="10">&nbsp;</td>
-                    <td width="80" class="font1 title3">批示日期：</td>
-                    <td width="138"><input type="text" border="1" class="input1" size="18"/></td>
-                    <td width="17">&nbsp;</td>
-                    <td width="73" class="font1 title3">&nbsp;</td>
-                    <td width="133">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td rowspan="3">&nbsp;</td>
-                    <td rowspan="3">&nbsp;</td>
-                    <td rowspan="3">&nbsp;</td>
-                    <td rowspan="3">&nbsp;</td>
                     <td>&nbsp;</td>
+                    <td class="label">机要号：</td>
+                    <td width="100"><input class="easyui-textbox" type="text" name="JBKJXSLY_XJWH"
+                                           style="width: 100%;"/></td>
+                </tr>
+                <tr>
+                    <td class="label" rowspan="2">举报中心领导批示：</td>
+                    <td rowspan="2"><input class="easyui-textbox" name="message" data-options="multiline:true"
+                                           style="width:300px;height:60px;"/></td>
+                    <td class="label">批示日期：</td>
+                    <td width="100"><input class="easyui-datebox" type="text" name="CZSPRQ" style="width: 100%;"/></td>
+                </tr>
+                <tr>
                     <td>&nbsp;</td>
                 </tr>
-            </table>
-            <table width="803" border="0" class="box2">
                 <tr>
-                    <td width="95" rowspan="5" valign="top" class="font1 title3">检察长批示：</td>
-                    <td width="365" rowspan="5"><textarea name="" cols="" rows="" class="input7"> </textarea>
-                    </td>
-                    <td width="10">&nbsp;</td>
-                    <td width="80" class="font1 title3">批示日期：</td>
-                    <td width="138"><input type="text" border="1" class="input1" size="18"/></td>
-                    <td width="17">&nbsp;</td>
-                    <td width="210" colspan="2" rowspan="2" class="font1 title3">&nbsp;</td>
+                    <td class="label" rowspan="2">检察长批示：</td>
+                    <td rowspan="2"><input class="easyui-textbox" name="message" data-options="multiline:true"
+                                           style="width:300px;height:60px;"/></td>
+                    <td class="label">批示日期：</td>
+                    <td width="100"><input class="easyui-datebox" type="text" name="CZSPRQ" style="width: 100%;"/></td>
                 </tr>
                 <tr>
-                    <td rowspan="4">&nbsp;</td>
-                    <td rowspan="4">&nbsp;</td>
-                    <td rowspan="4">&nbsp;</td>
-                    <td rowspan="4">&nbsp;</td>
+                    <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td colspan="2" class="font1 title3">&nbsp;</td>
-                </tr>
-            </table>
-            <table width="803" border="0" class="box2">
-                <tr>
-                    <td width="90" valign="top" class="font1 title3">*处理情况：</td>
-                    <td></td>
-                    <td>
-                        <textarea name="" cols="" rows="" class="input6"> </textarea>
+                    <td colspan="7">
+                        <img src="../images/double.jpg" style="width: 100%;margin-top: 14px;margin-bottom: 14px;"/>
                     </td>
                 </tr>
-            </table>
-            <table width="803" border="0" class="box2">
                 <tr>
-                    <td width="95" rowspan="5" valign="top" class="font1 title3">网站回复：</td>
-                    <td width="365" rowspan="5"><textarea name="" cols="" rows="" class="input7"> </textarea>
-                    </td>
-                    <td width="10">&nbsp;</td>
-                    <td width="80" class="font1 title3">回复日期：</td>
-                    <td width="138"><input type="text" border="1" class="input1" size="18"/></td>
-                    <td width="17">&nbsp;</td>
-                    <td width="210" colspan="2" rowspan="2" class="font1 title3">&nbsp;</td>
+                    <td class="label">*处理情况：</td>
+                    <td colspan="7"><input class="easyui-textbox" name="message" data-options="multiline:true"
+                                           style="width:825px;height:70px;"/></td>
                 </tr>
                 <tr>
-                    <td rowspan="4">&nbsp;</td>
-                    <td rowspan="4">&nbsp;</td>
-                    <td rowspan="4">&nbsp;</td>
-                    <td rowspan="4">&nbsp;</td>
+                    <td class="label" rowspan="2">网站回复：</td>
+                    <td rowspan="2"><input class="easyui-textbox" name="message" data-options="multiline:true"
+                                           style="width:300px;height:60px;"/></td>
+                    <td class="label">回复日期：</td>
+                    <td width="100"><input class="easyui-datebox" type="text" name="CZSPRQ" style="width: 100%;"/></td>
                 </tr>
                 <tr>
-                    <td colspan="2" class="font1 title3">&nbsp;</td>
+                    <td>&nbsp;</td>
                 </tr>
-            </table>
-            <table width="803" border="0" class="box2">
                 <tr>
-                    <td width="90" valign="top" class="font1 title3">备注：</td>
-                    <td></td>
-                    <td>
-                        <textarea name="BZ" cols="" rows="" class="input6"> </textarea>
-                    </td>
+                    <td class="label">备注：</td>
+                    <td colspan="7"><input class="easyui-textbox" name="message" data-options="multiline:true"
+                                           style="width:825px;height:70px;"/></td>
                 </tr>
             </table>
         </form>
@@ -567,7 +203,7 @@
     <div class="newClue-submit">
         <a class="easyui-linkbutton" data-options="iconCls:'icon-ok'" onclick="submitNewClueForm()">提交</a>
         <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'"
-           onclick="loadRightPanelContent('ClueList.html')">取消</a>
+           onclick="cancelNewClueForm()">取消</a>
     </div>
 </div>
 </body>
