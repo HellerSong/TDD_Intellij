@@ -1,6 +1,12 @@
 package com.utils;
 
+import com.dao.DropdownDao;
+import com.pojo.DropdownItemPojo;
+
+import java.security.InvalidParameterException;
 import java.sql.Timestamp;
+import java.util.Hashtable;
+import java.util.List;
 
 /**
  * <p>Summary: </p>
@@ -36,5 +42,23 @@ public class Parser {
         }
 
         return true;
+    }
+
+    public static String parseDropdownContent(String optionType, String optionValue) {
+        if (optionType == null || optionType.length() <= 0)
+            throw new InvalidParameterException();
+        if (optionValue == null || optionValue.length() <= 0)
+            throw new InvalidParameterException();
+
+        Hashtable<String, List<DropdownItemPojo>> dropdownHt = new DropdownDao().getDropdownHt();
+
+        List<DropdownItemPojo> targetList = dropdownHt.get(optionType);
+        for (DropdownItemPojo p : targetList) {
+            if (p.getOptionValue().equals(optionValue)) {
+                return p.getOptionHtmlContent();
+            }
+        }
+
+        return "error";
     }
 }

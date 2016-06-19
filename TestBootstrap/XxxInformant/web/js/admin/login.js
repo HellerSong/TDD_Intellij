@@ -1,5 +1,5 @@
 $(function () {
-    setHeadDatetime();
+    setDatetimeContent($('.index-head-time-value'));
 
     $('input[name="pwd"]').bind('keydown', function (e) {
         var key = e.which;
@@ -8,6 +8,8 @@ $(function () {
             submitLoginForm();
         }
     });
+
+    $('input[name="loginId"]').focus();
 });
 
 function submitLoginForm() {
@@ -39,13 +41,13 @@ function submitLoginForm() {
     }
 }
 
-
 function resetLoginForm() {
-    var userInput = $('input[name="loginId"]');
-    var passwordInput = $('input[name="pwd"]');
-    userInput.val('');
-    passwordInput.val('');
-    userInput.focus();
+    $('input[name="pwd"]').val('');
+    $('input[name="loginId"]').val('').focus();
+}
+
+function forgetPasswrod() {
+    alert('请联系该系统超级管理员处理！');
 }
 
 function validateLoginForm() {

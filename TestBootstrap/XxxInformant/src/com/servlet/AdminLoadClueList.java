@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,40 +23,34 @@ import java.util.Map;
  */
 public class AdminLoadClueList extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String keyword = request.getParameter("keyword");
         int pageNumber = Parser.parseInt(request.getParameter("pageNumber"));
         int pageSize = Parser.parseInt(request.getParameter("pageSize"));
-        int clueStatus = Parser.parseInt(request.getParameter("JBKJXSLY_CLZT"));
 
-//        String acceptDateStart = request.getParameter("acceptDateStart");
-//        String acceptDateEnd = request.getParameter("acceptDateEnd");
-//        String caseZone = request.getParameter("caseZone");
-//        int informantKindValue = Parser.parseInt(request.getParameter("informantKindValue"));
-//        int status = Parser.parseInt(request.getParameter("status"));
-//
+        String keyword = request.getParameter("keyword");
+        String clueType = request.getParameter("JBKJXSLY_LYFS");
+        int clueStatus = Parser.parseInt(request.getParameter("JBKJXSLY_CLZT"));
+        String acceptDateStart = request.getParameter("JBKJXSLY_CBRCLRQ_Start");
+        String acceptDateEnd = request.getParameter("JBKJXSLY_CBRCLRQ_End");
+        //String clueZone = request.getParameter("JBKJXSLY_AFDQ");
+
         Map<String, Object> map = new HashMap<String, Object>();
         Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
         String sWhere = "where JBKJXSLY_CLZT != '-1'";
-//
-//        if (keyword != null && keyword.length() > 0) {
-//            sWhere += " and clueContent like '%" + keyword + "%'";
-//        }
-//        if(acceptDateStart != null && acceptDateStart.length() > 0)
-//            sWhere += " and acceptDate > '" + acceptDateStart + "'";
-//        if(acceptDateEnd != null && acceptDateEnd.length() > 0)
-//            sWhere += " and acceptDate < '" + acceptDateEnd + "'";
-//        if (caseZone != null && caseZone.length() > 0) {
-//            sWhere += " and caseZone like '%" + caseZone + "%'";
-//        }
-//        if(informantKindValue > 0)
-//            sWhere += " and informantKindValue='" + informantKindValue + "'";
+
+        if (keyword != null && keyword.length() > 0)
+            sWhere += " and clueContent like '%" + keyword + "%'";
+        if (clueType != null && clueType.length() > 0)
+            sWhere += "and JBKJXSLY_LYFSDM ='" + clueType + "'";
         if (clueStatus > 0)
             sWhere += " and JBKJXSLY_CLZT='" + clueStatus + "'";
+        if (acceptDateStart != null && acceptDateStart.length() > 0)
+            sWhere += " and JBKJXSLY_CBRCLRQ > '" + acceptDateStart + "'";
+        if (acceptDateEnd != null && acceptDateEnd.length() > 0)
+            sWhere += " and JBKJXSLY_CBRCLRQ < '" + acceptDateEnd + "'";
 
-        List<VClueListPojo> list = new ArrayList<VClueListPojo>();
         VClueListDao dao = new VClueListDao();
         int totalCount = dao.getTotalRecordCount(sWhere);
-        list = dao.getAll(pageNumber, pageSize, sWhere);
+        List<VClueListPojo> list = dao.getAll(pageNumber, pageSize, sWhere);
         dao.closeAll();
 
 

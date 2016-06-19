@@ -1,9 +1,60 @@
+//// Global variables
 window.dropdownJson = '';
 window.searchDdropdownJson = '';
 
 
 $(function () {
-    //// Load all dropdown json string
+    loadAllGlobalDropdownJson();
+
+    //// Page content initial
+    setDatetimeContent($('.index-head-time-value'));
+    $('#index_currentAdminName').html($.session.get('currentAdminName'));
+
+
+    //// Loading exactly page
+    loadRightPanelContent('ClueList.html');
+    //loadRightPanelContent('NewClue.html');
+    loadTitleNavPath();
+
+
+    //// Page style setting
+    $('.index-main-title .right a').linkbutton();
+
+
+    //// Event action setting for left panel item
+    $('div.sdmenu a').click(function () {
+        $('div.sdmenu a').removeClass('focus');
+        $(this).addClass('focus');
+
+        loadRightPanelContent($(this).attr('title'));
+        loadTitleNavPath();
+    });
+});
+
+function loadRightPanelContent(htmlFile) {
+    var rightPanel = $('div.index-main-content');
+    rightPanel.css('display', 'none');
+    rightPanel.load(htmlFile + ' .main-content', null, function () {
+        rightPanel.fadeIn('slow');
+        var initMethodName = 'initialize' + htmlFile.substring(0, htmlFile.indexOf('.'));
+        window[initMethodName]();
+    });
+}
+
+function loadTitleNavPath() {
+    // Change right main title path
+    var activeLeftItem = $('div.sdmenu a.focus');
+    var rootName = activeLeftItem.parent().parent().attr('title');
+    var subName = activeLeftItem.html();
+    var titlePath = '<a href="javascropt:;">' + rootName + '</a>&nbsp;>&nbsp;<a href="javascript:;">' + subName + '</a>';
+    $('div.index-main-title .left').html(titlePath);
+
+    // Hide the right new clue button group
+    $('.index-main-title .right').hide();
+}
+
+
+function loadAllGlobalDropdownJson() {
     $.ajax({
         type: 'post',
         url: 'LoadDropdown',
@@ -32,48 +83,15 @@ $(function () {
             }
         }
     });
-
-    $('.index-main-title .right a').linkbutton();
-
-    setHeadDatetime();
-    $('#index_currentAdminName').html($.session.get('currentAdminName'));
-
-    //loadRightPanelContent('ClueList.html');
-    loadRightPanelContent('NewClue.html');
-
-    //// Set click action for left panel item
-    $('div.sdmenu a').click(function () {
-        // Load exactly html page
-        loadRightPanelContent($(this).attr('title'));
-
-        // Switch left item focus
-        $('div.sdmenu a').removeClass('focus');
-        $(this).addClass('focus');
-
-        // Change right main title path
-        var rootName = $(this).parent().parent().attr('title');
-        var subName = $(this).html();
-        var titlePath = '<a href="#">' + rootName + '</a>&nbsp;>&nbsp;<a href="#">' + subName + '</a>';
-        $('div.index-main-title').html(titlePath);
-    });
-});
-
-function loadRightPanelContent(htmlFile) {
-    var rightPanel = $('div.index-main-content');
-    rightPanel.css('display', 'none');
-    rightPanel.load(htmlFile + ' .main-content', null, function () {
-        rightPanel.fadeIn('slow');
-        var initMethodName = 'initialize' + htmlFile.substring(0, htmlFile.indexOf('.'));
-        window[initMethodName]();
-    });
 }
 
 function loadDropdown(selectElementId) {
     var cb = $('#' + selectElementId);
-    var selectElementName = selectElementId.substring(2, selectElementId.length);
-    var lastChar = selectElementId.substring(selectElementId.length - 1, selectElementId.length);
+    var strLength = selectElementId.length;
+    var selectElementName = selectElementId.substring(2, strLength);
+    var lastChar = selectElementId.substring(strLength - 1, strLength);
     if (isDigital(lastChar)) {
-        selectElementName = selectElementId.substring(2, selectElementId.length - 1);
+        selectElementName = selectElementId.substring(2, strLength - 1);
         //alert(selectElementName);
     }
 

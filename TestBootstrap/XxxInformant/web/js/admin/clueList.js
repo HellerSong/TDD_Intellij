@@ -1,5 +1,5 @@
 function initializeClueList() {
-    //// Main elements setting
+    //// Page style setting
     $.parser.parse();
     $('.easyui-combobox').combobox({panelHeight: 'auto'});
 
@@ -8,7 +8,6 @@ function initializeClueList() {
     $('#clueList_Dg').datagrid({
         fit: true,
         striped: true,
-        border: 1,
         fitColumns: true,
         nowrap: false,
         loadMsg: "正在加载中。。。",
@@ -17,11 +16,11 @@ function initializeClueList() {
             {field: 'JBKJXSLY_SLRQ', title: '受理日期', width: 80, align: 'center'},
             {field: 'CBRCLRQ', title: '处理日期', width: 80, align: 'center'},
             {field: 'JBKJXSLY_BJBRXM', title: '被举报人姓名', width: 100, align: 'center'},
-            {field: 'JBKJXSLY_BJBRDWZZ', title: '单位住址', width: 100, align: 'center'},
+            {field: 'JBKJXSLY_BJBRDWZZ', title: '单位住址', width: 120, align: 'center'},
             {field: 'JBKJXSLY_ZJ', title: '职级', width: 100, align: 'center'},
-            {field: 'JBKJXSLY_ZYSXXZ', title: '主要涉嫌性质', width: 100, align: 'center'},
+            {field: 'JBKJXSLY_ZYSXXZ', title: '主要涉嫌性质', width: 120, align: 'center'},
             {field: 'JBKJXSLY_LYFS', title: '举报方式', width: 60, align: 'center'},
-            {field: 'CBR', title: '承办人', width: 120, align: 'left'},
+            {field: 'CBR', title: '承办人', width: 80, align: 'left'},
             {field: 'JBKJXSLY_CLZT', title: '状态', width: 80, align: 'left', formatter: statusFormatter},
             {field: 'action', title: '操作选项', width: 80, align: 'center', formatter: actionFormatter}
         ]],

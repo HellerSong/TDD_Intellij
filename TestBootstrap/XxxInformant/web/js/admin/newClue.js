@@ -115,7 +115,17 @@ function initBjbrTabs() {
             bjbrTabs.tabs('select', bjbrIndex - 1);
         },
         onAdd: function () {
-
+            loadDropdown('cbJBKJXSLY_MZ' + bjbrIndex);
+            loadDropdown('cbJBKJXSLY_ZZMM' + bjbrIndex);
+            loadDropdown('cbJBKJXSLY_AFDQ' + bjbrIndex);
+            loadDropdown('cbJBKJXSLY_ZJ' + bjbrIndex);
+            loadDropdown('cbJBKJXSLY_SF' + bjbrIndex);
+            loadDropdown('cbJBKJXSLY_TSSF' + bjbrIndex);
+            loadDropdown('cbJBKJXSLY_ZW' + bjbrIndex);
+            loadDropdown('cbJBKJXSLY_QTZW' + bjbrIndex);
+            loadDropdown('cbJBKJXSLY_ZYSXXZ' + bjbrIndex);
+            loadDropdown('cbJBKJXSLY_CYSXXZ' + bjbrIndex);
+            loadDropdown('cbJBKJXSLY_SALY' + bjbrIndex);
         }
     });
 
@@ -132,11 +142,11 @@ function getBjbrTableElement(index) {
     table += '<table class="newClue-table" border="0" width="100%">';
     table += '    <tr>';
     table += '        <td class="label">*姓名：</td>';
-    table += '        <td width="100"><input type="text" name="JBKJXSLY_JBRXM"/></td>';
+    table += '        <td width="100"><input type="text" name="JBKJXSLY_BJBRXM' + index + '"/></td>';
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">性别：</td>';
     table += '        <td width="120">';
-    table += '            <select name="" style="width:100%;">';
+    table += '            <select name="JBKJXSLY_XB' + index + '" style="width:100%;">';
     table += '                <option value="0" selected>未知</option>';
     table += '                <option value="1">男</option>';
     table += '                <option value="2">女</option>';
@@ -144,54 +154,54 @@ function getBjbrTableElement(index) {
     table += '        </td>';
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">民族：</td>';
-    table += '        <td width="160"><select name="" style="width:100%;"></select></td>';
+    table += '        <td width="160"><select id="cbJBKJXSLY_MZ' + index + '" name="JBKJXSLY_MZ' + index + '" style="width:100%;"></select></td>';
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">政治面貌：</td>';
-    table += '        <td width="160"><select name="" style="width:100%;"></select></td>';
+    table += '        <td width="160"><select id="cbJBKJXSLY_ZZMM' + index + '" name="JBKJXSLY_ZZMM' + index + '" style="width:100%;"></select></td>';
     table += '    </tr>';
     table += '    <tr>';
     table += '        <td>&nbsp;</td>';
     table += '    </tr>';
     table += '    <tr>';
     table += '        <td class="label">*案发地区：</td>';
-    table += '        <td width="100"><select name="" style="width:100%;"></select></td>';
+    table += '        <td width="100"><select id="cbJBKJXSLY_AFDQ' + index + '" name="JBKJXSLY_AFDQ' + index + '" style="width:100%;"></select></td>';
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">*职级：</td>';
-    table += '        <td width="100"><select name="" style="width:100%;"></select></td>';
+    table += '        <td width="100"><select id="cbJBKJXSLY_ZJ' + index + '" name="JBKJXSLY_ZJ' + index + '" style="width:100%;"></select></td>';
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">单位、住址：</td>';
-    table += '        <td width="120" colspan="4"><input type="text" name="JBKJXSLY_JBRXM" style="width:99%;"/></td>';
+    table += '        <td width="120" colspan="4"><input type="text" name="JBKJXSLY_BJBRDWZZ' + index + '" style="width:99%;"/></td>';
     table += '    </tr>';
     table += '    <tr>';
     table += '        <td>&nbsp;</td>';
     table += '    </tr>';
     table += '    <tr>';
     table += '        <td class="label">*身份：</td>';
-    table += '        <td width="100"><select name="" style="width:100%;"></select></td>';
+    table += '        <td width="100"><select id="cbJBKJXSLY_SF' + index + '" name="JBKJXSLY_SF' + index + '" style="width:100%;"></select></td>';
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">特殊身份：</td>';
-    table += '        <td width="100"><select name="" style="width:100%;"></select></td>';
+    table += '        <td width="100"><select id="cbJBKJXSLY_TSSF' + index + '" name="JBKJXSLY_TSSF' + index + '" style="width:100%;"></select></td>';
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">职务：</td>';
-    table += '        <td width="120"><select name="" style="width:100%;"></select></td>';
+    table += '        <td width="100"><select id="cbJBKJXSLY_ZW' + index + '" name="JBKJXSLY_ZW' + index + '" style="width:100%;"></select></td>';
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">其他职务：</td>';
-    table += '        <td width="120"><select name="" style="width:100%;"></select></td>';
+    table += '        <td width="100"><select id="cbJBKJXSLY_QTZW' + index + '" name="JBKJXSLY_QTZW' + index + '" style="width:100%;"></select></td>';
     table += '    </tr>';
     table += '</table>';
     table += '<table class="newClue-table" border="0" width="100%">';
     table += '    <tr>';
     table += '        <td class="label">*主要涉嫌性质：</td>';
-    table += '        <td width="160"><select name="" style="width:100%;"></select></td>';
+    table += '        <td width="120"><select id="cbJBKJXSLY_ZYSXXZ' + index + '" name="JBKJXSLY_ZYSXXZ' + index + '" style="width:100%;"></select></td>';
     table += '        <td>&nbsp;</td>';
     table += '        <td class="label">其他涉嫌性质:</td>';
-    table += '        <td width="160"><select name="" style="width:100%;"></select></td>';
+    table += '        <td width="140"><select id="cbJBKJXSLY_CYSXXZ' + index + '" name="JBKJXSLY_CYSXXZ' + index + '" style="width:100%;"></select></td>';
     table += '        <td>&nbsp;</td>';
     table += '        <td class="label">涉嫌领域：</td>';
-    table += '        <td width="160"><select name="" style="width:100%;"></select></td>';
+    table += '        <td width="140"><select id="cbJBKJXSLY_SALY' + index + '" name="JBKJXSLY_SALY' + index + '" style="width:100%;"></select></td>';
     table += '        <td>&nbsp;</td>';
     table += '        <td class="label">涉嫌金额:</td>';
-    table += '        <td width="80"><input type="text" name="JBKJXSLY_JBRXM"/></td>';
+    table += '        <td width="120"><input type="text" name="JBKJXSLY_SXJE' + index + '"/></td>';
     table += '    </tr>';
     table += '    <tr>';
     table += '        <td>&nbsp;</td>';
@@ -199,14 +209,14 @@ function getBjbrTableElement(index) {
     table += '    <tr>';
     table += '        <td class="label">*内容是否具体：</td>';
     table += '        <td>';
-    table += '            <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;';
-    table += '            <input type="radio"/>&nbsp;否';
+    table += '            <input type="radio" name="JBKJXSLY_NRSFJT' + index + '" checked="checked"/>&nbsp;是&nbsp;&nbsp;';
+    table += '            <input type="radio" name="JBKJXSLY_NRSFJT' + index + '"/>&nbsp;否';
     table += '        </td>';
     table += '        <td>&nbsp;</td>';
     table += '        <td class="label">是否携款潜逃:</td>';
     table += '        <td>';
-    table += '            <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;';
-    table += '            <input type="radio"/>&nbsp;否';
+    table += '            <input type="radio" name="JBKJXSLY_SFXKQT' + index + '" checked="checked"/>&nbsp;是&nbsp;&nbsp;';
+    table += '            <input type="radio" name="JBKJXSLY_SFXKQT' + index + '"/>&nbsp;否';
     table += '        </td>';
     table += '    </tr>';
     table += '    <tr>';
@@ -215,26 +225,26 @@ function getBjbrTableElement(index) {
     table += '    <tr>';
     table += '        <td class="label">*是否属机关检察：</td>';
     table += '        <td>';
-    table += '            <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;';
-    table += '            <input type="radio"/>&nbsp;否';
+    table += '            <input type="radio" name="JBKJXSLY_SFSBYGX' + index + '" checked="checked"/>&nbsp;是&nbsp;&nbsp;';
+    table += '            <input type="radio" name="JBKJXSLY_SFSBYGX' + index + '"/>&nbsp;否';
     table += '        </td>';
     table += '        <td>&nbsp;</td>';
     table += '        <td class="label">*是否控告:</td>';
     table += '        <td>';
-    table += '            <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;';
-    table += '            <input type="radio"/>&nbsp;否';
+    table += '            <input type="radio" name="JBKJXSLY_SFKG' + index + '" checked="checked"/>&nbsp;是&nbsp;&nbsp;';
+    table += '            <input type="radio" name="JBKJXSLY_SFKG' + index + '"/>&nbsp;否';
     table += '        </td>';
     table += '        <td>&nbsp;</td>';
     table += '        <td class="label">*是否申诉：</td>';
     table += '        <td>';
-    table += '            <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;';
-    table += '            <input type="radio"/>&nbsp;否';
+    table += '            <input type="radio" name="JBKJXSLY_SFSS' + index + '" checked="checked"/>&nbsp;是&nbsp;&nbsp;';
+    table += '            <input type="radio" name="JBKJXSLY_SFSS' + index + '"/>&nbsp;否';
     table += '        </td>';
     table += '        <td>&nbsp;</td>';
     table += '        <td class="label">*是否其他:</td>';
     table += '        <td>';
-    table += '            <input type="radio" checked="checked"/>&nbsp;是&nbsp;&nbsp;';
-    table += '            <input type="radio"/>&nbsp;否';
+    table += '            <input type="radio" name="JBKJXSLY_SFQT' + index + '" checked="checked"/>&nbsp;是&nbsp;&nbsp;';
+    table += '            <input type="radio" name="JBKJXSLY_SFQT' + index + '"/>&nbsp;否';
     table += '        </td>';
     table += '    </tr>';
     table += '    <tr>';
@@ -242,16 +252,14 @@ function getBjbrTableElement(index) {
     table += '    </tr>';
     table += '    <tr>';
     table += '        <td class="label">*举报内容：</td>';
-    table += '        <td colspan="10"><textarea name="" cols="" rows="4" class="input6"';
-    table += '                                   style="width: 99%;"></textarea></td>';
+    table += '        <td colspan="10"><textarea name="JBKJXSLY_SYZY' + index + '" rows="5" style="width: 99%;"></textarea></td>';
     table += '    </tr>';
     table += '    <tr>';
     table += '        <td>&nbsp;</td>';
     table += '    </tr>';
     table += '    <tr>';
     table += '        <td class="label">*举报内容摘要：</td>';
-    table += '        <td colspan="10"><textarea name="" cols="" rows="4" class="input6"';
-    table += '                                   style="width: 99%;"></textarea></td>';
+    table += '        <td colspan="10"><textarea name="JBKJXSLY_NRZY' + index + '" rows="3" style="width: 99%;"></textarea></td>';
     table += '    </tr>';
     table += '</table>';
     table += '<ul class="newClue-attachment">';
@@ -302,7 +310,10 @@ function submitNewClueForm() {
     //alert($('#newClue_formCL').serialize());
     var values = $('#newClue_formXS').serialize() + '&' +
         $('#newClue_formJBR').serialize() + '&' +
+        $('#newClue_formBJBR').serialize() + '&' +
         $('#newClue_formCL').serialize();
+
+    //alert($('#newClue_formBJBR').serialize());
 
     if (validateNewClue()) {
         // $('#clue_fileUpload').upload('AdminSaveClue', values, function (result) {

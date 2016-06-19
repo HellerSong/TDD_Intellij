@@ -29,7 +29,7 @@ public class AdminLogin extends HttpServlet {
         String pwd = request.getParameter("pwd");
 
         Map<String, Object> map = new HashMap<String, Object>();
-        String message = "";
+        String message;
 
         if (loginId == null || loginId.length() <= 0) {
             message = "用户名异常！";
@@ -41,7 +41,7 @@ public class AdminLogin extends HttpServlet {
         OrgmemberinfoDao dao = new OrgmemberinfoDao();
         List<OrgmemberinfoPojo> list = dao.getAll("where LoginID='" + loginId + "'");
         if (list.size() <= 0) {
-            message = "用户名不存在！";
+            message = "用户名不存在，请重新输入！";
         } else {
             list = dao.getAll("where LoginID='" + loginId + "' and Passwords='" + pwd + "'");
             if (list.size() <= 0) {
@@ -53,6 +53,7 @@ public class AdminLogin extends HttpServlet {
             }
         }
         dao.closeAll();
+
 
         //// Result data transfer
         response.setContentType("text/plain");

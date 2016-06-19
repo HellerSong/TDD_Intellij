@@ -58,6 +58,16 @@ body {
     color: #CCC;
     font-size: 14px;
     background: #FFF;
+    text-decoration: none;
+}
+
+.forget_password a:hover {
+    color: #2185f5;
+    text-decoration: none;
+}
+
+.forget_password a:active, a:focus {
+    text-decoration: none;
 }
 
 .login-btn-group {
@@ -72,7 +82,7 @@ body {
     padding: 8px 25px;
     float: left;
     overflow: hidden;
-    margin-right: 30px;
+    margin-right: 35px;
     color: #FFF;
     text-decoration: none;
 }

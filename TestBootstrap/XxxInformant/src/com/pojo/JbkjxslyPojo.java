@@ -88,6 +88,7 @@ public class JbkjxslyPojo {
     private String JBKJXSLY_ZJDW;
     private String JBKJXSLY_ZJR;
     private String JBKJXSLY_ZW;
+    private String JBKJXSLY_QTZW;
     private String JBKJXSLY_ZWDM;
     private String JBKJXSLY_ZWDW;
     private String JBKJXSLY_ZWDWDM;
@@ -97,6 +98,13 @@ public class JbkjxslyPojo {
     private String JBKJXSLY_ZZMMDM;
     private int JBKJXSLY_CLZT;
 
+    public String getJBKJXSLY_QTZW() {
+        return JBKJXSLY_QTZW;
+    }
+
+    public void setJBKJXSLY_QTZW(String JBKJXSLY_QTZW) {
+        this.JBKJXSLY_QTZW = JBKJXSLY_QTZW;
+    }
 
     public int getJBKJXSLY_ID() {
         return JBKJXSLY_ID;
