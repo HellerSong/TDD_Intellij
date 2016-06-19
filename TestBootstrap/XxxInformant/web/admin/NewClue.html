@@ -21,19 +21,24 @@
             <table class="newClue-table" border="0" width="100%">
                 <tr>
                     <td class="label">*举报方式：</td>
-                    <td width="100"><select class="easyui-combobox" name="JBKJXSLY_LYFS" style="width: 100%;"></select>
+                    <td width="100"><select class="easyui-combobox" id="cbJBKJXSLY_LYFS" name="JBKJXSLY_LYFS"
+                                            style="width: 100%;"></select>
                     </td>
                     <td>&nbsp;</td>
                     <td class="label">举报种类：</td>
-                    <td width="100"><select class="easyui-combobox" name="JBKJXSLY_LYFS" style="width: 100%;"></select>
+                    <td width="100"><select class="easyui-combobox" id="cbJBKJXSLY_LYZL" name="JBKJXSLY_LYZL"
+                                            style="width: 100%;"></select>
                     </td>
                     <td>&nbsp;</td>
                     <td class="label">主体类别：</td>
-                    <td width="100"><select class="easyui-combobox" name="JBKJXSLY_LYFS" style="width: 100%;"></select>
+                    <td width="100"><select class="easyui-combobox" id="cbJBKJXSLY_BJBRZTLB" name="JBKJXSLY_BJBRZTLB"
+                                            style="width: 100%;"></select>
                     </td>
                     <td>&nbsp;</td>
                     <td class="label">转交单位：</td>
-                    <td width="100"><select class="easyui-combobox" name="JBKJXSLY_LYFS" style="width: 100%;"></select>
+                    <td width="100"><select class="easyui-combobox limit-height" id="cbJBKJXSLY_ZJDW"
+                                            name="JBKJXSLY_ZJDW"
+                                            style="width: 100%;"></select>
                     </td>
                 </tr>
                 <tr>
@@ -45,7 +50,7 @@
                     <td>&nbsp;</td>
                     <td class="label">交办人：</td>
                     <td width="100"><input class="easyui-textbox" type="text" name="JBKJXSLY_ZJR"
-                                           style="width: 100%;"></select></td>
+                                           style="width: 100%;"></td>
                     <td>&nbsp;</td>
                     <td class="label">线索编号：</td>
                     <td width="100"><input class="easyui-textbox" type="text" name="JBKJXSLY_OutId"
@@ -61,25 +66,29 @@
         <div class="newClue-title">
             <span>举报人基本情况</span>
         </div>
-        <div id="newClue_jbrTabs" style="height:auto;"></div>
-        <div id="newClue_jbrTabTools">
-            <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'"
-               onclick="addJbrPanel()"></a>
-            <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-remove'"
-               onclick="removeJbrPanel()"></a>
-        </div>
+        <form id="newClue_formJBR">
+            <div id="newClue_jbrTabs" style="height:auto;"></div>
+            <div id="newClue_jbrTabTools">
+                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'"
+                   onclick="addJbrPanel()"></a>
+                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-remove'"
+                   onclick="removeJbrPanel()"></a>
+            </div>
+        </form>
     </div>
     <div class="newClue-box">
         <div class="newClue-title">
             <span>被举报人基本情况</span>
         </div>
-        <div id="newClue_bjbrTabs" style="height:auto;"></div>
-        <div id="newClue_bjbrTabTools">
-            <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'"
-               onclick="addBjbrPanel()"></a>
-            <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-remove'"
-               onclick="removeBjbrPanel()"></a>
-        </div>
+        <form id="newClue_formBJBR">
+            <div id="newClue_bjbrTabs" style="height:auto;"></div>
+            <div id="newClue_bjbrTabTools">
+                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'"
+                   onclick="addBjbrPanel()"></a>
+                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-remove'"
+                   onclick="removeBjbrPanel()"></a>
+            </div>
+        </form>
     </div>
     <div class="newClue-box">
         <div class="newClue-title">
@@ -89,16 +98,18 @@
             <table class="newClue-table" border="0" width="100%">
                 <tr>
                     <td class="label">*处理方式：</td>
-                    <td width="100"><select class="easyui-combobox" name="JBKJXSLY_LYFS" style="width: 100%;"></select>
+                    <td width="100"><select class="easyui-combobox" id="cbCLYJ" name="CLYJ"
+                                            style="width: 100%;"></select>
                     </td>
-                    <td>&nbsp;</td>
+                    <td width="20">&nbsp;</td>
                     <td class="label">承办人：</td>
                     <td width="100"><input class="easyui-textbox" type="text" name="CBR" style="width: 100%;"/></td>
-                    <td>&nbsp;</td>
+                    <td width="20">&nbsp;</td>
                     <td class="label">转往单位：</td>
-                    <td width="100"><select class="easyui-combobox" name="JBKJXSLY_LYFS" style="width: 100%;"></select>
+                    <td width="100"><select class="easyui-combobox limit-height" id="cbZWDW" name="ZWDW"
+                                            style="width: 100%;"></select>
                     </td>
-                    <td>&nbsp;</td>
+                    <td width="20">&nbsp;</td>
                     <td class="label">编号：</td>
                     <td width="100"><input class="easyui-textbox" type="text" name="JBKJXSLY_OutId"
                                            style="width: 100%;"/></td>
@@ -108,14 +119,15 @@
                 </tr>
                 <tr>
                     <td class="label">抄送单位：</td>
-                    <td width="100"><select class="easyui-combobox" name="JBKJXSLY_LYFS" style="width: 100%;"></select>
+                    <td width="100"><select class="easyui-combobox limit-height" id="cbCSDW" name="CSDW"
+                                            style="width: 100%;"></select>
                     </td>
-                    <td>&nbsp;</td>
+                    <td width="20">&nbsp;</td>
                     <td class="label">抄送日期：</td>
                     <td width="100"><input class="easyui-datebox" type="text" name="CSRQ" style="width: 100%;"/></td>
-                    <td>&nbsp;</td>
+                    <td width="20">&nbsp;</td>
                     <td class="label">处理日期：</td>
-                    <td width="100"><input class="easyui-datebox" type="text" name="CSRQ" style="width: 100%;"/></td>
+                    <td width="100"><input class="easyui-datebox" type="text" name="CBRCLRQ" style="width: 100%;"/></td>
                 </tr>
             </table>
             <table class="newClue-table" border="0">
@@ -130,13 +142,17 @@
             <table class="newClue-table" border="0" width="100%">
                 <tr>
                     <td class="label">*承办人意见：</td>
-                    <td colspan="7"><input class="easyui-textbox" name="message" data-options="multiline:true"
-                                           style="width:825px;height:70px;"/></td>
+                    <td colspan="7">
+                        <input class="easyui-textbox" name="JBZRYJ" data-options="multiline:true"
+                               style="width:825px;height:70px;"/>
+                    </td>
                 </tr>
                 <tr>
                     <td class="label" rowspan="2">处领导批示：</td>
-                    <td rowspan="2"><input class="easyui-textbox" name="message" data-options="multiline:true"
-                                           style="width:300px;height:60px;"/></td>
+                    <td rowspan="2">
+                        <input class="easyui-textbox" name="CZYJ" data-options="multiline:true"
+                               style="width:300px;height:60px;"/>
+                    </td>
                     <td class="label">批示日期：</td>
                     <td width="100"><input class="easyui-datebox" type="text" name="CZSPRQ" style="width: 100%;"/></td>
                     <td width="20">&nbsp;</td>
@@ -154,20 +170,20 @@
                 </tr>
                 <tr>
                     <td class="label" rowspan="2">举报中心领导批示：</td>
-                    <td rowspan="2"><input class="easyui-textbox" name="message" data-options="multiline:true"
+                    <td rowspan="2"><input class="easyui-textbox" name="TZYJ" data-options="multiline:true"
                                            style="width:300px;height:60px;"/></td>
                     <td class="label">批示日期：</td>
-                    <td width="100"><input class="easyui-datebox" type="text" name="CZSPRQ" style="width: 100%;"/></td>
+                    <td width="100"><input class="easyui-datebox" type="text" name="TZSPRQ" style="width: 100%;"/></td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="label" rowspan="2">检察长批示：</td>
-                    <td rowspan="2"><input class="easyui-textbox" name="message" data-options="multiline:true"
+                    <td rowspan="2"><input class="easyui-textbox" name="JCZPS" data-options="multiline:true"
                                            style="width:300px;height:60px;"/></td>
                     <td class="label">批示日期：</td>
-                    <td width="100"><input class="easyui-datebox" type="text" name="CZSPRQ" style="width: 100%;"/></td>
+                    <td width="100"><input class="easyui-datebox" type="text" name="JCZPSRQ" style="width: 100%;"/></td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
@@ -179,22 +195,23 @@
                 </tr>
                 <tr>
                     <td class="label">*处理情况：</td>
-                    <td colspan="7"><input class="easyui-textbox" name="message" data-options="multiline:true"
+                    <td colspan="7"><input class="easyui-textbox" name="JBKJXSLY_CLQK" data-options="multiline:true"
                                            style="width:825px;height:70px;"/></td>
                 </tr>
                 <tr>
                     <td class="label" rowspan="2">网站回复：</td>
-                    <td rowspan="2"><input class="easyui-textbox" name="message" data-options="multiline:true"
+                    <td rowspan="2"><input class="easyui-textbox" name="JBKJXSLY_JDDD" data-options="multiline:true"
                                            style="width:300px;height:60px;"/></td>
                     <td class="label">回复日期：</td>
-                    <td width="100"><input class="easyui-datebox" type="text" name="CZSPRQ" style="width: 100%;"/></td>
+                    <td width="100"><input class="easyui-datebox" type="text" name="JBKJXSLY_HFRQ"
+                                           style="width: 100%;"/></td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="label">备注：</td>
-                    <td colspan="7"><input class="easyui-textbox" name="message" data-options="multiline:true"
+                    <td colspan="7"><input class="easyui-textbox" name="JBKJXSLY_BZ" data-options="multiline:true"
                                            style="width:825px;height:70px;"/></td>
                 </tr>
             </table>

@@ -14,3 +14,13 @@ function resetSearchForm() {
     $('select').combobox('clear');
     //$('.selectpicker').selectpicker('val', '0');
 }
+
+function isDigital(str) {
+    for (var i = 0; i < 10; i++) {
+        if (str.indexOf(i.toString()) != -1) {
+            return true;
+        }
+    }
+
+    return false;
+}

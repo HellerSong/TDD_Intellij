@@ -5,7 +5,8 @@ body {
 }
 
 .index-head, .index-head-time {
-    margin: 0 auto;
+    max-width: 1350px;
+    margin: 0 0;
     padding-right: 8px;
 }
 
@@ -306,11 +307,11 @@ body {
     letter-spacing: 1px;
 }
 
-#newClue_jbrTabs input, #newClue_jbrTabs select, #newClue_jbrTabs textarea {
+#newClue_jbrTabs input, #newClue_jbrTabs textarea {
     border: 1px solid #95B8E7;
 }
 
-#newClue_bjbrTabs input, #newClue_bjbrTabs select, #newClue_bjbrTabs textarea {
+#newClue_bjbrTabs input, #newClue_bjbrTabs textarea {
     border: 1px solid #95B8E7;
 }
 

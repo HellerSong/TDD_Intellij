@@ -72,6 +72,16 @@
     </servlet-mapping>
 
     <servlet>
+        <description>后台保存线索信息</description>
+        <servlet-name>AdminSaveClue</servlet-name>
+        <servlet-class>com.servlet.AdminSaveClue</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminSaveClue</servlet-name>
+        <url-pattern>/admin/AdminSaveClue</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <description>加载所有下拉框</description>
         <servlet-name>LoadDropdown</servlet-name>
         <servlet-class>com.servlet.LoadDropdown</servlet-class>

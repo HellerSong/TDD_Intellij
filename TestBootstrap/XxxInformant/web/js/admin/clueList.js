@@ -39,7 +39,7 @@ function initializeClueList() {
 }
 
 function actionFormatter(data, row, index) {
-    return '<a href="javascript:;" onclick="editCurrentRow()">修改</a>' +
+    return '<a href="javascript:;" onclick="editCurrentRow(' + row.JBKJXSLY_ID + ')">修改</a>' +
         '<a href="javascript:;" onclick="deleteCurrentRow(' + row.JBKJXSLY_ID + ')">删除</a>'
 }
 
@@ -158,8 +158,8 @@ function deleteCurrentRow(id) {
     }
 }
 
-function editCurrentRow(data, row, index) {
-
+function editCurrentRow(id) {
+    alert('Edit row id: ' + id);
 }
 
 

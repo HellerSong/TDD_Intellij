@@ -102,22 +102,23 @@ class DaoConverter {
         }
     }
 
-    private <T> PreparedStatement setPstmtByFieldType(PreparedStatement pstmt, int pstmtIndex, T t, Class<?> fieldType,
-                                                      Method getterMethod) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
-            SQLException {
-        if (fieldType == null || pstmt == null)
+    private <T> PreparedStatement setPstmtData(T t, PreparedStatement pstmt, int pstmtIndex, EntityConvertModel model)
+            throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, SQLException {
+        if (model == null || pstmt == null || pstmtIndex <= 0)
             throw new InvalidParameterException();
 
-        if (fieldType.equals(int.class)) {
+        Class<?> fType = model.getFieldType();
+        Method getterMethod = model.getGetterMethod();
+        if (fType.equals(int.class)) {
             int tempInt = (Integer) getterMethod.invoke(t);
             pstmt.setInt(pstmtIndex, tempInt);
-        } else if (fieldType.equals(String.class)) {
+        } else if (fType.equals(String.class)) {
             String tempStr = (String) getterMethod.invoke(t);
             pstmt.setString(pstmtIndex, tempStr);
-        } else if (fieldType.equals(Timestamp.class)) {
+        } else if (fType.equals(Timestamp.class)) {
             Timestamp tempTime = (Timestamp) getterMethod.invoke(t);
             pstmt.setTimestamp(pstmtIndex, tempTime);
-        } else if (fieldType.equals(boolean.class)) {
+        } else if (fType.equals(boolean.class)) {
             boolean tempBool = (Boolean) getterMethod.invoke(t);
             pstmt.setBoolean(pstmtIndex, tempBool);
         }
@@ -132,7 +133,7 @@ class DaoConverter {
      * @param rs, the database result set;
      * @return T, the instance with ResultSet data in it;
      */
-    <T> T convertDatabaseDataToEntityForGetting(T t, ResultSet rs) {
+    <T> T convertDatabaseDataToEntityForReading(T t, ResultSet rs) {
         if (t == null || rs == null)
             throw new InvalidParameterException();
 
@@ -177,16 +178,10 @@ class DaoConverter {
             int pstmtIndex = 1;
 
             for (EntityConvertModel model : modelList) {
-                String fName = model.getFieldName();
-                Class<?> fType = model.getFieldType();
-                Method getterMethod = model.getGetterMethod();
-
-                // Except main key, pstmtIndex = 0, as it increased automatically
-                if (!fName.equals(mainKeyName)) {
-                    pstmt = setPstmtByFieldType(pstmt, pstmtIndex, t, fType, getterMethod);
-                    pstmtIndex++;
-                }
+                setPstmtData(t, pstmt, pstmtIndex, model);
+                pstmtIndex++;
             }
+
 
             //// Execute to insert data
             pstmt.execute();
@@ -216,28 +211,19 @@ class DaoConverter {
             int pstmtIndex = 1;
 
             // Set field values except main key as  it is the last to be set
+            EntityConvertModel mainKeyModel = null;
             for (EntityConvertModel model : modelList) {
-                String fName = model.getFieldName();
-                Class<?> fType = model.getFieldType();
-                Method getterMethod = model.getGetterMethod();
-
-                if (!fName.equals(mainKeyName)) { // Except main key
-                    pstmt = setPstmtByFieldType(pstmt, pstmtIndex, t, fType, getterMethod);
+                if (model.getFieldName().equals(mainKeyName)) { // Except main key
+                    mainKeyModel = model;
+                } else {
+                    pstmt = setPstmtData(t, pstmt, pstmtIndex, model);
                     pstmtIndex++;
                 }
             }
 
             // Set main key value
-            for (EntityConvertModel model : modelList) {
-                String fName = model.getFieldName();
-                Class<?> fType = model.getFieldType();
-                Method getterMethod = model.getGetterMethod();
+            pstmt = setPstmtData(t, pstmt, pstmtIndex, mainKeyModel);
 
-                if (fName.equals(mainKeyName)) {
-                    pstmt = setPstmtByFieldType(pstmt, pstmtIndex, t, fType, getterMethod);
-                    break;
-                }
-            }
 
             //// Execute to update data
             pstmt.execute();

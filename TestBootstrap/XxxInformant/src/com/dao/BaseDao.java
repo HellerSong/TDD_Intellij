@@ -175,7 +175,7 @@ public class BaseDao<T, PK> implements IDao<T, PK> {
             }
             rs = pstmt.executeQuery();
             if (rs.next()) {
-                obj = daoConvert.convertDatabaseDataToEntityForGetting(clazz.newInstance(), rs);
+                obj = daoConvert.convertDatabaseDataToEntityForReading(clazz.newInstance(), rs);
             }
         } catch (Exception e) {
             DevLog.write("Get entity by id failed.");
@@ -194,7 +194,7 @@ public class BaseDao<T, PK> implements IDao<T, PK> {
         rs = pstmt.executeQuery();
         while (rs.next()) {
             @SuppressWarnings("unchecked")
-            T t = daoConvert.convertDatabaseDataToEntityForGetting(clazz.newInstance(), rs);
+            T t = daoConvert.convertDatabaseDataToEntityForReading(clazz.newInstance(), rs);
             list.add(t);
         }
 

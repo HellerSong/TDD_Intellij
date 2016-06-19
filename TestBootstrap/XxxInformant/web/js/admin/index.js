@@ -71,6 +71,12 @@ function loadRightPanelContent(htmlFile) {
 function loadDropdown(selectElementId) {
     var cb = $('#' + selectElementId);
     var selectElementName = selectElementId.substring(2, selectElementId.length);
+    var lastChar = selectElementId.substring(selectElementId.length - 1, selectElementId.length);
+    if (isDigital(lastChar)) {
+        selectElementName = selectElementId.substring(2, selectElementId.length - 1);
+        //alert(selectElementName);
+    }
+
     cb.combobox({
         data: window.dropdownJson[selectElementName],
         valueField: 'optionValue',

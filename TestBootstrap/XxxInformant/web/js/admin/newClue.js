@@ -3,7 +3,8 @@ var bjbrIndex = 1;
 
 function initializeNewClue() {
     $.parser.parse();
-    $('.easyui-combobox').combobox({panelHeight: '350px'});
+    $('.easyui-combobox').combobox({panelHeight: 'auto'});
+    $('.easyui-combobox.limit-height').combobox({panelHeight: '350px'});
     $('.index-main-title .right').show();
 
     initJbrTabs();
@@ -13,6 +14,10 @@ function initializeNewClue() {
     loadDropdown('cbJBKJXSLY_LYZL');
     loadDropdown('cbJBKJXSLY_BJBRZTLB');
     loadDropdown('cbJBKJXSLY_ZJDW');
+    loadDropdown('cbCLYJ');
+    loadDropdown('cbZWDW');
+    loadDropdown('cbCSDW');
+    loadDropdown('cbJBKJXSLY_JYLX');
 }
 
 
@@ -26,6 +31,9 @@ function initJbrTabs() {
         onClose: function () {
             jbrIndex--;
             jbrTabs.tabs('select', jbrIndex - 1);
+        },
+        onAdd: function () {
+            loadDropdown('cbJBKJXSLY_LXDQ' + jbrIndex);
         }
     });
 
@@ -58,7 +66,7 @@ function getJbrTableElement(index) {
     table += '        <td><input type="text" name="JBKJXSLY_JBRDH' + index + '"/></td>';
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">来信地区：</td>';
-    table += '        <td width="160"><select name="JBKJXSLY_LXDQ" id="cbJBKJXSLY_LXDQ' + index + '" style="width: 100%;"></select></td>';
+    table += '        <td width="160"><select id="cbJBKJXSLY_LXDQ' + index + '" name="JBKJXSLY_LXDQ' + index + '"></select></td>';
     table += '        <td width="60">&nbsp;</td>';
     table += '        <td class="label">单位、住址：</td>';
     table += '        <td><input type="text" name="JBKJXSLY_JBRDWZZ' + index + '" style="width: 100%;"/></td>';
@@ -105,6 +113,9 @@ function initBjbrTabs() {
         onClose: function () {
             bjbrIndex--;
             bjbrTabs.tabs('select', bjbrIndex - 1);
+        },
+        onAdd: function () {
+
         }
     });
 
@@ -244,7 +255,8 @@ function getBjbrTableElement(index) {
     table += '    </tr>';
     table += '</table>';
     table += '<ul class="newClue-attachment">';
-    table += '    <li class="newClue-attachment-select-file"><a href="#">附件上传</a></li>';
+    table += '    <input type="file" id="newClue_file" onchange="updateFileSelection()" hidden>';
+    table += '    <li class="newClue-attachment-select-file"><a href="javascript:;" onclick="selectFiles()">添加附件</a></li>';
     table += '    <li class="newClue-attachment-count">0个</li>';
     table += '    <li class="newClue-attachment-view"><a href="#">查看附件</a></li>';
     table += '</ul>';
@@ -278,15 +290,86 @@ function removeBjbrPanel() {
     }
 }
 
+function selectFiles() {
+    $('#newClue_file').click();
+}
+
+function updateFileSelection() {
+    alert($('#newClue_file').val());
+}
 
 function submitNewClueForm() {
-    //$('input[name="JBRXM"]').val('test');
-    //alert($('#newClue_XS').serialize());
-    //alert($('#newClue_CL').serialize());
-    alert($('.newClue-bjbr-table').length);
+    //alert($('#newClue_formCL').serialize());
+    var values = $('#newClue_formXS').serialize() + '&' +
+        $('#newClue_formJBR').serialize() + '&' +
+        $('#newClue_formCL').serialize();
+
+    if (validateNewClue()) {
+        // $('#clue_fileUpload').upload('AdminSaveClue', values, function (result) {
+        $.post('AdminSaveClue', values, function (result) {
+            result = (new Function('return ' + result))();
+
+            if (result.status.indexOf('成功') >= 0) {
+                alert(result.status);
+                //window.close();
+            } else {
+                alert(result.status);
+            }
+        });
+    }
 }
 
 function cancelNewClueForm() {
     $('.index-main-title .right').hide();
     window.location.reload();
+}
+
+
+function validateNewClue() {
+    var temp;
+
+    // /** Clue Inform Part Validate **/
+    // temp = $.trim($('select[name="informantTypeValue"]').val());
+    // if (temp == null || temp.length == 0) {
+    //     alert('请选择举报方式！');
+    //     return false;
+    // }
+    //
+    // temp = $.trim($('input[name="informantName"]').val());
+    // if (temp == null || temp.length == 0) {
+    //     alert('请输入被举报人姓名！');
+    //     return false;
+    // }
+    //
+    // temp = $.trim($('select[name="mainKindValue"]').val());
+    // if (temp == null || temp.length == 0) {
+    //     alert('请选择被举报人主要涉嫌性质！');
+    //     return false;
+    // }
+    //
+    // temp = $.trim($('select[name="identityValue"]').val());
+    // if (temp == null || temp.length == 0) {
+    //     alert('请选择被举报人身份！');
+    //     return false;
+    // }
+    //
+    // temp = $.trim($('input[name="clueTitle"]').val());
+    // if (temp == null || temp.length == 0) {
+    //     alert('请输入举报内容标题！');
+    //     return false;
+    // }
+    // temp = $.trim($('textarea[name="clueContent"]').val());
+    // if (temp == null || temp.length == 0) {
+    //     alert('请输入举报内容！');
+    //     return false;
+    // }
+    //
+    // /** Clue Process Part Validate **/
+    // temp = $.trim($('select[name="processType"]').val());
+    // if (temp == null || temp.length == 0) {
+    //     alert('请选择处理方式！');
+    //     return false;
+    // }
+
+    return true;
 }

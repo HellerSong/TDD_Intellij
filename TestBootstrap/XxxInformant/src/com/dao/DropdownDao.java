@@ -1,6 +1,7 @@
 package com.dao;
 
 import com.pojo.Code_tPojo;
+import com.pojo.CodelocalPojo;
 import com.pojo.DropdownItemPojo;
 import com.pojo.OrgnizePojo;
 
@@ -28,9 +29,7 @@ public class DropdownDao {
         code_tMappingHt.put("CLYJ", "举报线索处理方式");
         code_tMappingHt.put("JBKJXSLY_JYLX", "机要类型");
 
-
         Code_tDao code_tDao = new Code_tDao();
-
         for (String key : code_tMappingHt.keySet()) {
             String optionType = code_tMappingHt.get(key);
             List<DropdownItemPojo> itemList = new ArrayList<DropdownItemPojo>();
@@ -49,8 +48,22 @@ public class DropdownDao {
 
 
         //// Codelocal库表中的下拉选项的处理
-
+        codelocalMappingHt.put("JBKJXSLY_LXDQ", "地区代码");
         CodelocalDao codelocalDao = new CodelocalDao();
+        for (String key : codelocalMappingHt.keySet()) {
+            String optionType = codelocalMappingHt.get(key);
+            List<DropdownItemPojo> itemList = new ArrayList<DropdownItemPojo>();
+            List<CodelocalPojo> pojoList = codelocalDao.getAll("where OPTIONNAME='" + optionType + "' order by CONTENT");
+            for (CodelocalPojo p : pojoList) {
+                DropdownItemPojo dropdownItemPojo = new DropdownItemPojo();
+                dropdownItemPojo.setOptionType(p.getOPTIONNAME());
+                dropdownItemPojo.setOptionValue(p.getCodeID());
+                dropdownItemPojo.setOptionHtmlContent(p.getCONTENT());
+                itemList.add(dropdownItemPojo);
+            }
+            regionDropdownHt.put(key, itemList);
+        }
+        mappingHt.putAll(codelocalMappingHt);
         codelocalDao.closeAll();
 
 

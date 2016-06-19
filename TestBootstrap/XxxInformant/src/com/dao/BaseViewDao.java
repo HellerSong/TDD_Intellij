@@ -82,7 +82,7 @@ public abstract class BaseViewDao<T, PK> {
             }
             rs = pstmt.executeQuery();
             if (rs.next()) {
-                obj = daoConvert.convertDatabaseDataToEntityForGetting(clazz.newInstance(), rs);
+                obj = daoConvert.convertDatabaseDataToEntityForReading(clazz.newInstance(), rs);
             }
         } catch (Exception e) {
             DevLog.write("Get entity by id failed.");
@@ -109,7 +109,7 @@ public abstract class BaseViewDao<T, PK> {
             pstmt = conn.prepareStatement(sql);
             rs = pstmt.executeQuery();
             while (rs.next()) {
-                T t = daoConvert.convertDatabaseDataToEntityForGetting(clazz.newInstance(), rs);
+                T t = daoConvert.convertDatabaseDataToEntityForReading(clazz.newInstance(), rs);
                 list.add(t);
             }
         } catch (Exception e) {
@@ -132,7 +132,7 @@ public abstract class BaseViewDao<T, PK> {
             pstmt = conn.prepareStatement(sql);
             rs = pstmt.executeQuery();
             while (rs.next()) {
-                T t = daoConvert.convertDatabaseDataToEntityForGetting(clazz.newInstance(), rs);
+                T t = daoConvert.convertDatabaseDataToEntityForReading(clazz.newInstance(), rs);
                 list.add(t);
             }
         } catch (Exception e) {
