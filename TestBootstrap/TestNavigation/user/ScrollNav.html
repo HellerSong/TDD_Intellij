@@ -29,6 +29,14 @@
             $(window).resize(function () {  // Listening for window resize
                 autoResetScrollContentHeight();
             });
+
+            $('ul.navbar-nav a').click(function (e) {
+                //e.preventDefault();
+                $('body').animate({
+//                   scrollTop: $('#js').position().top\
+                    height: "300px"
+                }, 'slow');
+            });
         });
 
         function autoResetScrollContentHeight() {

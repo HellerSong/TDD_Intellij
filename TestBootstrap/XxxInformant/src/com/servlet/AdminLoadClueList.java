@@ -22,31 +22,39 @@ import java.util.Map;
  * <p>Authors : Heller Song (HellerSong@Outlook.com)</p>
  */
 public class AdminLoadClueList extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int pageNumber = Parser.parseInt(request.getParameter("pageNumber"));
         int pageSize = Parser.parseInt(request.getParameter("pageSize"));
 
         String keyword = request.getParameter("keyword");
-        String clueType = request.getParameter("JBKJXSLY_LYFS");
+        int clueType = Parser.parseInt(request.getParameter("JBKJXSLY_LYFS"));
         int clueStatus = Parser.parseInt(request.getParameter("JBKJXSLY_CLZT"));
-        String acceptDateStart = request.getParameter("JBKJXSLY_CBRCLRQ_Start");
-        String acceptDateEnd = request.getParameter("JBKJXSLY_CBRCLRQ_End");
+        String acceptDateStart = request.getParameter("JBKJXSLY_SLRQ_Start");
+        String acceptDateEnd = request.getParameter("JBKJXSLY_SLRQ_End");
         //String clueZone = request.getParameter("JBKJXSLY_AFDQ");
 
         Map<String, Object> map = new HashMap<String, Object>();
         Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
         String sWhere = "where JBKJXSLY_CLZT != '-1'";
 
-        if (keyword != null && keyword.length() > 0)
-            sWhere += " and clueContent like '%" + keyword + "%'";
-        if (clueType != null && clueType.length() > 0)
+        if (keyword != null && keyword.length() > 0) {
+            sWhere += " and JBKJXSLY_JBRXM like '%" + keyword + "%'";
+            sWhere += " or JBKJXSLY_JBRDWZZ like '%" + keyword + "%'";
+            sWhere += " or JBKJXSLY_BJBRXM like '%" + keyword + "%'";
+            sWhere += " or JBKJXSLY_BJBRDWZZ like '%" + keyword + "%'";
+            sWhere += " or JBKJXSLY_SYZY like '%" + keyword + "%'";
+            sWhere += " or JBKJXSLY_NRZY like '%" + keyword + "%'";
+        }
+        if (clueType > 0)
             sWhere += "and JBKJXSLY_LYFSDM ='" + clueType + "'";
         if (clueStatus > 0)
             sWhere += " and JBKJXSLY_CLZT='" + clueStatus + "'";
         if (acceptDateStart != null && acceptDateStart.length() > 0)
-            sWhere += " and JBKJXSLY_CBRCLRQ > '" + acceptDateStart + "'";
+            sWhere += " and '" + acceptDateStart + "' <= JBKJXSLY_SLRQ";
         if (acceptDateEnd != null && acceptDateEnd.length() > 0)
-            sWhere += " and JBKJXSLY_CBRCLRQ < '" + acceptDateEnd + "'";
+            sWhere += " and JBKJXSLY_SLRQ <= '" + acceptDateEnd + "'";
 
         VClueListDao dao = new VClueListDao();
         int totalCount = dao.getTotalRecordCount(sWhere);

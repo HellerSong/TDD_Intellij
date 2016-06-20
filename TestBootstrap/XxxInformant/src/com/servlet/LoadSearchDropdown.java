@@ -26,9 +26,8 @@ public class LoadSearchDropdown extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Map<String, Object> map = new HashMap<String, Object>();
 
-        DropdownDao dao = new DropdownDao();
         // This kind of dropdown is with "All" option value
-        Hashtable<String, List<DropdownItemPojo>> dropdownHt = dao.getSearchDropdownHt();
+        Hashtable<String, List<DropdownItemPojo>> dropdownHt = DropdownDao.getSearchDropdownHt();
 
         //// Result data transfer
         response.setContentType("text/plain");

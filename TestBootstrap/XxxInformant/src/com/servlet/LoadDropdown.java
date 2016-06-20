@@ -26,9 +26,8 @@ public class LoadDropdown extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Map<String, Object> map = new HashMap<String, Object>();
 
-        DropdownDao dao = new DropdownDao();
         // Normal dropdown
-        Hashtable<String, List<DropdownItemPojo>> dropdownHt = dao.getDropdownHt();
+        Hashtable<String, List<DropdownItemPojo>> dropdownHt = DropdownDao.getDropdownHt();
 
         //// Result data transfer
         response.setContentType("text/plain");

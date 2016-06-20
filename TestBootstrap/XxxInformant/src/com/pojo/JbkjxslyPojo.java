@@ -22,6 +22,7 @@ public class JbkjxslyPojo {
     private Timestamp JBKJXSLY_CSRQ;
     private Timestamp JBKJXSLY_CTime;
     private String JBKJXSLY_CYSXXZ;
+    private String JBKJXSLY_CYSXXZDM;
     private Timestamp JBKJXSLY_CZSPRQ;
     private String JBKJXSLY_CZYJ;
     private String JBKJXSLY_EMAIL;
@@ -86,9 +87,11 @@ public class JbkjxslyPojo {
     private String JBKJXSLY_ZJ;
     private String JBKJXSLY_ZJDM;
     private String JBKJXSLY_ZJDW;
+    private String JBKJXSLY_ZJDWDM;
     private String JBKJXSLY_ZJR;
     private String JBKJXSLY_ZW;
     private String JBKJXSLY_QTZW;
+    private String JBKJXSLY_QTZWDM;
     private String JBKJXSLY_ZWDM;
     private String JBKJXSLY_ZWDW;
     private String JBKJXSLY_ZWDWDM;
@@ -97,6 +100,30 @@ public class JbkjxslyPojo {
     private String JBKJXSLY_ZZMM;
     private String JBKJXSLY_ZZMMDM;
     private int JBKJXSLY_CLZT;
+
+    public String getJBKJXSLY_CYSXXZDM() {
+        return JBKJXSLY_CYSXXZDM;
+    }
+
+    public void setJBKJXSLY_CYSXXZDM(String JBKJXSLY_CYSXXZDM) {
+        this.JBKJXSLY_CYSXXZDM = JBKJXSLY_CYSXXZDM;
+    }
+
+    public String getJBKJXSLY_QTZWDM() {
+        return JBKJXSLY_QTZWDM;
+    }
+
+    public void setJBKJXSLY_QTZWDM(String JBKJXSLY_QTZWDM) {
+        this.JBKJXSLY_QTZWDM = JBKJXSLY_QTZWDM;
+    }
+
+    public String getJBKJXSLY_ZJDWDM() {
+        return JBKJXSLY_ZJDWDM;
+    }
+
+    public void setJBKJXSLY_ZJDWDM(String JBKJXSLY_ZJDWDM) {
+        this.JBKJXSLY_ZJDWDM = JBKJXSLY_ZJDWDM;
+    }
 
     public String getJBKJXSLY_QTZW() {
         return JBKJXSLY_QTZW;

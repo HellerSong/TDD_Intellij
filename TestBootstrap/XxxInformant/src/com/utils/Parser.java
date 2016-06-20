@@ -50,7 +50,7 @@ public class Parser {
         if (optionValue == null || optionValue.length() <= 0)
             throw new InvalidParameterException();
 
-        Hashtable<String, List<DropdownItemPojo>> dropdownHt = new DropdownDao().getDropdownHt();
+        Hashtable<String, List<DropdownItemPojo>> dropdownHt = DropdownDao.getDropdownHt();
 
         List<DropdownItemPojo> targetList = dropdownHt.get(optionType);
         for (DropdownItemPojo p : targetList) {

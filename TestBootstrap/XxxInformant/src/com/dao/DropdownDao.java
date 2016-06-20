@@ -14,17 +14,16 @@ import java.util.List;
  * <p>Authors : Heller Song (HellerSong@Outlook.com)</p>
  */
 public class DropdownDao {
-    private Hashtable<String, List<DropdownItemPojo>> regionDropdownHt = new Hashtable<String, List<DropdownItemPojo>>();
-    private Hashtable<String, String> mappingHt = new Hashtable<String, String>();
+    private static Hashtable<String, List<DropdownItemPojo>> regionDropdownHt = new Hashtable<String, List<DropdownItemPojo>>();
+    private static Hashtable<String, String> mappingHt = new Hashtable<String, String>();
 
-
-    public DropdownDao() {
+    static {
         //// Code_t库表中的下拉选项的处理
         Hashtable<String, String> code_tMappingHt = new Hashtable<String, String>();
-        code_tMappingHt.put("JBKJXSLY_LYFS", "举报方式代码");
+        code_tMappingHt.put("JBKJXSLY_LYFS", "举报来源方式");
         code_tMappingHt.put("JBKJXSLY_LYZL", "举报函件种类");
         code_tMappingHt.put("JBKJXSLY_BJBRZTLB", "申诉主体代码");
-        code_tMappingHt.put("CLYJ", "举报线索处理方式");
+        code_tMappingHt.put("CLFS", "举报线索处理方式");
         code_tMappingHt.put("JBKJXSLY_JYLX", "机要类型");
         code_tMappingHt.put("JBKJXSLY_MZ", "民族代码");
         code_tMappingHt.put("JBKJXSLY_ZZMM", "政治面貌代码");
@@ -41,7 +40,7 @@ public class DropdownDao {
         for (String key : code_tMappingHt.keySet()) {
             String optionType = code_tMappingHt.get(key);
             List<DropdownItemPojo> itemList = new ArrayList<DropdownItemPojo>();
-            List<Code_tPojo> pojoList = code_tDao.getAll("where OptionName='" + optionType + "' order by Content");
+            List<Code_tPojo> pojoList = code_tDao.getAll("where OptionName='" + optionType + "' order by CodeId");
             for (Code_tPojo p : pojoList) {
                 DropdownItemPojo dropdownItemPojo = new DropdownItemPojo();
                 dropdownItemPojo.setOptionType(p.getOptionName());
@@ -103,11 +102,15 @@ public class DropdownDao {
         orgnizeDao.closeAll();
     }
 
-    public Hashtable<String, List<DropdownItemPojo>> getDropdownHt() {
+    private DropdownDao() {
+
+    }
+
+    public static Hashtable<String, List<DropdownItemPojo>> getDropdownHt() {
         return regionDropdownHt;
     }
 
-    public Hashtable<String, List<DropdownItemPojo>> getSearchDropdownHt() {
+    public static Hashtable<String, List<DropdownItemPojo>> getSearchDropdownHt() {
         String[] searchDropdownArray = new String[]{"JBKJXSLY_LYFS"};
         Hashtable<String, List<DropdownItemPojo>> resultTable = new Hashtable<String, List<DropdownItemPojo>>();
 

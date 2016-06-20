@@ -38,29 +38,16 @@ function initializeClueList() {
 }
 
 function actionFormatter(data, row, index) {
-    return '<a href="javascript:;" onclick="editCurrentRow(' + row.JBKJXSLY_ID + ')">修改</a>' +
+    return '<a href="javascript:;" onclick="editCurrentRow(' + row.JBKJXSLY_ID + ',' + index + ')">修改</a>' +
         '<a href="javascript:;" onclick="deleteCurrentRow(' + row.JBKJXSLY_ID + ')">删除</a>'
 }
 
 function statusFormatter(value) {
     if (value == 1) {
-        return "未处理";
+        return "待处理";
     } else if (value == 2) {
         return "已处理";
     }
-}
-
-function submitClueListSearchForm() {
-    if (validateClueListSearchForm()) {
-        queryClueListDefaultData();
-    }
-}
-
-function resetClueListSearchForm() {
-    $('.easyui-textbox').textbox('clear');
-    $('.easyui-datebox').datebox('clear');
-    $('.easyui-combobox').combobox('select', 0);
-    queryClueListDefaultData();
 }
 
 
@@ -77,19 +64,18 @@ function queryClueList(pageNumber, pageSize) {
     $.post(url, values, function (result) {
         result = (new Function('return ' + result))();
 
-        if (result.total > 0) {
-            var dg = $('#clueList_Dg');
+        var dg = $('#clueList_Dg');
+        dg.datagrid('loadData', result.rows);
+        dg.datagrid('getPager').pagination({
+            total: result.total, pageNumber: pageNumber, pageSize: pageSize
+        });
 
-            dg.datagrid('loadData', result.rows);
-
-            dg.datagrid('getPager').pagination({
-                total: result.total, pageNumber: pageNumber, pageSize: pageSize
-            });
+        if (result.total <= 0) {
+            alert('未找到任何线索记录！');
         }
     });
 }
 
-//加载成功触发事件的挂载
 function onDataGridLoadSuccess() {
     var page = $(this).datagrid("getPager");
     page.pagination({
@@ -157,15 +143,29 @@ function deleteCurrentRow(id) {
     }
 }
 
-function editCurrentRow(id) {
+function editCurrentRow(id, index) {
+    $('#clueList_Dg').datagrid('selectRow', index);
     alert('Edit row id: ' + id);
 }
 
 
+function submitClueListSearchForm() {
+    if (validateClueListSearchForm()) {
+        queryClueListDefaultData();
+    }
+}
+
+function resetClueListSearchForm() {
+    $('.clueList-search-form .easyui-textbox').textbox('clear');
+    $('.clueList-search-form .easyui-datebox').datebox('clear');
+    $('.clueList-search-form .easyui-combobox').combobox('select', 0);
+    queryClueListDefaultData();
+}
+
 function validateClueListSearchForm() {
-    // Validate EndTime > StartTime
-    var acceptDateStart = $('input[name="JBKJXSLY_CBRCLRQ_Start"]').val();
-    var acceptDateEnd = $('input[name="JBKJXSLY_CBRCLRQ_End"]').val();
+    //// Validate EndTime > StartTime
+    var acceptDateStart = $('input[name="JBKJXSLY_SLRQ_Start"]').val();
+    var acceptDateEnd = $('input[name="JBKJXSLY_SLRQ_End"]').val();
     var start = new Date(acceptDateStart.replace('-', '/').replace('-', '/'));
     var end = new Date(acceptDateEnd.replace('-', '/').replace('-', '/'));
 

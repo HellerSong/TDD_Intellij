@@ -20,7 +20,7 @@
         <form id="newClue_formXS">
             <table class="newClue-table" border="0" width="100%">
                 <tr>
-                    <td class="label">*举报方式：</td>
+                    <td class="label"><span class="span-must-fill">*</span>举报方式：</td>
                     <td width="100"><select class="easyui-combobox" id="cbJBKJXSLY_LYFS" name="JBKJXSLY_LYFS"
                                             style="width: 100%;"></select>
                     </td>
@@ -53,8 +53,9 @@
                                            style="width: 100%;"></td>
                     <td>&nbsp;</td>
                     <td class="label">线索编号：</td>
-                    <td width="100"><input class="easyui-textbox" type="text" name="JBKJXSLY_OutId"
-                                           style="width: 100%;"></td>
+                    <td width="100" colspan="3"><input class="easyui-textbox" type="text" id="clueJBKJXSLY_XH"
+                                                       name="JBKJXSLY_XH"
+                                                       style="width: 100%;" readonly></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -97,8 +98,8 @@
         <form id="newClue_formCL">
             <table class="newClue-table" border="0" width="100%">
                 <tr>
-                    <td class="label">*处理方式：</td>
-                    <td width="100"><select class="easyui-combobox" id="cbCLYJ" name="CLYJ"
+                    <td class="label"><span class="span-must-fill">*</span>处理方式：</td>
+                    <td width="100"><select class="easyui-combobox" id="cbCLFS" name="CLFS"
                                             style="width: 100%;"></select>
                     </td>
                     <td width="20">&nbsp;</td>
@@ -111,8 +112,8 @@
                     </td>
                     <td width="20">&nbsp;</td>
                     <td class="label">编号：</td>
-                    <td width="100"><input class="easyui-textbox" type="text" name="JBKJXSLY_OutId"
-                                           style="width: 100%;"/></td>
+                    <td width="100"><input class="easyui-textbox" type="text" id="processJBKJXSLY_XH" name="JBKJXSLY_XH"
+                                           style="width: 100%;" readonly/></td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
@@ -134,14 +135,14 @@
                 <tr>
                     <td class="label">举报检察干警违法违纪：</td>
                     <td>
-                        <input type="radio" name="JBKJXSLY_JBJCGJWFWJ" checked="checked"/>&nbsp;是&nbsp;&nbsp;
-                        <input type="radio" name="JBKJXSLY_JBJCGJWFWJ"/>&nbsp;否
+                        <input type="radio" name="JBKJXSLY_JBJCGJWFWJ" checked="checked" value="1"/>&nbsp;是&nbsp;&nbsp;
+                        <input type="radio" name="JBKJXSLY_JBJCGJWFWJ" value="0"/>&nbsp;否
                     </td>
                 </tr>
             </table>
             <table class="newClue-table" border="0" width="100%">
                 <tr>
-                    <td class="label">*承办人意见：</td>
+                    <td class="label"><span class="span-must-fill">*</span>承办人意见：</td>
                     <td colspan="7">
                         <input class="easyui-textbox" name="JBZRYJ" data-options="multiline:true"
                                style="width:825px;height:70px;"/>
@@ -194,7 +195,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="label">*处理情况：</td>
+                    <td class="label"><span class="span-must-fill">*</span>处理情况：</td>
                     <td colspan="7"><input class="easyui-textbox" name="JBKJXSLY_CLQK" data-options="multiline:true"
                                            style="width:825px;height:70px;"/></td>
                 </tr>
@@ -220,7 +221,7 @@
     <div class="newClue-submit">
         <a class="easyui-linkbutton" data-options="iconCls:'icon-ok'" onclick="submitNewClueForm()">提交</a>
         <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'"
-           onclick="cancelNewClueForm()">取消</a>
+           onclick="closeNewClueForm()">取消</a>
     </div>
 </div>
 </body>

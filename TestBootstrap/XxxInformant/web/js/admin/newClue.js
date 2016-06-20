@@ -7,14 +7,20 @@ function initializeNewClue() {
     $('.easyui-combobox.limit-height').combobox({panelHeight: '350px'});
     $('.index-main-title .right').show();
 
+    var clueuuid = uuid();
+    $('#clueJBKJXSLY_XH').textbox('setValue', clueuuid);
+    $('#processJBKJXSLY_XH').textbox('setValue', clueuuid);
+
+
     initJbrTabs();
     initBjbrTabs();
+
 
     loadDropdown('cbJBKJXSLY_LYFS');
     loadDropdown('cbJBKJXSLY_LYZL');
     loadDropdown('cbJBKJXSLY_BJBRZTLB');
     loadDropdown('cbJBKJXSLY_ZJDW');
-    loadDropdown('cbCLYJ');
+    loadDropdown('cbCLFS');
     loadDropdown('cbZWDW');
     loadDropdown('cbCSDW');
     loadDropdown('cbJBKJXSLY_JYLX');
@@ -51,10 +57,10 @@ function getJbrTableElement(index) {
     table += '        <td class="label">姓名：</td>';
     table += '        <td><input type="text" name="JBKJXSLY_JBRXM' + index + '"/></td>';
     table += '        <td width="30">&nbsp;</td>';
-    table += '        <td class="label">*是否署名：</td>';
+    table += '        <td class="label"><span class="span-must-fill">*</span>是否署名：</td>';
     table += '        <td width="160">';
-    table += '            <input type="radio" checked="checked" name="JBKJXSLY_SFSM' + index + '"/>&nbsp;是&nbsp;&nbsp;';
-    table += '            <input type="radio" name="JBKJXSLY_SFSM' + index + '"/>&nbsp;否';
+    table += '            <input type="radio" checked="checked" name="JBKJXSLY_SFSM' + index + '" value="1"/>&nbsp;是&nbsp;&nbsp;';
+    table += '            <input type="radio" name="JBKJXSLY_SFSM' + index + '" value="0"/>&nbsp;否';
     table += '        </td>';
     table += '        <td width="60">&nbsp;</td>';
     table += '        <td class="label">身份证号：</td>';
@@ -66,7 +72,7 @@ function getJbrTableElement(index) {
     table += '        <td><input type="text" name="JBKJXSLY_JBRDH' + index + '"/></td>';
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">来信地区：</td>';
-    table += '        <td width="160"><select id="cbJBKJXSLY_LXDQ' + index + '" name="JBKJXSLY_LXDQ' + index + '"></select></td>';
+    table += '        <td width="160"><select id="cbJBKJXSLY_LXDQ' + index + '" name="JBKJXSLY_LXDQ' + index + '" style="width: 100%;"></select></td>';
     table += '        <td width="60">&nbsp;</td>';
     table += '        <td class="label">单位、住址：</td>';
     table += '        <td><input type="text" name="JBKJXSLY_JBRDWZZ' + index + '" style="width: 100%;"/></td>';
@@ -141,7 +147,7 @@ function getBjbrTableElement(index) {
 
     table += '<table class="newClue-table" border="0" width="100%">';
     table += '    <tr>';
-    table += '        <td class="label">*姓名：</td>';
+    table += '        <td class="label"><span class="span-must-fill">*</span>姓名：</td>';
     table += '        <td width="100"><input type="text" name="JBKJXSLY_BJBRXM' + index + '"/></td>';
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">性别：</td>';
@@ -163,10 +169,10 @@ function getBjbrTableElement(index) {
     table += '        <td>&nbsp;</td>';
     table += '    </tr>';
     table += '    <tr>';
-    table += '        <td class="label">*案发地区：</td>';
+    table += '        <td class="label"><span class="span-must-fill">*</span>案发地区：</td>';
     table += '        <td width="100"><select id="cbJBKJXSLY_AFDQ' + index + '" name="JBKJXSLY_AFDQ' + index + '" style="width:100%;"></select></td>';
     table += '        <td width="30">&nbsp;</td>';
-    table += '        <td class="label">*职级：</td>';
+    table += '        <td class="label"><span class="span-must-fill">*</span>职级：</td>';
     table += '        <td width="100"><select id="cbJBKJXSLY_ZJ' + index + '" name="JBKJXSLY_ZJ' + index + '" style="width:100%;"></select></td>';
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">单位、住址：</td>';
@@ -176,7 +182,7 @@ function getBjbrTableElement(index) {
     table += '        <td>&nbsp;</td>';
     table += '    </tr>';
     table += '    <tr>';
-    table += '        <td class="label">*身份：</td>';
+    table += '        <td class="label"><span class="span-must-fill">*</span>身份：</td>';
     table += '        <td width="100"><select id="cbJBKJXSLY_SF' + index + '" name="JBKJXSLY_SF' + index + '" style="width:100%;"></select></td>';
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">特殊身份：</td>';
@@ -191,7 +197,7 @@ function getBjbrTableElement(index) {
     table += '</table>';
     table += '<table class="newClue-table" border="0" width="100%">';
     table += '    <tr>';
-    table += '        <td class="label">*主要涉嫌性质：</td>';
+    table += '        <td class="label"><span class="span-must-fill">*</span>主要涉嫌性质：</td>';
     table += '        <td width="120"><select id="cbJBKJXSLY_ZYSXXZ' + index + '" name="JBKJXSLY_ZYSXXZ' + index + '" style="width:100%;"></select></td>';
     table += '        <td>&nbsp;</td>';
     table += '        <td class="label">其他涉嫌性质:</td>';
@@ -207,58 +213,58 @@ function getBjbrTableElement(index) {
     table += '        <td>&nbsp;</td>';
     table += '    </tr>';
     table += '    <tr>';
-    table += '        <td class="label">*内容是否具体：</td>';
+    table += '        <td class="label"><span class="span-must-fill">*</span>内容是否具体：</td>';
     table += '        <td>';
-    table += '            <input type="radio" name="JBKJXSLY_NRSFJT' + index + '" checked="checked"/>&nbsp;是&nbsp;&nbsp;';
-    table += '            <input type="radio" name="JBKJXSLY_NRSFJT' + index + '"/>&nbsp;否';
+    table += '            <input type="radio" name="JBKJXSLY_NRSFJT' + index + '" checked="checked" value="1"/>&nbsp;是&nbsp;&nbsp;';
+    table += '            <input type="radio" name="JBKJXSLY_NRSFJT' + index + '" value="0"/>&nbsp;否';
     table += '        </td>';
     table += '        <td>&nbsp;</td>';
     table += '        <td class="label">是否携款潜逃:</td>';
     table += '        <td>';
-    table += '            <input type="radio" name="JBKJXSLY_SFXKQT' + index + '" checked="checked"/>&nbsp;是&nbsp;&nbsp;';
-    table += '            <input type="radio" name="JBKJXSLY_SFXKQT' + index + '"/>&nbsp;否';
+    table += '            <input type="radio" name="JBKJXSLY_SFXKQT' + index + '" checked="checked" value="1"/>&nbsp;是&nbsp;&nbsp;';
+    table += '            <input type="radio" name="JBKJXSLY_SFXKQT' + index + '" value="0"/>&nbsp;否';
     table += '        </td>';
     table += '    </tr>';
     table += '    <tr>';
     table += '        <td>&nbsp;</td>';
     table += '    </tr>';
     table += '    <tr>';
-    table += '        <td class="label">*是否属机关检察：</td>';
+    table += '        <td class="label"><span class="span-must-fill">*</span>是否属机关检察：</td>';
     table += '        <td>';
-    table += '            <input type="radio" name="JBKJXSLY_SFSBYGX' + index + '" checked="checked"/>&nbsp;是&nbsp;&nbsp;';
-    table += '            <input type="radio" name="JBKJXSLY_SFSBYGX' + index + '"/>&nbsp;否';
+    table += '            <input type="radio" name="JBKJXSLY_SFSBYGX' + index + '" checked="checked" value="1"/>&nbsp;是&nbsp;&nbsp;';
+    table += '            <input type="radio" name="JBKJXSLY_SFSBYGX' + index + '" value="0"/>&nbsp;否';
     table += '        </td>';
     table += '        <td>&nbsp;</td>';
-    table += '        <td class="label">*是否控告:</td>';
+    table += '        <td class="label"><span class="span-must-fill">*</span>是否控告:</td>';
     table += '        <td>';
-    table += '            <input type="radio" name="JBKJXSLY_SFKG' + index + '" checked="checked"/>&nbsp;是&nbsp;&nbsp;';
-    table += '            <input type="radio" name="JBKJXSLY_SFKG' + index + '"/>&nbsp;否';
+    table += '            <input type="radio" name="JBKJXSLY_SFKG' + index + '" checked="checked" value="1"/>&nbsp;是&nbsp;&nbsp;';
+    table += '            <input type="radio" name="JBKJXSLY_SFKG' + index + '" value="0"/>&nbsp;否';
     table += '        </td>';
     table += '        <td>&nbsp;</td>';
-    table += '        <td class="label">*是否申诉：</td>';
+    table += '        <td class="label"><span class="span-must-fill">*</span>是否申诉：</td>';
     table += '        <td>';
-    table += '            <input type="radio" name="JBKJXSLY_SFSS' + index + '" checked="checked"/>&nbsp;是&nbsp;&nbsp;';
-    table += '            <input type="radio" name="JBKJXSLY_SFSS' + index + '"/>&nbsp;否';
+    table += '            <input type="radio" name="JBKJXSLY_SFSS' + index + '" checked="checked" value="1"/>&nbsp;是&nbsp;&nbsp;';
+    table += '            <input type="radio" name="JBKJXSLY_SFSS' + index + '" value="0"/>&nbsp;否';
     table += '        </td>';
     table += '        <td>&nbsp;</td>';
-    table += '        <td class="label">*是否其他:</td>';
+    table += '        <td class="label"><span class="span-must-fill">*</span>是否其他:</td>';
     table += '        <td>';
-    table += '            <input type="radio" name="JBKJXSLY_SFQT' + index + '" checked="checked"/>&nbsp;是&nbsp;&nbsp;';
-    table += '            <input type="radio" name="JBKJXSLY_SFQT' + index + '"/>&nbsp;否';
+    table += '            <input type="radio" name="JBKJXSLY_SFQT' + index + '" checked="checked" value="1"/>&nbsp;是&nbsp;&nbsp;';
+    table += '            <input type="radio" name="JBKJXSLY_SFQT' + index + '" value="0"/>&nbsp;否';
     table += '        </td>';
     table += '    </tr>';
     table += '    <tr>';
     table += '        <td>&nbsp;</td>';
     table += '    </tr>';
     table += '    <tr>';
-    table += '        <td class="label">*举报内容：</td>';
+    table += '        <td class="label"><span class="span-must-fill">*</span>举报内容：</td>';
     table += '        <td colspan="10"><textarea name="JBKJXSLY_SYZY' + index + '" rows="5" style="width: 99%;"></textarea></td>';
     table += '    </tr>';
     table += '    <tr>';
     table += '        <td>&nbsp;</td>';
     table += '    </tr>';
     table += '    <tr>';
-    table += '        <td class="label">*举报内容摘要：</td>';
+    table += '        <td class="label"><span class="span-must-fill">*</span>举报内容摘要：</td>';
     table += '        <td colspan="10"><textarea name="JBKJXSLY_NRZY' + index + '" rows="3" style="width: 99%;"></textarea></td>';
     table += '    </tr>';
     table += '</table>';
@@ -320,17 +326,15 @@ function submitNewClueForm() {
         $.post('AdminSaveClue', values, function (result) {
             result = (new Function('return ' + result))();
 
+            alert(result.status);
             if (result.status.indexOf('成功') >= 0) {
-                alert(result.status);
-                //window.close();
-            } else {
-                alert(result.status);
+                closeNewClueForm();
             }
         });
     }
 }
 
-function cancelNewClueForm() {
+function closeNewClueForm() {
     $('.index-main-title .right').hide();
     window.location.reload();
 }

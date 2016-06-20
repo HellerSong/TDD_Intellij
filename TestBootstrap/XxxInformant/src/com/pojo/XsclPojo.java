@@ -24,8 +24,34 @@ public class XsclPojo {
 	private String JCYMC;
 	private String JCYJB;
 	private String ZWDW;
+	private String ZWDWDM;
 	private String JBSFJ;
+	private String CLFS;
+	private String CLFSDM;
 
+	public String getZWDWDM() {
+		return ZWDWDM;
+	}
+
+	public void setZWDWDM(String ZWDWDM) {
+		this.ZWDWDM = ZWDWDM;
+	}
+
+	public String getCLFS() {
+		return CLFS;
+	}
+
+	public void setCLFS(String CLFS) {
+		this.CLFS = CLFS;
+	}
+
+	public String getCLFSDM() {
+		return CLFSDM;
+	}
+
+	public void setCLFSDM(String CLFSDM) {
+		this.CLFSDM = CLFSDM;
+	}
 
 	public String getJBKJXSLY_XH() {
 		return JBKJXSLY_XH;
