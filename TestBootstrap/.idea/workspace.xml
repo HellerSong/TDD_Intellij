@@ -38,8 +38,8 @@
       <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="1587" column="51" selection-start-line="1587" selection-start-column="51" selection-end-line="1587" selection-end-column="51" />
+            <state relative-caret-position="5593">
+              <caret line="1903" column="14" selection-start-line="1903" selection-start-column="14" selection-end-line="1903" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -993,7 +993,7 @@
       <workItem from="1466305371212" duration="27527000" />
       <workItem from="1466346953737" duration="5640000" />
       <workItem from="1466378830514" duration="10000" />
-      <workItem from="1466392952388" duration="7373000" />
+      <workItem from="1466392952388" duration="7456000" />
     </task>
     <task id="LOCAL-00001" summary="update test navigation">
       <created>1464684723063</created>
@@ -1254,7 +1254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1466407280360</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Informant V2 &gt; update for save clue data.&#10;">
+      <created>1466407310542</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1466407310542</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1287,7 +1294,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="373688000" />
+    <option name="totallyTimeSpent" value="373771000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1802,8 +1809,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="1587" column="51" selection-start-line="1587" selection-start-column="51" selection-end-line="1587" selection-end-column="51" />
+        <state relative-caret-position="5593">
+          <caret line="1903" column="14" selection-start-line="1903" selection-start-column="14" selection-end-line="1903" selection-end-column="14" />
           <folding />
         </state>
       </provider>
