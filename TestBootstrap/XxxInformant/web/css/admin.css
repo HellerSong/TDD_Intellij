@@ -268,14 +268,38 @@ body {
 }
 
 .newClue-attachment-select-file {
+    /*background: url(../images/upload.jpg) no-repeat;*/
+    /*width: 92px;*/
+    /*height: 28px;*/
+    /*font-size: 14px;*/
+    /*color: #FFF;*/
+    /*text-decoration: none;*/
+    /*padding-top: 5px;*/
+    /*padding-left: 18px;*/
+    /*border: 0;*/
+
+    position: relative;
+    display: inline-block;
     background: url(../images/upload.jpg) no-repeat;
-    width: 92px;
-    height: 28px;
-    font-size: 14px;
-    color: #FFF;
+    border: 0;
+    border-radius: 9px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #FFFFFF;
     text-decoration: none;
-    padding-top: 5px;
-    padding-left: 18px;
+    text-indent: 0;
+    line-height: 20px;
+    margin-right: 14px;
+}
+
+.newClue-attachment-select-file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
 }
 
 .newClue-attachment-select-file a {

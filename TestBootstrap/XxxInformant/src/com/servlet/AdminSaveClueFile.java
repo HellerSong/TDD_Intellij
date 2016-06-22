@@ -22,12 +22,16 @@ public class AdminSaveClueFile extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        DevLog.write("Do save file");
         FileItemFactory factory = new DiskFileItemFactory();
         ServletFileUpload upload = new ServletFileUpload(factory);
 
         try {
             List<FileItem> items = upload.parseRequest(request);
             DevLog.write(items.size());
+            for (FileItem f : items) {
+                DevLog.write(f.getName());
+            }
         } catch (Exception e) {
 
         }

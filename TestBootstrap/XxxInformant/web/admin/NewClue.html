@@ -134,13 +134,17 @@
                                                style="width: 99%;"></textarea></td>
                 </tr>
             </table>
-            <ul class="newClue-attachment">
-                <input type="file" multiple id="newClue_file" onchange="updateFileSelection()" hidden>
-                <li class="newClue-attachment-select-file"><a href="javascript:;" onclick="selectFiles()">添加附件</a></li>
-                <li class="newClue-attachment-count">0个</li>
-                <li class="newClue-attachment-view"><a href="javascript:;">查看附件</a></li>
-            </ul>
         </form>
+        <ul class="newClue-attachment">
+            <li>
+                <a href="javascript:;" class="newClue-attachment-select-file">添加附件
+                    <input id="newClue_fileUpload" type="file" name="files[]" multiple
+                           onchange="updateFileSelection()"/>
+                </a>
+            </li>
+            <li class="newClue-attachment-count">0个</li>
+            <li class="newClue-attachment-view"><a href="javascript:;">查看附件</a></li>
+        </ul>
     </div>
     <div class="newClue-box">
         <div class="newClue-title">

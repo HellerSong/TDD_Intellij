@@ -12,8 +12,8 @@ $(function () {
 
 
     //// Loading exactly page
-    loadRightPanelContent('ClueList.html');
-    //loadRightPanelContent('NewClue.html');
+    // loadRightPanelContent('ClueList.html');
+    loadRightPanelContent('NewClue.html');
     loadRightTitleNavPath();
 
 

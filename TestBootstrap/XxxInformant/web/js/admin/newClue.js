@@ -353,45 +353,52 @@ function removeBjbrTab() {
 }
 
 
-function selectFiles() {
-    $('#newClue_file').click();
-}
-
 function updateFileSelection() {
-    //alert($("#newClue_file")[0].files[1].name);
-    var values = document.getElementById("newClue_file").files[0];
-    $('#newClue_file').upload('AdminSaveClueFile', {}, function (result) {
-        if (result.total > 0) {
-
-        }
-    }, 'json');
-
+    // alert($('#newClue_fileUpload')[0].files[0].name);
     //alert(document.getElementById("newClue_file").files[1].name);
-    //alert($('#newClue_file').files[0].name);
+    var fileList = document.getElementById("newClue_fileUpload").files;
+    $('.newClue-attachment-count').html(fileList.length + '个');
 }
 
 
 function submitNewClueForm() {
-    //alert($('#newClue_formCL').serialize());
-    var values = $('#newClue_formXS').serialize() + '&' +
-        $('#newClue_formJBR').serialize() + '&' +
-        $('#newClue_formBJBR_Part1').serialize() + '&' +
-        $('#newClue_formBJBR_Part2').serialize() + '&' +
-        $('#newClue_formCL').serialize() + '&' +
-        'clueId=' + clueId;
+    // var values = $('#newClue_formXS').serialize() + '&' +
+    //     $('#newClue_formJBR').serialize() + '&' +
+    //     $('#newClue_formBJBR_Part1').serialize() + '&' +
+    //     $('#newClue_formBJBR_Part2').serialize() + '&' +
+    //     $('#newClue_formCL').serialize() + '&' +
+    //     'clueId=' + clueId;
+    //
+    // if (validateNewClue()) {
+    //     $.post('AdminSaveClue', values, function (result) {
+    //         result = (new Function('return ' + result))();
+    //
+    //         alert(result.status);
+    //         if (result.status.indexOf('成功') >= 0) {
+    //             closeNewClueForm();
+    //         }
+    //     });
+    // }
+    // $('#fileup').fileupload({
+    //     //url: 'AdminSaveClueFile',
+    //     dataType: 'json',
+    //     done: function (e, data) {
+    //         // $.each(data.result.files, function (index, file) {
+    //         //     $('<p/>').text(file.name).appendTo('#files');
+    //         // });
+    //     }
+    // });
 
-    //alert(values);
-    if (validateNewClue()) {
-        // $('#clue_fileUpload').upload('AdminSaveClue', values, function (result) {
-        $.post('AdminSaveClue', values, function (result) {
-            result = (new Function('return ' + result))();
-
-            alert(result.status);
-            if (result.status.indexOf('成功') >= 0) {
-                closeNewClueForm();
-            }
-        });
-    }
+    var values = 'id=123';
+    $('#newClue_fileUpload').upload('AdminSaveClueFile', values, function (result) {
+        if (result.status.indexOf('成功') >= 0) {
+            // alert(result.status + '\n您的举报线索查询码为：' + result.searchCode
+            //     + '，将用于处理结果的查询。');
+            // window.location.href = 'Index.html';
+        } else {
+            // alert(result.status);
+        }
+    }, 'json');
 }
 
 function closeNewClueForm() {
