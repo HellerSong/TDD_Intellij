@@ -32,7 +32,7 @@ function initializeNewClue() {
     } else {
         //// Generate and set "Clue UUID" value
         var clueuuid = uuid();
-        $('input[textboxname="JBKJXSLY_XH"]').textbox('setValue', clueuuid);
+        $('input[textboxname="JBKJXSLY_XH"]').textbox('setValue', '201606221000000002');
     }
 }
 
