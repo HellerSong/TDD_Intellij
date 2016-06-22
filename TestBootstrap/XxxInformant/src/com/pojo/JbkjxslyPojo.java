@@ -22,7 +22,6 @@ public class JbkjxslyPojo {
     private Timestamp JBKJXSLY_CSRQ;
     private Timestamp JBKJXSLY_CTime;
     private String JBKJXSLY_CYSXXZ;
-    private String JBKJXSLY_CYSXXZDM;
     private Timestamp JBKJXSLY_CZSPRQ;
     private String JBKJXSLY_CZYJ;
     private String JBKJXSLY_EMAIL;
@@ -61,6 +60,7 @@ public class JbkjxslyPojo {
     private String JBKJXSLY_QTJBRXM;
     private String JBKJXSLY_QTSXXZDM;
     private String JBKJXSLY_QTZJ;
+    private String JBKJXSLY_QTZJDM;
     private String JBKJXSLY_SALY;
     private String JBKJXSLY_SALYDM;
     private String JBKJXSLY_SF;
@@ -90,8 +90,6 @@ public class JbkjxslyPojo {
     private String JBKJXSLY_ZJDWDM;
     private String JBKJXSLY_ZJR;
     private String JBKJXSLY_ZW;
-    private String JBKJXSLY_QTZW;
-    private String JBKJXSLY_QTZWDM;
     private String JBKJXSLY_ZWDM;
     private String JBKJXSLY_ZWDW;
     private String JBKJXSLY_ZWDWDM;
@@ -101,21 +99,6 @@ public class JbkjxslyPojo {
     private String JBKJXSLY_ZZMMDM;
     private int JBKJXSLY_CLZT;
 
-    public String getJBKJXSLY_CYSXXZDM() {
-        return JBKJXSLY_CYSXXZDM;
-    }
-
-    public void setJBKJXSLY_CYSXXZDM(String JBKJXSLY_CYSXXZDM) {
-        this.JBKJXSLY_CYSXXZDM = JBKJXSLY_CYSXXZDM;
-    }
-
-    public String getJBKJXSLY_QTZWDM() {
-        return JBKJXSLY_QTZWDM;
-    }
-
-    public void setJBKJXSLY_QTZWDM(String JBKJXSLY_QTZWDM) {
-        this.JBKJXSLY_QTZWDM = JBKJXSLY_QTZWDM;
-    }
 
     public String getJBKJXSLY_ZJDWDM() {
         return JBKJXSLY_ZJDWDM;
@@ -123,14 +106,6 @@ public class JbkjxslyPojo {
 
     public void setJBKJXSLY_ZJDWDM(String JBKJXSLY_ZJDWDM) {
         this.JBKJXSLY_ZJDWDM = JBKJXSLY_ZJDWDM;
-    }
-
-    public String getJBKJXSLY_QTZW() {
-        return JBKJXSLY_QTZW;
-    }
-
-    public void setJBKJXSLY_QTZW(String JBKJXSLY_QTZW) {
-        this.JBKJXSLY_QTZW = JBKJXSLY_QTZW;
     }
 
     public int getJBKJXSLY_ID() {
@@ -587,6 +562,14 @@ public class JbkjxslyPojo {
 
     public void setJBKJXSLY_QTZJ(String JBKJXSLY_QTZJ) {
         this.JBKJXSLY_QTZJ = JBKJXSLY_QTZJ;
+    }
+
+    public String getJBKJXSLY_QTZJDM() {
+        return JBKJXSLY_QTZJDM;
+    }
+
+    public void setJBKJXSLY_QTZJDM(String JBKJXSLY_QTZJDM) {
+        this.JBKJXSLY_QTZJDM = JBKJXSLY_QTZJDM;
     }
 
     public String getJBKJXSLY_SALY() {

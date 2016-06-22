@@ -73,3 +73,12 @@ function uuid() {
     var uuid = s.join("");
     return uuid;
 }
+
+function checkRadioByValue(radioNameAttr, radioValue) {
+    var checkedRadio = $('input[name="' + radioNameAttr + '"][checked]');
+
+    if (radioValue != checkedRadio.val()) {
+        checkedRadio.removeAttr('checked');
+        $('input[name="' + radioNameAttr + '"][value="' + radioValue + '"]').attr('checked', true);
+    }
+}

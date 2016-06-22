@@ -62,6 +62,16 @@
     </servlet-mapping>
 
     <servlet>
+        <description>后台加载线索用于编辑</description>
+        <servlet-name>AdminLoadClue</servlet-name>
+        <servlet-class>com.servlet.AdminLoadClue</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoadClue</servlet-name>
+        <url-pattern>/admin/AdminLoadClue</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <description>后台删除线索</description>
         <servlet-name>AdminDeleteClue</servlet-name>
         <servlet-class>com.servlet.AdminDeleteClue</servlet-class>
@@ -79,6 +89,16 @@
     <servlet-mapping>
         <servlet-name>AdminSaveClue</servlet-name>
         <url-pattern>/admin/AdminSaveClue</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>后台保存线索附件</description>
+        <servlet-name>AdminSaveClueFile</servlet-name>
+        <servlet-class>com.servlet.AdminSaveClueFile</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminSaveClueFile</servlet-name>
+        <url-pattern>/admin/AdminSaveClueFile</url-pattern>
     </servlet-mapping>
 
     <servlet>

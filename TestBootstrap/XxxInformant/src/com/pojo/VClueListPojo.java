@@ -64,6 +64,7 @@ public class VClueListPojo {
     private String JBKJXSLY_QTJBRXM;
     private String JBKJXSLY_QTSXXZDM;
     private String JBKJXSLY_QTZJ;
+    private String JBKJXSLY_QTZJDM;
     private String JBKJXSLY_SALY;
     private String JBKJXSLY_SALYDM;
     private String JBKJXSLY_SF;
@@ -90,6 +91,7 @@ public class VClueListPojo {
     private String JBKJXSLY_ZJ;
     private String JBKJXSLY_ZJDM;
     private String JBKJXSLY_ZJDW;
+    private String JBKJXSLY_ZJDWDM;
     private String JBKJXSLY_ZJR;
     private String JBKJXSLY_ZW;
     private String JBKJXSLY_ZWDM;
@@ -122,7 +124,11 @@ public class VClueListPojo {
     private String JCYMC;
     private String JCYJB;
     private String ZWDW;
+    private String ZWDWDM;
     private String JBSFJ;
+    private String CLFS;
+    private String CLFSDM;
+
 
     public int getJBKJXSLY_ID() {
         return JBKJXSLY_ID;
@@ -580,6 +586,14 @@ public class VClueListPojo {
         this.JBKJXSLY_QTZJ = JBKJXSLY_QTZJ;
     }
 
+    public String getJBKJXSLY_QTZJDM() {
+        return JBKJXSLY_QTZJDM;
+    }
+
+    public void setJBKJXSLY_QTZJDM(String JBKJXSLY_QTZJDM) {
+        this.JBKJXSLY_QTZJDM = JBKJXSLY_QTZJDM;
+    }
+
     public String getJBKJXSLY_SALY() {
         return JBKJXSLY_SALY;
     }
@@ -748,118 +762,6 @@ public class VClueListPojo {
         this.JBKJXSLY_XH = JBKJXSLY_XH;
     }
 
-    public String getJBKJXSLY_XJWH() {
-        return JBKJXSLY_XJWH;
-    }
-
-    public void setJBKJXSLY_XJWH(String JBKJXSLY_XJWH) {
-        this.JBKJXSLY_XJWH = JBKJXSLY_XJWH;
-    }
-
-    public String getJBKJXSLY_ZFTBMBH() {
-        return JBKJXSLY_ZFTBMBH;
-    }
-
-    public void setJBKJXSLY_ZFTBMBH(String JBKJXSLY_ZFTBMBH) {
-        this.JBKJXSLY_ZFTBMBH = JBKJXSLY_ZFTBMBH;
-    }
-
-    public String getJBKJXSLY_ZJ() {
-        return JBKJXSLY_ZJ;
-    }
-
-    public void setJBKJXSLY_ZJ(String JBKJXSLY_ZJ) {
-        this.JBKJXSLY_ZJ = JBKJXSLY_ZJ;
-    }
-
-    public String getJBKJXSLY_ZJDM() {
-        return JBKJXSLY_ZJDM;
-    }
-
-    public void setJBKJXSLY_ZJDM(String JBKJXSLY_ZJDM) {
-        this.JBKJXSLY_ZJDM = JBKJXSLY_ZJDM;
-    }
-
-    public String getJBKJXSLY_ZJDW() {
-        return JBKJXSLY_ZJDW;
-    }
-
-    public void setJBKJXSLY_ZJDW(String JBKJXSLY_ZJDW) {
-        this.JBKJXSLY_ZJDW = JBKJXSLY_ZJDW;
-    }
-
-    public String getJBKJXSLY_ZJR() {
-        return JBKJXSLY_ZJR;
-    }
-
-    public void setJBKJXSLY_ZJR(String JBKJXSLY_ZJR) {
-        this.JBKJXSLY_ZJR = JBKJXSLY_ZJR;
-    }
-
-    public String getJBKJXSLY_ZW() {
-        return JBKJXSLY_ZW;
-    }
-
-    public void setJBKJXSLY_ZW(String JBKJXSLY_ZW) {
-        this.JBKJXSLY_ZW = JBKJXSLY_ZW;
-    }
-
-    public String getJBKJXSLY_ZWDM() {
-        return JBKJXSLY_ZWDM;
-    }
-
-    public void setJBKJXSLY_ZWDM(String JBKJXSLY_ZWDM) {
-        this.JBKJXSLY_ZWDM = JBKJXSLY_ZWDM;
-    }
-
-    public String getJBKJXSLY_ZWDW() {
-        return JBKJXSLY_ZWDW;
-    }
-
-    public void setJBKJXSLY_ZWDW(String JBKJXSLY_ZWDW) {
-        this.JBKJXSLY_ZWDW = JBKJXSLY_ZWDW;
-    }
-
-    public String getJBKJXSLY_ZWDWDM() {
-        return JBKJXSLY_ZWDWDM;
-    }
-
-    public void setJBKJXSLY_ZWDWDM(String JBKJXSLY_ZWDWDM) {
-        this.JBKJXSLY_ZWDWDM = JBKJXSLY_ZWDWDM;
-    }
-
-    public String getJBKJXSLY_ZYSXXZ() {
-        return JBKJXSLY_ZYSXXZ;
-    }
-
-    public void setJBKJXSLY_ZYSXXZ(String JBKJXSLY_ZYSXXZ) {
-        this.JBKJXSLY_ZYSXXZ = JBKJXSLY_ZYSXXZ;
-    }
-
-    public String getJBKJXSLY_ZYSXXZDM() {
-        return JBKJXSLY_ZYSXXZDM;
-    }
-
-    public void setJBKJXSLY_ZYSXXZDM(String JBKJXSLY_ZYSXXZDM) {
-        this.JBKJXSLY_ZYSXXZDM = JBKJXSLY_ZYSXXZDM;
-    }
-
-    public String getJBKJXSLY_ZZMM() {
-        return JBKJXSLY_ZZMM;
-    }
-
-    public void setJBKJXSLY_ZZMM(String JBKJXSLY_ZZMM) {
-        this.JBKJXSLY_ZZMM = JBKJXSLY_ZZMM;
-    }
-
-    public String getJBKJXSLY_ZZMMDM() {
-        return JBKJXSLY_ZZMMDM;
-    }
-
-    public void setJBKJXSLY_ZZMMDM(String JBKJXSLY_ZZMMDM) {
-        this.JBKJXSLY_ZZMMDM = JBKJXSLY_ZZMMDM;
-    }
-
     public String getCBR() {
         return CBR;
     }
@@ -1020,12 +922,156 @@ public class VClueListPojo {
         this.ZWDW = ZWDW;
     }
 
+    public String getZWDWDM() {
+        return ZWDWDM;
+    }
+
+    public void setZWDWDM(String ZWDWDM) {
+        this.ZWDWDM = ZWDWDM;
+    }
+
     public String getJBSFJ() {
         return JBSFJ;
     }
 
     public void setJBSFJ(String JBSFJ) {
         this.JBSFJ = JBSFJ;
+    }
+
+    public String getCLFS() {
+        return CLFS;
+    }
+
+    public void setCLFS(String CLFS) {
+        this.CLFS = CLFS;
+    }
+
+    public String getCLFSDM() {
+        return CLFSDM;
+    }
+
+    public void setCLFSDM(String CLFSDM) {
+        this.CLFSDM = CLFSDM;
+    }
+
+    public String getJBKJXSLY_XJWH() {
+        return JBKJXSLY_XJWH;
+    }
+
+    public void setJBKJXSLY_XJWH(String JBKJXSLY_XJWH) {
+        this.JBKJXSLY_XJWH = JBKJXSLY_XJWH;
+    }
+
+    public String getJBKJXSLY_ZFTBMBH() {
+        return JBKJXSLY_ZFTBMBH;
+    }
+
+    public void setJBKJXSLY_ZFTBMBH(String JBKJXSLY_ZFTBMBH) {
+        this.JBKJXSLY_ZFTBMBH = JBKJXSLY_ZFTBMBH;
+    }
+
+    public String getJBKJXSLY_ZJ() {
+        return JBKJXSLY_ZJ;
+    }
+
+    public void setJBKJXSLY_ZJ(String JBKJXSLY_ZJ) {
+        this.JBKJXSLY_ZJ = JBKJXSLY_ZJ;
+    }
+
+    public String getJBKJXSLY_ZJDM() {
+        return JBKJXSLY_ZJDM;
+    }
+
+    public void setJBKJXSLY_ZJDM(String JBKJXSLY_ZJDM) {
+        this.JBKJXSLY_ZJDM = JBKJXSLY_ZJDM;
+    }
+
+    public String getJBKJXSLY_ZJDW() {
+        return JBKJXSLY_ZJDW;
+    }
+
+    public void setJBKJXSLY_ZJDW(String JBKJXSLY_ZJDW) {
+        this.JBKJXSLY_ZJDW = JBKJXSLY_ZJDW;
+    }
+
+    public String getJBKJXSLY_ZJDWDM() {
+        return JBKJXSLY_ZJDWDM;
+    }
+
+    public void setJBKJXSLY_ZJDWDM(String JBKJXSLY_ZJDWDM) {
+        this.JBKJXSLY_ZJDWDM = JBKJXSLY_ZJDWDM;
+    }
+
+    public String getJBKJXSLY_ZJR() {
+        return JBKJXSLY_ZJR;
+    }
+
+    public void setJBKJXSLY_ZJR(String JBKJXSLY_ZJR) {
+        this.JBKJXSLY_ZJR = JBKJXSLY_ZJR;
+    }
+
+    public String getJBKJXSLY_ZW() {
+        return JBKJXSLY_ZW;
+    }
+
+    public void setJBKJXSLY_ZW(String JBKJXSLY_ZW) {
+        this.JBKJXSLY_ZW = JBKJXSLY_ZW;
+    }
+
+    public String getJBKJXSLY_ZWDM() {
+        return JBKJXSLY_ZWDM;
+    }
+
+    public void setJBKJXSLY_ZWDM(String JBKJXSLY_ZWDM) {
+        this.JBKJXSLY_ZWDM = JBKJXSLY_ZWDM;
+    }
+
+    public String getJBKJXSLY_ZWDW() {
+        return JBKJXSLY_ZWDW;
+    }
+
+    public void setJBKJXSLY_ZWDW(String JBKJXSLY_ZWDW) {
+        this.JBKJXSLY_ZWDW = JBKJXSLY_ZWDW;
+    }
+
+    public String getJBKJXSLY_ZWDWDM() {
+        return JBKJXSLY_ZWDWDM;
+    }
+
+    public void setJBKJXSLY_ZWDWDM(String JBKJXSLY_ZWDWDM) {
+        this.JBKJXSLY_ZWDWDM = JBKJXSLY_ZWDWDM;
+    }
+
+    public String getJBKJXSLY_ZYSXXZ() {
+        return JBKJXSLY_ZYSXXZ;
+    }
+
+    public void setJBKJXSLY_ZYSXXZ(String JBKJXSLY_ZYSXXZ) {
+        this.JBKJXSLY_ZYSXXZ = JBKJXSLY_ZYSXXZ;
+    }
+
+    public String getJBKJXSLY_ZYSXXZDM() {
+        return JBKJXSLY_ZYSXXZDM;
+    }
+
+    public void setJBKJXSLY_ZYSXXZDM(String JBKJXSLY_ZYSXXZDM) {
+        this.JBKJXSLY_ZYSXXZDM = JBKJXSLY_ZYSXXZDM;
+    }
+
+    public String getJBKJXSLY_ZZMM() {
+        return JBKJXSLY_ZZMM;
+    }
+
+    public void setJBKJXSLY_ZZMM(String JBKJXSLY_ZZMM) {
+        this.JBKJXSLY_ZZMM = JBKJXSLY_ZZMM;
+    }
+
+    public String getJBKJXSLY_ZZMMDM() {
+        return JBKJXSLY_ZZMMDM;
+    }
+
+    public void setJBKJXSLY_ZZMMDM(String JBKJXSLY_ZZMMDM) {
+        this.JBKJXSLY_ZZMMDM = JBKJXSLY_ZZMMDM;
     }
 
     public int getJBKJXSLY_CLZT() {

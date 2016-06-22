@@ -15,14 +15,14 @@ function initializeClueList() {
             {field: 'JBKJXSLY_ID', title: '', checkbox: true, width: 50, align: 'center'},
             {field: 'JBKJXSLY_SLRQ', title: '受理日期', width: 80, align: 'center'},
             {field: 'CBRCLRQ', title: '处理日期', width: 80, align: 'center'},
-            {field: 'JBKJXSLY_BJBRXM', title: '被举报人姓名', width: 100, align: 'center'},
-            {field: 'JBKJXSLY_BJBRDWZZ', title: '单位住址', width: 120, align: 'center'},
-            {field: 'JBKJXSLY_ZJ', title: '职级', width: 100, align: 'center'},
-            {field: 'JBKJXSLY_ZYSXXZ', title: '主要涉嫌性质', width: 120, align: 'center'},
+            {field: 'JBKJXSLY_BJBRXM', title: '被举报人姓名', width: 100, align: 'center', formatter: displayStringFormatter},
+            {field: 'JBKJXSLY_BJBRDWZZ', title: '单位住址', width: 140, align: 'center', formatter: displayStringFormatter},
+            {field: 'JBKJXSLY_ZJ', title: '职级', width: 120, align: 'center', formatter: displayStringFormatter},
+            {field: 'JBKJXSLY_ZYSXXZ', title: '主要涉嫌性质', width: 180, align: 'center', formatter: displayStringFormatter},
             {field: 'JBKJXSLY_LYFS', title: '举报方式', width: 60, align: 'center'},
-            {field: 'CBR', title: '承办人', width: 80, align: 'left'},
-            {field: 'JBKJXSLY_CLZT', title: '状态', width: 80, align: 'left', formatter: statusFormatter},
-            {field: 'action', title: '操作选项', width: 80, align: 'center', formatter: actionFormatter}
+            {field: 'CBR', title: '承办人', width: 60, align: 'left'},
+            {field: 'JBKJXSLY_CLZT', title: '状态', width: 50, align: 'left', formatter: statusFormatter},
+            {field: 'action', title: '操作选项', width: 70, align: 'center', formatter: actionFormatter}
         ]],
         rownumbers: false,
         singleSelect: false,
@@ -34,11 +34,11 @@ function initializeClueList() {
 
 
     //// Load all dropdown data
-    loadSearchDropdown('cbJBKJXSLY_LYFS');
+    loadSearchDropdown('cbSearchJBKJXSLY_LYFS');
 }
 
 function actionFormatter(data, row, index) {
-    return '<a href="javascript:;" onclick="editCurrentRow(' + row.JBKJXSLY_ID + ',' + index + ')">修改</a>' +
+    return '<a href="#EditClue?ID=' + row.JBKJXSLY_ID + '" onclick="editCurrentRow(' + row.JBKJXSLY_ID + ',' + index + ')">修改</a>' +
         '<a href="javascript:;" onclick="deleteCurrentRow(' + row.JBKJXSLY_ID + ')">删除</a>'
 }
 
@@ -50,6 +50,13 @@ function statusFormatter(value) {
     }
 }
 
+function displayStringFormatter(value) {
+    if (value.indexOf('@#@') == 0) {
+        return '';
+    } else {
+        return value.replace(/@#@/g, ';');
+    }
+}
 
 function queryClueListDefaultData() {
     var dg = $('#clueList_Dg');
@@ -95,6 +102,7 @@ function onDataGridLoadSuccess() {
 
 function loadNewCluePage() {
     loadRightPanelContent('NewClue.html');
+    loadRightTitleNavPath();
     var titlePathElement = $('div.index-main-title');
     var titlePath = titlePathElement.html() + '&nbsp;>&nbsp;<a href="#">新建窗口</a>';
     titlePathElement.html(titlePath);
@@ -145,7 +153,12 @@ function deleteCurrentRow(id) {
 
 function editCurrentRow(id, index) {
     $('#clueList_Dg').datagrid('selectRow', index);
-    alert('Edit row id: ' + id);
+    loadRightPanelContent('NewClue.html');
+    loadRightTitleNavPath();
+    var titlePathElement = $('div.index-main-title');
+    var titlePath = titlePathElement.html() + '&nbsp;>&nbsp;<a href="#">编辑窗口</a>';
+    titlePathElement.html(titlePath);
+    //alert('Edit row id: ' + id);
 }
 
 

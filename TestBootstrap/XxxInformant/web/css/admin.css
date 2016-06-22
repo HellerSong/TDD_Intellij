@@ -324,6 +324,14 @@ body {
     border: 1px solid #95B8E7;
 }
 
+#newClue_jbrTabs .combo input {
+    border: 0;
+}
+
+#newClue_bjbrTabs .combo input {
+    border: 0;
+}
+
 /*ClueList.html Page Style*/
 .clueList-action-btn-group {
     margin: 14px 0;

@@ -123,7 +123,7 @@ public abstract class BaseViewDao<T, PK> {
         List<T> list = new ArrayList<T>();
 
         try {
-            String sql = "select * from " + mainTableName + joinString + sWhere + " order by " + mainKeyName + " desc;";
+            String sql = "select * from " + mainTableName + " " + joinString + sWhere + " order by " + mainKeyName + " desc;";
             DevLog.write(sql);
 
             if (conn == null) {

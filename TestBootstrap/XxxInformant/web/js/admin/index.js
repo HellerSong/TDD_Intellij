@@ -14,7 +14,7 @@ $(function () {
     //// Loading exactly page
     loadRightPanelContent('ClueList.html');
     //loadRightPanelContent('NewClue.html');
-    loadTitleNavPath();
+    loadRightTitleNavPath();
 
 
     //// Page style setting
@@ -27,7 +27,7 @@ $(function () {
         $(this).addClass('focus');
 
         loadRightPanelContent($(this).attr('title'));
-        loadTitleNavPath();
+        loadRightTitleNavPath();
     });
 });
 
@@ -41,7 +41,7 @@ function loadRightPanelContent(htmlFile) {
     });
 }
 
-function loadTitleNavPath() {
+function loadRightTitleNavPath() {
     // Change right main title path
     var activeLeftItem = $('div.sdmenu a.focus');
     var rootName = activeLeftItem.parent().parent().attr('title');
@@ -88,7 +88,7 @@ function loadAllGlobalDropdownJson() {
 function loadDropdown(selectElementId) {
     var cb = $('#' + selectElementId);
     var strLength = selectElementId.length;
-    var selectElementName = selectElementId.substring(2, strLength);
+    var selectElementName = selectElementId.substring(2, strLength);    // "cbJBKJXSLY_LYFS" >> "JBKJXSLY_LYFS"
     var lastChar = selectElementId.substring(strLength - 1, strLength);
     if (isDigital(lastChar)) {
         selectElementName = selectElementId.substring(2, strLength - 1);
@@ -108,7 +108,7 @@ function loadDropdown(selectElementId) {
 
 function loadSearchDropdown(selectElementId) {
     var cb = $('#' + selectElementId);
-    var selectElementName = selectElementId.substring(2, selectElementId.length);
+    var selectElementName = selectElementId.substring(8, selectElementId.length);   // "cbSearchJBKJXSLY_LYFS" >> "JBKJXSLY_LYFS"
     cb.combobox({
         data: window.searchDdropdownJson[selectElementName],
         valueField: 'optionValue',

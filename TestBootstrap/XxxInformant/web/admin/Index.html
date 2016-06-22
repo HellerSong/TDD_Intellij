@@ -9,6 +9,7 @@
     <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
     <script type="text/javascript" src="../js/jquery.session.js"></script>
     <script type="text/javascript" src="../js/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="../js/jquery.upload.js"></script>
     <!-- Self using files -->
     <link rel="stylesheet" href="../css/admin.css">
     <script type="text/javascript" src="../js/shared.js"></script>
@@ -18,7 +19,7 @@
 </head>
 <body>
 <div class="index-head">
-    <div class="logo left"><img src="../images/index_1_03.png"/></div>
+    <!--<div class="logo left"><img src="../images/index_1_03.png"/></div>-->
     <div class="username right">
         <span>欢迎您，用户 <strong id="index_currentAdminName">2016417</strong></span>
         <span><a href="AdminLogout">安全退出</a></span><span class="index-icon-off"></span>
@@ -35,17 +36,17 @@
             <span>举报处业务</span>
             <div class="index-underline"><img src="../images/boder-bottom.jpg"/></div>
             <ul title="举报处业务">
-                <li><a href="javascript:;" title="ClueList.html" class="focus">线索处理中心</a></li>
-                <li><a href="javascript:;" title="Report.html">统计报表</a></li>
-                <li><a href="javascript:;" title="OfficerMgmt.html">检察干警违法违纪处理中心</a></li>
-                <li><a href="javascript:;" title="BureauClueMgmt.html">厅局级线索处理中心</a></li>
+                <li><a href="#" title="ClueList.html" class="focus">线索处理中心</a></li>
+                <li><a href="#" title="Report.html">统计报表</a></li>
+                <li><a href="#" title="OfficerMgmt.html">检察干警违法违纪处理中心</a></li>
+                <li><a href="#" title="BureauClueMgmt.html">厅局级线索处理中心</a></li>
             </ul>
             <span>管理模块</span>
             <div class="index-underline"><img src="../images/boder-bottom.jpg"/></div>
             <ul title="管理模块">
-                <li><a href="javascript:;" title="OrgStructure.html">组织机构</a></li>
-                <li><a href="javascript:;" title="OrgMemberList.html">组织成员</a></li>
-                <li><a href="javascript:;" title="RoleAccess.html">权限角色</a></li>
+                <li><a href="#" title="OrgStructure.html">组织机构</a></li>
+                <li><a href="#" title="OrgMemberList.html">组织成员</a></li>
+                <li><a href="#" title="RoleAccess.html">权限角色</a></li>
             </ul>
         </div>
         <div><img src="../images/index_1_31.png"/></div>
@@ -57,7 +58,7 @@
             </div>
             <div class="right" hidden>
                 <a data-options="iconCls:'icon-ok'" onclick="submitNewClueForm()">提交</a>
-                <a data-options="iconCls:'icon-cancel'" onclick="closeNewClueForm()">取消</a>
+                <a href="#" data-options="iconCls:'icon-cancel'" onclick="closeNewClueForm()">取消</a>
             </div>
         </div>
         <div class="index-main-content"></div>

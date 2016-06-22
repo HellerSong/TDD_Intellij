@@ -1,9 +1,11 @@
 package com.servlet;
 
-import com.dao.DropdownDao;
+import com.dao.VClueListDao;
 import com.google.gson.Gson;
-import com.pojo.DropdownItemPojo;
+import com.google.gson.GsonBuilder;
+import com.pojo.VClueListPojo;
 import com.utils.DevLog;
+import com.utils.Parser;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -12,7 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 
@@ -20,22 +21,32 @@ import java.util.Map;
  * <p>Summary : </p>
  * <p>Authors : Heller Song (HellerSong@Outlook.com)</p>
  */
-public class LoadDropdown extends HttpServlet {
+public class AdminLoadClue extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Map<String, Object> map = new HashMap<String, Object>();
+        int clueId = Parser.parseInt(request.getParameter("clueId"));
 
-        // Normal dropdown
-        Hashtable<String, List<DropdownItemPojo>> dropdownHt = DropdownDao.getRegionDropdownHt();
+        Map<String, Object> map = new HashMap<String, Object>();
+        Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
+        String sWhere = "where JBKJXSLY_CLZT != '-1'";
+
+        if (clueId > 0) {
+            sWhere += " and JBKJXSLY_ID = '" + clueId + "'";
+        }
+        VClueListDao dao = new VClueListDao();
+        int totalCount = dao.getTotalRecordCount(sWhere);
+        List<VClueListPojo> list = dao.getAll(sWhere);
+        dao.closeAll();
+
 
         //// Result data transfer
         response.setContentType("text/plain");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
-        map.put("total", dropdownHt.size());
-        map.put("rows", dropdownHt);
-        String json = new Gson().toJson(map);
+        map.put("total", totalCount);
+        map.put("rows", list);
+        String json = gson.toJson(map);
         DevLog.write(json);
         out.println(json);
         out.flush();

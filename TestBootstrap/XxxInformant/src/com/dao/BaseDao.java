@@ -48,7 +48,6 @@ public class BaseDao<T, PK> implements IDao<T, PK> {
 
         try {
             String sql = "select count(*) as count from " + tableName;
-            DevLog.write(sql);
 
             if (conn == null) {
                 conn = MySqlUtil.getConnection();

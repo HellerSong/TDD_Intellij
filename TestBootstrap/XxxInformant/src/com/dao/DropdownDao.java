@@ -15,9 +15,21 @@ import java.util.List;
  */
 public class DropdownDao {
     private static Hashtable<String, List<DropdownItemPojo>> regionDropdownHt = new Hashtable<String, List<DropdownItemPojo>>();
+    private static Hashtable<String, List<DropdownItemPojo>> searchDropdownHt = new Hashtable<String, List<DropdownItemPojo>>();
     private static Hashtable<String, String> mappingHt = new Hashtable<String, String>();
 
     static {
+        initRegionDropdownHt();
+        initSearchDropdownHt();
+    }
+
+    private DropdownDao() {
+
+    }
+
+    private static void initRegionDropdownHt() {
+        regionDropdownHt.clear();
+
         //// Code_t库表中的下拉选项的处理
         Hashtable<String, String> code_tMappingHt = new Hashtable<String, String>();
         code_tMappingHt.put("JBKJXSLY_LYFS", "举报来源方式");
@@ -27,11 +39,11 @@ public class DropdownDao {
         code_tMappingHt.put("JBKJXSLY_JYLX", "机要类型");
         code_tMappingHt.put("JBKJXSLY_MZ", "民族代码");
         code_tMappingHt.put("JBKJXSLY_ZZMM", "政治面貌代码");
-        code_tMappingHt.put("JBKJXSLY_ZJ", "(举报)干部职级代码");
+        code_tMappingHt.put("JBKJXSLY_ZW", "干部职务名称代码");
         code_tMappingHt.put("JBKJXSLY_SF", "被举报人身份");
         code_tMappingHt.put("JBKJXSLY_TSSF", "被举报人身份");
-        code_tMappingHt.put("JBKJXSLY_ZW", "干部职务名称代码");
-        code_tMappingHt.put("JBKJXSLY_QTZW", "干部职务名称代码");
+        code_tMappingHt.put("JBKJXSLY_ZJ", "(举报)干部职级代码");
+        code_tMappingHt.put("JBKJXSLY_QTZJ", "(举报)干部职级代码");
         code_tMappingHt.put("JBKJXSLY_ZYSXXZ", "案由代码");
         code_tMappingHt.put("JBKJXSLY_CYSXXZ", "案由代码");
         code_tMappingHt.put("JBKJXSLY_SALY", "商业贿赂领域");
@@ -102,30 +114,34 @@ public class DropdownDao {
         orgnizeDao.closeAll();
     }
 
-    private DropdownDao() {
+    private static void initSearchDropdownHt() {
+        searchDropdownHt.clear();
 
+        String[] searchOptionArray = new String[]{"JBKJXSLY_LYFS"};
+
+        for (String s : searchOptionArray) {
+            // Add "All" item to dropdown item list
+            List<DropdownItemPojo> itemList = regionDropdownHt.get(s);
+            List<DropdownItemPojo> resultList = new ArrayList<DropdownItemPojo>();
+
+            DropdownItemPojo firstDropdownItem = new DropdownItemPojo();
+            firstDropdownItem.setOptionType(mappingHt.get(s));
+            firstDropdownItem.setOptionValue("0");
+            firstDropdownItem.setOptionHtmlContent("全部");
+            resultList.add(firstDropdownItem);
+            for (DropdownItemPojo p : itemList) {
+                resultList.add(p);
+            }
+
+            searchDropdownHt.put(s, resultList);
+        }
     }
 
-    public static Hashtable<String, List<DropdownItemPojo>> getDropdownHt() {
+    public static Hashtable<String, List<DropdownItemPojo>> getRegionDropdownHt() {
         return regionDropdownHt;
     }
 
     public static Hashtable<String, List<DropdownItemPojo>> getSearchDropdownHt() {
-        String[] searchDropdownArray = new String[]{"JBKJXSLY_LYFS"};
-        Hashtable<String, List<DropdownItemPojo>> resultTable = new Hashtable<String, List<DropdownItemPojo>>();
-
-        for (String s : searchDropdownArray) {
-            // Add "All" item to dropdown item list
-            List<DropdownItemPojo> itemList = regionDropdownHt.get(s);
-            DropdownItemPojo dropdownItemPojo = new DropdownItemPojo();
-            dropdownItemPojo.setOptionType(mappingHt.get(s));
-            dropdownItemPojo.setOptionValue("0");
-            dropdownItemPojo.setOptionHtmlContent("全部");
-            itemList.add(0, dropdownItemPojo);
-
-            resultTable.put(s, itemList);
-        }
-
-        return resultTable;
+        return searchDropdownHt;
     }
 }

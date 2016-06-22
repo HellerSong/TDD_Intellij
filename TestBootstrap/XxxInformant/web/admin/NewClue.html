@@ -53,8 +53,7 @@
                                            style="width: 100%;"></td>
                     <td>&nbsp;</td>
                     <td class="label">线索编号：</td>
-                    <td width="100" colspan="3"><input class="easyui-textbox" type="text" id="clueJBKJXSLY_XH"
-                                                       name="JBKJXSLY_XH"
+                    <td width="100" colspan="3"><input class="easyui-textbox" type="text" name="JBKJXSLY_XH"
                                                        style="width: 100%;" readonly></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -71,9 +70,9 @@
             <div id="newClue_jbrTabs" style="height:auto;"></div>
             <div id="newClue_jbrTabTools">
                 <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'"
-                   onclick="addJbrPanel()"></a>
+                   onclick="addJbrTab()"></a>
                 <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-remove'"
-                   onclick="removeJbrPanel()"></a>
+                   onclick="removeJbrTab()"></a>
             </div>
         </form>
     </div>
@@ -81,14 +80,66 @@
         <div class="newClue-title">
             <span>被举报人基本情况</span>
         </div>
-        <form id="newClue_formBJBR">
+        <form id="newClue_formBJBR_Part1">
             <div id="newClue_bjbrTabs" style="height:auto;"></div>
             <div id="newClue_bjbrTabTools">
                 <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'"
-                   onclick="addBjbrPanel()"></a>
+                   onclick="addBjbrTab()"></a>
                 <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-remove'"
-                   onclick="removeBjbrPanel()"></a>
+                   onclick="removeBjbrTab()"></a>
             </div>
+
+        </form>
+        <form id="newClue_formBJBR_Part2" style="margin-top: 35px;">
+            <table class="newClue-table" border="0" width="100%">
+                <tr>
+                    <td class="label"><span class="span-must-fill">*</span>是否属机关检察：</td>
+                    <td width="120">
+                        <input type="radio" name="JBKJXSLY_SFSBYGX" checked="checked" value="1"/>&nbsp;是&nbsp;&nbsp;
+                        <input type="radio" name="JBKJXSLY_SFSBYGX" value="0"/>&nbsp;否
+                    </td>
+                    <td>&nbsp;</td>
+                    <td class="label"><span class="span-must-fill">*</span>是否控告:</td>
+                    <td width="140">
+                        <input type="radio" name="JBKJXSLY_SFKG" checked="checked" value="1"/>&nbsp;是&nbsp;&nbsp;
+                        <input type="radio" name="JBKJXSLY_SFKG" value="0"/>&nbsp;否
+                    </td>
+                    <td>&nbsp;</td>
+                    <td class="label"><span class="span-must-fill">*</span>是否申诉：</td>
+                    <td width="140">
+                        <input type="radio" name="JBKJXSLY_SFSS" checked="checked" value="1"/>&nbsp;是&nbsp;&nbsp;
+                        <input type="radio" name="JBKJXSLY_SFSS" value="0"/>&nbsp;否
+                    </td>
+                    <td>&nbsp;</td>
+                    <td class="label"><span class="span-must-fill">*</span>是否其他:</td>
+                    <td width="120">
+                        <input type="radio" name="JBKJXSLY_SFQT" checked="checked" value="1"/>&nbsp;是&nbsp;&nbsp;
+                        <input type="radio" name="JBKJXSLY_SFQT" value="0"/>&nbsp;否
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="label"><span class="span-must-fill">*</span>举报内容：</td>
+                    <td colspan="10"><textarea name="JBKJXSLY_SYZY" rows="5"
+                                               style="width: 99%;"></textarea></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="label"><span class="span-must-fill">*</span>举报内容摘要：</td>
+                    <td colspan="10"><textarea name="JBKJXSLY_NRZY" rows="3"
+                                               style="width: 99%;"></textarea></td>
+                </tr>
+            </table>
+            <ul class="newClue-attachment">
+                <input type="file" multiple id="newClue_file" onchange="updateFileSelection()" hidden>
+                <li class="newClue-attachment-select-file"><a href="javascript:;" onclick="selectFiles()">添加附件</a></li>
+                <li class="newClue-attachment-count">0个</li>
+                <li class="newClue-attachment-view"><a href="javascript:;">查看附件</a></li>
+            </ul>
         </form>
     </div>
     <div class="newClue-box">
@@ -112,7 +163,7 @@
                     </td>
                     <td width="20">&nbsp;</td>
                     <td class="label">编号：</td>
-                    <td width="100"><input class="easyui-textbox" type="text" id="processJBKJXSLY_XH" name="JBKJXSLY_XH"
+                    <td width="100"><input class="easyui-textbox" type="text" name="JBKJXSLY_XH"
                                            style="width: 100%;" readonly/></td>
                 </tr>
                 <tr>
@@ -220,7 +271,7 @@
     </div>
     <div class="newClue-submit">
         <a class="easyui-linkbutton" data-options="iconCls:'icon-ok'" onclick="submitNewClueForm()">提交</a>
-        <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'"
+        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'"
            onclick="closeNewClueForm()">取消</a>
     </div>
 </div>

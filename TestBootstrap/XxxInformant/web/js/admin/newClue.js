@@ -1,21 +1,19 @@
 var jbrIndex = 1;
 var bjbrIndex = 1;
+var clueId = 0;
 
 function initializeNewClue() {
+    //// Page style setting
     $.parser.parse();
     $('.easyui-combobox').combobox({panelHeight: 'auto'});
     $('.easyui-combobox.limit-height').combobox({panelHeight: '350px'});
     $('.index-main-title .right').show();
 
-    var clueuuid = uuid();
-    $('#clueJBKJXSLY_XH').textbox('setValue', clueuuid);
-    $('#processJBKJXSLY_XH').textbox('setValue', clueuuid);
-
-
     initJbrTabs();
     initBjbrTabs();
 
 
+    //// Load "Clue Info" and "Clue Process" dropdown data
     loadDropdown('cbJBKJXSLY_LYFS');
     loadDropdown('cbJBKJXSLY_LYZL');
     loadDropdown('cbJBKJXSLY_BJBRZTLB');
@@ -24,6 +22,103 @@ function initializeNewClue() {
     loadDropdown('cbZWDW');
     loadDropdown('cbCSDW');
     loadDropdown('cbJBKJXSLY_JYLX');
+
+
+    var url = window.location.href;
+    if (url.indexOf('EditClue') >= 0) {
+        //// When this is editing clue then load it by id
+        clueId = url.substring(url.indexOf('=') + 1, url.length);
+        loadClueDataById(clueId)
+    } else {
+        //// Generate and set "Clue UUID" value
+        var clueuuid = uuid();
+        $('input[textboxname="JBKJXSLY_XH"]').textbox('setValue', clueuuid);
+    }
+}
+
+function loadClueDataById(clueId) {
+    $.post('AdminLoadClue', {clueId: clueId}, function (result) {
+        result = (new Function('return ' + result))();
+
+        if (result.total > 0) {
+            var pojo = result.rows[0];
+
+            //// Set all "Clue Info" value
+            $('#cbJBKJXSLY_LYFS').combobox('select', pojo.JBKJXSLY_LYFSDM);
+            $('#cbJBKJXSLY_LYZL').combobox('select', pojo.JBKJXSLY_LYZLDM);
+            $('#cbJBKJXSLY_BJBRZTLB').combobox('select', pojo.JBKJXSLY_BJBRZTLBDM);
+            $('#cbJBKJXSLY_ZJDW').combobox('select', pojo.JBKJXSLY_ZJDWDM);
+            $('input[textboxname="JBKJXSLY_SLRQ"]').textbox('setValue', pojo.JBKJXSLY_SLRQ);
+            $('input[textboxname="JBKJXSLY_ZJR"]').textbox('setValue', pojo.JBKJXSLY_ZJR);
+            $('input[textboxname="JBKJXSLY_XH"]').textbox('setValue', pojo.JBKJXSLY_XH);
+
+            //// Set all "Clue Process" value
+            $('#cbCLFS').combobox('select', pojo.CLFSDM);
+            $('#cbZWDW').combobox('select', pojo.ZWDWDM);
+            $('#cbCSDW').combobox('select', pojo.CSDWDM);
+            $('#cbJBKJXSLY_JYLX').combobox('select', pojo.JBKJXSLY_JYLXDM);
+            $('input[textboxname="CBR"]').textbox('setValue', pojo.CBR);
+            $('input[textboxname="CSRQ"]').textbox('setValue', pojo.CSRQ);
+            $('input[textboxname="CBRCLRQ"]').textbox('setValue', pojo.CBRCLRQ);
+            $('input[textboxname="JBZRYJ"]').textbox('setValue', pojo.JBZRYJ);
+            $('input[textboxname="CZYJ"]').textbox('setValue', pojo.CZYJ);
+            $('input[textboxname="CZSPRQ"]').textbox('setValue', pojo.CZSPRQ);
+            $('input[textboxname="JBKJXSLY_XJWH"]').textbox('setValue', pojo.JBKJXSLY_XJWH);
+            $('input[textboxname="TZYJ"]').textbox('setValue', pojo.TZYJ);
+            $('input[textboxname="TZSPRQ"]').textbox('setValue', pojo.TZSPRQ);
+            $('input[textboxname="JCZPS"]').textbox('setValue', pojo.JCZPS);
+            $('input[textboxname="JCZPSRQ"]').textbox('setValue', pojo.JCZPSRQ);
+            $('input[textboxname="JBKJXSLY_CLQK"]').textbox('setValue', pojo.JBKJXSLY_CLQK);
+            $('input[textboxname="JBKJXSLY_JDDD"]').textbox('setValue', pojo.JBKJXSLY_JDDD);
+            $('input[textboxname="JBKJXSLY_HFRQ"]').textbox('setValue', pojo.JBKJXSLY_HFRQ);
+            $('input[textboxname="JBKJXSLY_BZ"]').textbox('setValue', pojo.JBKJXSLY_BZ);
+
+            //// Set all "Informer" value
+            var informerCount = pojo.JBKJXSLY_SFSM.split('@#@').length;
+            var i = 1;
+            do {
+                if (i > 1) {
+                    addJbrTab();
+                }
+                $('input[name="JBKJXSLY_JBRXM' + i + '"]').val(pojo.JBKJXSLY_JBRXM.split('@#@')[i - 1]);
+                checkRadioByValue('JBKJXSLY_SFSM' + i, pojo.JBKJXSLY_SFSM.split('@#@')[i - 1]);
+                $('input[name="JBKJXSLY_JBRSFZH' + i + '"]').val(pojo.JBKJXSLY_JBRSFZH.split('@#@')[i - 1]);
+                $('input[name="JBKJXSLY_JBRDH' + i + '"]').val(pojo.JBKJXSLY_JBRDH.split('@#@')[i - 1]);
+                $('#cbJBKJXSLY_LXDQ' + i).combobox('select', pojo.JBKJXSLY_LXDQDM.split('@#@')[i - 1]);
+                $('input[name="JBKJXSLY_JBRDWZZ' + i + '"]').val(pojo.JBKJXSLY_JBRDWZZ.split('@#@')[i - 1]);
+                i++;
+            } while (i <= informerCount);
+            $('#newClue_jbrTabs').tabs('select', 0);
+
+            //// Set all "BeInformer" value
+            var beInformerCount = pojo.JBKJXSLY_BJBRXM.split('@#@').length;
+            var j = 1;
+            do {
+                if (j > 1) {
+                    addBjbrTab();
+                }
+                $('input[name="JBKJXSLY_BJBRXM' + j + '"]').val(pojo.JBKJXSLY_BJBRXM.split('@#@')[j - 1]);
+                $('#cbJBKJXSLY_XB' + j).combobox('select', pojo.JBKJXSLY_XB.split('@#@')[j - 1]);
+                $('#cbJBKJXSLY_MZ' + j).combobox('select', pojo.JBKJXSLY_MZDM.split('@#@')[j - 1]);
+                $('#cbJBKJXSLY_ZZMM' + j).combobox('select', pojo.JBKJXSLY_ZZMMDM.split('@#@')[j - 1]);
+                $('#cbJBKJXSLY_AFDQ' + j).combobox('select', pojo.JBKJXSLY_AFDQDM.split('@#@')[j - 1]);
+                $('#cbJBKJXSLY_ZW' + j).combobox('select', pojo.JBKJXSLY_ZWDM.split('@#@')[j - 1]);
+                $('input[name="JBKJXSLY_BJBRDWZZ' + j + '"]').val(pojo.JBKJXSLY_BJBRDWZZ.split('@#@')[j - 1]);
+                $('#cbJBKJXSLY_SF' + j).combobox('select', pojo.JBKJXSLY_SFDM.split('@#@')[j - 1]);
+                $('#cbJBKJXSLY_TSSF' + j).combobox('select', pojo.JBKJXSLY_TSSFDM.split('@#@')[j - 1]);
+                $('#cbJBKJXSLY_ZJ' + j).combobox('select', pojo.JBKJXSLY_ZJDM.split('@#@')[j - 1]);
+                $('#cbJBKJXSLY_QTZJ' + j).combobox('select', pojo.JBKJXSLY_QTZJDM.split('@#@')[j - 1]);
+                $('#cbJBKJXSLY_ZYSXXZ' + j).combobox('select', pojo.JBKJXSLY_ZYSXXZDM.split('@#@')[j - 1]);
+                $('#cbJBKJXSLY_CYSXXZ' + j).combobox('select', pojo.JBKJXSLY_QTSXXZDM.split('@#@')[j - 1]);
+                $('#cbJBKJXSLY_SALY' + j).combobox('select', pojo.JBKJXSLY_SALYDM.split('@#@')[j - 1]);
+                $('input[name="JBKJXSLY_SXJE' + j + '"]').val(pojo.JBKJXSLY_SXJE.split('@#@')[j - 1]);
+                checkRadioByValue('JBKJXSLY_NRSFJT' + j, pojo.JBKJXSLY_NRSFJT.split('@#@')[j - 1]);
+                checkRadioByValue('JBKJXSLY_SFXKQT' + j, pojo.JBKJXSLY_SFXKQT.split('@#@')[j - 1]);
+                j++;
+            } while (j <= beInformerCount);
+            $('#newClue_bjbrTabs').tabs('select', 0);
+        }
+    });
 }
 
 
@@ -45,12 +140,12 @@ function initJbrTabs() {
 
     jbrTabs.tabs('add', {
         title: '举报人' + jbrIndex,
-        content: getJbrTableElement(jbrIndex),
+        content: getJbrTabElement(jbrIndex),
         closable: false
     });
 }
 
-function getJbrTableElement(index) {
+function getJbrTabElement(index) {
     var table = '';
     table += '<table class="newClue-table" border="0" width="100%">';
     table += '    <tr>';
@@ -82,12 +177,12 @@ function getJbrTableElement(index) {
     return table;
 }
 
-function addJbrPanel() {
+function addJbrTab() {
     if (jbrIndex < 3) {
         jbrIndex++;
         $('#newClue_jbrTabs').tabs('add', {
             title: '举报人' + jbrIndex,
-            content: getJbrTableElement(jbrIndex),
+            content: getJbrTabElement(jbrIndex),
             closable: false
         });
     } else {
@@ -96,7 +191,7 @@ function addJbrPanel() {
 
 }
 
-function removeJbrPanel() {
+function removeJbrTab() {
     if (jbrIndex > 1) {
         var jbrTabs = $('#newClue_jbrTabs');
 
@@ -124,25 +219,26 @@ function initBjbrTabs() {
             loadDropdown('cbJBKJXSLY_MZ' + bjbrIndex);
             loadDropdown('cbJBKJXSLY_ZZMM' + bjbrIndex);
             loadDropdown('cbJBKJXSLY_AFDQ' + bjbrIndex);
-            loadDropdown('cbJBKJXSLY_ZJ' + bjbrIndex);
+            loadDropdown('cbJBKJXSLY_ZW' + bjbrIndex);
             loadDropdown('cbJBKJXSLY_SF' + bjbrIndex);
             loadDropdown('cbJBKJXSLY_TSSF' + bjbrIndex);
-            loadDropdown('cbJBKJXSLY_ZW' + bjbrIndex);
-            loadDropdown('cbJBKJXSLY_QTZW' + bjbrIndex);
+            loadDropdown('cbJBKJXSLY_ZJ' + bjbrIndex);
+            loadDropdown('cbJBKJXSLY_QTZJ' + bjbrIndex);
             loadDropdown('cbJBKJXSLY_ZYSXXZ' + bjbrIndex);
             loadDropdown('cbJBKJXSLY_CYSXXZ' + bjbrIndex);
             loadDropdown('cbJBKJXSLY_SALY' + bjbrIndex);
+            $('#cbJBKJXSLY_XB' + bjbrIndex).combobox({panelHeight: 'auto'});
         }
     });
 
     bjbrTabs.tabs('add', {
         title: '被举报人' + bjbrIndex,
-        content: getBjbrTableElement(bjbrIndex),
+        content: getBjbrTabElement(bjbrIndex),
         closable: false
     });
 }
 
-function getBjbrTableElement(index) {
+function getBjbrTabElement(index) {
     var table = '';
 
     table += '<table class="newClue-table" border="0" width="100%">';
@@ -152,7 +248,7 @@ function getBjbrTableElement(index) {
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">性别：</td>';
     table += '        <td width="120">';
-    table += '            <select name="JBKJXSLY_XB' + index + '" style="width:100%;">';
+    table += '            <select id="cbJBKJXSLY_XB' + index + '" name="JBKJXSLY_XB' + index + '" style="width:100%;">';
     table += '                <option value="0" selected>未知</option>';
     table += '                <option value="1">男</option>';
     table += '                <option value="2">女</option>';
@@ -160,10 +256,10 @@ function getBjbrTableElement(index) {
     table += '        </td>';
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">民族：</td>';
-    table += '        <td width="160"><select id="cbJBKJXSLY_MZ' + index + '" name="JBKJXSLY_MZ' + index + '" style="width:100%;"></select></td>';
+    table += '        <td width="120"><select id="cbJBKJXSLY_MZ' + index + '" name="JBKJXSLY_MZ' + index + '" style="width:100%;"></select></td>';
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">政治面貌：</td>';
-    table += '        <td width="160"><select id="cbJBKJXSLY_ZZMM' + index + '" name="JBKJXSLY_ZZMM' + index + '" style="width:100%;"></select></td>';
+    table += '        <td width="120"><select id="cbJBKJXSLY_ZZMM' + index + '" name="JBKJXSLY_ZZMM' + index + '" style="width:100%;"></select></td>';
     table += '    </tr>';
     table += '    <tr>';
     table += '        <td>&nbsp;</td>';
@@ -172,8 +268,8 @@ function getBjbrTableElement(index) {
     table += '        <td class="label"><span class="span-must-fill">*</span>案发地区：</td>';
     table += '        <td width="100"><select id="cbJBKJXSLY_AFDQ' + index + '" name="JBKJXSLY_AFDQ' + index + '" style="width:100%;"></select></td>';
     table += '        <td width="30">&nbsp;</td>';
-    table += '        <td class="label"><span class="span-must-fill">*</span>职级：</td>';
-    table += '        <td width="100"><select id="cbJBKJXSLY_ZJ' + index + '" name="JBKJXSLY_ZJ' + index + '" style="width:100%;"></select></td>';
+    table += '        <td class="label">职务：</td>';
+    table += '        <td width="120"><select id="cbJBKJXSLY_ZW' + index + '" name="JBKJXSLY_ZW' + index + '" style="width:100%;"></select></td>';
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">单位、住址：</td>';
     table += '        <td width="120" colspan="4"><input type="text" name="JBKJXSLY_BJBRDWZZ' + index + '" style="width:99%;"/></td>';
@@ -188,11 +284,11 @@ function getBjbrTableElement(index) {
     table += '        <td class="label">特殊身份：</td>';
     table += '        <td width="100"><select id="cbJBKJXSLY_TSSF' + index + '" name="JBKJXSLY_TSSF' + index + '" style="width:100%;"></select></td>';
     table += '        <td width="30">&nbsp;</td>';
-    table += '        <td class="label">职务：</td>';
-    table += '        <td width="100"><select id="cbJBKJXSLY_ZW' + index + '" name="JBKJXSLY_ZW' + index + '" style="width:100%;"></select></td>';
+    table += '        <td class="label"><span class="span-must-fill">*</span>职级：</td>';
+    table += '        <td width="120"><select id="cbJBKJXSLY_ZJ' + index + '" name="JBKJXSLY_ZJ' + index + '" style="width:100%;"></select></td>';
     table += '        <td width="30">&nbsp;</td>';
-    table += '        <td class="label">其他职务：</td>';
-    table += '        <td width="100"><select id="cbJBKJXSLY_QTZW' + index + '" name="JBKJXSLY_QTZW' + index + '" style="width:100%;"></select></td>';
+    table += '        <td class="label">其他职级：</td>';
+    table += '        <td width="120"><select id="cbJBKJXSLY_QTZJ' + index + '" name="JBKJXSLY_QTZJ' + index + '" style="width:100%;"></select></td>';
     table += '    </tr>';
     table += '</table>';
     table += '<table class="newClue-table" border="0" width="100%">';
@@ -225,65 +321,17 @@ function getBjbrTableElement(index) {
     table += '            <input type="radio" name="JBKJXSLY_SFXKQT' + index + '" value="0"/>&nbsp;否';
     table += '        </td>';
     table += '    </tr>';
-    table += '    <tr>';
-    table += '        <td>&nbsp;</td>';
-    table += '    </tr>';
-    table += '    <tr>';
-    table += '        <td class="label"><span class="span-must-fill">*</span>是否属机关检察：</td>';
-    table += '        <td>';
-    table += '            <input type="radio" name="JBKJXSLY_SFSBYGX' + index + '" checked="checked" value="1"/>&nbsp;是&nbsp;&nbsp;';
-    table += '            <input type="radio" name="JBKJXSLY_SFSBYGX' + index + '" value="0"/>&nbsp;否';
-    table += '        </td>';
-    table += '        <td>&nbsp;</td>';
-    table += '        <td class="label"><span class="span-must-fill">*</span>是否控告:</td>';
-    table += '        <td>';
-    table += '            <input type="radio" name="JBKJXSLY_SFKG' + index + '" checked="checked" value="1"/>&nbsp;是&nbsp;&nbsp;';
-    table += '            <input type="radio" name="JBKJXSLY_SFKG' + index + '" value="0"/>&nbsp;否';
-    table += '        </td>';
-    table += '        <td>&nbsp;</td>';
-    table += '        <td class="label"><span class="span-must-fill">*</span>是否申诉：</td>';
-    table += '        <td>';
-    table += '            <input type="radio" name="JBKJXSLY_SFSS' + index + '" checked="checked" value="1"/>&nbsp;是&nbsp;&nbsp;';
-    table += '            <input type="radio" name="JBKJXSLY_SFSS' + index + '" value="0"/>&nbsp;否';
-    table += '        </td>';
-    table += '        <td>&nbsp;</td>';
-    table += '        <td class="label"><span class="span-must-fill">*</span>是否其他:</td>';
-    table += '        <td>';
-    table += '            <input type="radio" name="JBKJXSLY_SFQT' + index + '" checked="checked" value="1"/>&nbsp;是&nbsp;&nbsp;';
-    table += '            <input type="radio" name="JBKJXSLY_SFQT' + index + '" value="0"/>&nbsp;否';
-    table += '        </td>';
-    table += '    </tr>';
-    table += '    <tr>';
-    table += '        <td>&nbsp;</td>';
-    table += '    </tr>';
-    table += '    <tr>';
-    table += '        <td class="label"><span class="span-must-fill">*</span>举报内容：</td>';
-    table += '        <td colspan="10"><textarea name="JBKJXSLY_SYZY' + index + '" rows="5" style="width: 99%;"></textarea></td>';
-    table += '    </tr>';
-    table += '    <tr>';
-    table += '        <td>&nbsp;</td>';
-    table += '    </tr>';
-    table += '    <tr>';
-    table += '        <td class="label"><span class="span-must-fill">*</span>举报内容摘要：</td>';
-    table += '        <td colspan="10"><textarea name="JBKJXSLY_NRZY' + index + '" rows="3" style="width: 99%;"></textarea></td>';
-    table += '    </tr>';
     table += '</table>';
-    table += '<ul class="newClue-attachment">';
-    table += '    <input type="file" id="newClue_file" onchange="updateFileSelection()" hidden>';
-    table += '    <li class="newClue-attachment-select-file"><a href="javascript:;" onclick="selectFiles()">添加附件</a></li>';
-    table += '    <li class="newClue-attachment-count">0个</li>';
-    table += '    <li class="newClue-attachment-view"><a href="#">查看附件</a></li>';
-    table += '</ul>';
 
     return table;
 }
 
-function addBjbrPanel() {
+function addBjbrTab() {
     if (bjbrIndex < 3) {
         bjbrIndex++;
         $('#newClue_bjbrTabs').tabs('add', {
             title: '被举报人' + bjbrIndex,
-            content: getBjbrTableElement(bjbrIndex),
+            content: getBjbrTabElement(bjbrIndex),
             closable: false
         });
     } else {
@@ -292,7 +340,7 @@ function addBjbrPanel() {
 
 }
 
-function removeBjbrPanel() {
+function removeBjbrTab() {
     if (bjbrIndex > 1) {
         var bjbrTabs = $('#newClue_bjbrTabs');
 
@@ -304,23 +352,35 @@ function removeBjbrPanel() {
     }
 }
 
+
 function selectFiles() {
     $('#newClue_file').click();
 }
 
 function updateFileSelection() {
-    alert($('#newClue_file').val());
+    //alert($("#newClue_file")[0].files[1].name);
+    var values = document.getElementById("newClue_file").files[0];
+    $('#newClue_file').upload('AdminSaveClueFile', {}, function (result) {
+        if (result.total > 0) {
+
+        }
+    }, 'json');
+
+    //alert(document.getElementById("newClue_file").files[1].name);
+    //alert($('#newClue_file').files[0].name);
 }
+
 
 function submitNewClueForm() {
     //alert($('#newClue_formCL').serialize());
     var values = $('#newClue_formXS').serialize() + '&' +
         $('#newClue_formJBR').serialize() + '&' +
-        $('#newClue_formBJBR').serialize() + '&' +
-        $('#newClue_formCL').serialize();
+        $('#newClue_formBJBR_Part1').serialize() + '&' +
+        $('#newClue_formBJBR_Part2').serialize() + '&' +
+        $('#newClue_formCL').serialize() + '&' +
+        'clueId=' + clueId;
 
-    //alert($('#newClue_formBJBR').serialize());
-
+    //alert(values);
     if (validateNewClue()) {
         // $('#clue_fileUpload').upload('AdminSaveClue', values, function (result) {
         $.post('AdminSaveClue', values, function (result) {

@@ -45,14 +45,16 @@ public class Parser {
     }
 
     public static String parseDropdownContent(String optionType, String optionValue) {
-        if (optionType == null || optionType.length() <= 0)
-            throw new InvalidParameterException();
-        if (optionValue == null || optionValue.length() <= 0)
-            throw new InvalidParameterException();
+        if (optionType == null || optionType.length() <= 0 || optionValue == null)
+            DevLog.write(new InvalidParameterException().toString());
 
-        Hashtable<String, List<DropdownItemPojo>> dropdownHt = DropdownDao.getDropdownHt();
-
+        Hashtable<String, List<DropdownItemPojo>> dropdownHt = DropdownDao.getRegionDropdownHt();
         List<DropdownItemPojo> targetList = dropdownHt.get(optionType);
+
+        if (optionValue.length() <= 0) {
+            return targetList.get(0).getOptionHtmlContent();
+        }
+
         for (DropdownItemPojo p : targetList) {
             if (p.getOptionValue().equals(optionValue)) {
                 return p.getOptionHtmlContent();
