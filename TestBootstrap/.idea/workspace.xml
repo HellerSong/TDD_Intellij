@@ -1252,7 +1252,7 @@
       <workItem from="1466521279587" duration="4293000" />
       <workItem from="1466526784756" duration="40000" />
       <workItem from="1466545368848" duration="7104000" />
-      <workItem from="1466557399618" duration="301000" />
+      <workItem from="1466557399618" duration="323000" />
     </task>
     <task id="LOCAL-00001" summary="update test navigation">
       <created>1464684723063</created>
@@ -1534,7 +1534,14 @@
       <option name="project" value="LOCAL" />
       <updated>1466557672480</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Informant V2 &gt; update for save clue data.&#10;">
+      <created>1466557706294</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1466557706294</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1570,7 +1577,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="434486000" />
+    <option name="totallyTimeSpent" value="434508000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
