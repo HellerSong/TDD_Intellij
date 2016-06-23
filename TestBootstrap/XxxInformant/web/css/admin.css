@@ -252,14 +252,16 @@ body {
 }
 
 .newClue-attachment {
-    width: 250px;
+    width: 200px;
     float: right;
     margin-top: 10px;
+    padding-right: 7px;
 }
 
 .newClue-attachment li {
     list-style: none;
     float: left;
+    margin-right: 0;
 }
 
 .newClue-attachment li a {
@@ -268,16 +270,6 @@ body {
 }
 
 .newClue-attachment-select-file {
-    /*background: url(../images/upload.jpg) no-repeat;*/
-    /*width: 92px;*/
-    /*height: 28px;*/
-    /*font-size: 14px;*/
-    /*color: #FFF;*/
-    /*text-decoration: none;*/
-    /*padding-top: 5px;*/
-    /*padding-left: 18px;*/
-    /*border: 0;*/
-
     position: relative;
     display: inline-block;
     background: url(../images/upload.jpg) no-repeat;
@@ -289,7 +281,7 @@ body {
     text-decoration: none;
     text-indent: 0;
     line-height: 20px;
-    margin-right: 14px;
+    margin-right: 21px;
 }
 
 .newClue-attachment-select-file input {

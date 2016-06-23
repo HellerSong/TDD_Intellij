@@ -82,3 +82,31 @@ function checkRadioByValue(radioNameAttr, radioValue) {
         $('input[name="' + radioNameAttr + '"][value="' + radioValue + '"]').attr('checked', true);
     }
 }
+
+function OpenNewWindowInCurrentPage(windowOption) {
+    var windowId = windowOption.id;
+    $('<div id="' + windowId + '" title="' + windowOption.title + '"></div>').appendTo('body');
+    $('#' + windowId).dialog({
+        width: windowOption.width ? windowOption.width : 400,
+        height: windowOption.height ? windowOption.height : 400,
+        left: windowOption.left ? windowOption.left : null,
+        top: windowOption.top ? windowOption.top : null,
+        modal: true,
+        closed: true,
+        collapsible: windowOption.collapsible ? windowOption.collapsible : false,// 可折叠
+        minimizable: windowOption.minimizable ? windowOption.minimizable : false,// 最小化
+        maximizable: windowOption.maximizable ? windowOption.maximizable : false,// 最大化
+        resizable: windowOption.resizable ? windowOption.resizable : false,// 可缩放
+        inline: true,
+        param: windowOption.param,
+        href: windowOption.url,
+        cache: false,// 不进行缓存
+        onClose: function () {
+            $('#' + windowId).dialog('destroy');
+        },
+        onLoad: function () {
+            windowOption.onLoadFunction;
+        }
+    });
+    $('#' + windowId).dialog('open');
+}

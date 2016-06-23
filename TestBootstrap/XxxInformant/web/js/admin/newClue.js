@@ -1,6 +1,7 @@
 var jbrIndex = 1;
 var bjbrIndex = 1;
 var clueId = 0;
+var serverFileList = [];
 
 function initializeNewClue() {
     //// Page style setting
@@ -360,6 +361,27 @@ function updateFileSelection() {
     $('.newClue-attachment-count').html(fileList.length + '个');
 }
 
+function viewFilesOnServer() {
+    alert(serverFileList.length);
+
+    OpenNewWindowInCurrentPage({
+        id: 'viewAttachmentWindow',
+        width: 400,
+        height: 400,
+        title: '上传文件查看窗口',
+        url: 'ViewAttach.html',
+        collapsible: false,
+        minimizable: false,
+        maximizable: false,
+        resizable: false,
+        closable: false,
+        param: {},
+        onLoadFunction: loadAttachmentFileDg
+    });
+
+    //loadAttachmentFileDg();
+}
+
 
 function submitNewClueForm() {
     // var values = $('#newClue_formXS').serialize() + '&' +
@@ -389,8 +411,7 @@ function submitNewClueForm() {
     //     }
     // });
 
-    var values = 'id=123';
-    $('#newClue_fileUpload').upload('AdminSaveClueFile', values, function (result) {
+    $('#newClue_fileUpload').upload('AdminSaveClueFile', {}, function (result) {
         if (result.status.indexOf('成功') >= 0) {
             // alert(result.status + '\n您的举报线索查询码为：' + result.searchCode
             //     + '，将用于处理结果的查询。');

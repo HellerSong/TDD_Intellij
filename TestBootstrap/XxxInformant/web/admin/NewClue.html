@@ -5,7 +5,7 @@
     <title>举报网后台 - 新建界面</title>
     <link rel="stylesheet" type="text/css" href="../css/easyui.css">
     <link rel="stylesheet" type="text/css" href="../css/icon.css">
-    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.js"></script>
     <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
     <!-- Self using files -->
     <link rel="stylesheet" href="../css/admin.css">
@@ -137,13 +137,13 @@
         </form>
         <ul class="newClue-attachment">
             <li>
-                <a href="javascript:;" class="newClue-attachment-select-file">添加附件
+                <a href="javascript:;" class="newClue-attachment-select-file">选择附件
                     <input id="newClue_fileUpload" type="file" name="files[]" multiple
                            onchange="updateFileSelection()"/>
                 </a>
             </li>
             <li class="newClue-attachment-count">0个</li>
-            <li class="newClue-attachment-view"><a href="javascript:;">查看附件</a></li>
+            <li class="newClue-attachment-view"><a href="javascript:;" onclick="viewFilesOnServer()">查看附件</a></li>
         </ul>
     </div>
     <div class="newClue-box">
