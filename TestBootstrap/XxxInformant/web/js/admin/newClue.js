@@ -10,9 +10,9 @@ function initializeNewClue() {
     $('.easyui-combobox.limit-height').combobox({panelHeight: '350px'});
     $('.index-main-title .right').show();
 
+    //// Initialize tabs panel
     initJbrTabs();
     initBjbrTabs();
-
 
     //// Load "Clue Info" and "Clue Process" dropdown data
     loadDropdown('cbJBKJXSLY_LYFS');
@@ -24,16 +24,14 @@ function initializeNewClue() {
     loadDropdown('cbCSDW');
     loadDropdown('cbJBKJXSLY_JYLX');
 
-
+    //// Edit Clue or Create New
     var url = window.location.href;
     if (url.indexOf('EditClue') >= 0) {
-        //// When this is editing clue then load it by id
+        // When this is editing clue then load it by id
         clueId = url.substring(url.indexOf('=') + 1, url.length);
         loadClueDataById(clueId)
     } else {
-        //// Generate and set "Clue UUID" value
-        var clueuuid = uuid();
-        $('input[textboxname="JBKJXSLY_XH"]').textbox('setValue', '201606221000000002');
+        $('input[textboxname="JBKJXSLY_XH"]').textbox('setValue', '数据库自动生成');
     }
 }
 
@@ -118,6 +116,12 @@ function loadClueDataById(clueId) {
                 j++;
             } while (j <= beInformerCount);
             $('#newClue_bjbrTabs').tabs('select', 0);
+            checkRadioByValue('JBKJXSLY_SFSBYGX', pojo.JBKJXSLY_SFSBYGX);
+            checkRadioByValue('JBKJXSLY_SFKG', pojo.JBKJXSLY_SFKG);
+            checkRadioByValue('JBKJXSLY_SFSS', pojo.JBKJXSLY_SFSS);
+            checkRadioByValue('JBKJXSLY_SFQT', pojo.JBKJXSLY_SFQT);
+            $('input[textboxname="JBKJXSLY_SYZY"]').textbox('setValue', pojo.JBKJXSLY_SYZY);
+            $('input[textboxname="JBKJXSLY_NRZY"]').textbox('setValue', pojo.JBKJXSLY_NRZY);
         }
     });
 }
@@ -148,6 +152,7 @@ function initJbrTabs() {
 
 function getJbrTabElement(index) {
     var table = '';
+
     table += '<table class="newClue-table" border="0" width="100%">';
     table += '    <tr>';
     table += '        <td class="label">姓名：</td>';
@@ -356,19 +361,20 @@ function removeBjbrTab() {
 
 function updateFileSelection() {
     // alert($('#newClue_fileUpload')[0].files[0].name);
-    //alert(document.getElementById("newClue_file").files[1].name);
     var fileList = document.getElementById("newClue_fileUpload").files;
     $('.newClue-attachment-count').html(fileList.length + '个');
+    for (var i = 0; i < fileList.length; i++) {
+        serverFileList[i] = fileList[i].name;
+    }
 }
 
 function viewFilesOnServer() {
-    alert(serverFileList.length);
-
     OpenNewWindowInCurrentPage({
         id: 'viewAttachmentWindow',
-        width: 400,
+        width: 600,
         height: 400,
-        title: '上传文件查看窗口',
+        top: 800,
+        title: '文件查看窗口',
         url: 'ViewAttach.html',
         collapsible: false,
         minimizable: false,
@@ -376,103 +382,112 @@ function viewFilesOnServer() {
         resizable: false,
         closable: false,
         param: {},
-        onLoadFunction: loadAttachmentFileDg
+        onLoadFunctionName: 'loadAttachmentFileDg'
     });
-
-    //loadAttachmentFileDg();
 }
 
 
 function submitNewClueForm() {
-    // var values = $('#newClue_formXS').serialize() + '&' +
-    //     $('#newClue_formJBR').serialize() + '&' +
-    //     $('#newClue_formBJBR_Part1').serialize() + '&' +
-    //     $('#newClue_formBJBR_Part2').serialize() + '&' +
-    //     $('#newClue_formCL').serialize() + '&' +
-    //     'clueId=' + clueId;
-    //
-    // if (validateNewClue()) {
-    //     $.post('AdminSaveClue', values, function (result) {
-    //         result = (new Function('return ' + result))();
-    //
-    //         alert(result.status);
-    //         if (result.status.indexOf('成功') >= 0) {
-    //             closeNewClueForm();
-    //         }
-    //     });
-    // }
-    // $('#fileup').fileupload({
-    //     //url: 'AdminSaveClueFile',
-    //     dataType: 'json',
-    //     done: function (e, data) {
-    //         // $.each(data.result.files, function (index, file) {
-    //         //     $('<p/>').text(file.name).appendTo('#files');
-    //         // });
-    //     }
-    // });
+    if (validateNewClue()) {
+        //// Firstly, save clue info
+        var values = $('#newClue_formXS').serialize() + '&' +
+            $('#newClue_formJBR').serialize() + '&' +
+            $('#newClue_formBJBR_Part1').serialize() + '&' +
+            $('#newClue_formBJBR_Part2').serialize() + '&' +
+            $('#newClue_formCL').serialize() + '&' +
+            'clueId=' + clueId;
 
-    $('#newClue_fileUpload').upload('AdminSaveClueFile', {}, function (result) {
-        if (result.status.indexOf('成功') >= 0) {
-            // alert(result.status + '\n您的举报线索查询码为：' + result.searchCode
-            //     + '，将用于处理结果的查询。');
-            // window.location.href = 'Index.html';
-        } else {
-            // alert(result.status);
-        }
-    }, 'json');
+        $.ajax({
+            type: 'post',
+            url: 'AdminSaveClue',
+            data: values,
+            async: false,
+            success: function (result) {
+                result = (new Function('return ' + result))();
+                alert(result.status);
+            }
+        });
+
+
+        //// Secondly, upload all attachments
+        $('#newClue_fileUpload').upload('AdminSaveClueFile', {}, function (result) {
+            if (result.status.indexOf('成功') >= -1) {
+                closeNewClueForm();
+            } else {
+                alert('文件上传失败！');
+            }
+        }, 'json');
+    }
 }
 
 function closeNewClueForm() {
     $('.index-main-title .right').hide();
-    window.location.reload();
+    window.location.href = 'Index.html';
 }
 
 
 function validateNewClue() {
     var temp;
 
-    // /** Clue Inform Part Validate **/
-    // temp = $.trim($('select[name="informantTypeValue"]').val());
-    // if (temp == null || temp.length == 0) {
-    //     alert('请选择举报方式！');
-    //     return false;
-    // }
-    //
-    // temp = $.trim($('input[name="informantName"]').val());
-    // if (temp == null || temp.length == 0) {
-    //     alert('请输入被举报人姓名！');
-    //     return false;
-    // }
-    //
-    // temp = $.trim($('select[name="mainKindValue"]').val());
-    // if (temp == null || temp.length == 0) {
-    //     alert('请选择被举报人主要涉嫌性质！');
-    //     return false;
-    // }
-    //
-    // temp = $.trim($('select[name="identityValue"]').val());
-    // if (temp == null || temp.length == 0) {
-    //     alert('请选择被举报人身份！');
-    //     return false;
-    // }
-    //
-    // temp = $.trim($('input[name="clueTitle"]').val());
-    // if (temp == null || temp.length == 0) {
-    //     alert('请输入举报内容标题！');
-    //     return false;
-    // }
-    // temp = $.trim($('textarea[name="clueContent"]').val());
-    // if (temp == null || temp.length == 0) {
-    //     alert('请输入举报内容！');
-    //     return false;
-    // }
-    //
-    // /** Clue Process Part Validate **/
-    // temp = $.trim($('select[name="processType"]').val());
-    // if (temp == null || temp.length == 0) {
-    //     alert('请选择处理方式！');
-    //     return false;
-    // }
+    //// "BeInformer" Validate
+    temp = $('input[name="JBKJXSLY_BJBRXM1"]').val();
+    temp = $.trim(temp);
+    if (temp == null || temp.length == 0) {
+        alert('请输入被举报人1 的姓名！');
+        return false;
+    }
+    if (bjbrIndex == 2) {
+        temp = $('input[name="JBKJXSLY_BJBRXM2"]').val();
+        temp = $.trim(temp);
+        if (temp == null || temp.length == 0) {
+            alert('请输入被举报人2 的姓名！');
+            return false;
+        }
+    }
+    if (bjbrIndex == 3) {
+        temp = $('input[name="JBKJXSLY_BJBRXM3"]').val();
+        temp = $.trim(temp);
+        if (temp == null || temp.length == 0) {
+            alert('请输入被举报人3 的姓名！');
+            return false;
+        }
+    }
+    // var i = 1;
+    // do {
+    //     temp = $('input[name="JBKJXSLY_JBRXM1"]').val();
+    //     temp = $.trim(temp);
+    //     if (temp == null || temp.length == 0) {
+    //         alert('请输入被举报人' + i + ' 的姓名！');
+    //         return false;
+    //     }
+    //     i++;
+    // } while (i <= bjbrIndex);
+
+    temp = $.trim($('input[textboxname="JBKJXSLY_SYZY"]').textbox('getValue'));
+    if (temp == null || temp.length == 0) {
+        alert('请输入举报内容！');
+        return false;
+    }
+
+    temp = $.trim($('input[textboxname="JBKJXSLY_NRZY"]').textbox('getValue'));
+    if (temp == null || temp.length == 0) {
+        alert('请输入举报内容摘要！');
+        return false;
+    }
+
+
+    //// "Clue Process" validation
+    temp = $.trim($('input[textboxname="JBZRYJ"]').textbox('getValue'));
+    if (temp == null || temp.length == 0) {
+        alert('请输入承办人意见！');
+        return false;
+    }
+
+    temp = $.trim($('input[textboxname="JBKJXSLY_CLQK"]').textbox('getValue'));
+    if (temp == null || temp.length == 0) {
+        alert('请输入处理情况！');
+        return false;
+    }
 
     return true;
 }

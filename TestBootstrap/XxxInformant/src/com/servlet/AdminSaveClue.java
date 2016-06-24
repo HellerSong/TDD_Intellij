@@ -51,8 +51,7 @@ public class AdminSaveClue extends HttpServlet {
         String message;
 
         if (isDataReady(request)) {
-            //// 线索序号（jbkjxsly表与xscl表关联用）
-            String XH = request.getParameter("JBKJXSLY_XH");
+            //// JBKJXSLY_XH，线索序号，数据库Insert触发自动生成（jbkjxsly表与xscl表关联用）
 
 
             //// 举报线索情况参数
@@ -75,7 +74,6 @@ public class AdminSaveClue extends HttpServlet {
             jbkjxslyPojo.setJBKJXSLY_SLRQ(Parser.parseDate(JBKJXSLY_SLRQ)); // Deafult is: today
             jbkjxslyPojo.setJBKJXSLY_ZJR(JBKJXSLY_ZJR);
             jbkjxslyPojo.setJBKJXSLY_CLZT(AllEnums.ClueStatus.Pending.value());   // Default status: 待处理
-            jbkjxslyPojo.setJBKJXSLY_XH(XH);    // 线索编号
 
 
             //// 办理情况参数
@@ -117,7 +115,6 @@ public class AdminSaveClue extends HttpServlet {
             xsclPojo.setTZSPRQ(Parser.parseDate(TZSPRQ));
             xsclPojo.setJCZPS(JCZPS);
             xsclPojo.setJCZPSRQ(Parser.parseDate(JCZPSRQ));
-            xsclPojo.setJBKJXSLY_XH(XH);
 
             jbkjxslyPojo.setJBKJXSLY_JBJCGJWFWJ(JBKJXSLY_JBJCGJWFWJ);
             jbkjxslyPojo.setJBKJXSLY_JYLXDM(JBKJXSLY_JYLXDM);
@@ -263,10 +260,19 @@ public class AdminSaveClue extends HttpServlet {
 
             JbkjxslyDao jbkjxslyDao = new JbkjxslyDao();
             XsclDao xsclDao = new XsclDao();
+            String XH = request.getParameter("JBKJXSLY_XH");
+
             if (clueId > 0) {
                 // Set main key value
                 jbkjxslyPojo.setJBKJXSLY_ID(clueId);
+                jbkjxslyPojo.setJBKJXSLY_XH(XH);
                 xsclPojo.setJBKJXSLY_XH(XH);
+
+                // Do not update attachment segment value;
+                String oldFujianValue = jbkjxslyDao.getById(clueId).getJBKJXSLY_Fujian();
+                if (oldFujianValue != null && oldFujianValue.length() > 0) {
+                    jbkjxslyPojo.setJBKJXSLY_Fujian(oldFujianValue);
+                }
 
                 // Update the status value
                 jbkjxslyPojo.setJBKJXSLY_CLZT(AllEnums.ClueStatus.Finish.value());
@@ -275,7 +281,12 @@ public class AdminSaveClue extends HttpServlet {
                 message = "修改更新成功！";
             } else {
                 jbkjxslyPojo.setJBKJXSLY_CLZT(AllEnums.ClueStatus.Finish.value());
+                jbkjxslyPojo.setJBKJXSLY_XH("AutoGenerate");
                 jbkjxslyDao.add(jbkjxslyPojo);
+
+                int lastId = jbkjxslyDao.getLastAddedId();
+                XH = jbkjxslyDao.getById(lastId).getJBKJXSLY_XH();
+                xsclPojo.setJBKJXSLY_XH(XH);
                 xsclDao.add(xsclPojo);
                 message = "创建保存成功！";
             }

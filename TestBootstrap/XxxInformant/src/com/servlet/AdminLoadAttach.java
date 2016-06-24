@@ -1,9 +1,9 @@
 package com.servlet;
 
-import com.dao.VClueListDao;
+import com.dao.JbkjxslyDao;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.pojo.VClueListPojo;
+import com.pojo.AttachmentItem;
+import com.pojo.JbkjxslyPojo;
 import com.utils.DevLog;
 import com.utils.Parser;
 
@@ -22,22 +22,29 @@ import java.util.Map;
  * <p>Summary : </p>
  * <p>Authors : Heller Song (HellerSong@Outlook.com)</p>
  */
-public class AdminLoadClue extends HttpServlet {
+public class AdminLoadAttach extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int clueId = Parser.parseInt(request.getParameter("clueId"));
 
         Map<String, Object> map = new HashMap<String, Object>();
-        Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
-        String sWhere = "where JBKJXSLY_CLZT != '-1'";
         int totalCount = 0;
-        List<VClueListPojo> list = new ArrayList<VClueListPojo>();
+        List<AttachmentItem> list = new ArrayList<AttachmentItem>();
 
         if (clueId > 0) {
-            sWhere += " and JBKJXSLY_ID = '" + clueId + "'";
-            VClueListDao dao = new VClueListDao();
-            list = dao.getAll(sWhere);
+            JbkjxslyDao dao = new JbkjxslyDao();
+            JbkjxslyPojo pojo = dao.getById(clueId);
+            String[] fileArray = pojo.getJBKJXSLY_Fujian().split(";");
+            totalCount = fileArray.length;
+
+            for (int i = 0; i < fileArray.length; i++) {
+                AttachmentItem item = new AttachmentItem();
+                item.setFileName("附件" + (i + 1));
+                item.setStatus("已上传");
+                item.setServerPath("/upload/" + fileArray[i]);
+                list.add(item);
+            }
 
             dao.closeAll();
         }
@@ -47,9 +54,9 @@ public class AdminLoadClue extends HttpServlet {
         response.setContentType("text/plain");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
-        map.put("total", 1);
+        map.put("total", totalCount);
         map.put("rows", list);
-        String json = gson.toJson(map);
+        String json = new Gson().toJson(map);
         DevLog.write(json);
         out.println(json);
         out.flush();

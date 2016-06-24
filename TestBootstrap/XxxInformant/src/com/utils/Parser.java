@@ -1,7 +1,7 @@
 package com.utils;
 
 import com.dao.DropdownDao;
-import com.pojo.DropdownItemPojo;
+import com.pojo.DropdownItem;
 
 import java.security.InvalidParameterException;
 import java.sql.Timestamp;
@@ -48,14 +48,14 @@ public class Parser {
         if (optionType == null || optionType.length() <= 0 || optionValue == null)
             DevLog.write(new InvalidParameterException().toString());
 
-        Hashtable<String, List<DropdownItemPojo>> dropdownHt = DropdownDao.getRegionDropdownHt();
-        List<DropdownItemPojo> targetList = dropdownHt.get(optionType);
+        Hashtable<String, List<DropdownItem>> dropdownHt = DropdownDao.getRegionDropdownHt();
+        List<DropdownItem> targetList = dropdownHt.get(optionType);
 
         if (optionValue.length() <= 0) {
             return targetList.get(0).getOptionHtmlContent();
         }
 
-        for (DropdownItemPojo p : targetList) {
+        for (DropdownItem p : targetList) {
             if (p.getOptionValue().equals(optionValue)) {
                 return p.getOptionHtmlContent();
             }

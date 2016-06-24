@@ -72,6 +72,16 @@
     </servlet-mapping>
 
     <servlet>
+        <description>后台加载附件</description>
+        <servlet-name>AdminLoadAttach</servlet-name>
+        <servlet-class>com.servlet.AdminLoadAttach</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoadAttach</servlet-name>
+        <url-pattern>/admin/AdminLoadAttach</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <description>后台删除线索</description>
         <servlet-name>AdminDeleteClue</servlet-name>
         <servlet-class>com.servlet.AdminDeleteClue</servlet-class>

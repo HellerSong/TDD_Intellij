@@ -22,7 +22,7 @@ function initializeClueList() {
             {field: 'JBKJXSLY_LYFS', title: '举报方式', width: 60, align: 'center'},
             {field: 'CBR', title: '承办人', width: 60, align: 'left'},
             {field: 'JBKJXSLY_CLZT', title: '状态', width: 50, align: 'left', formatter: statusFormatter},
-            {field: 'action', title: '操作选项', width: 70, align: 'center', formatter: actionFormatter}
+            {field: 'action', title: '操作选项', width: 80, align: 'center', formatter: actionFormatter}
         ]],
         rownumbers: false,
         singleSelect: false,

@@ -2,7 +2,7 @@ package com.dao;
 
 import com.pojo.Code_tPojo;
 import com.pojo.CodelocalPojo;
-import com.pojo.DropdownItemPojo;
+import com.pojo.DropdownItem;
 import com.pojo.OrgnizePojo;
 
 import java.util.ArrayList;
@@ -14,8 +14,8 @@ import java.util.List;
  * <p>Authors : Heller Song (HellerSong@Outlook.com)</p>
  */
 public class DropdownDao {
-    private static Hashtable<String, List<DropdownItemPojo>> regionDropdownHt = new Hashtable<String, List<DropdownItemPojo>>();
-    private static Hashtable<String, List<DropdownItemPojo>> searchDropdownHt = new Hashtable<String, List<DropdownItemPojo>>();
+    private static Hashtable<String, List<DropdownItem>> regionDropdownHt = new Hashtable<String, List<DropdownItem>>();
+    private static Hashtable<String, List<DropdownItem>> searchDropdownHt = new Hashtable<String, List<DropdownItem>>();
     private static Hashtable<String, String> mappingHt = new Hashtable<String, String>();
 
     static {
@@ -51,14 +51,14 @@ public class DropdownDao {
         Code_tDao code_tDao = new Code_tDao();
         for (String key : code_tMappingHt.keySet()) {
             String optionType = code_tMappingHt.get(key);
-            List<DropdownItemPojo> itemList = new ArrayList<DropdownItemPojo>();
+            List<DropdownItem> itemList = new ArrayList<DropdownItem>();
             List<Code_tPojo> pojoList = code_tDao.getAll("where OptionName='" + optionType + "' order by CodeId");
             for (Code_tPojo p : pojoList) {
-                DropdownItemPojo dropdownItemPojo = new DropdownItemPojo();
-                dropdownItemPojo.setOptionType(p.getOptionName());
-                dropdownItemPojo.setOptionValue(p.getCodeId());
-                dropdownItemPojo.setOptionHtmlContent(p.getContent());
-                itemList.add(dropdownItemPojo);
+                DropdownItem dropdownItem = new DropdownItem();
+                dropdownItem.setOptionType(p.getOptionName());
+                dropdownItem.setOptionValue(p.getCodeId());
+                dropdownItem.setOptionHtmlContent(p.getContent());
+                itemList.add(dropdownItem);
             }
             regionDropdownHt.put(key, itemList);
         }
@@ -74,14 +74,14 @@ public class DropdownDao {
         CodelocalDao codelocalDao = new CodelocalDao();
         for (String key : codelocalMappingHt.keySet()) {
             String optionType = codelocalMappingHt.get(key);
-            List<DropdownItemPojo> itemList = new ArrayList<DropdownItemPojo>();
+            List<DropdownItem> itemList = new ArrayList<DropdownItem>();
             List<CodelocalPojo> pojoList = codelocalDao.getAll("where OPTIONNAME='" + optionType + "' order by CONTENT");
             for (CodelocalPojo p : pojoList) {
-                DropdownItemPojo dropdownItemPojo = new DropdownItemPojo();
-                dropdownItemPojo.setOptionType(p.getOPTIONNAME());
-                dropdownItemPojo.setOptionValue(p.getCodeID());
-                dropdownItemPojo.setOptionHtmlContent(p.getCONTENT());
-                itemList.add(dropdownItemPojo);
+                DropdownItem dropdownItem = new DropdownItem();
+                dropdownItem.setOptionType(p.getOPTIONNAME());
+                dropdownItem.setOptionValue(p.getCodeID());
+                dropdownItem.setOptionHtmlContent(p.getCONTENT());
+                itemList.add(dropdownItem);
             }
             regionDropdownHt.put(key, itemList);
         }
@@ -91,14 +91,14 @@ public class DropdownDao {
 
         //// 转往单位下拉选项单独处理
         OrgnizeDao orgnizeDao = new OrgnizeDao();
-        List<DropdownItemPojo> itemList = new ArrayList<DropdownItemPojo>();
+        List<DropdownItem> itemList = new ArrayList<DropdownItem>();
         List<OrgnizePojo> pojoList = orgnizeDao.getAll("where IsZWDW='1'");
         for (OrgnizePojo p : pojoList) {
-            DropdownItemPojo dropdownItemPojo = new DropdownItemPojo();
-            dropdownItemPojo.setOptionType("转往单位");
-            dropdownItemPojo.setOptionValue(p.getID());
-            dropdownItemPojo.setOptionHtmlContent(p.getDisplayName());
-            itemList.add(dropdownItemPojo);
+            DropdownItem dropdownItem = new DropdownItem();
+            dropdownItem.setOptionType("转往单位");
+            dropdownItem.setOptionValue(p.getID());
+            dropdownItem.setOptionHtmlContent(p.getDisplayName());
+            itemList.add(dropdownItem);
         }
 
         Hashtable<String, String> orgnizeMappingHt = new Hashtable<String, String>();
@@ -121,15 +121,15 @@ public class DropdownDao {
 
         for (String s : searchOptionArray) {
             // Add "All" item to dropdown item list
-            List<DropdownItemPojo> itemList = regionDropdownHt.get(s);
-            List<DropdownItemPojo> resultList = new ArrayList<DropdownItemPojo>();
+            List<DropdownItem> itemList = regionDropdownHt.get(s);
+            List<DropdownItem> resultList = new ArrayList<DropdownItem>();
 
-            DropdownItemPojo firstDropdownItem = new DropdownItemPojo();
+            DropdownItem firstDropdownItem = new DropdownItem();
             firstDropdownItem.setOptionType(mappingHt.get(s));
             firstDropdownItem.setOptionValue("0");
             firstDropdownItem.setOptionHtmlContent("全部");
             resultList.add(firstDropdownItem);
-            for (DropdownItemPojo p : itemList) {
+            for (DropdownItem p : itemList) {
                 resultList.add(p);
             }
 
@@ -137,11 +137,11 @@ public class DropdownDao {
         }
     }
 
-    public static Hashtable<String, List<DropdownItemPojo>> getRegionDropdownHt() {
+    public static Hashtable<String, List<DropdownItem>> getRegionDropdownHt() {
         return regionDropdownHt;
     }
 
-    public static Hashtable<String, List<DropdownItemPojo>> getSearchDropdownHt() {
+    public static Hashtable<String, List<DropdownItem>> getSearchDropdownHt() {
         return searchDropdownHt;
     }
 }

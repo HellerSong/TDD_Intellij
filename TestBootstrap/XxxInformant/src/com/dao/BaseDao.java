@@ -17,13 +17,13 @@ import java.util.List;
  * <p>Authors: Heller Song (HellerSong@Outlook.com)</p>
  **/
 public class BaseDao<T, PK> implements IDao<T, PK> {
-    private Connection conn;
-    private PreparedStatement pstmt;
-    private ResultSet rs;
+    protected Connection conn;
+    protected PreparedStatement pstmt;
+    protected ResultSet rs;
     private Class<T> clazz;
     private DaoConverter daoConvert;
-    private String tableName;
-    private String mainKeyName;
+    protected String tableName;
+    protected String mainKeyName;
     public int totalCount;
 
 

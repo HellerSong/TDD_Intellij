@@ -2,7 +2,7 @@ package com.servlet;
 
 import com.dao.DropdownDao;
 import com.google.gson.Gson;
-import com.pojo.DropdownItemPojo;
+import com.pojo.DropdownItem;
 import com.utils.DevLog;
 
 import javax.servlet.ServletException;
@@ -27,7 +27,7 @@ public class LoadSearchDropdown extends HttpServlet {
         Map<String, Object> map = new HashMap<String, Object>();
 
         // This kind of dropdown is with "All" option value
-        Hashtable<String, List<DropdownItemPojo>> dropdownHt = DropdownDao.getSearchDropdownHt();
+        Hashtable<String, List<DropdownItem>> dropdownHt = DropdownDao.getSearchDropdownHt();
 
         //// Result data transfer
         response.setContentType("text/plain");

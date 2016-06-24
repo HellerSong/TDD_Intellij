@@ -4,7 +4,7 @@ package com.pojo;
  * <p>Summary : </p>
  * <p>Authors : Heller Song (HellerSong@Outlook.com)</p>
  */
-public class DropdownItemPojo {
+public class DropdownItem {
     private String optionValue;
     private String optionHtmlContent;
     private String optionType;

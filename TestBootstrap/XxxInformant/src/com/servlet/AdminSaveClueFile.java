@@ -1,6 +1,8 @@
 package com.servlet;
 
+import com.dao.JbkjxslyDao;
 import com.google.gson.Gson;
+import com.utils.DateUtil;
 import com.utils.DevLog;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileItemFactory;
@@ -18,7 +20,6 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 
 /**
  * <p>Summary: </p>
@@ -39,27 +40,44 @@ public class AdminSaveClueFile extends HttpServlet {
         if (!dir.exists())
             dir.mkdirs();
 
+
+        JbkjxslyDao dao = new JbkjxslyDao();
+        int lastId = dao.getLastAddedId();
+        String uploadedFileJoinStr = dao.getById(lastId).getJBKJXSLY_Fujian();
+
         FileItemFactory factory = new DiskFileItemFactory();
         ServletFileUpload upload = new ServletFileUpload(factory);
-
+        String fileJoinStr = "";
         try {
             List<FileItem> fileList = upload.parseRequest(request);
             DevLog.write("File Count: " + fileList.size());
-            for (FileItem item : fileList) {
-                String regionFileName = item.getName();
+            for (int i = 0; i < fileList.size(); i++) {
+                String regionFileName = fileList.get(i).getName();
                 DevLog.write("Upload file name: " + regionFileName);
                 if (regionFileName.length() > 0) {
                     String fileExtension = regionFileName.substring(regionFileName.lastIndexOf('.'));
-                    String saveFileName = UUID.randomUUID().toString() + fileExtension;
+                    String saveFileName = DateUtil.getCurrentTime("yyyyMMdd") + "_" + lastId + "_" + (i + 1) + fileExtension;
                     DevLog.write("Server file name: " + saveFileName);
-                    item.write(new File(uploadPath, saveFileName));
-                    //serverFileList.add(saveFileName);
+                    fileList.get(i).write(new File(uploadPath, saveFileName));
+                    fileJoinStr += saveFileName + ";";
                 }
             }
-
-
         } catch (Exception e) {
             e.printStackTrace();
+        }
+
+        if (fileJoinStr.length() > 0) {
+            fileJoinStr = fileJoinStr.substring(0, fileJoinStr.length() - 1);
+
+
+            // The clue editing will append server file name to db segment;
+            // The new create clue will update db segment directly;
+            if (uploadedFileJoinStr != null && uploadedFileJoinStr.length() > 0) {
+                fileJoinStr = uploadedFileJoinStr + ";" + fileJoinStr;
+            }
+            dao.update(lastId, "JBKJXSLY_Fujian", fileJoinStr);
+
+            dao.closeAll();
         }
 
         message = "文件上传成功";

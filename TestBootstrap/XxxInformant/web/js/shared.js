@@ -105,7 +105,7 @@ function OpenNewWindowInCurrentPage(windowOption) {
             $('#' + windowId).dialog('destroy');
         },
         onLoad: function () {
-            windowOption.onLoadFunction;
+            window[windowOption.onLoadFunctionName]();
         }
     });
     $('#' + windowId).dialog('open');
