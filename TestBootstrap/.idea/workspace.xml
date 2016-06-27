@@ -4,32 +4,55 @@
     <bookmark url="file://$PROJECT_DIR$/TestGrammar/user/LoadingButton.html" line="15" mnemonic="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e8c390e-1e00-4781-be2f-3c4c0722cc6a" name="Default" comment="Informant V2 &gt; admin almost done! haha&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDatetimePicker/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDatetimePicker/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDatetimePicker/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDatetimePicker/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDatetimePicker/images/title.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDatetimePicker/TestDatetimePicker.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDatetimePicker/admin/Index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDatetimePicker/css/admin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDatetimePicker/css/bootstrap-datetimepicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDatetimePicker/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDatetimePicker/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDatetimePicker/css/user.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDatetimePicker/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDatetimePicker/js/admin/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDatetimePicker/js/bootstrap-datetimepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDatetimePicker/js/bootstrap-datetimepicker.zh-CN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDatetimePicker/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDatetimePicker/js/jquery.cookie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDatetimePicker/js/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDatetimePicker/js/jquery.upload.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDatetimePicker/js/user/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestDatetimePicker/user/Index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+    <list default="true" id="0e8c390e-1e00-4781-be2f-3c4c0722cc6a" name="Default" comment="Finish TestDatetimePicker&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSelect/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSelect/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSelect/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSelect/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSelect/images/title.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestTreeView/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestTreeView/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestTreeView/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestTreeView/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestTreeView/images/title.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestGrammar/js/jquery.session.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSelect/TestSelect.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSelect/admin/Index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSelect/css/admin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSelect/css/bootstrap-select.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSelect/css/bootstrap-theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSelect/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSelect/css/user.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSelect/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSelect/js/admin/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSelect/js/bootstrap-select.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSelect/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSelect/js/defaults-zh_CN.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSelect/js/jquery.cookie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSelect/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSelect/js/jquery.upload.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSelect/js/user/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSelect/user/Index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestTreeView/TestTreeView.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestTreeView/admin/Index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestTreeView/css/admin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestTreeView/css/bootstrap-theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestTreeView/css/bootstrap-treeview.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestTreeView/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestTreeView/css/user.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestTreeView/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestTreeView/js/admin/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestTreeView/js/bootstrap-treeview.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestTreeView/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestTreeView/js/jquery.cookie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestTreeView/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestTreeView/js/jquery.upload.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestTreeView/js/user/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestTreeView/user/Example.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestTreeView/user/Index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestGrammar/js/jquery.cookie.js" afterPath="$PROJECT_DIR$/TestGrammar/js/jquery.cookie.js" />
     </list>
     <ignored path="TestBootstrap.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,89 +82,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="newClue.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/admin/newClue.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="424" column="40" selection-start-line="424" selection-start-column="40" selection-end-line="424" selection-end-column="40" />
-              <folding>
-                <element signature="n#!!block;n#loadClueDataById#0" expanded="false" />
-                <element signature="n#!!block;n#initJbrTabs#0" expanded="false" />
-                <element signature="n#!!block;n#getJbrTabElement#0" expanded="false" />
-                <element signature="n#!!block;n#addJbrTab#0" expanded="false" />
-                <element signature="n#!!block;n#removeJbrTab#0" expanded="false" />
-                <element signature="n#!!block;n#initBjbrTabs#0" expanded="false" />
-                <element signature="n#!!block;n#getBjbrTabElement#0" expanded="false" />
-                <element signature="n#!!block;n#addBjbrTab#0" expanded="false" />
-                <element signature="n#!!block;n#removeBjbrTab#0" expanded="false" />
-                <element signature="e#16947#17212#0" expanded="false" />
-                <element signature="n#!!block;n#updateFileSelection#0" expanded="false" />
-                <marker date="1466728064333" expanded="true" signature="8507:8519" ph="..." />
-                <marker date="1466728064333" expanded="true" signature="8993:9005" ph="..." />
-                <marker date="1466728064333" expanded="true" signature="9218:9230" ph="..." />
-                <marker date="1466728064333" expanded="true" signature="11683:11694" ph="..." />
-                <marker date="1466728064333" expanded="true" signature="12179:12190" ph="..." />
-                <marker date="1466728064333" expanded="true" signature="12434:12445" ph="..." />
-                <marker date="1466728064333" expanded="true" signature="12817:12828" ph="..." />
-                <marker date="1466728064333" expanded="true" signature="13066:13077" ph="..." />
-                <marker date="1466728064333" expanded="true" signature="13315:13325" ph="..." />
-                <marker date="1466728064333" expanded="true" signature="13683:13694" ph="..." />
-                <marker date="1466728064333" expanded="true" signature="13938:13949" ph="..." />
-                <marker date="1466728064333" expanded="true" signature="14224:14235" ph="..." />
-                <marker date="1466728064333" expanded="true" signature="14479:14490" ph="..." />
-                <marker date="1466728064333" expanded="true" signature="14872:14883" ph="..." />
-                <marker date="1466728064333" expanded="true" signature="15122:15133" ph="..." />
-                <marker date="1466728064333" expanded="true" signature="15366:15377" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="viewAttach.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/admin/viewAttach.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="47" column="27" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestGrammar/admin/Index.html">
+      <file leaf-file-name="jquery.session.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TestGrammar/js/jquery.session.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Alert.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestGrammar/user/Alert.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Animate.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestGrammar/user/Animate.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TestDatetimePicker/user/Index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -153,9 +98,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -179,9 +124,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/XxxInformant/web/css/style.css" />
-        <option value="$PROJECT_DIR$/XxxInformant/web/WEB-INF/lib/mysql-connector-5.1.18.jar!/com/mysql/jdbc/PreparedStatement.class" />
-        <option value="$PROJECT_DIR$/XxxInformant/src/com/dao/DaoConverter.java" />
         <option value="$PROJECT_DIR$/XxxInformant/test/com/unittest/TestInformerStr.java" />
         <option value="$PROJECT_DIR$/XxxInformant/web/css/adminlogin.css" />
         <option value="$PROJECT_DIR$/XxxInformant/web/js/admin/login.js" />
@@ -230,6 +172,9 @@
         <option value="$PROJECT_DIR$/XxxInformant/web/js/admin/viewAttach.js" />
         <option value="$PROJECT_DIR$/TestDatetimePicker/css/bootstrap-datetimepicker.css" />
         <option value="$PROJECT_DIR$/TestDatetimePicker/user/Index.html" />
+        <option value="$PROJECT_DIR$/TestSelect/user/Index.html" />
+        <option value="$PROJECT_DIR$/TestTreeView/user/Index.html" />
+        <option value="$PROJECT_DIR$/TestTreeView/user/Example.html" />
       </list>
     </option>
   </component>
@@ -351,9 +296,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -369,6 +313,70 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestTreeView" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestGrammar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestGrammar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestBootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestGrammar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -406,6 +414,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -434,11 +443,11 @@
       <recent name="com.dao" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\TestDatetimePicker\js" />
-      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\TestDatetimePicker\css" />
-      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\TestDatetimePicker" />
-      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\XxxInformant\web\js" />
-      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\TestFileUpload" />
+      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\TestGrammar\js" />
+      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\TestTreeView\css" />
+      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\TestTreeView\js" />
+      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\TestTreeView" />
+      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\TestSwitch" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat6.0">
@@ -1206,14 +1215,9 @@
       <workItem from="1466640420344" duration="19253000" />
       <workItem from="1466689407940" duration="26705000" />
       <workItem from="1466726047319" duration="2244000" />
-      <workItem from="1466909916707" duration="4715000" />
-    </task>
-    <task id="LOCAL-00001" summary="update test navigation">
-      <created>1464684723063</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1464684723063</updated>
+      <workItem from="1466909916707" duration="11170000" />
+      <workItem from="1466982561259" duration="1394000" />
+      <workItem from="1466988201287" duration="20000" />
     </task>
     <task id="LOCAL-00002" summary="update test navigation">
       <created>1464684895553</created>
@@ -1551,7 +1555,14 @@
       <option name="project" value="LOCAL" />
       <updated>1466728137511</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Finish TestDatetimePicker&#10;">
+      <created>1466931529887</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1466931529888</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1587,7 +1598,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="498676000" />
+    <option name="totallyTimeSpent" value="506545000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1604,7 +1615,6 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6051282" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1612,7 +1622,6 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32702702" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32767624" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39802632" sideWeight="0.49707174" order="12" side_tool="false" content_ui="combo" x="-1420" y="207" width="1412" height="399" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1623,12 +1632,14 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19969743" sideWeight="0.5089058" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39864865" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39864865" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6051282" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39802632" sideWeight="0.49707174" order="12" side_tool="false" content_ui="combo" x="-1420" y="207" width="1412" height="399" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256579" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1652,7 +1663,8 @@
     <MESSAGE value="update all infromant v2 project&#10;" />
     <MESSAGE value="Informant V2 &gt; update for save clue data.&#10;" />
     <MESSAGE value="Informant V2 &gt; admin almost done! haha&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Informant V2 &gt; admin almost done! haha&#10;" />
+    <MESSAGE value="Finish TestDatetimePicker&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish TestDatetimePicker&#10;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1667,62 +1679,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/fileinput_locale_zh.js" />
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/bootstrap.js" />
-    <entry file="file://$PROJECT_DIR$/TestFileUpload/admin/Index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestFileUpload/user/Index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="25" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/fileinput.js" />
-    <entry file="file://$PROJECT_DIR$/TestNavigation/user/ScrollNav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/admin/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/jquery.fileupload.js" />
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/jquery.ui.widget.js" />
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/jquery.iframe-transport.js" />
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/jquery.min.js" />
-    <entry file="file://$PROJECT_DIR$/XxxInformant/src/com/servlet/AdminLoadClueList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="38" column="75" selection-start-line="37" selection-start-column="8" selection-end-line="38" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/web/js/jquery.upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="122" column="16" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XxxInformant/test/com/unittest/TestInformerStr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/XxxInformant/test/com/unittest/TestBaseDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -1804,7 +1760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="7" column="52" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1847,7 +1802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4644">
           <caret line="273" column="68" selection-start-line="273" selection-start-column="68" selection-end-line="273" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1855,7 +1809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
           <caret line="74" column="47" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1863,11 +1816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#945#961#0" expanded="false" />
-            <element signature="e#1042#1058#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1875,16 +1823,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2592">
           <caret line="154" column="13" selection-start-line="154" selection-start-column="13" selection-end-line="154" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#8072#8073#0" expanded="false" />
-            <element signature="e#8120#8121#0" expanded="false" />
-            <marker date="1466696295557" expanded="true" signature="1533:1563" ph="select count... " />
-            <marker date="1466696295557" expanded="true" signature="2304:2470" ph="insert into missingValue... " />
-            <marker date="1466696295557" expanded="true" signature="3100:3212" ph="update missi... " />
-            <marker date="1466696295557" expanded="true" signature="3883:3961" ph="update missi... " />
-            <marker date="1466696295557" expanded="true" signature="5365:5424" ph="select * fro... missingValue" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1892,7 +1830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2358">
           <caret line="131" column="22" selection-start-line="7" selection-start-column="4" selection-end-line="131" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1900,7 +1837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1908,12 +1844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2682">
           <caret line="149" column="80" selection-start-line="149" selection-start-column="80" selection-end-line="149" selection-end-column="80" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#td#7;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#2;n#table#0;n#form#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#4;n#table#0;n#form#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#2;n#form#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1921,7 +1851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
           <caret line="85" column="9" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1929,35 +1858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="424" column="40" selection-start-line="424" selection-start-column="40" selection-end-line="424" selection-end-column="40" />
-          <folding>
-            <element signature="n#!!block;n#loadClueDataById#0" expanded="false" />
-            <element signature="n#!!block;n#initJbrTabs#0" expanded="false" />
-            <element signature="n#!!block;n#getJbrTabElement#0" expanded="false" />
-            <element signature="n#!!block;n#addJbrTab#0" expanded="false" />
-            <element signature="n#!!block;n#removeJbrTab#0" expanded="false" />
-            <element signature="n#!!block;n#initBjbrTabs#0" expanded="false" />
-            <element signature="n#!!block;n#getBjbrTabElement#0" expanded="false" />
-            <element signature="n#!!block;n#addBjbrTab#0" expanded="false" />
-            <element signature="n#!!block;n#removeBjbrTab#0" expanded="false" />
-            <element signature="e#16947#17212#0" expanded="false" />
-            <element signature="n#!!block;n#updateFileSelection#0" expanded="false" />
-            <marker date="1466728064333" expanded="true" signature="8507:8519" ph="..." />
-            <marker date="1466728064333" expanded="true" signature="8993:9005" ph="..." />
-            <marker date="1466728064333" expanded="true" signature="9218:9230" ph="..." />
-            <marker date="1466728064333" expanded="true" signature="11683:11694" ph="..." />
-            <marker date="1466728064333" expanded="true" signature="12179:12190" ph="..." />
-            <marker date="1466728064333" expanded="true" signature="12434:12445" ph="..." />
-            <marker date="1466728064333" expanded="true" signature="12817:12828" ph="..." />
-            <marker date="1466728064333" expanded="true" signature="13066:13077" ph="..." />
-            <marker date="1466728064333" expanded="true" signature="13315:13325" ph="..." />
-            <marker date="1466728064333" expanded="true" signature="13683:13694" ph="..." />
-            <marker date="1466728064333" expanded="true" signature="13938:13949" ph="..." />
-            <marker date="1466728064333" expanded="true" signature="14224:14235" ph="..." />
-            <marker date="1466728064333" expanded="true" signature="14479:14490" ph="..." />
-            <marker date="1466728064333" expanded="true" signature="14872:14883" ph="..." />
-            <marker date="1466728064333" expanded="true" signature="15122:15133" ph="..." />
-            <marker date="1466728064333" expanded="true" signature="15366:15377" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1965,7 +1865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="47" column="27" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1973,7 +1872,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1981,7 +1879,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1989,7 +1886,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1997,7 +1893,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2005,7 +1900,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2013,38 +1907,108 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestDatetimePicker/js/locales/bootstrap-datetimepicker.zh-CN.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestDatetimePicker/js/locales/bootstrap-datetimepicker.ar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/TestDatetimePicker/js/locales/bootstrap-datetimepicker.zh-CN.js" />
+    <entry file="file://$PROJECT_DIR$/TestDatetimePicker/js/locales/bootstrap-datetimepicker.ar.js" />
     <entry file="file://$PROJECT_DIR$/TestDatetimePicker/css/bootstrap-datetimepicker.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="196" column="4" selection-start-line="196" selection-start-column="4" selection-end-line="196" selection-end-column="4" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestSelect/js/defaults-zh_CN.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestSelect/js/bootstrap-select.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-26455">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestSelect/css/bootstrap-select.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-864">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestSelect/admin/Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TestDatetimePicker/user/Index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="360">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestSwitch/admin/Index.html" />
+    <entry file="file://$PROJECT_DIR$/TestSwitch/user/Index.html" />
+    <entry file="file://$PROJECT_DIR$/TestSelect/user/Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="61" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestTreeView/admin/Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestTreeView/js/bootstrap-treeview.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestTreeView/css/bootstrap-treeview.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestTreeView/user/Example.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestTreeView/user/Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestGrammar/js/jquery.cookie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestGrammar/js/jquery.session.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2103,7 +2067,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>TestDatetimePicker</last-edited>
+          <last-edited>TestTreeView</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
