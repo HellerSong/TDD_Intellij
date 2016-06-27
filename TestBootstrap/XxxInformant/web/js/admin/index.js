@@ -1,6 +1,7 @@
 //// Global variables
 window.dropdownJson = '';
-window.searchDdropdownJson = '';
+window.searchDropdownJson = '';
+window.treeDropdownJson = '';
 
 
 $(function () {
@@ -79,7 +80,22 @@ function loadAllGlobalDropdownJson() {
             result = (new Function('return ' + result))();
 
             if (result.total > 0) {
-                window.searchDdropdownJson = result.rows;
+                window.searchDropdownJson = result.rows;
+            }
+        }
+    });
+
+    $.ajax({
+        type: 'post',
+        url: 'LoadTreeDropdown',
+        // data: values,
+        async: false,
+        success: function (result) {
+            result = (new Function('return ' + result))();
+
+            if (result.total > 0) {
+                window.treeDropdownJson = result.rows;
+                //alert(result.rows.ZWDW[0].optionHtmlContent);
             }
         }
     });
@@ -110,7 +126,7 @@ function loadSearchDropdown(selectElementId) {
     var cb = $('#' + selectElementId);
     var selectElementName = selectElementId.substring(8, selectElementId.length);   // "cbSearchJBKJXSLY_LYFS" >> "JBKJXSLY_LYFS"
     cb.combobox({
-        data: window.searchDdropdownJson[selectElementName],
+        data: window.searchDropdownJson[selectElementName],
         valueField: 'optionValue',
         textField: 'optionHtmlContent',
         onLoadSuccess: function () {
@@ -118,4 +134,41 @@ function loadSearchDropdown(selectElementId) {
             cb.combobox('select', data[0].optionValue);
         }
     });
+}
+
+function loadTreeDropdown(selectElementId) {
+    var cb = $('#' + selectElementId);
+    var selectElementName = selectElementId.substring(8, selectElementId.length);   // "cbSearchJBKJXSLY_LYFS" >> "JBKJXSLY_LYFS"
+
+    // alert(selectElementName);
+    // alert(window.treeDropdownJson['ZWDW']);
+
+    cb.combotree({
+        data: window.treeDropdownJson['ZWDW'][0],
+        onBeforeExpand: function (node) {
+            cb.combotree("tree").tree("options").data = window.treeDropdownJson['ZWDW'][0].children;
+        }
+    });
+
+    // cb.combotree('loadData', [{
+    //     id: window.treeDropdownJson['ZWDW'][0].optionValue,
+    //     text: window.treeDropdownJson['ZWDW'][0].optionHtmlContent,
+    //     children: [{
+    //         id: 11,
+    //         text: 'Java'
+    //     },{
+    //         id: 12,
+    //         text: 'C++'
+    //     }]
+    // }]);
+    // cb.combotree({
+    //     data: window.treeDropdownJson['ZWDW'],
+    //     valueField: 'optionValue',
+    //     textField: 'optionHtmlContent',
+    //     onLoadSuccess: function () {
+    //         // var data = cb.combobox('getData');
+    //         // cb.combobox('select', data[0].optionValue);
+    //     }
+    // });
+
 }

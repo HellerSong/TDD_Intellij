@@ -130,4 +130,14 @@
         <servlet-name>LoadSearchDropdown</servlet-name>
         <url-pattern>/admin/LoadSearchDropdown</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <description>加载所有二级分类的搜索下拉框</description>
+        <servlet-name>LoadTreeDropdown</servlet-name>
+        <servlet-class>com.servlet.LoadTreeDropdown</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoadTreeDropdown</servlet-name>
+        <url-pattern>/admin/LoadTreeDropdown</url-pattern>
+    </servlet-mapping>
 </web-app>

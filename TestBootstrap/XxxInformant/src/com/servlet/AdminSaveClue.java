@@ -248,12 +248,14 @@ public class AdminSaveClue extends HttpServlet {
             String JBKJXSLY_SFKG = request.getParameter("JBKJXSLY_SFKG");
             String JBKJXSLY_SFSS = request.getParameter("JBKJXSLY_SFSS");
             String JBKJXSLY_SFQT = request.getParameter("JBKJXSLY_SFQT");
+            String JBKJXSLY_Keywords = request.getParameter("JBKJXSLY_Keywords");
             String JBKJXSLY_SYZY = request.getParameter("JBKJXSLY_SYZY");
             String JBKJXSLY_NRZY = request.getParameter("JBKJXSLY_NRZY");
             jbkjxslyPojo.setJBKJXSLY_SFSBYGX(JBKJXSLY_SFSBYGX);
             jbkjxslyPojo.setJBKJXSLY_SFKG(JBKJXSLY_SFKG);
             jbkjxslyPojo.setJBKJXSLY_SFSS(JBKJXSLY_SFSS);
             jbkjxslyPojo.setJBKJXSLY_SFQT(JBKJXSLY_SFQT);
+            jbkjxslyPojo.setJBKJXSLY_Keywords(JBKJXSLY_Keywords);
             jbkjxslyPojo.setJBKJXSLY_SYZY(JBKJXSLY_SYZY);
             jbkjxslyPojo.setJBKJXSLY_NRZY(JBKJXSLY_NRZY);
 

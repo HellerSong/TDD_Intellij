@@ -17,23 +17,16 @@ function loadAttachmentFileDg() {
     });
 
     // load server files
-    $.post('AdminLoadAttach', {clueId: clueId}, function (result) {
+    $.post('AdminLoadAttach', {clueId: window.clueId}, function (result) {
         result = (new Function('return ' + result))();
 
         if (result.total > 0) {
             $('#viewAttach_fileDg').datagrid('loadData', result.rows);
         }
     });
-    // $('#viewAttach_fileDg').datagrid('acceptChanges');
-    //
-    // // $('#viewAttach_fileDg').datagrid('reload');
-    //
-    // var row = '{"fileName":"附件22","status":"已上传","serverPath":"1b5d12a4-a8f2-4ecc-85fd-e298e6c49d48.sql"}';
-    //
-    // $('#viewAttach_fileDg').datagrid('appendRow', row);
 
     // load local files
-    $.each(serverFileList, function (i, file) {
+    $.each(window.serverFileList, function (i, file) {
         alert(file);
         $('#viewAttach_fileDg').datagrid('appendRow', {
             fileName: file,

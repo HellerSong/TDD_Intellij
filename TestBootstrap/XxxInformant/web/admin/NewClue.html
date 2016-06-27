@@ -36,7 +36,7 @@
                     </td>
                     <td>&nbsp;</td>
                     <td class="label">转交单位：</td>
-                    <td width="100"><select class="easyui-combobox limit-height" id="cbJBKJXSLY_ZJDW"
+                    <td width="100"><select class="easyui-combotree" id="cbJBKJXSLY_ZJDW"
                                             name="JBKJXSLY_ZJDW"
                                             style="width: 100%;"></select>
                     </td>
@@ -93,28 +93,46 @@
         <form id="newClue_formBJBR_Part2" style="margin-top: 35px;">
             <table class="newClue-table" border="0" width="100%">
                 <tr>
-                    <td class="label"><span class="span-must-fill">*</span>是否属机关检察：</td>
+                    <td class="label"><span class="span-must-fill">*</span>是否属检察机关检查：</td>
                     <td width="120">
-                        <input type="radio" name="JBKJXSLY_SFSBYGX" checked="checked" value="1"/>&nbsp;是&nbsp;&nbsp;
-                        <input type="radio" name="JBKJXSLY_SFSBYGX" value="0"/>&nbsp;否
+                        <input type="radio" name="JBKJXSLY_SFSBYGX" id="JBKJXSLY_SFSBYGX_YES" checked="checked"
+                               value="1"/>
+                        <label for="JBKJXSLY_SFSBYGX_YES">&nbsp;是&nbsp;&nbsp;</label>
+                        <input type="radio" name="JBKJXSLY_SFSBYGX" id="JBKJXSLY_SFSBYGX_NO" value="0"/>
+                        <label for="JBKJXSLY_SFSBYGX_NO">&nbsp;否</label>
                     </td>
                     <td>&nbsp;</td>
                     <td class="label"><span class="span-must-fill">*</span>是否控告:</td>
                     <td width="140">
-                        <input type="radio" name="JBKJXSLY_SFKG" checked="checked" value="1"/>&nbsp;是&nbsp;&nbsp;
-                        <input type="radio" name="JBKJXSLY_SFKG" value="0"/>&nbsp;否
+                        <input type="radio" name="JBKJXSLY_SFKG" id="JBKJXSLY_SFKG_YES" checked="checked" value="1"/>
+                        <label for="JBKJXSLY_SFKG_YES">&nbsp;是&nbsp;&nbsp;</label>
+                        <input type="radio" name="JBKJXSLY_SFKG" id="JBKJXSLY_SFKG_NO" value="0"/>
+                        <label for="JBKJXSLY_SFKG_NO">&nbsp;否</label>
                     </td>
                     <td>&nbsp;</td>
                     <td class="label"><span class="span-must-fill">*</span>是否申诉：</td>
                     <td width="140">
-                        <input type="radio" name="JBKJXSLY_SFSS" checked="checked" value="1"/>&nbsp;是&nbsp;&nbsp;
-                        <input type="radio" name="JBKJXSLY_SFSS" value="0"/>&nbsp;否
+                        <input type="radio" name="JBKJXSLY_SFSS" id="JBKJXSLY_SFSS_YES" checked="checked" value="1"/>
+                        <label for="JBKJXSLY_SFSS_YES">&nbsp;是&nbsp;&nbsp;</label>
+                        <input type="radio" name="JBKJXSLY_SFSS" id="JBKJXSLY_SFSS_NO" value="0"/>
+                        <label for="JBKJXSLY_SFSS_NO">&nbsp;否</label>
                     </td>
                     <td>&nbsp;</td>
                     <td class="label"><span class="span-must-fill">*</span>是否其他:</td>
                     <td width="120">
-                        <input type="radio" name="JBKJXSLY_SFQT" checked="checked" value="1"/>&nbsp;是&nbsp;&nbsp;
-                        <input type="radio" name="JBKJXSLY_SFQT" value="0"/>&nbsp;否
+                        <input type="radio" name="JBKJXSLY_SFQT" id="JBKJXSLY_SFQT_YES" checked="checked" value="1"/>
+                        <label for="JBKJXSLY_SFQT_YES">&nbsp;是&nbsp;&nbsp;</label>
+                        <input type="radio" name="JBKJXSLY_SFQT" id="JBKJXSLY_SFQT_NO" value="0"/>
+                        <label for="JBKJXSLY_SFQT_NO">&nbsp;否</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="label">关键字：</td>
+                    <td colspan="10">
+                        <input class="easyui-textbox" name="JBKJXSLY_Keywords" style="width:825px;"/>
                     </td>
                 </tr>
                 <tr>
@@ -194,8 +212,11 @@
                 <tr>
                     <td class="label">举报检察干警违法违纪：</td>
                     <td>
-                        <input type="radio" name="JBKJXSLY_JBJCGJWFWJ" checked="checked" value="1"/>&nbsp;是&nbsp;&nbsp;
-                        <input type="radio" name="JBKJXSLY_JBJCGJWFWJ" value="0"/>&nbsp;否
+                        <input type="radio" name="JBKJXSLY_JBJCGJWFWJ" id="JBKJXSLY_JBJCGJWFWJ_YES" checked="checked"
+                               value="1"/>
+                        <label for="JBKJXSLY_JBJCGJWFWJ_YES">&nbsp;是&nbsp;&nbsp;</label>
+                        <input type="radio" name="JBKJXSLY_JBJCGJWFWJ" id="JBKJXSLY_JBJCGJWFWJ_NO" value="0"/>
+                        <label for="JBKJXSLY_JBJCGJWFWJ_NO">&nbsp;否</label>
                     </td>
                 </tr>
             </table>
@@ -216,7 +237,7 @@
                     <td class="label">批示日期：</td>
                     <td width="100"><input class="easyui-datebox" type="text" name="CZSPRQ" style="width: 100%;"/></td>
                     <td width="20">&nbsp;</td>
-                    <td class="label">机要类型：</td>
+                    <td class="label">处理类型：</td>
                     <td width="100"><select class="easyui-combobox" id="cbJBKJXSLY_JYLX" name="JBKJXSLY_JYLX"
                                             style="width: 100%;"></select></td>
                 </tr>

@@ -18,7 +18,7 @@ function initializeNewClue() {
     loadDropdown('cbJBKJXSLY_LYFS');
     loadDropdown('cbJBKJXSLY_LYZL');
     loadDropdown('cbJBKJXSLY_BJBRZTLB');
-    loadDropdown('cbJBKJXSLY_ZJDW');
+    loadTreeDropdown('cbJBKJXSLY_ZJDW');
     loadDropdown('cbCLFS');
     loadDropdown('cbZWDW');
     loadDropdown('cbCSDW');
@@ -59,6 +59,7 @@ function loadClueDataById(clueId) {
             $('input[textboxname="CBR"]').textbox('setValue', pojo.CBR);
             $('input[textboxname="CSRQ"]').textbox('setValue', pojo.CSRQ);
             $('input[textboxname="CBRCLRQ"]').textbox('setValue', pojo.CBRCLRQ);
+            checkRadioByValue('JBKJXSLY_JBJCGJWFWJ', pojo.JBKJXSLY_JBJCGJWFWJ);
             $('input[textboxname="JBZRYJ"]').textbox('setValue', pojo.JBZRYJ);
             $('input[textboxname="CZYJ"]').textbox('setValue', pojo.CZYJ);
             $('input[textboxname="CZSPRQ"]').textbox('setValue', pojo.CZSPRQ);
@@ -122,6 +123,15 @@ function loadClueDataById(clueId) {
             checkRadioByValue('JBKJXSLY_SFQT', pojo.JBKJXSLY_SFQT);
             $('input[textboxname="JBKJXSLY_SYZY"]').textbox('setValue', pojo.JBKJXSLY_SYZY);
             $('input[textboxname="JBKJXSLY_NRZY"]').textbox('setValue', pojo.JBKJXSLY_NRZY);
+
+            //// Set attachment file value
+            $.post('AdminLoadAttach', {clueId: clueId}, function (result) {
+                result = (new Function('return ' + result))();
+
+                if (result.total > 0) {
+                    $('.newClue-attachment-count').html('共' + result.total + '个');
+                }
+            });
         }
     });
 }
@@ -160,8 +170,10 @@ function getJbrTabElement(index) {
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label"><span class="span-must-fill">*</span>是否署名：</td>';
     table += '        <td width="160">';
-    table += '            <input type="radio" checked="checked" name="JBKJXSLY_SFSM' + index + '" value="1"/>&nbsp;是&nbsp;&nbsp;';
-    table += '            <input type="radio" name="JBKJXSLY_SFSM' + index + '" value="0"/>&nbsp;否';
+    table += '            <input type="radio" checked="checked" name="JBKJXSLY_SFSM' + index + '" id="JBKJXSLY_SFSM' + index + '_YES" value="1"/>';
+    table += '            <label for="JBKJXSLY_SFSM' + index + '_YES">&nbsp;是&nbsp;&nbsp;</label>';
+    table += '            <input type="radio" name="JBKJXSLY_SFSM' + index + '" id="JBKJXSLY_SFSM' + index + '_NO" value="0"/>';
+    table += '            <label for="JBKJXSLY_SFSM' + index + '_NO">&nbsp;否</label>';
     table += '        </td>';
     table += '        <td width="60">&nbsp;</td>';
     table += '        <td class="label">身份证号：</td>';
@@ -317,14 +329,18 @@ function getBjbrTabElement(index) {
     table += '    <tr>';
     table += '        <td class="label"><span class="span-must-fill">*</span>内容是否具体：</td>';
     table += '        <td>';
-    table += '            <input type="radio" name="JBKJXSLY_NRSFJT' + index + '" checked="checked" value="1"/>&nbsp;是&nbsp;&nbsp;';
-    table += '            <input type="radio" name="JBKJXSLY_NRSFJT' + index + '" value="0"/>&nbsp;否';
+    table += '            <input type="radio" name="JBKJXSLY_NRSFJT' + index + '" id="JBKJXSLY_NRSFJT' + index + '_YES" checked="checked" value="1"/>';
+    table += '            <label for="JBKJXSLY_NRSFJT' + index + '_YES">&nbsp;是&nbsp;&nbsp;</label>';
+    table += '            <input type="radio" name="JBKJXSLY_NRSFJT' + index + '" id="JBKJXSLY_NRSFJT' + index + '_NO" value="0"/>';
+    table += '            <label for="JBKJXSLY_NRSFJT' + index + '_NO">&nbsp;否</label>';
     table += '        </td>';
     table += '        <td>&nbsp;</td>';
     table += '        <td class="label">是否携款潜逃:</td>';
     table += '        <td>';
-    table += '            <input type="radio" name="JBKJXSLY_SFXKQT' + index + '" checked="checked" value="1"/>&nbsp;是&nbsp;&nbsp;';
-    table += '            <input type="radio" name="JBKJXSLY_SFXKQT' + index + '" value="0"/>&nbsp;否';
+    table += '            <input type="radio" name="JBKJXSLY_SFXKQT' + index + '" id="JBKJXSLY_SFXKQT' + index + '_YES" checked="checked" value="1"/>';
+    table += '            <label for="JBKJXSLY_SFXKQT' + index + '_YES">&nbsp;是&nbsp;&nbsp;</label>';
+    table += '            <input type="radio" name="JBKJXSLY_SFXKQT' + index + '" id="JBKJXSLY_SFXKQT' + index + '_NO" value="0"/>';
+    table += '            <label for="JBKJXSLY_SFXKQT' + index + '_NO">&nbsp;否</label>';
     table += '        </td>';
     table += '    </tr>';
     table += '</table>';
@@ -362,9 +378,8 @@ function removeBjbrTab() {
 function updateFileSelection() {
     // alert($('#newClue_fileUpload')[0].files[0].name);
     var fileList = document.getElementById("newClue_fileUpload").files;
-    $('.newClue-attachment-count').html(fileList.length + '个');
     for (var i = 0; i < fileList.length; i++) {
-        serverFileList[i] = fileList[i].name;
+        window.serverFileList[i] = fileList[i].name;
     }
 }
 

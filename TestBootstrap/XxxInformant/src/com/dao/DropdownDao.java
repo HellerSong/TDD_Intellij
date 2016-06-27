@@ -1,9 +1,6 @@
 package com.dao;
 
-import com.pojo.Code_tPojo;
-import com.pojo.CodelocalPojo;
-import com.pojo.DropdownItem;
-import com.pojo.OrgnizePojo;
+import com.pojo.*;
 
 import java.util.ArrayList;
 import java.util.Hashtable;
@@ -16,6 +13,7 @@ import java.util.List;
 public class DropdownDao {
     private static Hashtable<String, List<DropdownItem>> regionDropdownHt = new Hashtable<String, List<DropdownItem>>();
     private static Hashtable<String, List<DropdownItem>> searchDropdownHt = new Hashtable<String, List<DropdownItem>>();
+    private static Hashtable<String, List<DropdownTreeNode>> treeDropdownHt = new Hashtable<String, List<DropdownTreeNode>>();
     private static Hashtable<String, String> mappingHt = new Hashtable<String, String>();
 
     static {
@@ -53,6 +51,19 @@ public class DropdownDao {
             String optionType = code_tMappingHt.get(key);
             List<DropdownItem> itemList = new ArrayList<DropdownItem>();
             List<Code_tPojo> pojoList = code_tDao.getAll("where OptionName='" + optionType + "' order by CodeId");
+
+            if (key.equals("JBKJXSLY_LYZL") || key.equals("JBKJXSLY_BJBRZTLB") || key.equals("JBKJXSLY_ZW") ||
+                    key.equals("JBKJXSLY_SF") || key.equals("JBKJXSLY_TSSF") ||
+                    key.equals("JBKJXSLY_ZJ") || key.equals("JBKJXSLY_QTZJ") ||
+                    key.equals("JBKJXSLY_ZYSXXZ") || key.equals("JBKJXSLY_CYSXXZ") ||
+                    key.equals("JBKJXSLY_SALY")) {
+                DropdownItem firstDropdownItem = new DropdownItem();
+                firstDropdownItem.setOptionType(optionType);
+                firstDropdownItem.setOptionValue("0");
+                firstDropdownItem.setOptionHtmlContent("请选择");
+                itemList.add(firstDropdownItem);
+            }
+
             for (Code_tPojo p : pojoList) {
                 DropdownItem dropdownItem = new DropdownItem();
                 dropdownItem.setOptionType(p.getOptionName());
@@ -91,23 +102,48 @@ public class DropdownDao {
 
         //// 转往单位下拉选项单独处理
         OrgnizeDao orgnizeDao = new OrgnizeDao();
-        List<DropdownItem> itemList = new ArrayList<DropdownItem>();
-        List<OrgnizePojo> pojoList = orgnizeDao.getAll("where IsZWDW='1'");
-        for (OrgnizePojo p : pojoList) {
-            DropdownItem dropdownItem = new DropdownItem();
-            dropdownItem.setOptionType("转往单位");
-            dropdownItem.setOptionValue(p.getID());
-            dropdownItem.setOptionHtmlContent(p.getDisplayName());
-            itemList.add(dropdownItem);
+        List<DropdownTreeNode> treeNodeList = new ArrayList<DropdownTreeNode>();
+
+        String companyOptionType = "转往单位";
+
+
+//        DropdownItem firstDropdownItem = new DropdownItem();
+//        firstDropdownItem.setOptionType("转往单位");
+//        firstDropdownItem.setOptionValue("0");
+//        firstDropdownItem.setOptionHtmlContent("请选择单位");
+//        itemList.add(firstDropdownItem);
+
+        List<OrgnizePojo> firstLevelPojoList = orgnizeDao.getAll("where IsZWDW='1' and MemberType='otTemp'");
+        for (OrgnizePojo firstP : firstLevelPojoList) {
+            DropdownTreeNode treeNode = new DropdownTreeNode();
+            treeNode.setOptionType(companyOptionType);
+            treeNode.setOptionValue(firstP.getID());
+            treeNode.setOptionHtmlContent(firstP.getDisplayName());
+
+            // Get second dropdown items
+            List<DropdownItem> itemList = new ArrayList<DropdownItem>();
+            List<OrgnizePojo> secondLevelPojoList = orgnizeDao.getAll("where IsZWDW='1' and OwnerId='" + firstP.getOwnerID() + "'");
+            for (OrgnizePojo p : secondLevelPojoList) {
+
+                DropdownItem dropdownItem = new DropdownItem();
+                dropdownItem.setOptionType(companyOptionType);
+                dropdownItem.setOptionValue(p.getID());
+                dropdownItem.setOptionHtmlContent(p.getDisplayName());
+                itemList.add(dropdownItem);
+            }
+            treeNode.setChildren(itemList);
+
+            treeNodeList.add(treeNode);
         }
+
 
         Hashtable<String, String> orgnizeMappingHt = new Hashtable<String, String>();
         orgnizeMappingHt.put("JBKJXSLY_ZJDW", "转往单位");
-        regionDropdownHt.put("JBKJXSLY_ZJDW", itemList);
+        treeDropdownHt.put("JBKJXSLY_ZJDW", treeNodeList);
         orgnizeMappingHt.put("ZWDW", "转往单位");
-        regionDropdownHt.put("ZWDW", itemList);
+        treeDropdownHt.put("ZWDW", treeNodeList);
         orgnizeMappingHt.put("CSDW", "转往单位");
-        regionDropdownHt.put("CSDW", itemList);
+        treeDropdownHt.put("CSDW", treeNodeList);
 
 
         mappingHt.putAll(orgnizeMappingHt);
@@ -143,5 +179,9 @@ public class DropdownDao {
 
     public static Hashtable<String, List<DropdownItem>> getSearchDropdownHt() {
         return searchDropdownHt;
+    }
+
+    public static Hashtable<String, List<DropdownTreeNode>> getTreeDropdownHt() {
+        return treeDropdownHt;
     }
 }

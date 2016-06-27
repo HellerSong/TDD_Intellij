@@ -1,9 +1,21 @@
+window.isJCGJClue = 0;
+window.isTJClue = 0;
+
 function initializeClueList() {
     //// Page style setting
     $.parser.parse();
     $('.easyui-combobox').combobox({panelHeight: 'auto'});
 
-
+    var clueType = $('.sdmenu ul a.focus[title="ClueList.html"]').attr('name');
+    if (clueType == 'JCGJ') {
+        window.isJCGJClue = 1;
+    } else if (clueType == 'TJ') {
+        window.isTJClue = 1;
+    } else if (clueType == 'XS') {
+        window.isJCGJClue = 0;
+        window.isTJClue = 0;
+    }
+    
     //// Load the data grid data
     $('#clueList_Dg').datagrid({
         fit: true,
@@ -67,7 +79,9 @@ function queryClueListDefaultData() {
 function queryClueList(pageNumber, pageSize) {
     var url = 'AdminLoadClueList';
     var values = $('.clueList-search-form').serialize();
-    values += '&pageNumber=' + pageNumber + "&pageSize=" + pageSize;
+    values += '&pageNumber=' + pageNumber + '&pageSize=' + pageSize;
+    values += '&isJCGJClue=' + window.isJCGJClue + '&isTJClue=' + window.isTJClue;
+    
     $.post(url, values, function (result) {
         result = (new Function('return ' + result))();
 
