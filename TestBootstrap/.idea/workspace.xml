@@ -5,43 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e8c390e-1e00-4781-be2f-3c4c0722cc6a" name="Default" comment="Informant &gt; update for 0627&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidation/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidation/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidation/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidation/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidation/images/title.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidation/TestValidation.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidation/admin/Index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidation/css/admin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidation/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidation/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidation/css/bootstrapValidator.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidation/css/user.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidation/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidation/js/admin/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidation/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidation/js/bootstrapValidator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidation/js/jquery.cookie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidation/js/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidation/js/jquery.upload.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidation/js/user/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidation/js/zh_CN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidation/user/Index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidator/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidator/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidator/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidator/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidator/images/title.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidator/TestValidator.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidator/admin/Index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidator/css/admin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidator/css/bootstrap-theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidator/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidator/css/bootstrapValidator.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidator/css/user.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidator/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidator/js/admin/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidator/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidator/js/bootstrapValidator.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidator/js/jquery.cookie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidator/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidator/js/jquery.upload.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidator/js/user/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidator/js/zh_CN.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestValidator/user/Index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/src/com/dao/DropdownDao.java" afterPath="$PROJECT_DIR$/XxxInformant/src/com/dao/DropdownDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/src/com/pojo/DropdownItem.java" afterPath="$PROJECT_DIR$/XxxInformant/src/com/pojo/DropdownItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/src/com/pojo/DropdownTreeNode.java" afterPath="$PROJECT_DIR$/XxxInformant/src/com/pojo/DropdownTreeNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/src/com/servlet/AdminSaveClue.java" afterPath="$PROJECT_DIR$/XxxInformant/src/com/servlet/AdminSaveClue.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/src/com/servlet/LoadDropdown.java" afterPath="$PROJECT_DIR$/XxxInformant/src/com/servlet/LoadDropdown.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/src/com/servlet/LoadSearchDropdown.java" afterPath="$PROJECT_DIR$/XxxInformant/src/com/servlet/LoadSearchDropdown.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/src/com/servlet/LoadTreeDropdown.java" afterPath="$PROJECT_DIR$/XxxInformant/src/com/servlet/LoadTreeDropdown.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/src/com/utils/Parser.java" afterPath="$PROJECT_DIR$/XxxInformant/src/com/utils/Parser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/admin/ClueList.html" afterPath="$PROJECT_DIR$/XxxInformant/web/admin/ClueList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/admin/Index.html" afterPath="$PROJECT_DIR$/XxxInformant/web/admin/Index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/js/admin/clueList.js" afterPath="$PROJECT_DIR$/XxxInformant/web/js/admin/clueList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/js/admin/index.js" afterPath="$PROJECT_DIR$/XxxInformant/web/js/admin/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XxxInformant/web/js/admin/newClue.js" afterPath="$PROJECT_DIR$/XxxInformant/web/js/admin/newClue.js" />
     </list>
     <ignored path="TestBootstrap.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,11 +58,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TestValidation/user/Index.html">
+      <file leaf-file-name="Index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TestValidator/admin/Index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="805">
-              <caret line="116" column="26" selection-start-line="116" selection-start-column="24" selection-end-line="116" selection-end-column="26" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TestValidator/user/Index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-810">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -190,8 +187,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -285,6 +282,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -313,7 +312,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TestValidation" />
+              <option name="myItemId" value="TestValidator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -327,7 +326,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TestValidation" />
+              <option name="myItemId" value="TestValidator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -348,84 +347,10 @@
               <option name="myItemId" value="TestValidation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestBootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestBootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestValidation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestBootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestBootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestValidation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestBootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestBootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestAbcTemplate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestBootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestBootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestAbcTemplate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -454,11 +379,11 @@
       <recent name="com.dao" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\TestValidator" />
       <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\TestValidation\css" />
       <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\TestValidation\js" />
       <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\TestValidation" />
       <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\XxxInformant\src\com\servlet" />
-      <recent name="D:\GitHub\TDD_Intellij\TestBootstrap\XxxInformant\web\admin" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat6.0">
@@ -1234,6 +1159,7 @@
       <workItem from="1467077643532" duration="8850000" />
       <workItem from="1467090732778" duration="16378000" />
       <workItem from="1467153215308" duration="1951000" />
+      <workItem from="1467165778935" duration="3718000" />
     </task>
     <task id="LOCAL-00004" summary="update test bootstrap">
       <created>1464829700593</created>
@@ -1614,7 +1540,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="554943000" />
+    <option name="totallyTimeSpent" value="558661000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1626,7 +1552,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1641,7 +1567,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20278184" sideWeight="0.49109414" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20277777" sideWeight="0.49109414" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19969743" sideWeight="0.5089058" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1697,20 +1623,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TestDatetimePicker/admin/Index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestDatetimePicker/js/bootstrap-datetimepicker.zh-CN.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TestDatetimePicker/js/bootstrap-datetimepicker.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1838,7 +1750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
           <caret line="139" column="38" selection-start-line="139" selection-start-column="38" selection-end-line="139" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1867,9 +1778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="38" column="67" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="67" />
-          <folding>
-            <element signature="n#style#0;n#select#0;n#td#10;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1906,7 +1814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="478">
           <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1914,7 +1821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1922,7 +1828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
           <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1937,7 +1842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1945,29 +1849,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="27" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!block;n#loadClueDataById#0" expanded="false" />
-            <element signature="n#!!block;n#removeJbrTab#0" expanded="false" />
-            <element signature="n#!!block;n#getBjbrTabElement#0" expanded="false" />
-            <element signature="n#!!block;n#addBjbrTab#0" expanded="false" />
-            <element signature="n#!!block;n#removeBjbrTab#0" expanded="false" />
-            <marker date="1467100825051" expanded="true" signature="9069:9081" ph="..." />
-            <marker date="1467100825051" expanded="true" signature="9555:9567" ph="..." />
-            <marker date="1467100825051" expanded="true" signature="9780:9792" ph="..." />
-            <marker date="1467100825051" expanded="true" signature="12281:12292" ph="..." />
-            <marker date="1467100825051" expanded="true" signature="12777:12788" ph="..." />
-            <marker date="1467100825051" expanded="true" signature="13032:13043" ph="..." />
-            <marker date="1467100825051" expanded="true" signature="13415:13426" ph="..." />
-            <marker date="1467100825051" expanded="true" signature="13664:13675" ph="..." />
-            <marker date="1467100825051" expanded="true" signature="13913:13923" ph="..." />
-            <marker date="1467100825051" expanded="true" signature="14281:14292" ph="..." />
-            <marker date="1467100825051" expanded="true" signature="14536:14547" ph="..." />
-            <marker date="1467100825051" expanded="true" signature="14822:14833" ph="..." />
-            <marker date="1467100825051" expanded="true" signature="15077:15088" ph="..." />
-            <marker date="1467100825051" expanded="true" signature="15470:15481" ph="..." />
-            <marker date="1467100825051" expanded="true" signature="15720:15731" ph="..." />
-            <marker date="1467100825051" expanded="true" signature="15964:15975" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1975,15 +1856,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3204">
           <caret line="182" column="50" selection-start-line="182" selection-start-column="50" selection-end-line="182" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#8490#8491#0" expanded="false" />
-            <element signature="e#8529#8530#0" expanded="false" />
-            <element signature="e#8610#8611#0" expanded="false" />
-            <element signature="e#8649#8650#0" expanded="false" />
-            <element signature="e#8732#8733#0" expanded="false" />
-            <element signature="e#8769#8770#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1998,7 +1870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1224">
           <caret line="68" column="38" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2013,7 +1884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
           <caret line="179" column="33" selection-start-line="179" selection-start-column="33" selection-end-line="179" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2021,7 +1891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2029,7 +1898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2067,8 +1935,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TestValidation/user/Index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
+        <state relative-caret-position="2088">
           <caret line="116" column="26" selection-start-line="116" selection-start-column="24" selection-end-line="116" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestValidator/admin/Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestValidator/user/Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-810">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2127,7 +2011,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>TestValidation</last-edited>
+          <last-edited>TestValidator</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
