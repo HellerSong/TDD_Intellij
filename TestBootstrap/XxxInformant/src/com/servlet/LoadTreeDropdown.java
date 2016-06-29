@@ -30,7 +30,7 @@ public class LoadTreeDropdown extends HttpServlet {
         Hashtable<String, List<DropdownTreeNode>> dropdownHt = DropdownDao.getTreeDropdownHt();
 
         //// Result data transfer
-        response.setContentType("text/plain");
+        response.setContentType("text/html");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
         map.put("total", dropdownHt.size());

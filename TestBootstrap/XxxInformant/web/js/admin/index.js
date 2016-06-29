@@ -95,13 +95,12 @@ function loadAllGlobalDropdownJson() {
 
             if (result.total > 0) {
                 window.treeDropdownJson = result.rows;
-                //alert(result.rows.ZWDW[0].optionHtmlContent);
             }
         }
     });
 }
 
-function loadDropdown(selectElementId) {
+function loadDropdown(selectElementId, isAutoHeight) {
     var cb = $('#' + selectElementId);
     var strLength = selectElementId.length;
     var selectElementName = selectElementId.substring(2, strLength);    // "cbJBKJXSLY_LYFS" >> "JBKJXSLY_LYFS"
@@ -111,64 +110,78 @@ function loadDropdown(selectElementId) {
         //alert(selectElementName);
     }
 
+    var height = 'auto';
+    if (isAutoHeight != null && isAutoHeight == false) {
+        height = '340px';
+    }
     cb.combobox({
         data: window.dropdownJson[selectElementName],
-        valueField: 'optionValue',
-        textField: 'optionHtmlContent',
+        valueField: 'id',
+        textField: 'text',
+        panelHeight: height,
+        editable: false,
         onLoadSuccess: function () {
             var data = cb.combobox('getData');
-            cb.combobox('select', data[0].optionValue);
+            cb.combobox('select', data[0].id);
         }
     });
 }
 
-function loadSearchDropdown(selectElementId) {
+function loadSearchDropdown(selectElementId, isAutoHeight) {
     var cb = $('#' + selectElementId);
     var selectElementName = selectElementId.substring(8, selectElementId.length);   // "cbSearchJBKJXSLY_LYFS" >> "JBKJXSLY_LYFS"
+
+    var height = 'auto';
+    if (isAutoHeight != null && isAutoHeight == false) {
+        height = '340px';
+    }
+
     cb.combobox({
         data: window.searchDropdownJson[selectElementName],
-        valueField: 'optionValue',
-        textField: 'optionHtmlContent',
+        valueField: 'id',
+        textField: 'text',
+        panelHeight: height,
+        editable: false,
         onLoadSuccess: function () {
             var data = cb.combobox('getData');
-            cb.combobox('select', data[0].optionValue);
+            cb.combobox('select', data[0].id);
         }
     });
 }
 
-function loadTreeDropdown(selectElementId) {
+function loadTreeDropdownCompany(selectElementId) {
     var cb = $('#' + selectElementId);
-    var selectElementName = selectElementId.substring(8, selectElementId.length);   // "cbSearchJBKJXSLY_LYFS" >> "JBKJXSLY_LYFS"
-
-    // alert(selectElementName);
-    // alert(window.treeDropdownJson['ZWDW']);
 
     cb.combotree({
-        data: window.treeDropdownJson['ZWDW'][0],
+        data: window.treeDropdownJson.COMPANY,
+        panelHeight: '340px',
+        editable: false,
+        animate: true,
+        lines: true,
         onBeforeExpand: function (node) {
-            cb.combotree("tree").tree("options").data = window.treeDropdownJson['ZWDW'][0].children;
+            //cb.combotree('scrollTo', node.target);
+        },
+        onLoadSuccess: function () {
+            cb.combotree('setValue', 0);
         }
     });
+}
 
-    // cb.combotree('loadData', [{
-    //     id: window.treeDropdownJson['ZWDW'][0].optionValue,
-    //     text: window.treeDropdownJson['ZWDW'][0].optionHtmlContent,
-    //     children: [{
-    //         id: 11,
-    //         text: 'Java'
-    //     },{
-    //         id: 12,
-    //         text: 'C++'
-    //     }]
-    // }]);
-    // cb.combotree({
-    //     data: window.treeDropdownJson['ZWDW'],
-    //     valueField: 'optionValue',
-    //     textField: 'optionHtmlContent',
-    //     onLoadSuccess: function () {
-    //         // var data = cb.combobox('getData');
-    //         // cb.combobox('select', data[0].optionValue);
-    //     }
-    // });
+function loadTreeDropdownZone(selectElementId) {
+    var cb = $('#' + selectElementId);
 
+    cb.combotree({
+        data: window.treeDropdownJson.ZONE,
+        panelHeight: '340',
+        editable: false,
+        animate: true,
+        lines: true,
+        onBeforeExpand: function (node) {
+            //alert(node.target);
+        },
+        onLoadSuccess: function () {
+            cb.combotree('setValue', 0);
+            cb.combotree('tree').tree('collapseAll');
+        }
+    });
 }

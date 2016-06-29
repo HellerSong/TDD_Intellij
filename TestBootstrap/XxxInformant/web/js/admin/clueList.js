@@ -4,7 +4,6 @@ window.isTJClue = 0;
 function initializeClueList() {
     //// Page style setting
     $.parser.parse();
-    $('.easyui-combobox').combobox({panelHeight: 'auto'});
 
     var clueType = $('.sdmenu ul a.focus[title="ClueList.html"]').attr('name');
     if (clueType == 'JCGJ') {
@@ -47,6 +46,7 @@ function initializeClueList() {
 
     //// Load all dropdown data
     loadSearchDropdown('cbSearchJBKJXSLY_LYFS');
+    loadSearchDropdown('cbSearchJBKJXSLY_AFDQ', false);
 }
 
 function actionFormatter(data, row, index) {

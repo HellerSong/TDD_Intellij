@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/TestNavigation/TestNavigation.iml" filepath="$PROJECT_DIR$/TestNavigation/TestNavigation.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestSelect/TestSelect.iml" filepath="$PROJECT_DIR$/TestSelect/TestSelect.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestTreeView/TestTreeView.iml" filepath="$PROJECT_DIR$/TestTreeView/TestTreeView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestValidation/TestValidation.iml" filepath="$PROJECT_DIR$/TestValidation/TestValidation.iml" />
       <module fileurl="file://$PROJECT_DIR$/XxxInformant/XxxInformant.iml" filepath="$PROJECT_DIR$/XxxInformant/XxxInformant.iml" />
     </modules>
   </component>

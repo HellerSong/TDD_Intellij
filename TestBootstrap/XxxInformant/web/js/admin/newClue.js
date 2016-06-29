@@ -6,8 +6,6 @@ var serverFileList = [];
 function initializeNewClue() {
     //// Page style setting
     $.parser.parse();
-    $('.easyui-combobox').combobox({panelHeight: 'auto'});
-    $('.easyui-combobox.limit-height').combobox({panelHeight: '350px'});
     $('.index-main-title .right').show();
 
     //// Initialize tabs panel
@@ -18,10 +16,10 @@ function initializeNewClue() {
     loadDropdown('cbJBKJXSLY_LYFS');
     loadDropdown('cbJBKJXSLY_LYZL');
     loadDropdown('cbJBKJXSLY_BJBRZTLB');
-    loadTreeDropdown('cbJBKJXSLY_ZJDW');
+    loadTreeDropdownCompany('cbJBKJXSLY_ZJDW');
     loadDropdown('cbCLFS');
-    loadDropdown('cbZWDW');
-    loadDropdown('cbCSDW');
+    loadTreeDropdownCompany('cbZWDW');
+    loadTreeDropdownCompany('cbCSDW');
     loadDropdown('cbJBKJXSLY_JYLX');
 
     //// Edit Clue or Create New
@@ -149,7 +147,7 @@ function initJbrTabs() {
             jbrTabs.tabs('select', jbrIndex - 1);
         },
         onAdd: function () {
-            loadDropdown('cbJBKJXSLY_LXDQ' + jbrIndex);
+            loadTreeDropdownZone('cbJBKJXSLY_LXDQ' + jbrIndex);
         }
     });
 
@@ -234,16 +232,16 @@ function initBjbrTabs() {
             bjbrTabs.tabs('select', bjbrIndex - 1);
         },
         onAdd: function () {
-            loadDropdown('cbJBKJXSLY_MZ' + bjbrIndex);
+            loadDropdown('cbJBKJXSLY_MZ' + bjbrIndex, false);
             loadDropdown('cbJBKJXSLY_ZZMM' + bjbrIndex);
-            loadDropdown('cbJBKJXSLY_AFDQ' + bjbrIndex);
-            loadDropdown('cbJBKJXSLY_ZW' + bjbrIndex);
+            loadTreeDropdownZone('cbJBKJXSLY_AFDQ' + bjbrIndex);
+            loadDropdown('cbJBKJXSLY_ZW' + bjbrIndex, false);
             loadDropdown('cbJBKJXSLY_SF' + bjbrIndex);
             loadDropdown('cbJBKJXSLY_TSSF' + bjbrIndex);
             loadDropdown('cbJBKJXSLY_ZJ' + bjbrIndex);
             loadDropdown('cbJBKJXSLY_QTZJ' + bjbrIndex);
-            loadDropdown('cbJBKJXSLY_ZYSXXZ' + bjbrIndex);
-            loadDropdown('cbJBKJXSLY_CYSXXZ' + bjbrIndex);
+            loadDropdown('cbJBKJXSLY_ZYSXXZ' + bjbrIndex, false);
+            loadDropdown('cbJBKJXSLY_CYSXXZ' + bjbrIndex, false);
             loadDropdown('cbJBKJXSLY_SALY' + bjbrIndex);
             $('#cbJBKJXSLY_XB' + bjbrIndex).combobox({panelHeight: 'auto'});
         }
@@ -506,3 +504,6 @@ function validateNewClue() {
 
     return true;
 }
+
+
+

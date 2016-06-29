@@ -30,7 +30,7 @@ public class LoadSearchDropdown extends HttpServlet {
         Hashtable<String, List<DropdownItem>> dropdownHt = DropdownDao.getSearchDropdownHt();
 
         //// Result data transfer
-        response.setContentType("text/plain");
+        response.setContentType("text/html");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
         map.put("total", dropdownHt.size());

@@ -52,12 +52,12 @@ public class Parser {
         List<DropdownItem> targetList = dropdownHt.get(optionType);
 
         if (optionValue.length() <= 0) {
-            return targetList.get(0).getOptionHtmlContent();
+            return targetList.get(0).getText();
         }
 
         for (DropdownItem p : targetList) {
-            if (p.getOptionValue().equals(optionValue)) {
-                return p.getOptionHtmlContent();
+            if (p.getId().equals(optionValue)) {
+                return p.getText();
             }
         }
 

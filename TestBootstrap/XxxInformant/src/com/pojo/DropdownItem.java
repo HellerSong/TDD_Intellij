@@ -5,31 +5,22 @@ package com.pojo;
  * <p>Authors : Heller Song (HellerSong@Outlook.com)</p>
  */
 public class DropdownItem {
-    private String optionValue;
-    private String optionHtmlContent;
-    private String optionType;
+    private String id;
+    private String text;
 
-    public String getOptionValue() {
-        return optionValue;
+    public String getId() {
+        return id;
     }
 
-    public void setOptionValue(String optionValue) {
-        this.optionValue = optionValue;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getOptionHtmlContent() {
-        return optionHtmlContent;
+    public String getText() {
+        return text;
     }
 
-    public void setOptionHtmlContent(String optionHtmlContent) {
-        this.optionHtmlContent = optionHtmlContent;
-    }
-
-    public String getOptionType() {
-        return optionType;
-    }
-
-    public void setOptionType(String optionType) {
-        this.optionType = optionType;
+    public void setText(String text) {
+        this.text = text;
     }
 }
