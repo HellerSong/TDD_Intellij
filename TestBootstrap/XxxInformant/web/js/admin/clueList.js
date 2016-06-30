@@ -1,18 +1,25 @@
 window.isJCGJClue = 0;
 window.isTJClue = 0;
+window.isXSClue = 1;
 
 function initializeClueList() {
     //// Page style setting
     $.parser.parse();
+    $('.easyui-combobox').combobox({panelHeight: 'auto'});
 
     var clueType = $('.sdmenu ul a.focus[title="ClueList.html"]').attr('name');
     if (clueType == 'JCGJ') {
         window.isJCGJClue = 1;
+        window.isTJClue = 0;
+        window.isXSClue = 0;
     } else if (clueType == 'TJ') {
+        window.isJCGJClue = 0;
         window.isTJClue = 1;
+        window.isXSClue = 0;
     } else if (clueType == 'XS') {
         window.isJCGJClue = 0;
         window.isTJClue = 0;
+        window.isXSClue = 1;
     }
     
     //// Load the data grid data
@@ -80,8 +87,8 @@ function queryClueList(pageNumber, pageSize) {
     var url = 'AdminLoadClueList';
     var values = $('.clueList-search-form').serialize();
     values += '&pageNumber=' + pageNumber + '&pageSize=' + pageSize;
-    values += '&isJCGJClue=' + window.isJCGJClue + '&isTJClue=' + window.isTJClue;
-    
+    values += '&isXSClue=' + window.isXSClue + '&isJCGJClue=' + window.isJCGJClue + '&isTJClue=' + window.isTJClue;
+
     $.post(url, values, function (result) {
         result = (new Function('return ' + result))();
 
@@ -92,7 +99,7 @@ function queryClueList(pageNumber, pageSize) {
         });
 
         if (result.total <= 0) {
-            alert('未找到任何线索记录！');
+//            alert('未找到任何线索记录！');
         }
     });
 }

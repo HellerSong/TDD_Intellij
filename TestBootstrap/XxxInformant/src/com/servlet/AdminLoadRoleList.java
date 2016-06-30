@@ -1,9 +1,9 @@
 package com.servlet;
 
-import com.dao.VClueListDao;
+import com.dao.RoleinfoDao;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.pojo.VClueListPojo;
+import com.pojo.RoleinfoPojo;
 import com.utils.DevLog;
 import com.utils.Parser;
 
@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,36 +21,28 @@ import java.util.Map;
  * <p>Summary : </p>
  * <p>Authors : Heller Song (HellerSong@Outlook.com)</p>
  */
-public class AdminLoadClue extends HttpServlet {
+public class AdminLoadRoleList extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int clueId = Parser.parseInt(request.getParameter("clueId"));
-//        
-//        int isXSClue = Parser.parseInt(request.getParameter("isXSClue"));
-//        int isJCGJClue = Parser.parseInt(request.getParameter("isJCGJClue"));
-//        int isTJClue = Parser.parseInt(request.getParameter("isTJClue"));
+        int pageNumber = Parser.parseInt(request.getParameter("pageNumber"));
+        int pageSize = Parser.parseInt(request.getParameter("pageSize"));
 
         Map<String, Object> map = new HashMap<String, Object>();
         Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
-        String sWhere = "where JBKJXSLY_CLZT != '-1'";
-        int totalCount = 0;
-        List<VClueListPojo> list = new ArrayList<VClueListPojo>();
+        String sWhere = "where newType = 1";
 
-        if (clueId > 0) {
-            sWhere += " and JBKJXSLY_ID = '" + clueId + "'";
-            VClueListDao dao = new VClueListDao();
-            list = dao.getAll(sWhere);
-
-            dao.closeAll();
-        }
+        RoleinfoDao dao = new RoleinfoDao();
+        int totalCount = dao.getTotalRecordCount(sWhere);
+        List<RoleinfoPojo> list = dao.getAll(pageNumber, pageSize, sWhere);
+        dao.closeAll();
 
 
         //// Result data transfer
         response.setContentType("text/plain");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
-        map.put("total", 1);
+        map.put("total", totalCount);
         map.put("rows", list);
         String json = gson.toJson(map);
         DevLog.write(json);

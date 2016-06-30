@@ -7,7 +7,7 @@ import java.security.InvalidParameterException;
 import java.util.Locale;
 
 /**
- * <p>Summary: Mapping rules between Database and Entity Class.</p>
+ * <p>Summary: Mapping rules between Database and Entity Class. (Abandon for a more clear way!)</p>
  * <p>Authors: Heller Song (HellerSong@Outlook.com)</p>
  **/
 class DaoMapper {

@@ -31,7 +31,7 @@ public class DropdownDao {
         Hashtable<String, String> mappingHt = new Hashtable<String, String>();
         mappingHt.put("JBKJXSLY_LYFS", "举报来源方式");
         mappingHt.put("JBKJXSLY_LYZL", "举报函件种类");
-        mappingHt.put("JBKJXSLY_BJBRZTLB", "申诉主体代码");
+        mappingHt.put("JBKJXSLY_BJBRZTLB", "主体类别");
         mappingHt.put("CLFS", "举报线索处理方式");
         mappingHt.put("JBKJXSLY_JYLX", "机要类型");
         mappingHt.put("JBKJXSLY_MZ", "民族代码");
@@ -83,31 +83,6 @@ public class DropdownDao {
             itemList.add(dropdownItem);
         }
         regionDropdownHt.put("JBKJXSLY_AFDQ", itemList);
-
-
-//        //// 转往单位下拉选项单独处理
-//        OrgnizeDao orgnizeDao = new OrgnizeDao();
-//        List<DropdownItem> itemList = new ArrayList<DropdownItem>();
-//        List<OrgnizePojo> pojoList = orgnizeDao.getAll("where IsZWDW='1'");
-//        for (OrgnizePojo p : pojoList) {
-//            DropdownItem dropdownItem = new DropdownItem();
-//            dropdownItem.setOptionType("转往单位");
-//            dropdownItem.setOptionValue(p.getID());
-//            dropdownItem.setOptionHtmlContent(p.getDisplayName());
-//            itemList.add(dropdownItem);
-//        }
-//
-//        Hashtable<String, String> orgnizeMappingHt = new Hashtable<String, String>();
-//        orgnizeMappingHt.put("JBKJXSLY_ZJDW", "转往单位");
-//        regionDropdownHt.put("JBKJXSLY_ZJDW", itemList);
-//        orgnizeMappingHt.put("ZWDW", "转往单位");
-//        regionDropdownHt.put("ZWDW", itemList);
-//        orgnizeMappingHt.put("CSDW", "转往单位");
-//        regionDropdownHt.put("CSDW", itemList);
-//
-//
-//        mappingHt.putAll(orgnizeMappingHt);
-//        orgnizeDao.closeAll();
     }
 
     private static void initSearchDropdownHt() {

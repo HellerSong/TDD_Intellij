@@ -2,10 +2,10 @@ package com.utils;
 
 import com.dao.DropdownDao;
 import com.pojo.DropdownItem;
+import com.pojo.DropdownTreeNode;
 
 import java.security.InvalidParameterException;
 import java.sql.Timestamp;
-import java.util.Hashtable;
 import java.util.List;
 
 /**
@@ -48,19 +48,48 @@ public class Parser {
         if (optionType == null || optionType.length() <= 0 || optionValue == null)
             DevLog.write(new InvalidParameterException().toString());
 
-        Hashtable<String, List<DropdownItem>> dropdownHt = DropdownDao.getRegionDropdownHt();
-        List<DropdownItem> targetList = dropdownHt.get(optionType);
+        List<DropdownItem> targetList = DropdownDao.getRegionDropdownHt().get(optionType);
 
-        if (optionValue.length() <= 0) {
-            return targetList.get(0).getText();
+        if (optionValue.length() <= 0 || optionValue.equals("0")) {
+            return "";
         }
 
-        for (DropdownItem p : targetList) {
-            if (p.getId().equals(optionValue)) {
-                return p.getText();
+        for (DropdownItem d : targetList) {
+            if (d.getId().equals(optionValue)) {
+                return d.getText();
             }
         }
 
-        return "error";
+        return "Error";
+    }
+
+    public static String parseTreeDropdownContent(String optionType, String optionValue) {
+        if (optionType == null || optionType.length() <= 0 || optionValue == null)
+            DevLog.write(new InvalidParameterException().toString());
+
+        List<DropdownTreeNode> targetList = DropdownDao.getTreeDropdownHt().get(optionType);
+
+        if (optionValue.length() <= 0 || optionValue.equals("0")) {
+            return "";
+        }
+
+        for (DropdownTreeNode node : targetList) {
+            if (node.getId().equals(optionValue)) {
+                return node.getText();
+            }
+        }
+
+        for (DropdownTreeNode node : targetList) {
+            List<DropdownItem> childItemList = node.getChildren();
+            if (childItemList != null) {
+                for (DropdownItem d : childItemList) {
+                    if (d.getId().equals(optionValue)) {
+                        return d.getText();
+                    }
+                }
+            }
+        }
+
+        return "Error";
     }
 }

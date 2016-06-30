@@ -6,7 +6,7 @@ public class RoleinfoPojo {
     private String RoleName;
     private String RGroup;
     private String RMemo;
-
+    private int newType;
 
     public int getId() {
         return Id;
@@ -46,6 +46,14 @@ public class RoleinfoPojo {
 
     public void setRMemo(String RMemo) {
         this.RMemo = RMemo;
+    }
+
+    public void setNewType(int newType) {
+        this.newType = newType;
+    }
+
+    public int getNewType() {
+        return newType;
     }
 
 }

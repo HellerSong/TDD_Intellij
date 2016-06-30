@@ -3,10 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>举报网后台 - 组织成员</title>
+    <link rel="stylesheet" type="text/css" href="../css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../css/icon.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+    <!-- Self using files -->
+    <link rel="stylesheet" href="../css/admin.css">
 </head>
 <body>
 <div class="main-content">
-    组织成员，即将发布。。。
+    <form class="orgmemberinfoList-search-form">
+        <table border="0" width="100%">
+            <tr>
+                <td class="label">用户名:</td>
+                <td><input type="text" class="easyui-textbox" id="LoginID" name="LoginID"
+                           data-options="prompt:'请输入查询用户名'"
+                           style="width:80%;height:26px;"></td>
+                <td width="20">&nbsp;</td>
+                <td class="label">真实姓名:</td>
+                <td><input type="text" class="easyui-textbox" id="DisplayName" name="DisplayName"
+                           data-options="prompt:'请输入查询真实姓名'"
+                           style="width:80%;height:26px;"></td>
+                <td width="20">&nbsp;</td>
+                <td class="label">角色:</td>
+                <td>
+                    <select class="easyui-combobox" id="roleId" name="roleId" style="width:100%;height:26px;">
+                        <option value="0" selected>全部</option>
+                        <option value="11">管理员</option>
+                        <option value="12">承办人</option>
+                        <option value="13">厅领导</option>
+                        <option value="14">举报中心领导</option>
+                        <option value="15">检察长</option>
+                    </select>
+                </td>
+                <td width="20">&nbsp;</td>
+                <td>
+                    <div class="cluelist-search-btn-group">
+                        <a class="easyui-linkbutton" data-options="iconCls:'icon-search'"
+                           onclick="submitOrgmemberinfoListSearchForm()">搜索</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="cluelist-search-btn-group">
+                        <a class="easyui-linkbutton" data-options="iconCls:'icon-clear'"
+                           onclick="resetOrgmemberinfoListSearchForm()">重置</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="cluelist-search-btn-group">
+                        <a class="easyui-linkbutton" data-options="iconCls:'icon-add'" onclick="alert('功能即将发布！')">新建</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div><img src="../images/double.jpg"/></div>
+    <br/>
+    <div class="clueList-datagrid-content">
+        <table class="easyui-datagrid" id="orgmemberinfoList_Dg"></table>
+    </div>
 </div>
+<script type="text/javascript">
+    $(function () {
+        queryOrgMemberList(1, 20);
+    });
+</script>
 </body>
 </html>

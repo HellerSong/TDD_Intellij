@@ -1,9 +1,13 @@
 var jbrIndex = 1;
 var bjbrIndex = 1;
-var clueId = 0;
-var serverFileList = [];
+window.clueId = 0;
+window.localFileList = [];
+window.serverFileCount = 0;
 
 function initializeNewClue() {
+    window.localFileList = [];
+    window.serverFileCount = 0;
+
     //// Page style setting
     $.parser.parse();
     $('.index-main-title .right').show();
@@ -44,15 +48,15 @@ function loadClueDataById(clueId) {
             $('#cbJBKJXSLY_LYFS').combobox('select', pojo.JBKJXSLY_LYFSDM);
             $('#cbJBKJXSLY_LYZL').combobox('select', pojo.JBKJXSLY_LYZLDM);
             $('#cbJBKJXSLY_BJBRZTLB').combobox('select', pojo.JBKJXSLY_BJBRZTLBDM);
-            $('#cbJBKJXSLY_ZJDW').combobox('select', pojo.JBKJXSLY_ZJDWDM);
+            $('#cbJBKJXSLY_ZJDW').combotree('setValue', pojo.JBKJXSLY_ZJDWDM);
             $('input[textboxname="JBKJXSLY_SLRQ"]').textbox('setValue', pojo.JBKJXSLY_SLRQ);
             $('input[textboxname="JBKJXSLY_ZJR"]').textbox('setValue', pojo.JBKJXSLY_ZJR);
             $('input[textboxname="JBKJXSLY_XH"]').textbox('setValue', pojo.JBKJXSLY_XH);
 
             //// Set all "Clue Process" value
             $('#cbCLFS').combobox('select', pojo.CLFSDM);
-            $('#cbZWDW').combobox('select', pojo.ZWDWDM);
-            $('#cbCSDW').combobox('select', pojo.CSDWDM);
+            $('#cbZWDW').combotree('setValue', pojo.ZWDWDM);
+            $('#cbCSDW').combotree('setValue', pojo.CSDWDM);
             $('#cbJBKJXSLY_JYLX').combobox('select', pojo.JBKJXSLY_JYLXDM);
             $('input[textboxname="CBR"]').textbox('setValue', pojo.CBR);
             $('input[textboxname="CSRQ"]').textbox('setValue', pojo.CSRQ);
@@ -80,9 +84,14 @@ function loadClueDataById(clueId) {
                 }
                 $('input[name="JBKJXSLY_JBRXM' + i + '"]').val(pojo.JBKJXSLY_JBRXM.split('@#@')[i - 1]);
                 checkRadioByValue('JBKJXSLY_SFSM' + i, pojo.JBKJXSLY_SFSM.split('@#@')[i - 1]);
+                if (pojo.JBKJXSLY_SFSM.split('@#@')[i - 1] == 1) {
+                    updateSignature(i, true);
+                } else {
+                    updateSignature(i, false);
+                }
                 $('input[name="JBKJXSLY_JBRSFZH' + i + '"]').val(pojo.JBKJXSLY_JBRSFZH.split('@#@')[i - 1]);
                 $('input[name="JBKJXSLY_JBRDH' + i + '"]').val(pojo.JBKJXSLY_JBRDH.split('@#@')[i - 1]);
-                $('#cbJBKJXSLY_LXDQ' + i).combobox('select', pojo.JBKJXSLY_LXDQDM.split('@#@')[i - 1]);
+                $('#cbJBKJXSLY_LXDQ' + i).combotree('setValue', pojo.JBKJXSLY_LXDQDM.split('@#@')[i - 1]);
                 $('input[name="JBKJXSLY_JBRDWZZ' + i + '"]').val(pojo.JBKJXSLY_JBRDWZZ.split('@#@')[i - 1]);
                 i++;
             } while (i <= informerCount);
@@ -99,7 +108,7 @@ function loadClueDataById(clueId) {
                 $('#cbJBKJXSLY_XB' + j).combobox('select', pojo.JBKJXSLY_XB.split('@#@')[j - 1]);
                 $('#cbJBKJXSLY_MZ' + j).combobox('select', pojo.JBKJXSLY_MZDM.split('@#@')[j - 1]);
                 $('#cbJBKJXSLY_ZZMM' + j).combobox('select', pojo.JBKJXSLY_ZZMMDM.split('@#@')[j - 1]);
-                $('#cbJBKJXSLY_AFDQ' + j).combobox('select', pojo.JBKJXSLY_AFDQDM.split('@#@')[j - 1]);
+                $('#cbJBKJXSLY_AFDQ' + j).combotree('setValue', pojo.JBKJXSLY_AFDQDM.split('@#@')[j - 1]);
                 $('#cbJBKJXSLY_ZW' + j).combobox('select', pojo.JBKJXSLY_ZWDM.split('@#@')[j - 1]);
                 $('input[name="JBKJXSLY_BJBRDWZZ' + j + '"]').val(pojo.JBKJXSLY_BJBRDWZZ.split('@#@')[j - 1]);
                 $('#cbJBKJXSLY_SF' + j).combobox('select', pojo.JBKJXSLY_SFDM.split('@#@')[j - 1]);
@@ -115,10 +124,11 @@ function loadClueDataById(clueId) {
                 j++;
             } while (j <= beInformerCount);
             $('#newClue_bjbrTabs').tabs('select', 0);
-            checkRadioByValue('JBKJXSLY_SFSBYGX', pojo.JBKJXSLY_SFSBYGX);
-            checkRadioByValue('JBKJXSLY_SFKG', pojo.JBKJXSLY_SFKG);
-            checkRadioByValue('JBKJXSLY_SFSS', pojo.JBKJXSLY_SFSS);
-            checkRadioByValue('JBKJXSLY_SFQT', pojo.JBKJXSLY_SFQT);
+            // checkRadioByValue('JBKJXSLY_SFSBYGX', pojo.JBKJXSLY_SFSBYGX);
+            // checkRadioByValue('JBKJXSLY_SFKG', pojo.JBKJXSLY_SFKG);
+            // checkRadioByValue('JBKJXSLY_SFSS', pojo.JBKJXSLY_SFSS);
+            // checkRadioByValue('JBKJXSLY_SFQT', pojo.JBKJXSLY_SFQT);
+            $('input[textboxname="JBKJXSLY_Keywords"]').textbox('setValue', pojo.JBKJXSLY_Keywords);
             $('input[textboxname="JBKJXSLY_SYZY"]').textbox('setValue', pojo.JBKJXSLY_SYZY);
             $('input[textboxname="JBKJXSLY_NRZY"]').textbox('setValue', pojo.JBKJXSLY_NRZY);
 
@@ -127,7 +137,10 @@ function loadClueDataById(clueId) {
                 result = (new Function('return ' + result))();
 
                 if (result.total > 0) {
-                    $('.newClue-attachment-count').html('共' + result.total + '个');
+                    window.serverFileCount = result.total;
+
+                    var fileCount = Number(window.localFileList.length) + Number(window.serverFileCount);
+                    $('.newClue-attachment-view>a').html('查看附件(' + fileCount + ')');
                 }
             });
         }
@@ -164,29 +177,29 @@ function getJbrTabElement(index) {
     table += '<table class="newClue-table" border="0" width="100%">';
     table += '    <tr>';
     table += '        <td class="label">姓名：</td>';
-    table += '        <td><input type="text" name="JBKJXSLY_JBRXM' + index + '"/></td>';
+    table += '        <td><input type="text" name="JBKJXSLY_JBRXM' + index + '" disabled/></td>';
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label"><span class="span-must-fill">*</span>是否署名：</td>';
     table += '        <td width="160">';
-    table += '            <input type="radio" checked="checked" name="JBKJXSLY_SFSM' + index + '" id="JBKJXSLY_SFSM' + index + '_YES" value="1"/>';
+    table += '            <input type="radio" name="JBKJXSLY_SFSM' + index + '" id="JBKJXSLY_SFSM' + index + '_YES" value="1" onchange="updateSignature(' + index + ', true)"/>';
     table += '            <label for="JBKJXSLY_SFSM' + index + '_YES">&nbsp;是&nbsp;&nbsp;</label>';
-    table += '            <input type="radio" name="JBKJXSLY_SFSM' + index + '" id="JBKJXSLY_SFSM' + index + '_NO" value="0"/>';
+    table += '            <input type="radio" checked="checked" name="JBKJXSLY_SFSM' + index + '" id="JBKJXSLY_SFSM' + index + '_NO" value="0" onchange="updateSignature(' + index + ', false)"/>';
     table += '            <label for="JBKJXSLY_SFSM' + index + '_NO">&nbsp;否</label>';
     table += '        </td>';
     table += '        <td width="60">&nbsp;</td>';
     table += '        <td class="label">身份证号：</td>';
-    table += '        <td><input type="text" name="JBKJXSLY_JBRSFZH' + index + '" style="width: 100%;"/></td>';
+    table += '        <td><input type="text" name="JBKJXSLY_JBRSFZH' + index + '" style="width: 100%;" disabled/></td>';
     table += '    </tr>';
     table += '    <tr><td>&nbsp;</td></tr>';
     table += '    <tr>';
     table += '        <td class="label">联系电话：</td>';
-    table += '        <td><input type="text" name="JBKJXSLY_JBRDH' + index + '"/></td>';
+    table += '        <td><input type="text" name="JBKJXSLY_JBRDH' + index + '" disabled/></td>';
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">来信地区：</td>';
     table += '        <td width="160"><select id="cbJBKJXSLY_LXDQ' + index + '" name="JBKJXSLY_LXDQ' + index + '" style="width: 100%;"></select></td>';
     table += '        <td width="60">&nbsp;</td>';
     table += '        <td class="label">单位、住址：</td>';
-    table += '        <td><input type="text" name="JBKJXSLY_JBRDWZZ' + index + '" style="width: 100%;"/></td>';
+    table += '        <td><input type="text" name="JBKJXSLY_JBRDWZZ' + index + '" style="width: 100%;" disabled/></td>';
     table += '    </tr>';
     table += '</table>';
 
@@ -377,7 +390,24 @@ function updateFileSelection() {
     // alert($('#newClue_fileUpload')[0].files[0].name);
     var fileList = document.getElementById("newClue_fileUpload").files;
     for (var i = 0; i < fileList.length; i++) {
-        window.serverFileList[i] = fileList[i].name;
+        window.localFileList[i] = fileList[i].name;
+    }
+
+    var fileCount = Number(window.localFileList.length) + Number(window.serverFileCount);
+    $('.newClue-attachment-view>a').html('查看附件(' + fileCount + ')');
+}
+
+function updateSignature(index, isSignature) {
+    if (isSignature == true) {
+        $('input[name="JBKJXSLY_JBRXM' + index + '"]').removeAttr('disabled');
+        $('input[name="JBKJXSLY_JBRSFZH' + index + '"]').removeAttr('disabled');
+        $('input[name="JBKJXSLY_JBRDH' + index + '"]').removeAttr('disabled');
+        $('input[name="JBKJXSLY_JBRDWZZ' + index + '"]').removeAttr('disabled');
+    } else {
+        $('input[name="JBKJXSLY_JBRXM' + index + '"]').attr('disabled', true);
+        $('input[name="JBKJXSLY_JBRSFZH' + index + '"]').attr('disabled', true);
+        $('input[name="JBKJXSLY_JBRDH' + index + '"]').attr('disabled', true);
+        $('input[name="JBKJXSLY_JBRDWZZ' + index + '"]').attr('disabled', true);
     }
 }
 
@@ -442,65 +472,65 @@ function closeNewClueForm() {
 function validateNewClue() {
     var temp;
 
-    //// "BeInformer" Validate
-    temp = $('input[name="JBKJXSLY_BJBRXM1"]').val();
-    temp = $.trim(temp);
-    if (temp == null || temp.length == 0) {
-        alert('请输入被举报人1 的姓名！');
-        return false;
-    }
-    if (bjbrIndex == 2) {
-        temp = $('input[name="JBKJXSLY_BJBRXM2"]').val();
-        temp = $.trim(temp);
-        if (temp == null || temp.length == 0) {
-            alert('请输入被举报人2 的姓名！');
-            return false;
-        }
-    }
-    if (bjbrIndex == 3) {
-        temp = $('input[name="JBKJXSLY_BJBRXM3"]').val();
-        temp = $.trim(temp);
-        if (temp == null || temp.length == 0) {
-            alert('请输入被举报人3 的姓名！');
-            return false;
-        }
-    }
-    // var i = 1;
-    // do {
-    //     temp = $('input[name="JBKJXSLY_JBRXM1"]').val();
+    // //// "BeInformer" Validate
+    // temp = $('input[name="JBKJXSLY_BJBRXM1"]').val();
+    // temp = $.trim(temp);
+    // if (temp == null || temp.length == 0) {
+    //     alert('请输入被举报人1 的姓名.');
+    //     return false;
+    // }
+    // if (bjbrIndex == 2) {
+    //     temp = $('input[name="JBKJXSLY_BJBRXM2"]').val();
     //     temp = $.trim(temp);
     //     if (temp == null || temp.length == 0) {
-    //         alert('请输入被举报人' + i + ' 的姓名！');
+    //         alert('请输入被举报人2 的姓名.');
     //         return false;
     //     }
-    //     i++;
-    // } while (i <= bjbrIndex);
-
-    temp = $.trim($('input[textboxname="JBKJXSLY_SYZY"]').textbox('getValue'));
-    if (temp == null || temp.length == 0) {
-        alert('请输入举报内容！');
-        return false;
-    }
-
-    temp = $.trim($('input[textboxname="JBKJXSLY_NRZY"]').textbox('getValue'));
-    if (temp == null || temp.length == 0) {
-        alert('请输入举报内容摘要！');
-        return false;
-    }
-
-
-    //// "Clue Process" validation
-    temp = $.trim($('input[textboxname="JBZRYJ"]').textbox('getValue'));
-    if (temp == null || temp.length == 0) {
-        alert('请输入承办人意见！');
-        return false;
-    }
-
-    temp = $.trim($('input[textboxname="JBKJXSLY_CLQK"]').textbox('getValue'));
-    if (temp == null || temp.length == 0) {
-        alert('请输入处理情况！');
-        return false;
-    }
+    // }
+    // if (bjbrIndex == 3) {
+    //     temp = $('input[name="JBKJXSLY_BJBRXM3"]').val();
+    //     temp = $.trim(temp);
+    //     if (temp == null || temp.length == 0) {
+    //         alert('请输入被举报人3 的姓名.');
+    //         return false;
+    //     }
+    // }
+    // // var i = 1;
+    // // do {
+    // //     temp = $('input[name="JBKJXSLY_JBRXM1"]').val();
+    // //     temp = $.trim(temp);
+    // //     if (temp == null || temp.length == 0) {
+    // //         alert('请输入被举报人' + i + ' 的姓名！');
+    // //         return false;
+    // //     }
+    // //     i++;
+    // // } while (i <= bjbrIndex);
+    //
+    // temp = $.trim($('input[textboxname="JBKJXSLY_SYZY"]').textbox('getValue'));
+    // if (temp == null || temp.length == 0) {
+    //     alert('请输入举报内容！');
+    //     return false;
+    // }
+    //
+    // temp = $.trim($('input[textboxname="JBKJXSLY_NRZY"]').textbox('getValue'));
+    // if (temp == null || temp.length == 0) {
+    //     alert('请输入举报内容摘要！');
+    //     return false;
+    // }
+    //
+    //
+    // //// "Clue Process" validation
+    // temp = $.trim($('input[textboxname="JBZRYJ"]').textbox('getValue'));
+    // if (temp == null || temp.length == 0) {
+    //     alert('请输入承办人意见！');
+    //     return false;
+    // }
+    //
+    // temp = $.trim($('input[textboxname="JBKJXSLY_CLQK"]').textbox('getValue'));
+    // if (temp == null || temp.length == 0) {
+    //     alert('请输入处理情况！');
+    //     return false;
+    // }
 
     return true;
 }

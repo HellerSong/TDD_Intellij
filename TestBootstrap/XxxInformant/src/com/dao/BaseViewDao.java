@@ -24,6 +24,7 @@ public abstract class BaseViewDao<T, PK> {
     public String mainTableName;
     public String mainKeyName;
     public String joinString;
+    public int totalCount;
 
 
     public BaseViewDao() {
@@ -33,6 +34,10 @@ public abstract class BaseViewDao<T, PK> {
 
         //// Convert data cross database table and entity instance
         daoConvert = new DaoConverter(clazz, mainKeyName);
+    }
+
+    public int getTotalRecordCount() {
+        return getTotalRecordCount("");
     }
 
     public int getTotalRecordCount(String sWhere) {

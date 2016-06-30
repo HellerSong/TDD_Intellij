@@ -32,7 +32,7 @@ public class AdminSaveClueFile extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession(true);
         Map<String, Object> map = new HashMap<String, Object>();
-        String message;
+        String message = "文件上传失败！";
 
         //// Create server folder
         String uploadPath = session.getServletContext().getRealPath("/upload");
@@ -50,37 +50,41 @@ public class AdminSaveClueFile extends HttpServlet {
         String fileJoinStr = "";
         try {
             List<FileItem> fileList = upload.parseRequest(request);
-            DevLog.write("File Count: " + fileList.size());
-            for (int i = 0; i < fileList.size(); i++) {
-                String regionFileName = fileList.get(i).getName();
-                DevLog.write("Upload file name: " + regionFileName);
-                if (regionFileName.length() > 0) {
-                    String fileExtension = regionFileName.substring(regionFileName.lastIndexOf('.'));
-                    String saveFileName = DateUtil.getCurrentTime("yyyyMMdd") + "_" + lastId + "_" + (i + 1) + fileExtension;
-                    DevLog.write("Server file name: " + saveFileName);
-                    fileList.get(i).write(new File(uploadPath, saveFileName));
-                    fileJoinStr += saveFileName + ";";
+            if (fileList.size() >= 1 && fileList.get(0).getName().length() > 0) {
+                DevLog.write("File Count: " + fileList.size());
+                for (int i = 0; i < fileList.size(); i++) {
+                    String regionFileName = fileList.get(i).getName();
+                    DevLog.write("Upload file name: " + regionFileName);
+                    if (regionFileName.length() > 0) {
+                        String fileExtension = regionFileName.substring(regionFileName.lastIndexOf('.'));
+                        String saveFileName = DateUtil.getCurrentTime("yyyyMMdd") + "_" + lastId + "_" + (i + 1) + fileExtension;
+                        DevLog.write("Server file name: " + saveFileName);
+                        fileList.get(i).write(new File(uploadPath, saveFileName));
+                        fileJoinStr += saveFileName + ";";
+                    }
                 }
+
+                if (fileJoinStr.length() > 0) {
+                    fileJoinStr = fileJoinStr.substring(0, fileJoinStr.length() - 1);
+                    // The clue editing will append server file name to db segment;
+                    // The new create clue will update db segment directly;
+                    if (uploadedFileJoinStr != null && uploadedFileJoinStr.length() > 0) {
+                        fileJoinStr = uploadedFileJoinStr + ";" + fileJoinStr;
+                    }
+                    dao.update(lastId, "JBKJXSLY_Fujian", fileJoinStr);
+
+                    dao.closeAll();
+                }
+
+                message = "文件上传成功！";
+            } else {
+                message = "未检测到文件！";
             }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        if (fileJoinStr.length() > 0) {
-            fileJoinStr = fileJoinStr.substring(0, fileJoinStr.length() - 1);
-
-
-            // The clue editing will append server file name to db segment;
-            // The new create clue will update db segment directly;
-            if (uploadedFileJoinStr != null && uploadedFileJoinStr.length() > 0) {
-                fileJoinStr = uploadedFileJoinStr + ";" + fileJoinStr;
-            }
-            dao.update(lastId, "JBKJXSLY_Fujian", fileJoinStr);
-
-            dao.closeAll();
-        }
-
-        message = "文件上传成功";
 
         //// Result data transfer
         response.setContentType("text/html");

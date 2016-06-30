@@ -3,7 +3,7 @@
          xmlns="http://java.sun.com/xml/ns/javaee"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          id="WebApp_ID" version="2.5">
-    <display-name>Informant</display-name>
+    <display-name>12309</display-name>
 
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
@@ -129,6 +129,36 @@
     <servlet-mapping>
         <servlet-name>LoadSearchDropdown</servlet-name>
         <url-pattern>/admin/LoadSearchDropdown</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>后台加载角色列表</description>
+        <servlet-name>AdminLoadRoleList</servlet-name>
+        <servlet-class>com.servlet.AdminLoadRoleList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoadRoleList</servlet-name>
+        <url-pattern>/admin/AdminLoadRoleList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>后台加载用户列表</description>
+        <servlet-name>AdminLoadOrgmemberinfoList</servlet-name>
+        <servlet-class>com.servlet.AdminLoadOrgmemberinfoList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoadOrgmemberinfoList</servlet-name>
+        <url-pattern>/admin/AdminLoadOrgmemberinfoList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>后台加载组织结构列表</description>
+        <servlet-name>AdminLoadOrgStructureList</servlet-name>
+        <servlet-class>com.servlet.AdminLoadOrgStructureList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoadOrgStructureList</servlet-name>
+        <url-pattern>/admin/AdminLoadOrgStructureList</url-pattern>
     </servlet-mapping>
 
     <servlet>

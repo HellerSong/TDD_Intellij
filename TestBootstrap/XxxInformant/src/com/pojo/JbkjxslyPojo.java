@@ -98,6 +98,8 @@ public class JbkjxslyPojo {
     private String JBKJXSLY_ZZMM;
     private String JBKJXSLY_ZZMMDM;
     private int JBKJXSLY_CLZT;
+    private int JBKJXSLY_RepeatXS;
+    private int JBKJXSLY_RepeatXS_ID;
 
 
     public String getJBKJXSLY_ZJDWDM() {
@@ -858,5 +860,21 @@ public class JbkjxslyPojo {
 
     public void setJBKJXSLY_CLZT(int JBKJXSLY_CLZT) {
         this.JBKJXSLY_CLZT = JBKJXSLY_CLZT;
+    }
+
+    public int getJBKJXSLY_RepeatXS() {
+        return JBKJXSLY_RepeatXS;
+    }
+
+    public void setJBKJXSLY_RepeatXS(int JBKJXSLY_RepeatXS) {
+        this.JBKJXSLY_RepeatXS = JBKJXSLY_RepeatXS;
+    }
+
+    public int getJBKJXSLY_RepeatXS_ID() {
+        return JBKJXSLY_RepeatXS_ID;
+    }
+
+    public void setJBKJXSLY_RepeatXS_ID(int JBKJXSLY_RepeatXS_ID) {
+        this.JBKJXSLY_RepeatXS_ID = JBKJXSLY_RepeatXS_ID;
     }
 }

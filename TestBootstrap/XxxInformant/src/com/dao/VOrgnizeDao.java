@@ -6,12 +6,11 @@ import com.pojo.OrgnizePojo;
  * <p>Summary : </p>
  * <p>Authors : Heller Song (HellerSong@Outlook.com)</p>
  */
-public class OrgnizeDao extends BaseDao<OrgnizePojo, String> {
-    public OrgnizeDao() {
-        tableName = "orgnize";
+public class VOrgnizeDao extends BaseViewDao<OrgnizePojo, Integer> {
+    public VOrgnizeDao() {
+        mainTableName = "orgnize as a";
         mainKeyName = "ID";
-        orderByName = "OwnerID,DisplayName";
-        orderByType = "asc";
+        joinString = "left join orgnize as b on (b.OwnerID = a.ID) ";
 
         totalCount = getTotalRecordCount();
     }

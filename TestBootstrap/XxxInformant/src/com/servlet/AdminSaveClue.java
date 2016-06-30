@@ -70,12 +70,8 @@ public class AdminSaveClue extends HttpServlet {
             jbkjxslyPojo.setJBKJXSLY_BJBRZTLBDM(JBKJXSLY_BJBRZTLBDM);
             jbkjxslyPojo.setJBKJXSLY_BJBRZTLB(Parser.parseDropdownContent("JBKJXSLY_BJBRZTLB", JBKJXSLY_BJBRZTLBDM));
             jbkjxslyPojo.setJBKJXSLY_ZJDWDM(JBKJXSLY_ZJDWDM);
-            if (JBKJXSLY_ZJDWDM != null && JBKJXSLY_ZJDWDM.length() > 0) {
-                //jbkjxslyPojo.setJBKJXSLY_ZJDW(Parser.parseDropdownContent("JBKJXSLY_ZJDW", JBKJXSLY_ZJDWDM));
-            }
-            if (JBKJXSLY_SLRQ != null && JBKJXSLY_SLRQ.length() > 0) {
-                jbkjxslyPojo.setJBKJXSLY_SLRQ(Parser.parseDate(JBKJXSLY_SLRQ)); // Deafult is: today
-            }
+            jbkjxslyPojo.setJBKJXSLY_ZJDW(Parser.parseTreeDropdownContent("COMPANY", JBKJXSLY_ZJDWDM));
+            jbkjxslyPojo.setJBKJXSLY_SLRQ(Parser.parseDate(JBKJXSLY_SLRQ)); // Deafult is: today
             jbkjxslyPojo.setJBKJXSLY_ZJR(JBKJXSLY_ZJR);
             jbkjxslyPojo.setJBKJXSLY_CLZT(AllEnums.ClueStatus.Pending.value());   // Default status: 待处理
 
@@ -84,7 +80,6 @@ public class AdminSaveClue extends HttpServlet {
             String CLFSDM = request.getParameter("CLFS");
             String CBR = request.getParameter("CBR");
             String ZWDWDM = request.getParameter("ZWDW");
-            DevLog.write(ZWDWDM);
             String CSDWDM = request.getParameter("CSDW");
             String CSRQ = request.getParameter("CSRQ");
             String CBRCLRQ = request.getParameter("CBRCLRQ");
@@ -108,17 +103,12 @@ public class AdminSaveClue extends HttpServlet {
             if (CLFSDM != null && CLFSDM.length() > 0) {
                 xsclPojo.setCLFS(Parser.parseDropdownContent("CLFS", CLFSDM));
             }
-            
+
             xsclPojo.setCBR(CBR);
             xsclPojo.setZWDWDM(ZWDWDM);
-            if (ZWDWDM != null && ZWDWDM.length() > 0) {
-                //xsclPojo.setZWDW(Parser.parseDropdownContent("ZWDW", ZWDWDM));
-            }
-            
+            xsclPojo.setZWDW(Parser.parseDropdownContent("COMPANY", ZWDWDM));
             xsclPojo.setCSDWDM(CSDWDM);
-            if (CSDWDM != null && CSDWDM.length() > 0) {
-                //xsclPojo.setCSDW(Parser.parseDropdownContent("CSDW", CSDWDM));
-            }
+            xsclPojo.setCSDW(Parser.parseDropdownContent("COMPANY", CSDWDM));
 
             if (CSRQ != null && CSRQ.length() > 0) {
                 xsclPojo.setCSRQ(Parser.parseDate(CSRQ));
@@ -127,37 +117,37 @@ public class AdminSaveClue extends HttpServlet {
             if (CBRCLRQ != null && CBRCLRQ.length() > 0) {
                 xsclPojo.setCBRCLRQ(Parser.parseDate(CBRCLRQ));
             }
-            
+
             xsclPojo.setJBZRYJ(JBZRYJ);
             xsclPojo.setCZYJ(CZYJ);
             if (CZSPRQ != null && CZSPRQ.length() > 0) {
                 xsclPojo.setCZSPRQ(Parser.parseDate(CZSPRQ));
             }
-            
+
             xsclPojo.setTZYJ(TZYJ);
             if (TZSPRQ != null && TZSPRQ.length() > 0) {
                 xsclPojo.setTZSPRQ(Parser.parseDate(TZSPRQ));
             }
-            
+
             xsclPojo.setJCZPS(JCZPS);
             if (JCZPSRQ != null && JCZPSRQ.length() > 0) {
                 xsclPojo.setJCZPSRQ(Parser.parseDate(JCZPSRQ));
             }
-            
+
 
             jbkjxslyPojo.setJBKJXSLY_JBJCGJWFWJ(JBKJXSLY_JBJCGJWFWJ);
             jbkjxslyPojo.setJBKJXSLY_JYLXDM(JBKJXSLY_JYLXDM);
             if (JBKJXSLY_JYLXDM != null && JBKJXSLY_JYLXDM.length() > 0) {
                 jbkjxslyPojo.setJBKJXSLY_JYLX(Parser.parseDropdownContent("JBKJXSLY_JYLX", JBKJXSLY_JYLXDM));
             }
-            
+
             jbkjxslyPojo.setJBKJXSLY_XJWH(JBKJXSLY_XJWH);
             jbkjxslyPojo.setJBKJXSLY_CLQK(JBKJXSLY_CLQK);
             jbkjxslyPojo.setJBKJXSLY_JDDD(JBKJXSLY_JDDD);
             if (JBKJXSLY_HFRQ != null && JBKJXSLY_HFRQ.length() > 0) {
                 jbkjxslyPojo.setJBKJXSLY_HFRQ(Parser.parseDate(JBKJXSLY_HFRQ));
             }
-            
+
             jbkjxslyPojo.setJBKJXSLY_BZ(JBKJXSLY_BZ);
 
             //// 举报人基本情况参数
@@ -166,10 +156,7 @@ public class AdminSaveClue extends HttpServlet {
             String JBKJXSLY_JBRSFZH = request.getParameter("JBKJXSLY_JBRSFZH1");
             String JBKJXSLY_JBRDH = request.getParameter("JBKJXSLY_JBRDH1");
             String JBKJXSLY_LXDQDM = request.getParameter("JBKJXSLY_LXDQ1");
-            String JBKJXSLY_LXDQ = "";
-            if (JBKJXSLY_SLRQ != null && JBKJXSLY_SLRQ.length() > 0) {
-                //JBKJXSLY_LXDQ = Parser.parseDropdownContent("JBKJXSLY_LXDQ", JBKJXSLY_LXDQDM);
-            }
+            String JBKJXSLY_LXDQ = Parser.parseTreeDropdownContent("ZONE", JBKJXSLY_LXDQDM);
             String JBKJXSLY_JBRDWZZ = request.getParameter("JBKJXSLY_JBRDWZZ1");
             for (int i = 2; i <= 3; i++) {
                 if (request.getParameter("JBKJXSLY_JBRXM" + i) != null) {
@@ -178,7 +165,7 @@ public class AdminSaveClue extends HttpServlet {
                     JBKJXSLY_JBRSFZH += "@#@" + request.getParameter("JBKJXSLY_JBRSFZH" + i);
                     JBKJXSLY_JBRDH += "@#@" + request.getParameter("JBKJXSLY_JBRDH" + i);
                     JBKJXSLY_LXDQDM += "@#@" + request.getParameter("JBKJXSLY_LXDQ" + i);
-                    //JBKJXSLY_LXDQ += "@#@" + Parser.parseDropdownContent("JBKJXSLY_LXDQ", request.getParameter("JBKJXSLY_LXDQ" + i));
+                    JBKJXSLY_LXDQ += "@#@" + Parser.parseTreeDropdownContent("ZONE", request.getParameter("JBKJXSLY_LXDQ" + i));
                     JBKJXSLY_JBRDWZZ += "@#@" + request.getParameter("JBKJXSLY_JBRDWZZ" + i);
                 }
             }
@@ -187,7 +174,8 @@ public class AdminSaveClue extends HttpServlet {
             jbkjxslyPojo.setJBKJXSLY_JBRSFZH(JBKJXSLY_JBRSFZH);
             jbkjxslyPojo.setJBKJXSLY_JBRDH(JBKJXSLY_JBRDH);
             jbkjxslyPojo.setJBKJXSLY_LXDQDM(JBKJXSLY_LXDQDM);
-            //jbkjxslyPojo.setJBKJXSLY_LXDQ(JBKJXSLY_LXDQ);
+            jbkjxslyPojo.setJBKJXSLY_LXDQ(JBKJXSLY_LXDQ);
+            jbkjxslyPojo.setJBKJXSLY_LXDQ(JBKJXSLY_LXDQ);
             jbkjxslyPojo.setJBKJXSLY_JBRDWZZ(JBKJXSLY_JBRDWZZ);
 
             //// 被举报人基本情况参数
@@ -198,7 +186,7 @@ public class AdminSaveClue extends HttpServlet {
             String JBKJXSLY_ZZMMDM = request.getParameter("JBKJXSLY_ZZMM1");
             String JBKJXSLY_ZZMM = Parser.parseDropdownContent("JBKJXSLY_ZZMM", JBKJXSLY_ZZMMDM);
             String JBKJXSLY_AFDQDM = request.getParameter("JBKJXSLY_AFDQ1");
-            //String JBKJXSLY_AFDQ = Parser.parseDropdownContent("JBKJXSLY_AFDQ", JBKJXSLY_AFDQDM);
+            String JBKJXSLY_AFDQ = Parser.parseTreeDropdownContent("ZONE", JBKJXSLY_AFDQDM);
             String JBKJXSLY_ZWDM = request.getParameter("JBKJXSLY_ZW1");
             String JBKJXSLY_ZW = Parser.parseDropdownContent("JBKJXSLY_ZW", JBKJXSLY_ZWDM);
             String JBKJXSLY_BJBRDWZZ = request.getParameter("JBKJXSLY_BJBRDWZZ1");
@@ -229,7 +217,7 @@ public class AdminSaveClue extends HttpServlet {
                     JBKJXSLY_ZZMMDM += "@#@" + request.getParameter("JBKJXSLY_ZZMM" + i);
                     JBKJXSLY_ZZMM += "@#@" + Parser.parseDropdownContent("JBKJXSLY_ZZMM", request.getParameter("JBKJXSLY_ZZMM" + i));
                     JBKJXSLY_AFDQDM += "@#@" + request.getParameter("JBKJXSLY_AFDQ" + i);
-                    //JBKJXSLY_AFDQ += "@#@" + Parser.parseDropdownContent("JBKJXSLY_AFDQ", request.getParameter("JBKJXSLY_AFDQ" + i));
+                    JBKJXSLY_AFDQ += "@#@" + Parser.parseTreeDropdownContent("ZONE", request.getParameter("JBKJXSLY_AFDQ" + i));
                     JBKJXSLY_ZWDM += "@#@" + request.getParameter("JBKJXSLY_ZW" + i);
                     JBKJXSLY_ZW += "@#@" + Parser.parseDropdownContent("JBKJXSLY_ZW", request.getParameter("JBKJXSLY_ZW" + i));
                     JBKJXSLY_BJBRDWZZ += "@#@" + request.getParameter("JBKJXSLY_BJBRDWZZ" + i);
@@ -259,7 +247,7 @@ public class AdminSaveClue extends HttpServlet {
             jbkjxslyPojo.setJBKJXSLY_ZZMMDM(JBKJXSLY_ZZMMDM);
             jbkjxslyPojo.setJBKJXSLY_ZZMM(JBKJXSLY_ZZMM);
             jbkjxslyPojo.setJBKJXSLY_AFDQDM(JBKJXSLY_AFDQDM);
-            //jbkjxslyPojo.setJBKJXSLY_AFDQ(JBKJXSLY_AFDQ);
+            jbkjxslyPojo.setJBKJXSLY_AFDQ(JBKJXSLY_AFDQ);
             jbkjxslyPojo.setJBKJXSLY_ZWDM(JBKJXSLY_ZWDM);
             jbkjxslyPojo.setJBKJXSLY_ZW(JBKJXSLY_ZW);
             jbkjxslyPojo.setJBKJXSLY_BJBRDWZZ(JBKJXSLY_BJBRDWZZ);
@@ -281,17 +269,17 @@ public class AdminSaveClue extends HttpServlet {
             jbkjxslyPojo.setJBKJXSLY_NRSFJT(JBKJXSLY_NRSFJT);
             jbkjxslyPojo.setJBKJXSLY_SFXKQT(JBKJXSLY_SFXKQT);
 
-            String JBKJXSLY_SFSBYGX = request.getParameter("JBKJXSLY_SFSBYGX");
-            String JBKJXSLY_SFKG = request.getParameter("JBKJXSLY_SFKG");
-            String JBKJXSLY_SFSS = request.getParameter("JBKJXSLY_SFSS");
-            String JBKJXSLY_SFQT = request.getParameter("JBKJXSLY_SFQT");
+//            String JBKJXSLY_SFSBYGX = request.getParameter("JBKJXSLY_SFSBYGX");
+//            String JBKJXSLY_SFKG = request.getParameter("JBKJXSLY_SFKG");
+//            String JBKJXSLY_SFSS = request.getParameter("JBKJXSLY_SFSS");
+//            String JBKJXSLY_SFQT = request.getParameter("JBKJXSLY_SFQT");
             String JBKJXSLY_Keywords = request.getParameter("JBKJXSLY_Keywords");
             String JBKJXSLY_SYZY = request.getParameter("JBKJXSLY_SYZY");
             String JBKJXSLY_NRZY = request.getParameter("JBKJXSLY_NRZY");
-            jbkjxslyPojo.setJBKJXSLY_SFSBYGX(JBKJXSLY_SFSBYGX);
-            jbkjxslyPojo.setJBKJXSLY_SFKG(JBKJXSLY_SFKG);
-            jbkjxslyPojo.setJBKJXSLY_SFSS(JBKJXSLY_SFSS);
-            jbkjxslyPojo.setJBKJXSLY_SFQT(JBKJXSLY_SFQT);
+//            jbkjxslyPojo.setJBKJXSLY_SFSBYGX(JBKJXSLY_SFSBYGX);
+//            jbkjxslyPojo.setJBKJXSLY_SFKG(JBKJXSLY_SFKG);
+//            jbkjxslyPojo.setJBKJXSLY_SFSS(JBKJXSLY_SFSS);
+//            jbkjxslyPojo.setJBKJXSLY_SFQT(JBKJXSLY_SFQT);
             jbkjxslyPojo.setJBKJXSLY_Keywords(JBKJXSLY_Keywords);
             jbkjxslyPojo.setJBKJXSLY_SYZY(JBKJXSLY_SYZY);
             jbkjxslyPojo.setJBKJXSLY_NRZY(JBKJXSLY_NRZY);

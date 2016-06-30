@@ -154,7 +154,7 @@ function loadTreeDropdownCompany(selectElementId) {
 
     cb.combotree({
         data: window.treeDropdownJson.COMPANY,
-        panelHeight: '340px',
+        panelHeight: '270px',
         editable: false,
         animate: true,
         lines: true,
@@ -172,7 +172,7 @@ function loadTreeDropdownZone(selectElementId) {
 
     cb.combotree({
         data: window.treeDropdownJson.ZONE,
-        panelHeight: '340',
+        panelHeight: '270px',
         editable: false,
         animate: true,
         lines: true,

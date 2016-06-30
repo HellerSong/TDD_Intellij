@@ -9,6 +9,12 @@ import com.utils.MySqlUtil;
  * <p>Authors : Heller Song (HellerSong@Outlook.com)</p>
  */
 public class JbkjxslyDao extends BaseDao<JbkjxslyPojo, Integer> {
+    public JbkjxslyDao() {
+        tableName = "jbkjxsly";
+        mainKeyName = "JBKJXSLY_ID";
+
+        totalCount = getTotalRecordCount();
+    }
 
     public int getLastAddedId() {
         int id = 0;

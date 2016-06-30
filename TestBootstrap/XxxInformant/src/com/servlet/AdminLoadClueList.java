@@ -27,6 +27,8 @@ public class AdminLoadClueList extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int pageNumber = Parser.parseInt(request.getParameter("pageNumber"));
         int pageSize = Parser.parseInt(request.getParameter("pageSize"));
+
+        int isXSClue = Parser.parseInt(request.getParameter("isXSClue"));
         int isJCGJClue = Parser.parseInt(request.getParameter("isJCGJClue"));
         int isTJClue = Parser.parseInt(request.getParameter("isTJClue"));
 
@@ -42,16 +44,16 @@ public class AdminLoadClueList extends HttpServlet {
         String sWhere = "where JBKJXSLY_CLZT != '-1'";
 
         if (keyword != null && keyword.length() > 0) {
-            sWhere += " and JBKJXSLY_JBRXM like '%" + keyword + "%'";
+            sWhere += " and (JBKJXSLY_JBRXM like '%" + keyword + "%'";
             sWhere += " or JBKJXSLY_JBRDWZZ like '%" + keyword + "%'";
             sWhere += " or JBKJXSLY_BJBRXM like '%" + keyword + "%'";
             sWhere += " or JBKJXSLY_BJBRDWZZ like '%" + keyword + "%'";
             sWhere += " or JBKJXSLY_SYZY like '%" + keyword + "%'";
             sWhere += " or JBKJXSLY_NRZY like '%" + keyword + "%'";
-            sWhere += " or JBKJXSLY_Keywords like '%" + keyword + "%'";
+            sWhere += " or JBKJXSLY_Keywords like '%" + keyword + "%')";
         }
         if (clueType > 0)
-            sWhere += "and JBKJXSLY_LYFSDM ='" + clueType + "'";
+            sWhere += " and JBKJXSLY_LYFSDM ='" + clueType + "'";
         if (clueStatus > 0)
             sWhere += " and JBKJXSLY_CLZT='" + clueStatus + "'";
         if (acceptDateStart != null && acceptDateStart.length() > 0)
@@ -59,12 +61,17 @@ public class AdminLoadClueList extends HttpServlet {
         if (acceptDateEnd != null && acceptDateEnd.length() > 0)
             sWhere += " and JBKJXSLY_SLRQ <= '" + acceptDateEnd + "'";
 
-        if (isJCGJClue == 1) {
+        if (isXSClue == 1) {
+            sWhere += " and JBKJXSLY_JBJCGJWFWJ <> '1'";
+            sWhere += " and (JBKJXSLY_ZJDM <> '05' or JBKJXSLY_ZJDM <> '06'";
+            sWhere += " or JBKJXSLY_QTZJDM <> '05' or JBKJXSLY_QTZJDM <> '06')";
+        } else if (isJCGJClue == 1) {
             sWhere += " and JBKJXSLY_JBJCGJWFWJ = '1'";
-        }
-        if (isTJClue == 1) {
-            sWhere += " and JBKJXSLY_ZJDM = '05' or JBKJXSLY_ZJDM = '06'";
-            sWhere += " or JBKJXSLY_QTZJDM = '05' or JBKJXSLY_QTZJDM = '06'";
+            sWhere += " and (JBKJXSLY_ZJDM <> '05' and JBKJXSLY_ZJDM <> '06'";
+            sWhere += " and JBKJXSLY_QTZJDM <> '05' and JBKJXSLY_QTZJDM <> '06')";
+        } else if (isTJClue == 1) {
+            sWhere += " and (JBKJXSLY_ZJDM = '05' or JBKJXSLY_ZJDM = '06'";
+            sWhere += " or JBKJXSLY_QTZJDM = '05' or JBKJXSLY_QTZJDM = '06')";
         }
 
         VClueListDao dao = new VClueListDao();

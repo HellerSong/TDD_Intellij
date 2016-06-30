@@ -16,7 +16,7 @@ import java.util.List;
  * <p>Summary: IDao implementation for data exchanging between entity and db.</p>
  * <p>Authors: Heller Song (HellerSong@Outlook.com)</p>
  **/
-public class BaseDao<T, PK> implements IDao<T, PK> {
+public abstract class BaseDao<T, PK> implements IDao<T, PK> {
     protected Connection conn;
     protected PreparedStatement pstmt;
     protected ResultSet rs;
@@ -24,6 +24,8 @@ public class BaseDao<T, PK> implements IDao<T, PK> {
     private DaoConverter daoConvert;
     protected String tableName;
     protected String mainKeyName;
+    protected String orderByName = mainKeyName;
+    protected String orderByType = "desc";
     public int totalCount;
 
 
@@ -38,16 +40,18 @@ public class BaseDao<T, PK> implements IDao<T, PK> {
 
         //// Convert data cross database table and entity instance
         daoConvert = new DaoConverter(clazz, mainKeyName);
-
-        //// Get table total record count
-        totalCount = getTotalRecordCount();
     }
 
-    private int getTotalRecordCount() {
+    public int getTotalRecordCount() {
+        return getTotalRecordCount("");
+    }
+
+    public int getTotalRecordCount(String sWhere) {
         int count = 0;
 
         try {
-            String sql = "select count(*) as count from " + tableName;
+            String sql = "select count(*) as count from " + tableName + " " + sWhere;
+            DevLog.write(sql);
 
             if (conn == null) {
                 conn = MySqlUtil.getConnection();
@@ -205,8 +209,8 @@ public class BaseDao<T, PK> implements IDao<T, PK> {
             throw new InvalidParameterException();
 
         try {
-            String sql = "select distinct * from " + tableName + " " + sWhere + " order by " + mainKeyName
-                    + " desc limit " + pageSize * (pageNumber - 1) + "," + pageSize + ";";
+            String sql = "select distinct * from " + tableName + " " + sWhere + " order by " + orderByName + " " + orderByType + " "
+                    + " limit " + pageSize * (pageNumber - 1) + "," + pageSize + ";";
             DevLog.write(sql);
 
             return getAllRecords(sql);

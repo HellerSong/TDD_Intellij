@@ -35,15 +35,17 @@ public class AdminLoadAttach extends HttpServlet {
         if (clueId > 0) {
             JbkjxslyDao dao = new JbkjxslyDao();
             JbkjxslyPojo pojo = dao.getById(clueId);
-            String[] fileArray = pojo.getJBKJXSLY_Fujian().split(";");
-            totalCount = fileArray.length;
+            if (pojo.getJBKJXSLY_Fujian() != null && pojo.getJBKJXSLY_Fujian().length() > 0) {
+                String[] fileArray = pojo.getJBKJXSLY_Fujian().split(";");
+                totalCount = fileArray.length;
 
-            for (int i = 0; i < fileArray.length; i++) {
-                AttachmentItem item = new AttachmentItem();
-                item.setFileName("附件" + (i + 1));
-                item.setStatus("已上传");
-                item.setServerPath("/upload/" + fileArray[i]);
-                list.add(item);
+                for (int i = 0; i < fileArray.length; i++) {
+                    AttachmentItem item = new AttachmentItem();
+                    item.setFileName("附件" + (i + 1));
+                    item.setStatus("已上传");
+                    item.setServerPath("/upload/" + fileArray[i]);
+                    list.add(item);
+                }
             }
 
             dao.closeAll();

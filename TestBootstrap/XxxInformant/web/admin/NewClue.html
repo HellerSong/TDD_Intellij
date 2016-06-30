@@ -35,10 +35,10 @@
                                             style="width: 100%;"></select>
                     </td>
                     <td>&nbsp;</td>
-                    <td class="label">转交单位：</td>
-                    <td width="100"><select class="easyui-combotree" id="cbJBKJXSLY_ZJDW"
-                                            name="JBKJXSLY_ZJDW"
-                                            style="width: 100%;"></select>
+                    <td class="label">线索编号：</td>
+                    <td width="100"><input class="easyui-textbox" type="text" name="JBKJXSLY_XH"
+                                           style="width: 100%;" readonly></td>
+
                     </td>
                 </tr>
                 <tr>
@@ -48,14 +48,14 @@
                     <td class="label">受理日期：</td>
                     <td width="100"><input class="easyui-datebox" name="JBKJXSLY_SLRQ" style="width: 100%;"></td>
                     <td>&nbsp;</td>
-                    <td class="label">交办人：</td>
+                    <td class="label">转交人：</td>
                     <td width="100"><input class="easyui-textbox" type="text" name="JBKJXSLY_ZJR"
                                            style="width: 100%;"></td>
                     <td>&nbsp;</td>
-                    <td class="label">线索编号：</td>
-                    <td width="100"><input class="easyui-textbox" type="text" name="JBKJXSLY_XH"
-                                           style="width: 100%;" readonly></td>
-                    <td>&nbsp;</td>
+                    <td class="label">转交单位：</td>
+                    <td width="100" colspan="3"><select class="easyui-combotree" id="cbJBKJXSLY_ZJDW"
+                                                        name="JBKJXSLY_ZJDW"
+                                                        style="width: 100%;"></select>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
@@ -92,45 +92,42 @@
         </form>
         <form id="newClue_formBJBR_Part2" style="margin-top: 35px;">
             <table class="newClue-table" border="0" width="100%">
+                <!--<tr>-->
+                <!--<td class="label"><span class="span-must-fill">*</span>是否属检察机关检查：</td>-->
+                <!--<td width="120">-->
+                <!--<input type="radio" name="JBKJXSLY_SFSBYGX" id="JBKJXSLY_SFSBYGX_YES" checked="checked"-->
+                <!--value="1"/>-->
+                <!--<label for="JBKJXSLY_SFSBYGX_YES">&nbsp;是&nbsp;&nbsp;</label>-->
+                <!--<input type="radio" name="JBKJXSLY_SFSBYGX" id="JBKJXSLY_SFSBYGX_NO" value="0"/>-->
+                <!--<label for="JBKJXSLY_SFSBYGX_NO">&nbsp;否</label>-->
+                <!--</td>-->
+                <!--<td>&nbsp;</td>-->
+                <!--<td class="label"><span class="span-must-fill">*</span>是否控告:</td>-->
+                <!--<td width="140">-->
+                <!--<input type="radio" name="JBKJXSLY_SFKG" id="JBKJXSLY_SFKG_YES" checked="checked" value="1"/>-->
+                <!--<label for="JBKJXSLY_SFKG_YES">&nbsp;是&nbsp;&nbsp;</label>-->
+                <!--<input type="radio" name="JBKJXSLY_SFKG" id="JBKJXSLY_SFKG_NO" value="0"/>-->
+                <!--<label for="JBKJXSLY_SFKG_NO">&nbsp;否</label>-->
+                <!--</td>-->
+                <!--<td>&nbsp;</td>-->
+                <!--<td class="label"><span class="span-must-fill">*</span>是否申诉：</td>-->
+                <!--<td width="140">-->
+                <!--<input type="radio" name="JBKJXSLY_SFSS" id="JBKJXSLY_SFSS_YES" checked="checked" value="1"/>-->
+                <!--<label for="JBKJXSLY_SFSS_YES">&nbsp;是&nbsp;&nbsp;</label>-->
+                <!--<input type="radio" name="JBKJXSLY_SFSS" id="JBKJXSLY_SFSS_NO" value="0"/>-->
+                <!--<label for="JBKJXSLY_SFSS_NO">&nbsp;否</label>-->
+                <!--</td>-->
+                <!--<td>&nbsp;</td>-->
+                <!--<td class="label"><span class="span-must-fill">*</span>是否其他:</td>-->
+                <!--<td width="120">-->
+                <!--<input type="radio" name="JBKJXSLY_SFQT" id="JBKJXSLY_SFQT_YES" checked="checked" value="1"/>-->
+                <!--<label for="JBKJXSLY_SFQT_YES">&nbsp;是&nbsp;&nbsp;</label>-->
+                <!--<input type="radio" name="JBKJXSLY_SFQT" id="JBKJXSLY_SFQT_NO" value="0"/>-->
+                <!--<label for="JBKJXSLY_SFQT_NO">&nbsp;否</label>-->
+                <!--</td>-->
+                <!--</tr>-->
                 <tr>
-                    <td class="label"><span class="span-must-fill">*</span>是否属检察机关检查：</td>
-                    <td width="120">
-                        <input type="radio" name="JBKJXSLY_SFSBYGX" id="JBKJXSLY_SFSBYGX_YES" checked="checked"
-                               value="1"/>
-                        <label for="JBKJXSLY_SFSBYGX_YES">&nbsp;是&nbsp;&nbsp;</label>
-                        <input type="radio" name="JBKJXSLY_SFSBYGX" id="JBKJXSLY_SFSBYGX_NO" value="0"/>
-                        <label for="JBKJXSLY_SFSBYGX_NO">&nbsp;否</label>
-                    </td>
-                    <td>&nbsp;</td>
-                    <td class="label"><span class="span-must-fill">*</span>是否控告:</td>
-                    <td width="140">
-                        <input type="radio" name="JBKJXSLY_SFKG" id="JBKJXSLY_SFKG_YES" checked="checked" value="1"/>
-                        <label for="JBKJXSLY_SFKG_YES">&nbsp;是&nbsp;&nbsp;</label>
-                        <input type="radio" name="JBKJXSLY_SFKG" id="JBKJXSLY_SFKG_NO" value="0"/>
-                        <label for="JBKJXSLY_SFKG_NO">&nbsp;否</label>
-                    </td>
-                    <td>&nbsp;</td>
-                    <td class="label"><span class="span-must-fill">*</span>是否申诉：</td>
-                    <td width="140">
-                        <input type="radio" name="JBKJXSLY_SFSS" id="JBKJXSLY_SFSS_YES" checked="checked" value="1"/>
-                        <label for="JBKJXSLY_SFSS_YES">&nbsp;是&nbsp;&nbsp;</label>
-                        <input type="radio" name="JBKJXSLY_SFSS" id="JBKJXSLY_SFSS_NO" value="0"/>
-                        <label for="JBKJXSLY_SFSS_NO">&nbsp;否</label>
-                    </td>
-                    <td>&nbsp;</td>
-                    <td class="label"><span class="span-must-fill">*</span>是否其他:</td>
-                    <td width="120">
-                        <input type="radio" name="JBKJXSLY_SFQT" id="JBKJXSLY_SFQT_YES" checked="checked" value="1"/>
-                        <label for="JBKJXSLY_SFQT_YES">&nbsp;是&nbsp;&nbsp;</label>
-                        <input type="radio" name="JBKJXSLY_SFQT" id="JBKJXSLY_SFQT_NO" value="0"/>
-                        <label for="JBKJXSLY_SFQT_NO">&nbsp;否</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="label">关键字：</td>
+                    <td class="label">举报关键字：</td>
                     <td colspan="10">
                         <input class="easyui-textbox" name="JBKJXSLY_Keywords" style="width:825px;"/>
                     </td>
@@ -164,8 +161,7 @@
                            onchange="updateFileSelection()"/>
                 </a>
             </li>
-            <li class="newClue-attachment-count">0个</li>
-            <li class="newClue-attachment-view"><a href="javascript:;" onclick="viewFilesOnServer()">查看附件</a></li>
+            <li class="newClue-attachment-view"><a href="javascript:;" onclick="viewFilesOnServer()">查看附件(0)</a></li>
         </ul>
     </div>
     <div class="newClue-box">

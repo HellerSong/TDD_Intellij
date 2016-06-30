@@ -7,4 +7,8 @@ import com.pojo.CodelocalPojo;
  * <p>Authors : Heller Song (HellerSong@Outlook.com)</p>
  */
 public class CodelocalDao extends BaseDao<CodelocalPojo, Integer> {
+    public CodelocalDao() {
+        tableName = "codelocal";
+        mainKeyName = null;
+    }
 }
