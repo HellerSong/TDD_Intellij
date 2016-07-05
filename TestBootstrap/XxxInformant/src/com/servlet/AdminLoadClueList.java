@@ -28,9 +28,12 @@ public class AdminLoadClueList extends HttpServlet {
         int pageNumber = Parser.parseInt(request.getParameter("pageNumber"));
         int pageSize = Parser.parseInt(request.getParameter("pageSize"));
 
+        int isALLClue = Parser.parseInt(request.getParameter("isALLClue"));
         int isXSClue = Parser.parseInt(request.getParameter("isXSClue"));
+        int isCFClue = Parser.parseInt(request.getParameter("isCFClue"));
         int isJCGJClue = Parser.parseInt(request.getParameter("isJCGJClue"));
         int isTJClue = Parser.parseInt(request.getParameter("isTJClue"));
+        int isSBJClue = Parser.parseInt(request.getParameter("isSBJClue"));
 
         String keyword = request.getParameter("keyword");
         int clueType = Parser.parseInt(request.getParameter("JBKJXSLY_LYFS"));
@@ -61,17 +64,23 @@ public class AdminLoadClueList extends HttpServlet {
         if (acceptDateEnd != null && acceptDateEnd.length() > 0)
             sWhere += " and JBKJXSLY_SLRQ <= '" + acceptDateEnd + "'";
 
-        if (isXSClue == 1) {
+        if (isALLClue == 1) {
+
+        } else if (isXSClue == 1) {
             sWhere += " and JBKJXSLY_JBJCGJWFWJ <> '1'";
-            sWhere += " and (JBKJXSLY_ZJDM <> '05' or JBKJXSLY_ZJDM <> '06'";
-            sWhere += " or JBKJXSLY_QTZJDM <> '05' or JBKJXSLY_QTZJDM <> '06')";
+            sWhere += " and (JBKJXSLY_ZJDM <> '05' or JBKJXSLY_ZJDM <> '06')";
+//            sWhere += " or JBKJXSLY_QTZJDM <> '05' or JBKJXSLY_QTZJDM <> '06')";
         } else if (isJCGJClue == 1) {
             sWhere += " and JBKJXSLY_JBJCGJWFWJ = '1'";
-            sWhere += " and (JBKJXSLY_ZJDM <> '05' and JBKJXSLY_ZJDM <> '06'";
-            sWhere += " and JBKJXSLY_QTZJDM <> '05' and JBKJXSLY_QTZJDM <> '06')";
+            sWhere += " and (JBKJXSLY_ZJDM <> '05' and JBKJXSLY_ZJDM <> '06')";
+//            sWhere += " and JBKJXSLY_QTZJDM <> '05' and JBKJXSLY_QTZJDM <> '06')";
         } else if (isTJClue == 1) {
-            sWhere += " and (JBKJXSLY_ZJDM = '05' or JBKJXSLY_ZJDM = '06'";
-            sWhere += " or JBKJXSLY_QTZJDM = '05' or JBKJXSLY_QTZJDM = '06')";
+            sWhere += " and (JBKJXSLY_ZJDM = '05' or JBKJXSLY_ZJDM = '06')";
+//            sWhere += " or JBKJXSLY_QTZJDM = '05' or JBKJXSLY_QTZJDM = '06')";
+        } else if (isSBJClue == 1) {
+            // 03-正部级，04-副部级
+            sWhere += " and (JBKJXSLY_ZJ like '%03%' or JBKJXSLY_ZJ like '%04%')";
+//            sWhere += " or JBKJXSLY_QTZJDM = '05' or JBKJXSLY_QTZJDM = '06')";
         }
 
         VClueListDao dao = new VClueListDao();

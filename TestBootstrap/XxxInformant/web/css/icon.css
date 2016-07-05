@@ -66,6 +66,10 @@
     background: url('icons/back.png') no-repeat center center;
 }
 
+.icon-forward {
+    background: url('icons/forward.png') no-repeat center center;
+}
+
 .icon-up {
     background: url('icons/up.png') no-repeat center center;
 }

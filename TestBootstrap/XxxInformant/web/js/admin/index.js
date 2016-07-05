@@ -19,7 +19,9 @@ $(function () {
 
 
     //// Page style setting
-    $('.index-main-title .right a').linkbutton();
+    $('.index-main-title .right a').linkbutton({
+        width: '60px;'
+    });
 
 
     //// Event action setting for left panel item
@@ -52,6 +54,7 @@ function loadRightTitleNavPath() {
 
     // Hide the right new clue button group
     $('.index-main-title .right').hide();
+    $('.index-main-title .right span.index-edit-btn-group').hide();
 }
 
 
@@ -163,6 +166,7 @@ function loadTreeDropdownCompany(selectElementId) {
         },
         onLoadSuccess: function () {
             cb.combotree('setValue', 0);
+            cb.combotree('tree').tree('collapseAll');
         }
     });
 }
@@ -172,6 +176,63 @@ function loadTreeDropdownZone(selectElementId) {
 
     cb.combotree({
         data: window.treeDropdownJson.ZONE,
+        panelHeight: '270px',
+        editable: false,
+        animate: true,
+        lines: true,
+        onBeforeExpand: function (node) {
+            //alert(node.target);
+        },
+        onLoadSuccess: function () {
+            cb.combotree('setValue', 0);
+            cb.combotree('tree').tree('collapseAll');
+        }
+    });
+}
+
+function loadTreeDropdownId(selectElementId) {
+    var cb = $('#' + selectElementId);
+
+    cb.combotree({
+        data: window.treeDropdownJson.ID,
+        panelHeight: '270px',
+        editable: false,
+        animate: true,
+        lines: true,
+        onBeforeExpand: function (node) {
+            //alert(node.target);
+        },
+        onLoadSuccess: function () {
+            cb.combotree('setValue', 0);
+            cb.combotree('tree').tree('collapseAll');
+        }
+    });
+}
+
+function loadTreeDropdownSpecialId(selectElementId) {
+    var cb = $('#' + selectElementId);
+
+    cb.combotree({
+        data: window.treeDropdownJson.SPECIAL_ID,
+        panelHeight: '270px',
+        editable: false,
+        animate: true,
+        lines: true,
+        onBeforeExpand: function (node) {
+            //alert(node.target);
+        },
+        onLoadSuccess: function () {
+            cb.combotree('setValue', 0);
+            cb.combotree('tree').tree('collapseAll');
+        }
+    });
+}
+
+function loadTreeDropdownNature(selectElementId) {
+    var cb = $('#' + selectElementId);
+
+    cb.combotree({
+        data: window.treeDropdownJson.NATURE,
         panelHeight: '270px',
         editable: false,
         animate: true,

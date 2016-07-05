@@ -42,11 +42,13 @@
             <ul title="举报业务">
                 <li><a href="#" title="Notice.html" name="notice">系统通知</a></li>
                 <li><a href="#" title="Law.html" name="law">法规规章</a></li>
+                <li><a href="#" title="ClueList.html" name="ALL">全库线索检索</a></li>
                 <li><a href="#" title="ClueList.html" name="XS" class="focus">线索处理中心</a></li>
                 <li><a href="#" title="ClueList.html" name="CF">重复举报线索</a></li>
-                <li><a href="#" title="Report.html" name="report">统计报表</a></li>
                 <li><a href="#" title="ClueList.html" name="JCGJ">检察干警违法违纪处理中心</a></li>
                 <li><a href="#" title="ClueList.html" name="TJ">厅局级线索处理中心</a></li>
+                <li><a href="#" title="ClueList.html" name="SBJ">省部级线索处理中心</a></li>
+                <li><a href="#" title="Report.html" name="report">统计报表</a></li>
             </ul>
             <span>管理模块</span>
             <div class="index-underline"><img src="../images/boder-bottom.jpg"/></div>
@@ -63,7 +65,16 @@
             <div class="left">
                 <a href="javascript:;">举报业务</a>&nbsp;>&nbsp;<a href="#">线索处理中心</a>
             </div>
+
             <div class="right" hidden>
+                <span class="index-edit-btn-group" hidden>
+                    <a href="#" onclick="loadClueDataFirst()">首条</a>
+                    <a href="#" onclick="loadClueDataPrevious()">上一条</a>
+                    <a href="#" onclick="loadClueDataNext()">下一条</a>
+                    <a href="#" onclick="loadClueDataLast()">未条</a>
+                </span>
+                <a data-options="iconCls:'icon-print'" onclick="storeNewClueForm()">打印</a>
+                <a data-options="iconCls:'icon-save'" onclick="storeNewClueForm()">暂存</a>
                 <a data-options="iconCls:'icon-ok'" onclick="submitNewClueForm()">提交</a>
                 <a href="#" data-options="iconCls:'icon-cancel'" onclick="closeNewClueForm()">取消</a>
             </div>

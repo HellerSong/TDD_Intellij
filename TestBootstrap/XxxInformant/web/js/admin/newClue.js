@@ -12,6 +12,7 @@ function initializeNewClue() {
     $.parser.parse();
     $('.index-main-title .right').show();
 
+
     //// Initialize tabs panel
     initJbrTabs();
     initBjbrTabs();
@@ -37,7 +38,25 @@ function initializeNewClue() {
     }
 }
 
+function loadClueDataFirst() {
+
+}
+
+function loadClueDataPrevious() {
+
+}
+
+function loadClueDataNext() {
+
+}
+
+function loadClueDataLast() {
+
+}
+
 function loadClueDataById(clueId) {
+    $('.index-main-title .right span.index-edit-btn-group').show();
+
     $.post('AdminLoadClue', {clueId: clueId}, function (result) {
         result = (new Function('return ' + result))();
 
@@ -59,7 +78,6 @@ function loadClueDataById(clueId) {
             $('#cbCSDW').combotree('setValue', pojo.CSDWDM);
             $('#cbJBKJXSLY_JYLX').combobox('select', pojo.JBKJXSLY_JYLXDM);
             $('input[textboxname="CBR"]').textbox('setValue', pojo.CBR);
-            $('input[textboxname="CSRQ"]').textbox('setValue', pojo.CSRQ);
             $('input[textboxname="CBRCLRQ"]').textbox('setValue', pojo.CBRCLRQ);
             checkRadioByValue('JBKJXSLY_JBJCGJWFWJ', pojo.JBKJXSLY_JBJCGJWFWJ);
             $('input[textboxname="JBZRYJ"]').textbox('setValue', pojo.JBZRYJ);
@@ -82,17 +100,21 @@ function loadClueDataById(clueId) {
                 if (i > 1) {
                     addJbrTab();
                 }
-                $('input[name="JBKJXSLY_JBRXM' + i + '"]').val(pojo.JBKJXSLY_JBRXM.split('@#@')[i - 1]);
                 checkRadioByValue('JBKJXSLY_SFSM' + i, pojo.JBKJXSLY_SFSM.split('@#@')[i - 1]);
                 if (pojo.JBKJXSLY_SFSM.split('@#@')[i - 1] == 1) {
                     updateSignature(i, true);
                 } else {
                     updateSignature(i, false);
                 }
-                $('input[name="JBKJXSLY_JBRSFZH' + i + '"]').val(pojo.JBKJXSLY_JBRSFZH.split('@#@')[i - 1]);
-                $('input[name="JBKJXSLY_JBRDH' + i + '"]').val(pojo.JBKJXSLY_JBRDH.split('@#@')[i - 1]);
+
+                if (pojo.JBKJXSLY_SFSM.split('@#@')[i - 1] == 1) {
+                    $('input[name="JBKJXSLY_JBRXM' + i + '"]').val(pojo.JBKJXSLY_JBRXM.split('@#@')[i - 1]);
+                    $('input[name="JBKJXSLY_JBRSFZH' + i + '"]').val(pojo.JBKJXSLY_JBRSFZH.split('@#@')[i - 1]);
+                    $('input[name="JBKJXSLY_JBRDH' + i + '"]').val(pojo.JBKJXSLY_JBRDH.split('@#@')[i - 1]);
+                    $('input[name="JBKJXSLY_JBRDWZZ' + i + '"]').val(pojo.JBKJXSLY_JBRDWZZ.split('@#@')[i - 1]);
+                }
                 $('#cbJBKJXSLY_LXDQ' + i).combotree('setValue', pojo.JBKJXSLY_LXDQDM.split('@#@')[i - 1]);
-                $('input[name="JBKJXSLY_JBRDWZZ' + i + '"]').val(pojo.JBKJXSLY_JBRDWZZ.split('@#@')[i - 1]);
+
                 i++;
             } while (i <= informerCount);
             $('#newClue_jbrTabs').tabs('select', 0);
@@ -110,17 +132,15 @@ function loadClueDataById(clueId) {
                 $('#cbJBKJXSLY_ZZMM' + j).combobox('select', pojo.JBKJXSLY_ZZMMDM.split('@#@')[j - 1]);
                 $('#cbJBKJXSLY_AFDQ' + j).combotree('setValue', pojo.JBKJXSLY_AFDQDM.split('@#@')[j - 1]);
                 $('#cbJBKJXSLY_ZW' + j).combobox('select', pojo.JBKJXSLY_ZWDM.split('@#@')[j - 1]);
-                $('input[name="JBKJXSLY_BJBRDWZZ' + j + '"]').val(pojo.JBKJXSLY_BJBRDWZZ.split('@#@')[j - 1]);
-                $('#cbJBKJXSLY_SF' + j).combobox('select', pojo.JBKJXSLY_SFDM.split('@#@')[j - 1]);
-                $('#cbJBKJXSLY_TSSF' + j).combobox('select', pojo.JBKJXSLY_TSSFDM.split('@#@')[j - 1]);
+                $('input[name="JBKJXSLY_BJBRDW' + j + '"]').val(pojo.JBKJXSLY_BJBRDW.split('@#@')[j - 1]);
+                $('input[name="JBKJXSLY_BJBRZZ' + j + '"]').val(pojo.JBKJXSLY_BJBRZZ.split('@#@')[j - 1]);
+                $('#cbJBKJXSLY_SF' + j).combotree('setValue', pojo.JBKJXSLY_SFDM.split('@#@')[j - 1]);
+                $('#cbJBKJXSLY_TSSF' + j).combotree('setValue', pojo.JBKJXSLY_TSSFDM.split('@#@')[j - 1]);
                 $('#cbJBKJXSLY_ZJ' + j).combobox('select', pojo.JBKJXSLY_ZJDM.split('@#@')[j - 1]);
-                $('#cbJBKJXSLY_QTZJ' + j).combobox('select', pojo.JBKJXSLY_QTZJDM.split('@#@')[j - 1]);
-                $('#cbJBKJXSLY_ZYSXXZ' + j).combobox('select', pojo.JBKJXSLY_ZYSXXZDM.split('@#@')[j - 1]);
-                $('#cbJBKJXSLY_CYSXXZ' + j).combobox('select', pojo.JBKJXSLY_QTSXXZDM.split('@#@')[j - 1]);
+                $('#cbJBKJXSLY_ZYSXXZ' + j).combotree('setValue', pojo.JBKJXSLY_ZYSXXZDM.split('@#@')[j - 1]);
+                $('#cbJBKJXSLY_CYSXXZ' + j).combotree('setValue', pojo.JBKJXSLY_QTSXXZDM.split('@#@')[j - 1]);
                 $('#cbJBKJXSLY_SALY' + j).combobox('select', pojo.JBKJXSLY_SALYDM.split('@#@')[j - 1]);
                 $('input[name="JBKJXSLY_SXJE' + j + '"]').val(pojo.JBKJXSLY_SXJE.split('@#@')[j - 1]);
-                checkRadioByValue('JBKJXSLY_NRSFJT' + j, pojo.JBKJXSLY_NRSFJT.split('@#@')[j - 1]);
-                checkRadioByValue('JBKJXSLY_SFXKQT' + j, pojo.JBKJXSLY_SFXKQT.split('@#@')[j - 1]);
                 j++;
             } while (j <= beInformerCount);
             $('#newClue_bjbrTabs').tabs('select', 0);
@@ -177,29 +197,29 @@ function getJbrTabElement(index) {
     table += '<table class="newClue-table" border="0" width="100%">';
     table += '    <tr>';
     table += '        <td class="label">姓名：</td>';
-    table += '        <td><input type="text" name="JBKJXSLY_JBRXM' + index + '" disabled/></td>';
+    table += '        <td><input type="text" name="JBKJXSLY_JBRXM' + index + '"/></td>';
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label"><span class="span-must-fill">*</span>是否署名：</td>';
     table += '        <td width="160">';
-    table += '            <input type="radio" name="JBKJXSLY_SFSM' + index + '" id="JBKJXSLY_SFSM' + index + '_YES" value="1" onchange="updateSignature(' + index + ', true)"/>';
+    table += '            <input type="radio" checked="checked" name="JBKJXSLY_SFSM' + index + '" id="JBKJXSLY_SFSM' + index + '_YES" value="1" onchange="updateSignature(' + index + ', true)"/>';
     table += '            <label for="JBKJXSLY_SFSM' + index + '_YES">&nbsp;是&nbsp;&nbsp;</label>';
-    table += '            <input type="radio" checked="checked" name="JBKJXSLY_SFSM' + index + '" id="JBKJXSLY_SFSM' + index + '_NO" value="0" onchange="updateSignature(' + index + ', false)"/>';
+    table += '            <input type="radio" name="JBKJXSLY_SFSM' + index + '" id="JBKJXSLY_SFSM' + index + '_NO" value="0" onchange="updateSignature(' + index + ', false)"/>';
     table += '            <label for="JBKJXSLY_SFSM' + index + '_NO">&nbsp;否</label>';
     table += '        </td>';
     table += '        <td width="60">&nbsp;</td>';
     table += '        <td class="label">身份证号：</td>';
-    table += '        <td><input type="text" name="JBKJXSLY_JBRSFZH' + index + '" style="width: 100%;" disabled/></td>';
+    table += '        <td><input type="text" name="JBKJXSLY_JBRSFZH' + index + '" style="width: 100%;"/></td>';
     table += '    </tr>';
     table += '    <tr><td>&nbsp;</td></tr>';
     table += '    <tr>';
     table += '        <td class="label">联系电话：</td>';
-    table += '        <td><input type="text" name="JBKJXSLY_JBRDH' + index + '" disabled/></td>';
+    table += '        <td><input type="text" name="JBKJXSLY_JBRDH' + index + '"/></td>';
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">来信地区：</td>';
     table += '        <td width="160"><select id="cbJBKJXSLY_LXDQ' + index + '" name="JBKJXSLY_LXDQ' + index + '" style="width: 100%;"></select></td>';
     table += '        <td width="60">&nbsp;</td>';
     table += '        <td class="label">单位、住址：</td>';
-    table += '        <td><input type="text" name="JBKJXSLY_JBRDWZZ' + index + '" style="width: 100%;" disabled/></td>';
+    table += '        <td><input type="text" name="JBKJXSLY_JBRDWZZ' + index + '" style="width: 100%;"/></td>';
     table += '    </tr>';
     table += '</table>';
 
@@ -249,12 +269,11 @@ function initBjbrTabs() {
             loadDropdown('cbJBKJXSLY_ZZMM' + bjbrIndex);
             loadTreeDropdownZone('cbJBKJXSLY_AFDQ' + bjbrIndex);
             loadDropdown('cbJBKJXSLY_ZW' + bjbrIndex, false);
-            loadDropdown('cbJBKJXSLY_SF' + bjbrIndex);
-            loadDropdown('cbJBKJXSLY_TSSF' + bjbrIndex);
+            loadTreeDropdownId('cbJBKJXSLY_SF' + bjbrIndex);
+            loadTreeDropdownSpecialId('cbJBKJXSLY_TSSF' + bjbrIndex);
             loadDropdown('cbJBKJXSLY_ZJ' + bjbrIndex);
-            loadDropdown('cbJBKJXSLY_QTZJ' + bjbrIndex);
-            loadDropdown('cbJBKJXSLY_ZYSXXZ' + bjbrIndex, false);
-            loadDropdown('cbJBKJXSLY_CYSXXZ' + bjbrIndex, false);
+            loadTreeDropdownNature('cbJBKJXSLY_ZYSXXZ' + bjbrIndex, false);
+            loadTreeDropdownNature('cbJBKJXSLY_CYSXXZ' + bjbrIndex, false);
             loadDropdown('cbJBKJXSLY_SALY' + bjbrIndex);
             $('#cbJBKJXSLY_XB' + bjbrIndex).combobox({panelHeight: 'auto'});
         }
@@ -294,65 +313,52 @@ function getBjbrTabElement(index) {
     table += '        <td>&nbsp;</td>';
     table += '    </tr>';
     table += '    <tr>';
+    table += '        <td class="label"><span class="span-must-fill">*</span>单位：</td>';
+    table += '        <td width="120" colspan="4"><input type="text" name="JBKJXSLY_BJBRDW' + index + '" style="width:99%;"/></td>';
+    table += '        <td width="30">&nbsp;</td>';
+    table += '        <td class="label">住址：</td>';
+    table += '        <td width="120" colspan="4"><input type="text" name="JBKJXSLY_BJBRZZ' + index + '" style="width:99%;"/></td>';
+    table += '    </tr>';
+    table += '</table>';
+    table += '<table class="newClue-table" border="0" width="100%">';
+    table += '    <tr>';
     table += '        <td class="label"><span class="span-must-fill">*</span>案发地区：</td>';
-    table += '        <td width="100"><select id="cbJBKJXSLY_AFDQ' + index + '" name="JBKJXSLY_AFDQ' + index + '" style="width:100%;"></select></td>';
+    table += '        <td width="200"><select id="cbJBKJXSLY_AFDQ' + index + '" name="JBKJXSLY_AFDQ' + index + '" style="width:100%;"></select></td>';
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">职务：</td>';
-    table += '        <td width="120"><select id="cbJBKJXSLY_ZW' + index + '" name="JBKJXSLY_ZW' + index + '" style="width:100%;"></select></td>';
+    table += '        <td width="200"><select id="cbJBKJXSLY_ZW' + index + '" name="JBKJXSLY_ZW' + index + '" style="width:100%;"></select></td>';
     table += '        <td width="30">&nbsp;</td>';
-    table += '        <td class="label">单位、住址：</td>';
-    table += '        <td width="120" colspan="4"><input type="text" name="JBKJXSLY_BJBRDWZZ' + index + '" style="width:99%;"/></td>';
+    table += '        <td class="label"><span class="span-must-fill">*</span>职级：</td>';
+    table += '        <td width="240"><select id="cbJBKJXSLY_ZJ' + index + '" name="JBKJXSLY_ZJ' + index + '" style="width:100%;"></select></td>';
     table += '    </tr>';
     table += '    <tr>';
     table += '        <td>&nbsp;</td>';
     table += '    </tr>';
     table += '    <tr>';
     table += '        <td class="label"><span class="span-must-fill">*</span>身份：</td>';
-    table += '        <td width="100"><select id="cbJBKJXSLY_SF' + index + '" name="JBKJXSLY_SF' + index + '" style="width:100%;"></select></td>';
+    table += '        <td width="200"><select id="cbJBKJXSLY_SF' + index + '" name="JBKJXSLY_SF' + index + '" style="width:100%;"></select></td>';
     table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">特殊身份：</td>';
-    table += '        <td width="100"><select id="cbJBKJXSLY_TSSF' + index + '" name="JBKJXSLY_TSSF' + index + '" style="width:100%;"></select></td>';
+    table += '        <td width="200"><select id="cbJBKJXSLY_TSSF' + index + '" name="JBKJXSLY_TSSF' + index + '" style="width:100%;"></select></td>';
     table += '        <td width="30">&nbsp;</td>';
-    table += '        <td class="label"><span class="span-must-fill">*</span>职级：</td>';
-    table += '        <td width="120"><select id="cbJBKJXSLY_ZJ' + index + '" name="JBKJXSLY_ZJ' + index + '" style="width:100%;"></select></td>';
-    table += '        <td width="30">&nbsp;</td>';
-    table += '        <td class="label">其他职级：</td>';
-    table += '        <td width="120"><select id="cbJBKJXSLY_QTZJ' + index + '" name="JBKJXSLY_QTZJ' + index + '" style="width:100%;"></select></td>';
+    table += '        <td class="label">涉嫌领域：</td>';
+    table += '        <td width="240"><select id="cbJBKJXSLY_SALY' + index + '" name="JBKJXSLY_SALY' + index + '" style="width:100%;"></select></td>';
     table += '    </tr>';
-    table += '</table>';
-    table += '<table class="newClue-table" border="0" width="100%">';
+    table += '    <tr>';
+    table += '        <td>&nbsp;</td>';
+    table += '    </tr>';
     table += '    <tr>';
     table += '        <td class="label"><span class="span-must-fill">*</span>主要涉嫌性质：</td>';
-    table += '        <td width="120"><select id="cbJBKJXSLY_ZYSXXZ' + index + '" name="JBKJXSLY_ZYSXXZ' + index + '" style="width:100%;"></select></td>';
-    table += '        <td>&nbsp;</td>';
+    table += '        <td width="200"><select id="cbJBKJXSLY_ZYSXXZ' + index + '" name="JBKJXSLY_ZYSXXZ' + index + '" style="width:100%;"></select></td>';
+    table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">其他涉嫌性质:</td>';
-    table += '        <td width="140"><select id="cbJBKJXSLY_CYSXXZ' + index + '" name="JBKJXSLY_CYSXXZ' + index + '" style="width:100%;"></select></td>';
-    table += '        <td>&nbsp;</td>';
-    table += '        <td class="label">涉嫌领域：</td>';
-    table += '        <td width="140"><select id="cbJBKJXSLY_SALY' + index + '" name="JBKJXSLY_SALY' + index + '" style="width:100%;"></select></td>';
-    table += '        <td>&nbsp;</td>';
+    table += '        <td width="200"><select id="cbJBKJXSLY_CYSXXZ' + index + '" name="JBKJXSLY_CYSXXZ' + index + '" style="width:100%;"></select></td>';
+    table += '        <td width="30">&nbsp;</td>';
     table += '        <td class="label">涉嫌金额:</td>';
-    table += '        <td width="120"><input type="text" name="JBKJXSLY_SXJE' + index + '"/></td>';
+    table += '        <td width="240"><input type="text" name="JBKJXSLY_SXJE' + index + '" style="width:99%;"/></td>';
     table += '    </tr>';
     table += '    <tr>';
     table += '        <td>&nbsp;</td>';
-    table += '    </tr>';
-    table += '    <tr>';
-    table += '        <td class="label"><span class="span-must-fill">*</span>内容是否具体：</td>';
-    table += '        <td>';
-    table += '            <input type="radio" name="JBKJXSLY_NRSFJT' + index + '" id="JBKJXSLY_NRSFJT' + index + '_YES" checked="checked" value="1"/>';
-    table += '            <label for="JBKJXSLY_NRSFJT' + index + '_YES">&nbsp;是&nbsp;&nbsp;</label>';
-    table += '            <input type="radio" name="JBKJXSLY_NRSFJT' + index + '" id="JBKJXSLY_NRSFJT' + index + '_NO" value="0"/>';
-    table += '            <label for="JBKJXSLY_NRSFJT' + index + '_NO">&nbsp;否</label>';
-    table += '        </td>';
-    table += '        <td>&nbsp;</td>';
-    table += '        <td class="label">是否携款潜逃:</td>';
-    table += '        <td>';
-    table += '            <input type="radio" name="JBKJXSLY_SFXKQT' + index + '" id="JBKJXSLY_SFXKQT' + index + '_YES" checked="checked" value="1"/>';
-    table += '            <label for="JBKJXSLY_SFXKQT' + index + '_YES">&nbsp;是&nbsp;&nbsp;</label>';
-    table += '            <input type="radio" name="JBKJXSLY_SFXKQT' + index + '" id="JBKJXSLY_SFXKQT' + index + '_NO" value="0"/>';
-    table += '            <label for="JBKJXSLY_SFXKQT' + index + '_NO">&nbsp;否</label>';
-    table += '        </td>';
     table += '    </tr>';
     table += '</table>';
 
@@ -429,8 +435,20 @@ function viewFilesOnServer() {
     });
 }
 
+function storeNewClueForm() {
+    alert('暂存记录');
+}
 
 function submitNewClueForm() {
+    //// 自动设置是否署名
+    for (var i = 1; i <= jbrIndex; i++) {
+        var jbrName = $('input[name="JBKJXSLY_JBRXM' + +'"]').val();
+        if (jbrName == null || jbrName.length <= 0 || jbrName == '匿名') {
+            checkRadioByValue('JBKJXSLY_SFSM' + i, 0);
+            updateSignature(i, false);
+        }
+    }
+
     if (validateNewClue()) {
         //// Firstly, save clue info
         var values = $('#newClue_formXS').serialize() + '&' +

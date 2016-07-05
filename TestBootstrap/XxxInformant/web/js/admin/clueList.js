@@ -1,6 +1,10 @@
+window.isALLClue = 0;
+window.isXSClue = 1;
+window.isCFClue = 0;
 window.isJCGJClue = 0;
 window.isTJClue = 0;
-window.isXSClue = 1;
+window.isSBJClue = 0;
+
 
 function initializeClueList() {
     //// Page style setting
@@ -8,20 +12,51 @@ function initializeClueList() {
     $('.easyui-combobox').combobox({panelHeight: 'auto'});
 
     var clueType = $('.sdmenu ul a.focus[title="ClueList.html"]').attr('name');
-    if (clueType == 'JCGJ') {
+    if (clueType == 'ALL') {
+        window.isALLClue = 1;
+        window.isXSClue = 0;
+        window.isCFClue = 0;
+        window.isJCGJClue = 0;
+        window.isTJClue = 0;
+        window.isSBJClue = 0;
+    } else if (clueType == 'XS') {
+        window.isALLClue = 0;
+        window.isXSClue = 1;
+        window.isCFClue = 0;
+        window.isJCGJClue = 0;
+        window.isTJClue = 0;
+        window.isSBJClue = 0;
+    } else if (clueType == 'CF') {
+        window.isALLClue = 0;
+        window.isXSClue = 0;
+        window.isCFClue = 1;
+        window.isJCGJClue = 0;
+        window.isTJClue = 0;
+        window.isSBJClue = 0;
+    } else if (clueType == 'JCGJ') {
+        window.isALLClue = 0;
+        window.isXSClue = 0;
+        window.isCFClue = 0;
         window.isJCGJClue = 1;
         window.isTJClue = 0;
-        window.isXSClue = 0;
+        window.isSBJClue = 0;
     } else if (clueType == 'TJ') {
+        window.isALLClue = 0;
+        window.isXSClue = 0;
+        window.isCFClue = 0;
         window.isJCGJClue = 0;
         window.isTJClue = 1;
+        window.isSBJClue = 0;
+    } else if (clueType == 'SBJ') {
+        window.isALLClue = 0;
         window.isXSClue = 0;
-    } else if (clueType == 'XS') {
+        window.isCFClue = 0;
         window.isJCGJClue = 0;
         window.isTJClue = 0;
-        window.isXSClue = 1;
+        window.isSBJClue = 1;
     }
-    
+
+
     //// Load the data grid data
     $('#clueList_Dg').datagrid({
         fit: true,
@@ -34,7 +69,7 @@ function initializeClueList() {
             {field: 'JBKJXSLY_SLRQ', title: '受理日期', width: 80, align: 'center'},
             {field: 'CBRCLRQ', title: '处理日期', width: 80, align: 'center'},
             {field: 'JBKJXSLY_BJBRXM', title: '被举报人姓名', width: 100, align: 'center', formatter: displayStringFormatter},
-            {field: 'JBKJXSLY_BJBRDWZZ', title: '单位住址', width: 140, align: 'center', formatter: displayStringFormatter},
+            {field: 'JBKJXSLY_BJBRDW', title: '单位', width: 140, align: 'center', formatter: displayStringFormatter},
             {field: 'JBKJXSLY_ZJ', title: '职级', width: 120, align: 'center', formatter: displayStringFormatter},
             {field: 'JBKJXSLY_ZYSXXZ', title: '主要涉嫌性质', width: 180, align: 'center', formatter: displayStringFormatter},
             {field: 'JBKJXSLY_LYFS', title: '举报方式', width: 60, align: 'center'},
@@ -70,10 +105,14 @@ function statusFormatter(value) {
 }
 
 function displayStringFormatter(value) {
-    if (value.indexOf('@#@') == 0) {
-        return '';
+    if (value != null) {
+        if (value.indexOf('@#@') == 0) {
+            return '';
+        } else {
+            return value.replace(/@#@/g, ';');
+        }
     } else {
-        return value.replace(/@#@/g, ';');
+        return '';
     }
 }
 
@@ -87,7 +126,9 @@ function queryClueList(pageNumber, pageSize) {
     var url = 'AdminLoadClueList';
     var values = $('.clueList-search-form').serialize();
     values += '&pageNumber=' + pageNumber + '&pageSize=' + pageSize;
-    values += '&isXSClue=' + window.isXSClue + '&isJCGJClue=' + window.isJCGJClue + '&isTJClue=' + window.isTJClue;
+    values += '&isALLClue=' + window.isALLClue + '&isXSClue=' + window.isXSClue +
+        '&isJCGJClue=' + window.isJCGJClue + '&isTJClue=' + window.isTJClue +
+        '&isSBJClue' + window.isSBJClue;
 
     $.post(url, values, function (result) {
         result = (new Function('return ' + result))();
@@ -124,7 +165,7 @@ function onDataGridLoadSuccess() {
 function loadNewCluePage() {
     loadRightPanelContent('NewClue.html');
     loadRightTitleNavPath();
-    var titlePathElement = $('div.index-main-title');
+    var titlePathElement = $('div.index-main-title .left');
     var titlePath = titlePathElement.html() + '&nbsp;>&nbsp;<a href="#">新建窗口</a>';
     titlePathElement.html(titlePath);
 }

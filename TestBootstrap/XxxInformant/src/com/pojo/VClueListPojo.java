@@ -10,7 +10,8 @@ public class VClueListPojo {
     private int JBKJXSLY_ID;
     private String JBKJXSLY_AFDQ;
     private String JBKJXSLY_AFDQDM;
-    private String JBKJXSLY_BJBRDWZZ;
+    private String JBKJXSLY_BJBRDW;
+    private String JBKJXSLY_BJBRZZ;
     private String JBKJXSLY_BJBRXM;
     private String JBKJXSLY_BJBRZTLB;
     private String JBKJXSLY_BJBRZTLBDM;
@@ -154,12 +155,20 @@ public class VClueListPojo {
         this.JBKJXSLY_AFDQDM = JBKJXSLY_AFDQDM;
     }
 
-    public String getJBKJXSLY_BJBRDWZZ() {
-        return JBKJXSLY_BJBRDWZZ;
+    public String getJBKJXSLY_BJBRDW() {
+        return JBKJXSLY_BJBRDW;
     }
 
-    public void setJBKJXSLY_BJBRDWZZ(String JBKJXSLY_BJBRDWZZ) {
-        this.JBKJXSLY_BJBRDWZZ = JBKJXSLY_BJBRDWZZ;
+    public void setJBKJXSLY_BJBRDW(String JBKJXSLY_BJBRDW) {
+        this.JBKJXSLY_BJBRDW = JBKJXSLY_BJBRDW;
+    }
+
+    public String getJBKJXSLY_BJBRZZ() {
+        return JBKJXSLY_BJBRZZ;
+    }
+
+    public void setJBKJXSLY_BJBRZZ(String JBKJXSLY_BJBRZZ) {
+        this.JBKJXSLY_BJBRZZ = JBKJXSLY_BJBRZZ;
     }
 
     public String getJBKJXSLY_BJBRXM() {

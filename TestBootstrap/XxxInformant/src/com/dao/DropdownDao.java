@@ -38,9 +38,7 @@ public class DropdownDao {
         mappingHt.put("JBKJXSLY_ZZMM", "政治面貌代码");
         mappingHt.put("JBKJXSLY_ZW", "干部职务名称代码");
         mappingHt.put("JBKJXSLY_SF", "被举报人身份");
-        mappingHt.put("JBKJXSLY_TSSF", "被举报人身份");
         mappingHt.put("JBKJXSLY_ZJ", "(举报)干部职级代码");
-        mappingHt.put("JBKJXSLY_QTZJ", "(举报)干部职级代码");
         mappingHt.put("JBKJXSLY_ZYSXXZ", "案由代码");
         mappingHt.put("JBKJXSLY_CYSXXZ", "案由代码");
         mappingHt.put("JBKJXSLY_SALY", "商业贿赂领域");
@@ -52,8 +50,8 @@ public class DropdownDao {
 
             // Add first item if necessary
             if (key.equals("JBKJXSLY_LYZL") || key.equals("JBKJXSLY_BJBRZTLB") || key.equals("JBKJXSLY_ZW") ||
-                    key.equals("JBKJXSLY_SF") || key.equals("JBKJXSLY_TSSF") ||
-                    key.equals("JBKJXSLY_ZJ") || key.equals("JBKJXSLY_QTZJ") ||
+                    key.equals("JBKJXSLY_SF") ||
+                    key.equals("JBKJXSLY_ZJ") ||
                     key.equals("JBKJXSLY_ZYSXXZ") || key.equals("JBKJXSLY_CYSXXZ") ||
                     key.equals("JBKJXSLY_SALY")) {
                 DropdownItem firstDropdownItem = new DropdownItem();
@@ -65,7 +63,11 @@ public class DropdownDao {
             for (Code_tPojo p : code_tDao.getAll("where OptionName='" + optionType + "' order by CodeId")) {
                 DropdownItem dropdownItem = new DropdownItem();
                 dropdownItem.setId(p.getCodeId());
-                dropdownItem.setText(p.getContent());
+                if (key.equals("JBKJXSLY_ZJ")) {
+                    dropdownItem.setText("[" + p.getContent() + "]  -  " + p.getScript());
+                } else {
+                    dropdownItem.setText(p.getContent());
+                }
                 itemList.add(dropdownItem);
             }
 
@@ -110,7 +112,7 @@ public class DropdownDao {
     private static void initTreeDropdownHt() {
         treeDropdownHt.clear();
 
-        //// Add company tree dropdown list
+        //// Add 单位 tree dropdown list
         List<DropdownTreeNode> companyTreeNodeList = new ArrayList<DropdownTreeNode>();
         OrgnizeDao orgnizeDao = new OrgnizeDao();
         DropdownTreeNode companyFirstTreeNode = new DropdownTreeNode();
@@ -143,16 +145,17 @@ public class DropdownDao {
         orgnizeDao.closeAll();
 
 
-        //// Add zone tree dropdown list
-        List<DropdownTreeNode> zoneTreeNodeList = new ArrayList<DropdownTreeNode>();
         CodelocalDao codelocalDao = new CodelocalDao();
+
+        //// Add 地区 tree dropdown list
+        List<DropdownTreeNode> zoneTreeNodeList = new ArrayList<DropdownTreeNode>();
         DropdownTreeNode zoneFirstTreeNode = new DropdownTreeNode();
         zoneFirstTreeNode.setId("0");
         zoneFirstTreeNode.setText("请选择地区");
         zoneFirstTreeNode.setState("open");
         zoneTreeNodeList.add(zoneFirstTreeNode);
 
-        for (CodelocalPojo firstP : codelocalDao.getAll("where OPTIONNAME='地区代码' and OWNERID='-1'")) {
+        for (CodelocalPojo firstP : codelocalDao.getAll("where OPTIONNAME='地区代码' and OWNERID='-1' order by CodeID")) {
             DropdownTreeNode treeNode = new DropdownTreeNode();
             treeNode.setId(firstP.getCodeID());
             treeNode.setText(firstP.getCONTENT());
@@ -166,7 +169,7 @@ public class DropdownDao {
             List<DropdownItem> childItemList = new ArrayList<DropdownItem>();
             for (CodelocalPojo p : codelocalDao.getAll("where OPTIONNAME='地区代码' and OWNERID='" + firstP.getID() + "'")) {
                 DropdownItem dropdownItem = new DropdownItem();
-                dropdownItem.setId(p.getID());
+                dropdownItem.setId(p.getCodeID());
                 dropdownItem.setText(p.getCONTENT());
                 childItemList.add(dropdownItem);
             }
@@ -176,6 +179,99 @@ public class DropdownDao {
         }
 
         treeDropdownHt.put("ZONE", zoneTreeNodeList);
+
+        //// Add 身份 tree dropdown list
+        List<DropdownTreeNode> idTreeNodeList = new ArrayList<DropdownTreeNode>();
+        DropdownTreeNode idFirstTreeNode = new DropdownTreeNode();
+        idFirstTreeNode.setId("0");
+        idFirstTreeNode.setText("请选择身份");
+        idFirstTreeNode.setState("open");
+        idTreeNodeList.add(idFirstTreeNode);
+
+        for (CodelocalPojo firstP : codelocalDao.getAll("where OPTIONNAME='身份' and OWNERID='-1' order by CodeID")) {
+            DropdownTreeNode treeNode = new DropdownTreeNode();
+            treeNode.setId(firstP.getCodeID());
+            treeNode.setText(firstP.getCONTENT());
+
+            // Get second dropdown items
+            List<DropdownItem> childItemList = new ArrayList<DropdownItem>();
+            for (CodelocalPojo p : codelocalDao.getAll("where OPTIONNAME='身份' and OWNERID='" + firstP.getID() + "'")) {
+                DropdownItem dropdownItem = new DropdownItem();
+                dropdownItem.setId(p.getCodeID());
+                dropdownItem.setText(p.getCONTENT());
+                childItemList.add(dropdownItem);
+            }
+            treeNode.setChildren(childItemList);
+
+            idTreeNodeList.add(treeNode);
+        }
+
+        treeDropdownHt.put("ID", idTreeNodeList);
+
+
+        //// Add 特殊身份 tree dropdown list
+        List<DropdownTreeNode> specialIdTreeNodeList = new ArrayList<DropdownTreeNode>();
+        DropdownTreeNode specialIdFirstTreeNode = new DropdownTreeNode();
+        specialIdFirstTreeNode.setId("0");
+        specialIdFirstTreeNode.setText("请选择身份");
+        specialIdFirstTreeNode.setState("open");
+        specialIdTreeNodeList.add(specialIdFirstTreeNode);
+
+        for (CodelocalPojo firstP : codelocalDao.getAll("where OPTIONNAME='特殊身份' and OWNERID='-1' order by CodeID")) {
+            DropdownTreeNode treeNode = new DropdownTreeNode();
+            treeNode.setId(firstP.getCodeID());
+            treeNode.setText(firstP.getCONTENT());
+
+            // Get second dropdown items
+            List<DropdownItem> childItemList = new ArrayList<DropdownItem>();
+            for (CodelocalPojo p : codelocalDao.getAll("where OPTIONNAME='特殊身份' and OWNERID='" + firstP.getID() + "'")) {
+                DropdownItem dropdownItem = new DropdownItem();
+                dropdownItem.setId(p.getCodeID());
+                dropdownItem.setText(p.getCONTENT());
+                childItemList.add(dropdownItem);
+            }
+            treeNode.setChildren(childItemList);
+
+            specialIdTreeNodeList.add(treeNode);
+        }
+
+        treeDropdownHt.put("SPECIAL_ID", specialIdTreeNodeList);
+
+
+        //// Add 涉嫌性质 tree dropdown list
+        List<DropdownTreeNode> natureTreeNodeList = new ArrayList<DropdownTreeNode>();
+        DropdownTreeNode natureFirstTreeNode = new DropdownTreeNode();
+        natureFirstTreeNode.setId("0");
+        natureFirstTreeNode.setText("请选择性质");
+        natureFirstTreeNode.setState("open");
+        natureTreeNodeList.add(natureFirstTreeNode);
+
+        for (CodelocalPojo firstP : codelocalDao.getAll("where OPTIONNAME='涉嫌性质' and OWNERID='-1' order by CodeID")) {
+            DropdownTreeNode treeNode = new DropdownTreeNode();
+            treeNode.setId(firstP.getCodeID());
+            treeNode.setText(firstP.getCONTENT());
+            if (firstP.getCONTENT().contains("一般违法") || firstP.getCONTENT().contains("其他")) {
+                treeNode.setState("open");
+            } else {
+                treeNode.setState("closed");
+            }
+
+            // Get second dropdown items
+            List<DropdownItem> childItemList = new ArrayList<DropdownItem>();
+            for (CodelocalPojo p : codelocalDao.getAll("where OPTIONNAME='涉嫌性质' and OWNERID='" + firstP.getID() + "'")) {
+                DropdownItem dropdownItem = new DropdownItem();
+                dropdownItem.setId(p.getCodeID());
+                dropdownItem.setText(p.getCONTENT());
+                childItemList.add(dropdownItem);
+            }
+            treeNode.setChildren(childItemList);
+
+            natureTreeNodeList.add(treeNode);
+        }
+
+        treeDropdownHt.put("NATURE", natureTreeNodeList);
+
+
         codelocalDao.closeAll();
     }
 

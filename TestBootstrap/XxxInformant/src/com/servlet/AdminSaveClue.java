@@ -81,7 +81,6 @@ public class AdminSaveClue extends HttpServlet {
             String CBR = request.getParameter("CBR");
             String ZWDWDM = request.getParameter("ZWDW");
             String CSDWDM = request.getParameter("CSDW");
-            String CSRQ = request.getParameter("CSRQ");
             String CBRCLRQ = request.getParameter("CBRCLRQ");
             String JBKJXSLY_JBJCGJWFWJ = request.getParameter("JBKJXSLY_JBJCGJWFWJ");
             String JBZRYJ = request.getParameter("JBZRYJ");
@@ -109,10 +108,6 @@ public class AdminSaveClue extends HttpServlet {
             xsclPojo.setZWDW(Parser.parseDropdownContent("COMPANY", ZWDWDM));
             xsclPojo.setCSDWDM(CSDWDM);
             xsclPojo.setCSDW(Parser.parseDropdownContent("COMPANY", CSDWDM));
-
-            if (CSRQ != null && CSRQ.length() > 0) {
-                xsclPojo.setCSRQ(Parser.parseDate(CSRQ));
-            }
 
             if (CBRCLRQ != null && CBRCLRQ.length() > 0) {
                 xsclPojo.setCBRCLRQ(Parser.parseDate(CBRCLRQ));
@@ -189,23 +184,21 @@ public class AdminSaveClue extends HttpServlet {
             String JBKJXSLY_AFDQ = Parser.parseTreeDropdownContent("ZONE", JBKJXSLY_AFDQDM);
             String JBKJXSLY_ZWDM = request.getParameter("JBKJXSLY_ZW1");
             String JBKJXSLY_ZW = Parser.parseDropdownContent("JBKJXSLY_ZW", JBKJXSLY_ZWDM);
-            String JBKJXSLY_BJBRDWZZ = request.getParameter("JBKJXSLY_BJBRDWZZ1");
+            String JBKJXSLY_BJBRDW = request.getParameter("JBKJXSLY_BJBRDW1");
+            String JBKJXSLY_BJBRZZ = request.getParameter("JBKJXSLY_BJBRZZ1");
             String JBKJXSLY_SFDM = request.getParameter("JBKJXSLY_SF1");
             String JBKJXSLY_SF = Parser.parseDropdownContent("JBKJXSLY_SF", JBKJXSLY_SFDM);
             String JBKJXSLY_TSSFDM = request.getParameter("JBKJXSLY_TSSF1");
-            String JBKJXSLY_TSSF = Parser.parseDropdownContent("JBKJXSLY_TSSF", JBKJXSLY_TSSFDM);
+            String JBKJXSLY_TSSF = Parser.parseTreeDropdownContent("SPECIAL_ID", JBKJXSLY_TSSFDM);
             String JBKJXSLY_ZJDM = request.getParameter("JBKJXSLY_ZJ1");
             String JBKJXSLY_ZJ = Parser.parseDropdownContent("JBKJXSLY_ZJ", JBKJXSLY_ZJDM);
-            String JBKJXSLY_QTZJDM = request.getParameter("JBKJXSLY_QTZJ1");
-            String JBKJXSLY_QTZJ = Parser.parseDropdownContent("JBKJXSLY_QTZJ", JBKJXSLY_QTZJDM);
             String JBKJXSLY_ZYSXXZDM = request.getParameter("JBKJXSLY_ZYSXXZ1");
-            String JBKJXSLY_ZYSXXZ = Parser.parseDropdownContent("JBKJXSLY_ZYSXXZ", JBKJXSLY_ZYSXXZDM);
+            String JBKJXSLY_ZYSXXZ = Parser.parseTreeDropdownContent("NATURE", JBKJXSLY_ZYSXXZDM);
             String JBKJXSLY_QTSXXZDM = request.getParameter("JBKJXSLY_CYSXXZ1");
-            String JBKJXSLY_CYSXXZ = Parser.parseDropdownContent("JBKJXSLY_CYSXXZ", JBKJXSLY_QTSXXZDM);
+            String JBKJXSLY_CYSXXZ = Parser.parseTreeDropdownContent("NATURE", JBKJXSLY_QTSXXZDM);
             String JBKJXSLY_SALYDM = request.getParameter("JBKJXSLY_SALY1");
             String JBKJXSLY_SALY = Parser.parseDropdownContent("JBKJXSLY_SALY", JBKJXSLY_SALYDM);
             String JBKJXSLY_SXJE = request.getParameter("JBKJXSLY_SXJE1");
-            String JBKJXSLY_NRSFJT = request.getParameter("JBKJXSLY_NRSFJT1");
             String JBKJXSLY_SFXKQT = request.getParameter("JBKJXSLY_SFXKQT1");
 
             for (int i = 2; i <= 3; i++) {
@@ -220,24 +213,21 @@ public class AdminSaveClue extends HttpServlet {
                     JBKJXSLY_AFDQ += "@#@" + Parser.parseTreeDropdownContent("ZONE", request.getParameter("JBKJXSLY_AFDQ" + i));
                     JBKJXSLY_ZWDM += "@#@" + request.getParameter("JBKJXSLY_ZW" + i);
                     JBKJXSLY_ZW += "@#@" + Parser.parseDropdownContent("JBKJXSLY_ZW", request.getParameter("JBKJXSLY_ZW" + i));
-                    JBKJXSLY_BJBRDWZZ += "@#@" + request.getParameter("JBKJXSLY_BJBRDWZZ" + i);
+                    JBKJXSLY_BJBRDW += "@#@" + request.getParameter("JBKJXSLY_BJBRDW" + i);
+                    JBKJXSLY_BJBRZZ += "@#@" + request.getParameter("JBKJXSLY_BJBRZZ" + i);
                     JBKJXSLY_SFDM += "@#@" + request.getParameter("JBKJXSLY_SF" + i);
                     JBKJXSLY_SF += "@#@" + Parser.parseDropdownContent("JBKJXSLY_SF", request.getParameter("JBKJXSLY_SF" + i));
                     JBKJXSLY_TSSFDM += "@#@" + request.getParameter("JBKJXSLY_TSSF" + i);
-                    JBKJXSLY_TSSF += "@#@" + Parser.parseDropdownContent("JBKJXSLY_TSSF", request.getParameter("JBKJXSLY_TSSF" + i));
+                    JBKJXSLY_TSSF += "@#@" + Parser.parseTreeDropdownContent("SPECIAL_ID", request.getParameter("JBKJXSLY_TSSF" + i));
                     JBKJXSLY_ZJDM += "@#@" + request.getParameter("JBKJXSLY_ZJ" + i);
                     JBKJXSLY_ZJ += "@#@" + Parser.parseDropdownContent("JBKJXSLY_ZJ", request.getParameter("JBKJXSLY_ZJ" + i));
-                    JBKJXSLY_QTZJDM += "@#@" + request.getParameter("JBKJXSLY_QTZJ" + i);
-                    JBKJXSLY_QTZJ += "@#@" + Parser.parseDropdownContent("JBKJXSLY_QTZJ", request.getParameter("JBKJXSLY_QTZJ" + i));
                     JBKJXSLY_ZYSXXZDM += "@#@" + request.getParameter("JBKJXSLY_ZYSXXZ" + i);
-                    JBKJXSLY_ZYSXXZ += "@#@" + Parser.parseDropdownContent("JBKJXSLY_ZYSXXZ", request.getParameter("JBKJXSLY_ZYSXXZ" + i));
+                    JBKJXSLY_ZYSXXZ += "@#@" + Parser.parseTreeDropdownContent("NATURE", request.getParameter("JBKJXSLY_ZYSXXZ" + i));
                     JBKJXSLY_QTSXXZDM += "@#@" + request.getParameter("JBKJXSLY_CYSXXZ" + i);
-                    JBKJXSLY_CYSXXZ += "@#@" + Parser.parseDropdownContent("JBKJXSLY_CYSXXZ", request.getParameter("JBKJXSLY_CYSXXZ" + i));
+                    JBKJXSLY_CYSXXZ += "@#@" + Parser.parseTreeDropdownContent("NATURE", request.getParameter("JBKJXSLY_CYSXXZ" + i));
                     JBKJXSLY_SALYDM += "@#@" + request.getParameter("JBKJXSLY_SALY" + i);
                     JBKJXSLY_SALY += "@#@" + Parser.parseDropdownContent("JBKJXSLY_SALY", request.getParameter("JBKJXSLY_SALY" + i));
                     JBKJXSLY_SXJE += "@#@" + request.getParameter("JBKJXSLY_SXJE" + i);
-                    JBKJXSLY_NRSFJT += "@#@" + request.getParameter("JBKJXSLY_NRSFJT" + i);
-                    JBKJXSLY_SFXKQT += "@#@" + request.getParameter("JBKJXSLY_SFXKQT" + i);
                 }
             }
             jbkjxslyPojo.setJBKJXSLY_BJBRXM(JBKJXSLY_BJBRXM);
@@ -250,15 +240,14 @@ public class AdminSaveClue extends HttpServlet {
             jbkjxslyPojo.setJBKJXSLY_AFDQ(JBKJXSLY_AFDQ);
             jbkjxslyPojo.setJBKJXSLY_ZWDM(JBKJXSLY_ZWDM);
             jbkjxslyPojo.setJBKJXSLY_ZW(JBKJXSLY_ZW);
-            jbkjxslyPojo.setJBKJXSLY_BJBRDWZZ(JBKJXSLY_BJBRDWZZ);
+            jbkjxslyPojo.setJBKJXSLY_BJBRDW(JBKJXSLY_BJBRDW);
+            jbkjxslyPojo.setJBKJXSLY_BJBRZZ(JBKJXSLY_BJBRZZ);
             jbkjxslyPojo.setJBKJXSLY_SFDM(JBKJXSLY_SFDM);
             jbkjxslyPojo.setJBKJXSLY_SF(JBKJXSLY_SF);
             jbkjxslyPojo.setJBKJXSLY_TSSFDM(JBKJXSLY_TSSFDM);
             jbkjxslyPojo.setJBKJXSLY_TSSF(JBKJXSLY_TSSF);
             jbkjxslyPojo.setJBKJXSLY_ZJDM(JBKJXSLY_ZJDM);
             jbkjxslyPojo.setJBKJXSLY_ZJ(JBKJXSLY_ZJ);
-            jbkjxslyPojo.setJBKJXSLY_QTZJDM(JBKJXSLY_QTZJDM);
-            jbkjxslyPojo.setJBKJXSLY_QTZJ(JBKJXSLY_QTZJ);
             jbkjxslyPojo.setJBKJXSLY_ZYSXXZDM(JBKJXSLY_ZYSXXZDM);
             jbkjxslyPojo.setJBKJXSLY_ZYSXXZ(JBKJXSLY_ZYSXXZ);
             jbkjxslyPojo.setJBKJXSLY_QTSXXZDM(JBKJXSLY_QTSXXZDM);
@@ -266,20 +255,10 @@ public class AdminSaveClue extends HttpServlet {
             jbkjxslyPojo.setJBKJXSLY_SALYDM(JBKJXSLY_SALYDM);
             jbkjxslyPojo.setJBKJXSLY_SALY(JBKJXSLY_SALY);
             jbkjxslyPojo.setJBKJXSLY_SXJE(JBKJXSLY_SXJE);
-            jbkjxslyPojo.setJBKJXSLY_NRSFJT(JBKJXSLY_NRSFJT);
-            jbkjxslyPojo.setJBKJXSLY_SFXKQT(JBKJXSLY_SFXKQT);
 
-//            String JBKJXSLY_SFSBYGX = request.getParameter("JBKJXSLY_SFSBYGX");
-//            String JBKJXSLY_SFKG = request.getParameter("JBKJXSLY_SFKG");
-//            String JBKJXSLY_SFSS = request.getParameter("JBKJXSLY_SFSS");
-//            String JBKJXSLY_SFQT = request.getParameter("JBKJXSLY_SFQT");
             String JBKJXSLY_Keywords = request.getParameter("JBKJXSLY_Keywords");
             String JBKJXSLY_SYZY = request.getParameter("JBKJXSLY_SYZY");
             String JBKJXSLY_NRZY = request.getParameter("JBKJXSLY_NRZY");
-//            jbkjxslyPojo.setJBKJXSLY_SFSBYGX(JBKJXSLY_SFSBYGX);
-//            jbkjxslyPojo.setJBKJXSLY_SFKG(JBKJXSLY_SFKG);
-//            jbkjxslyPojo.setJBKJXSLY_SFSS(JBKJXSLY_SFSS);
-//            jbkjxslyPojo.setJBKJXSLY_SFQT(JBKJXSLY_SFQT);
             jbkjxslyPojo.setJBKJXSLY_Keywords(JBKJXSLY_Keywords);
             jbkjxslyPojo.setJBKJXSLY_SYZY(JBKJXSLY_SYZY);
             jbkjxslyPojo.setJBKJXSLY_NRZY(JBKJXSLY_NRZY);
