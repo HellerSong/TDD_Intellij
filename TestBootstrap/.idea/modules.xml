@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/TestAbcTemplate/TestAbcTemplate.iml" filepath="$PROJECT_DIR$/TestAbcTemplate/TestAbcTemplate.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestBootgrid/TestBootgrid.iml" filepath="$PROJECT_DIR$/TestBootgrid/TestBootgrid.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestBootstrap.iml" filepath="$PROJECT_DIR$/TestBootstrap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestChart/TestChart.iml" filepath="$PROJECT_DIR$/TestChart/TestChart.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestDatetimePicker/TestDatetimePicker.iml" filepath="$PROJECT_DIR$/TestDatetimePicker/TestDatetimePicker.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestEasyUI/TestEasyUI.iml" filepath="$PROJECT_DIR$/TestEasyUI/TestEasyUI.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestFileUpload/TestFileUpload.iml" filepath="$PROJECT_DIR$/TestFileUpload/TestFileUpload.iml" />
