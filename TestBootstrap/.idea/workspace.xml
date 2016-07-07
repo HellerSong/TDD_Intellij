@@ -4,32 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/TestGrammar/user/LoadingButton.html" line="15" mnemonic="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e8c390e-1e00-4781-be2f-3c4c0722cc6a" name="Default" comment="Informant &gt; update for 0705">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/images/title.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/TestChart.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/admin/Index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/css/admin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/css/user.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/js/Chart.bundle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/js/Chart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/js/admin/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/js/jquery.cookie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/js/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/js/jquery.upload.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/js/user/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/user/Index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/user/bar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/user/pie-customTooltips.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestChart/user/pie.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="0e8c390e-1e00-4781-be2f-3c4c0722cc6a" name="Default" comment="create test chart">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TestBootstrap.iws" />
@@ -59,68 +34,7 @@
     <favorites_list name="TestBootstrap" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestChart/admin/Index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bar.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestChart/user/bar.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pie-customTooltips.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestChart/user/pie-customTooltips.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pie.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TestChart/user/pie.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5">
-              <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Chart.bundle.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestChart/js/Chart.bundle.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2160">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Chart.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestChart/js/Chart.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -1266,14 +1180,7 @@
       <workItem from="1467763569989" duration="601000" />
       <workItem from="1467818597441" duration="116000" />
       <workItem from="1467846803131" duration="8000" />
-      <workItem from="1467846842414" duration="2838000" />
-    </task>
-    <task id="LOCAL-00007" summary="update test bootstrap">
-      <created>1464829915980</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1464829915980</updated>
+      <workItem from="1467846842414" duration="2921000" />
     </task>
     <task id="LOCAL-00008" summary="update test bootstrap">
       <created>1465166788760</created>
@@ -1611,7 +1518,14 @@
       <option name="project" value="LOCAL" />
       <updated>1467678616198</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="create test chart">
+      <created>1467851536857</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1467851536857</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1647,7 +1561,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="625426000" />
+    <option name="totallyTimeSpent" value="625509000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1660,7 +1574,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1718,7 +1632,8 @@
     <MESSAGE value="update test validator&#10;" />
     <MESSAGE value="Informant &gt; update for 0628&#10;" />
     <MESSAGE value="Informant &gt; update for 0705" />
-    <option name="LAST_COMMIT_MESSAGE" value="Informant &gt; update for 0705" />
+    <MESSAGE value="create test chart" />
+    <option name="LAST_COMMIT_MESSAGE" value="create test chart" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -2089,8 +2004,10 @@
     <entry file="file://$PROJECT_DIR$/TestChart/user/pie-customTooltips.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
-          <folding />
+          <caret line="61" column="27" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
+          <folding>
+            <marker date="1467851495281" expanded="true" signature="2217:3822" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2098,7 +2015,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2160">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1467851495081" expanded="true" signature="427143:427168" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
