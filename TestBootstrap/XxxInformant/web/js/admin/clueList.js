@@ -2,7 +2,7 @@ window.isALLClue = 0;
 window.isXSClue = 1;
 window.isCFClue = 0;
 window.isJCGJClue = 0;
-window.isTJClue = 0;
+window.isTJJClue = 0;
 window.isSBJClue = 0;
 
 
@@ -17,42 +17,42 @@ function initializeClueList() {
         window.isXSClue = 0;
         window.isCFClue = 0;
         window.isJCGJClue = 0;
-        window.isTJClue = 0;
+        window.isTJJClue = 0;
         window.isSBJClue = 0;
     } else if (clueType == 'XS') {
         window.isALLClue = 0;
         window.isXSClue = 1;
         window.isCFClue = 0;
         window.isJCGJClue = 0;
-        window.isTJClue = 0;
+        window.isTJJClue = 0;
         window.isSBJClue = 0;
     } else if (clueType == 'CF') {
         window.isALLClue = 0;
         window.isXSClue = 0;
         window.isCFClue = 1;
         window.isJCGJClue = 0;
-        window.isTJClue = 0;
+        window.isTJJClue = 0;
         window.isSBJClue = 0;
     } else if (clueType == 'JCGJ') {
         window.isALLClue = 0;
         window.isXSClue = 0;
         window.isCFClue = 0;
         window.isJCGJClue = 1;
-        window.isTJClue = 0;
+        window.isTJJClue = 0;
         window.isSBJClue = 0;
-    } else if (clueType == 'TJ') {
+    } else if (clueType == 'TJJ') {
         window.isALLClue = 0;
         window.isXSClue = 0;
         window.isCFClue = 0;
         window.isJCGJClue = 0;
-        window.isTJClue = 1;
+        window.isTJJClue = 1;
         window.isSBJClue = 0;
     } else if (clueType == 'SBJ') {
         window.isALLClue = 0;
         window.isXSClue = 0;
         window.isCFClue = 0;
         window.isJCGJClue = 0;
-        window.isTJClue = 0;
+        window.isTJJClue = 0;
         window.isSBJClue = 1;
     }
 
@@ -127,8 +127,8 @@ function queryClueList(pageNumber, pageSize) {
     var values = $('.clueList-search-form').serialize();
     values += '&pageNumber=' + pageNumber + '&pageSize=' + pageSize;
     values += '&isALLClue=' + window.isALLClue + '&isXSClue=' + window.isXSClue +
-        '&isJCGJClue=' + window.isJCGJClue + '&isTJClue=' + window.isTJClue +
-        '&isSBJClue' + window.isSBJClue;
+        '&isJCGJClue=' + window.isJCGJClue + '&isTJJClue=' + window.isTJJClue +
+        '&isSBJClue=' + window.isSBJClue;
 
     $.post(url, values, function (result) {
         result = (new Function('return ' + result))();

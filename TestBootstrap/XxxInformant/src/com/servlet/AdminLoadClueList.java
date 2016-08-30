@@ -4,6 +4,7 @@ import com.dao.VClueListDao;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.pojo.VClueListPojo;
+import com.utils.ClueUtil;
 import com.utils.DevLog;
 import com.utils.Parser;
 
@@ -32,7 +33,7 @@ public class AdminLoadClueList extends HttpServlet {
         int isXSClue = Parser.parseInt(request.getParameter("isXSClue"));
         int isCFClue = Parser.parseInt(request.getParameter("isCFClue"));
         int isJCGJClue = Parser.parseInt(request.getParameter("isJCGJClue"));
-        int isTJClue = Parser.parseInt(request.getParameter("isTJClue"));
+        int isTJJClue = Parser.parseInt(request.getParameter("isTJJClue"));
         int isSBJClue = Parser.parseInt(request.getParameter("isSBJClue"));
 
         String keyword = request.getParameter("keyword");
@@ -45,6 +46,8 @@ public class AdminLoadClueList extends HttpServlet {
         Map<String, Object> map = new HashMap<String, Object>();
         Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
         String sWhere = "where JBKJXSLY_CLZT != '-1'";
+
+        sWhere += ClueUtil.getClueTypeWhereString(isALLClue, isCFClue, isXSClue, isJCGJClue, isTJJClue, isSBJClue);
 
         if (keyword != null && keyword.length() > 0) {
             sWhere += " and (JBKJXSLY_JBRXM like '%" + keyword + "%'";
@@ -64,24 +67,7 @@ public class AdminLoadClueList extends HttpServlet {
         if (acceptDateEnd != null && acceptDateEnd.length() > 0)
             sWhere += " and JBKJXSLY_SLRQ <= '" + acceptDateEnd + "'";
 
-        if (isALLClue == 1) {
 
-        } else if (isXSClue == 1) {
-            sWhere += " and JBKJXSLY_JBJCGJWFWJ <> '1'";
-            sWhere += " and (JBKJXSLY_ZJDM <> '05' or JBKJXSLY_ZJDM <> '06')";
-//            sWhere += " or JBKJXSLY_QTZJDM <> '05' or JBKJXSLY_QTZJDM <> '06')";
-        } else if (isJCGJClue == 1) {
-            sWhere += " and JBKJXSLY_JBJCGJWFWJ = '1'";
-            sWhere += " and (JBKJXSLY_ZJDM <> '05' and JBKJXSLY_ZJDM <> '06')";
-//            sWhere += " and JBKJXSLY_QTZJDM <> '05' and JBKJXSLY_QTZJDM <> '06')";
-        } else if (isTJClue == 1) {
-            sWhere += " and (JBKJXSLY_ZJDM = '05' or JBKJXSLY_ZJDM = '06')";
-//            sWhere += " or JBKJXSLY_QTZJDM = '05' or JBKJXSLY_QTZJDM = '06')";
-        } else if (isSBJClue == 1) {
-            // 03-正部级，04-副部级
-            sWhere += " and (JBKJXSLY_ZJ like '%03%' or JBKJXSLY_ZJ like '%04%')";
-//            sWhere += " or JBKJXSLY_QTZJDM = '05' or JBKJXSLY_QTZJDM = '06')";
-        }
 
         VClueListDao dao = new VClueListDao();
         int totalCount = dao.getTotalRecordCount(sWhere);

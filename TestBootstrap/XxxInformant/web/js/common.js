@@ -110,14 +110,3 @@ function OpenNewWindowInCurrentPage(windowOption) {
     });
     $('#' + windowId).dialog('open');
 }
-
-var jsStr = '<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>';
-document.getElementsByTagName("head").innerHTML += jsStr;
-function setBorderAround(element) {
-    element.css('border', '2px orange solid');
-    setTimeout(function () {
-        element.css('border', '');
-    }, 800);
-}
-
-setBorderAround($('div.newslist dt a'));

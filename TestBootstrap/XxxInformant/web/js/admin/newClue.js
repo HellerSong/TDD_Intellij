@@ -10,6 +10,7 @@ function initializeNewClue() {
 
     //// Page style setting
     $.parser.parse();
+    $('.easyui-datebox').datebox({editable: false});
     $('.index-main-title .right').show();
 
 
@@ -27,35 +28,83 @@ function initializeNewClue() {
     loadTreeDropdownCompany('cbCSDW');
     loadDropdown('cbJBKJXSLY_JYLX');
 
-    //// Edit Clue or Create New
+    //// 判断当前是编辑线索状态还是创建新线索状态
     var url = window.location.href;
     if (url.indexOf('EditClue') >= 0) {
         // When this is editing clue then load it by id
         clueId = url.substring(url.indexOf('=') + 1, url.length);
-        loadClueDataById(clueId)
+        loadClueDataById(clueId);
     } else {
         $('input[textboxname="JBKJXSLY_XH"]').textbox('setValue', '数据库自动生成');
+
     }
 }
 
 function loadClueDataFirst() {
-
+    loadClueDataByGetType('First');
 }
 
 function loadClueDataPrevious() {
-
+    loadClueDataByGetType('Previous');
 }
 
 function loadClueDataNext() {
-
+    loadClueDataByGetType('Next');
 }
 
 function loadClueDataLast() {
+    loadClueDataByGetType('Last');
+}
 
+function loadClueDataByGetType(getType) {
+    var values = 'getType=' + getType;
+    values += '&clueId=' + window.clueId + '&isALLClue=' + window.isALLClue + '&isXSClue=' + window.isXSClue +
+        '&isJCGJClue=' + window.isJCGJClue + '&isTJJClue=' + window.isTJJClue +
+        '&isSBJClue=' + window.isSBJClue;
+
+    $.post('AdminGetClueId', values, function (result) {
+        result = (new Function('return ' + result))();
+
+        if (result.targetClueId != -1) {
+            loadClueDataById(result.targetClueId);
+            clueId = result.targetClueId;
+            var oldUrl = window.location.href;
+            oldUrl = oldUrl.substring(0, oldUrl.indexOf('=') + 1);
+            window.location.href = oldUrl + result.targetClueId;
+        }
+    });
+}
+
+function displayFirstAndTailBtnOrNot(clueId) {
+    var values = 'clueId=' + clueId + '&isALLClue=' + window.isALLClue + '&isXSClue=' + window.isXSClue +
+        '&isJCGJClue=' + window.isJCGJClue + '&isTJJClue=' + window.isTJJClue +
+        '&isSBJClue=' + window.isSBJClue;
+
+    $.post('AdminFirstOrLastClue', values, function (result) {
+        result = (new Function('return ' + result))();
+
+        var btnList = $('.index-main-title .right span.index-edit-btn-group a');
+        if (result.msg.indexOf('FirstClue') >= 0) {
+            btnList.eq(0).hide();
+            btnList.eq(1).hide();
+            btnList.eq(2).show();
+            btnList.eq(3).show();
+        } else if (result.msg.indexOf('LastClue') >= 0) {
+            btnList.eq(0).show();
+            btnList.eq(1).show();
+            btnList.eq(2).hide();
+            btnList.eq(3).hide();
+        } else if (result.msg.indexOf('OneClue') >= 0) {
+            btnList.hide();
+        } else {
+            btnList.show();
+        }
+        $('.index-main-title .right span.index-edit-btn-group').show();
+    });
 }
 
 function loadClueDataById(clueId) {
-    $('.index-main-title .right span.index-edit-btn-group').show();
+    displayFirstAndTailBtnOrNot(clueId);
 
     $.post('AdminLoadClue', {clueId: clueId}, function (result) {
         result = (new Function('return ' + result))();
@@ -449,41 +498,90 @@ function submitNewClueForm() {
         }
     }
 
-    if (validateNewClue()) {
-        //// Firstly, save clue info
-        var values = $('#newClue_formXS').serialize() + '&' +
-            $('#newClue_formJBR').serialize() + '&' +
-            $('#newClue_formBJBR_Part1').serialize() + '&' +
-            $('#newClue_formBJBR_Part2').serialize() + '&' +
-            $('#newClue_formCL').serialize() + '&' +
-            'clueId=' + clueId;
+    if (checkTransferCompanyMatchCaseZone()) {
+        if (validateNewClue()) {
+            //// Firstly, save clue info
+            var values = $('#newClue_formXS').serialize() + '&' +
+                $('#newClue_formJBR').serialize() + '&' +
+                $('#newClue_formBJBR_Part1').serialize() + '&' +
+                $('#newClue_formBJBR_Part2').serialize() + '&' +
+                $('#newClue_formCL').serialize() + '&' +
+                'clueId=' + clueId;
 
-        $.ajax({
-            type: 'post',
-            url: 'AdminSaveClue',
-            data: values,
-            async: false,
-            success: function (result) {
-                result = (new Function('return ' + result))();
-                alert(result.status);
-            }
-        });
+            $.ajax({
+                type: 'post',
+                url: 'AdminSaveClue',
+                data: values,
+                async: false,
+                success: function (result) {
+                    result = (new Function('return ' + result))();
+                    alert(result.status);
+                }
+            });
 
 
-        //// Secondly, upload all attachments
-        $('#newClue_fileUpload').upload('AdminSaveClueFile', {}, function (result) {
-            if (result.status.indexOf('成功') >= -1) {
-                closeNewClueForm();
-            } else {
-                alert('文件上传失败！');
-            }
-        }, 'json');
+            //// Secondly, upload all attachments
+            $('#newClue_fileUpload').upload('AdminSaveClueFile', {}, function (result) {
+                if (result.status.indexOf('成功') >= -1) {
+                    //closeNewClueForm();
+                } else {
+                    alert('文件上传失败！');
+                }
+            }, 'json');
+        }
     }
+
+
 }
 
 function closeNewClueForm() {
     $('.index-main-title .right').hide();
     window.location.href = 'Index.html';
+}
+
+function checkTransferCompanyMatchCaseZone() {
+    if ($('#cbCLFS').combobox('getText').indexOf('交办') >= 0) {
+        var companyTree = $('#cbZWDW').combotree('tree');
+        var companySelectedNode = companyTree.tree('getSelected');
+        var zoneTree = $('#cbJBKJXSLY_AFDQ1').combotree('tree');
+        var zoneSelectedNode = zoneTree.tree('getSelected');
+
+        if (companySelectedNode.text.indexOf('请选择') == -1 && zoneSelectedNode.text.indexOf('请选择') == -1) {
+            var companyCompareText, zoneCompareText;
+            if (companyTree.tree('getParent', companySelectedNode.target) != null) {
+                companyCompareText = companyTree.tree('getParent', companySelectedNode.target).text;
+            } else {
+                companyCompareText = companySelectedNode.text;
+            }
+            if (zoneTree.tree('getParent', zoneSelectedNode.target) != null) {
+                zoneCompareText = zoneTree.tree('getParent', zoneSelectedNode.target).text;
+            } else {
+                zoneCompareText = zoneSelectedNode.text;
+            }
+
+            if (companyCompareText.indexOf('本院其他部门') >= 0 || companyCompareText.indexOf('其他中央国家机关') >= 0) {
+                // 本院其他部门，其他中央国家机关，隶属于北京市
+                if (zoneCompareText.indexOf('北京') == -1) {
+                    if (confirm('转往单位地区与案发地区不对应，请确认是否保存？')) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            } else if (companyCompareText.indexOf('下级') >= 0) {
+                // 如：转往单位为：安徽省信访局，案发地区为：北京市，属于不匹配
+                if (companySelectedNode.text.indexOf(zoneCompareText) == -1) {
+                    if (confirm('转往单位地区与案发地区不对应，请确认是否保存？')) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            }
+        }
+    }
+
+    return true;
 }
 
 

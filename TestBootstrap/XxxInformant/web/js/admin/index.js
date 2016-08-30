@@ -110,8 +110,11 @@ function loadDropdown(selectElementId, isAutoHeight) {
     var lastChar = selectElementId.substring(strLength - 1, strLength);
     if (isDigital(lastChar)) {
         selectElementName = selectElementId.substring(2, strLength - 1);
-        //alert(selectElementName);
     }
+    if (selectElementName.indexOf('JBKJXSLY_ZJ') >= 0) {
+        selectElementName = 'JBKJXSLY_ZJ_FULL';
+    }
+
 
     var height = 'auto';
     if (isAutoHeight != null && isAutoHeight == false) {

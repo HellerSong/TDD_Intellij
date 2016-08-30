@@ -170,4 +170,24 @@
         <servlet-name>LoadTreeDropdown</servlet-name>
         <url-pattern>/admin/LoadTreeDropdown</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <description>后台判断是否为首条或末条线索</description>
+        <servlet-name>AdminFirstOrLastClue</servlet-name>
+        <servlet-class>com.servlet.AdminFirstOrLastClue</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminFirstOrLastClue</servlet-name>
+        <url-pattern>/admin/AdminFirstOrLastClue</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>获取上一条或下一条线索ID</description>
+        <servlet-name>AdminGetClueId</servlet-name>
+        <servlet-class>com.servlet.AdminGetClueId</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminGetClueId</servlet-name>
+        <url-pattern>/admin/AdminGetClueId</url-pattern>
+    </servlet-mapping>
 </web-app>

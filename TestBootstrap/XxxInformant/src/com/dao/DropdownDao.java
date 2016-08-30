@@ -39,6 +39,7 @@ public class DropdownDao {
         mappingHt.put("JBKJXSLY_ZW", "干部职务名称代码");
         mappingHt.put("JBKJXSLY_SF", "被举报人身份");
         mappingHt.put("JBKJXSLY_ZJ", "(举报)干部职级代码");
+        mappingHt.put("JBKJXSLY_ZJ_FULL", "(举报)干部职级代码");
         mappingHt.put("JBKJXSLY_ZYSXXZ", "案由代码");
         mappingHt.put("JBKJXSLY_CYSXXZ", "案由代码");
         mappingHt.put("JBKJXSLY_SALY", "商业贿赂领域");
@@ -63,7 +64,7 @@ public class DropdownDao {
             for (Code_tPojo p : code_tDao.getAll("where OptionName='" + optionType + "' order by CodeId")) {
                 DropdownItem dropdownItem = new DropdownItem();
                 dropdownItem.setId(p.getCodeId());
-                if (key.equals("JBKJXSLY_ZJ")) {
+                if (key.equals("JBKJXSLY_ZJ_FULL")) {
                     dropdownItem.setText("[" + p.getContent() + "]  -  " + p.getScript());
                 } else {
                     dropdownItem.setText(p.getContent());

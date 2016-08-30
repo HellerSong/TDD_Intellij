@@ -48,7 +48,7 @@ public class DevRandom {
             randomStr += uuid.charAt((int) numb);
         }
 
-        return randomStr.toLowerCase();
+        return randomStr.toUpperCase();
     }
 
 }

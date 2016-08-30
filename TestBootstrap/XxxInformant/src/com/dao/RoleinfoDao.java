@@ -7,6 +7,8 @@ import com.pojo.RoleinfoPojo;
  * <p>Authors : Heller Song (HellerSong@Outlook.com)</p>
  */
 public class RoleinfoDao extends BaseDao<RoleinfoPojo, Integer> {
+
+
     public RoleinfoDao() {
         tableName = "roleinfo";
         mainKeyName = "Id";

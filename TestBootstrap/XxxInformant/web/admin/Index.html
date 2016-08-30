@@ -12,7 +12,7 @@
     <script type="text/javascript" src="../js/jquery.upload.js"></script>
     <!-- Self using files -->
     <link rel="stylesheet" href="../css/admin.css">
-    <script type="text/javascript" src="../js/shared.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
     <script type="text/javascript" src="../js/admin/index.js"></script>
     <script type="text/javascript" src="../js/admin/clueList.js"></script>
     <script type="text/javascript" src="../js/admin/newClue.js"></script>
@@ -46,7 +46,7 @@
                 <li><a href="#" title="ClueList.html" name="XS" class="focus">线索处理中心</a></li>
                 <li><a href="#" title="ClueList.html" name="CF">重复举报线索</a></li>
                 <li><a href="#" title="ClueList.html" name="JCGJ">检察干警违法违纪处理中心</a></li>
-                <li><a href="#" title="ClueList.html" name="TJ">厅局级线索处理中心</a></li>
+                <li><a href="#" title="ClueList.html" name="TJJ">厅局级线索处理中心</a></li>
                 <li><a href="#" title="ClueList.html" name="SBJ">省部级线索处理中心</a></li>
                 <li><a href="#" title="Report.html" name="report">统计报表</a></li>
             </ul>
@@ -68,10 +68,10 @@
 
             <div class="right" hidden>
                 <span class="index-edit-btn-group" hidden>
-                    <a href="#" onclick="loadClueDataFirst()">首条</a>
-                    <a href="#" onclick="loadClueDataPrevious()">上一条</a>
-                    <a href="#" onclick="loadClueDataNext()">下一条</a>
-                    <a href="#" onclick="loadClueDataLast()">未条</a>
+                    <a href="javascript:;" onclick="loadClueDataFirst()">首条</a>
+                    <a href="javascript:;" onclick="loadClueDataPrevious()">上一条</a>
+                    <a href="javascript:;" onclick="loadClueDataNext()">下一条</a>
+                    <a href="javascript:;" onclick="loadClueDataLast()">未条</a>
                 </span>
                 <a data-options="iconCls:'icon-print'" onclick="storeNewClueForm()">打印</a>
                 <a data-options="iconCls:'icon-save'" onclick="storeNewClueForm()">暂存</a>
