@@ -4,7 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/TestGrammar/user/LoadingButton.html" line="15" mnemonic="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e8c390e-1e00-4781-be2f-3c4c0722cc6a" name="Default" comment="TestGrammar &gt; add new test-icon and test-dropdown related reusable code.">
+    <list default="true" id="0e8c390e-1e00-4781-be2f-3c4c0722cc6a" name="Default" comment="TestGrammar &gt; Refine input group and tooltip demo code.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TestBootstrap.iws" />
@@ -351,8 +351,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -1195,14 +1194,7 @@
       <workItem from="1501392334305" duration="599000" />
       <workItem from="1501462273020" duration="9133000" />
       <workItem from="1501510181760" duration="2441000" />
-      <workItem from="1501519916815" duration="8924000" />
-    </task>
-    <task id="LOCAL-00009" summary="update test bootstrap">
-      <created>1465166794956</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1465166794956</updated>
+      <workItem from="1501519916815" duration="9147000" />
     </task>
     <task id="LOCAL-00010" summary="update test bootstrap">
       <created>1465166812402</created>
@@ -1540,7 +1532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1472570306491</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="TestGrammar &gt; Refine input group and tooltip demo code.">
+      <created>1501550857334</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1501550857334</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1576,7 +1575,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="648819000" />
+    <option name="totallyTimeSpent" value="649042000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1657,7 +1656,8 @@
     <MESSAGE value="create test chart" />
     <MESSAGE value="update informant project" />
     <MESSAGE value="TestGrammar &gt; add new test-icon and test-dropdown related reusable code." />
-    <option name="LAST_COMMIT_MESSAGE" value="TestGrammar &gt; add new test-icon and test-dropdown related reusable code." />
+    <MESSAGE value="TestGrammar &gt; Refine input group and tooltip demo code." />
+    <option name="LAST_COMMIT_MESSAGE" value="TestGrammar &gt; Refine input group and tooltip demo code." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
