@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="../css/bootstrap-theme.css">
     <script type="text/javascript" src="../js/jquery.js"></script>
     <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script>
+        $('ul.nav').click(function (e) {
+            $(this).tab('show');
+        });
+    </script>
 </head>
 <body>
 <ul class="nav nav-tabs nav-pills">
@@ -15,11 +20,5 @@
     <li role="presentation"><a href="#">Profile</a></li>
     <li role="presentation"><a href="#">Messages</a></li>
 </ul>
-
-<script>
-    $('ul.nav').click(function (e) {
-        $(this).tab('show');
-    });
-</script>
 </body>
 </html>
