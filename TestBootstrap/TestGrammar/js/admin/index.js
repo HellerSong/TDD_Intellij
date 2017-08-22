@@ -1,4 +1,0 @@
-//// Initialize
-$(function () {
-    // Code Content...
-});

@@ -27,7 +27,7 @@
             'default': '请输入有效的信用卡号码'
         },
         cusip: {
-            'default': '请输入有效的美国CUSIP代码'
+            'default': '请输入有效的美国SIP代码'
         },
         cvv: {
             'default': '请输入有效的CVV代码'
