@@ -11,9 +11,6 @@
     <link rel="stylesheet" href="../css/bootstrapValidator.css">
     <script type="text/javascript" src="../js/bootstrapValidator.js"></script>
     <script type="text/javascript" src="../js/zh_CN.js"></script>
-    <!-- Self using files -->
-    <link rel="stylesheet" href="../css/user.css">
-    <script type="text/javascript" src="../js/user/index.js"></script>
 </head>
 <body>
 <div class="container">
@@ -27,21 +24,28 @@
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Username</label>
                     <div class="col-lg-5">
-                        <input type="text" class="form-control" name="username"/>
+                        <input title="" type="text" class="form-control" name="username"/>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Email address</label>
                     <div class="col-lg-5">
-                        <input type="text" class="form-control" name="email"/>
+                        <input title="" type="text" class="form-control" name="email"/>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Password</label>
                     <div class="col-lg-5">
-                        <input type="password" class="form-control" name="password"/>
+                        <input title="" type="password" class="form-control" name="password"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">File</label>
+                    <div class="col-lg-5">
+                        <input title="" type="file" class="form-control" name="file"/>
                     </div>
                 </div>
 
@@ -58,69 +62,80 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $('#defaultForm')
-                .bootstrapValidator({
-                    message: 'This value is not valid',
-                    feedbackIcons: {
-                        valid: 'glyphicon glyphicon-ok',
-                        invalid: 'glyphicon glyphicon-remove',
-                        validating: 'glyphicon glyphicon-refresh'
+            .bootstrapValidator({
+                message: 'This value is not valid',
+                feedbackIcons: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+                    username: {
+                        message: 'The username is not valid',
+                        validators: {
+                            notEmpty: {
+                                message: 'The username is required and can\'t be empty'
+                            },
+                            stringLength: {
+                                min: 6,
+                                max: 30,
+                                message: 'The username must be more than 6 and less than 30 characters long'
+                            },
+                            regexp: {
+                                regexp: /^[a-zA-Z0-9_\.]+$/,
+                                message: 'The username can only consist of alphabetical, number, dot and underscore'
+                            }
+                        }
                     },
-                    fields: {
-                        username: {
-                            message: 'The username is not valid',
-                            validators: {
-                                notEmpty: {
-                                    message: 'The username is required and can\'t be empty'
-                                },
-                                stringLength: {
-                                    min: 6,
-                                    max: 30,
-                                    message: 'The username must be more than 6 and less than 30 characters long'
-                                },
-                                /*remote: {
-                                 url: 'remote.php',
-                                 message: 'The username is not available'
-                                 },*/
-                                regexp: {
-                                    regexp: /^[a-zA-Z0-9_\.]+$/,
-                                    message: 'The username can only consist of alphabetical, number, dot and underscore'
-                                }
+                    email: {
+                        validators: {
+                            notEmpty: {
+                                message: 'The email address is required and can\'t be empty'
+                            },
+                            emailAddress: {
+                                message: 'The input is not a valid email address'
+                                // No set, it will display Chinese as default
                             }
-                        },
-                        email: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'The email address is required and can\'t be empty'
-                                },
-                                emailAddress: {
-                                    message: 'The input is not a valid email address'
-                                }
+                        }
+                    },
+                    password: {
+                        validators: {
+                            notEmpty: {
+                                message: 'The password is required and can\'t be empty'
                             }
-                        },
-                        password: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'The password is required and can\'t be empty'
-                                }
+                        }
+                    },
+                    file: {
+                        validators: {
+                            notEmpty: {
+                                message: 'The file is required and can\'t be empty'
+                            },
+                            file: {
+                                extension: 'pdf',
+                                type: 'application/pdf',
+                                minSize: 1024 * 1024,
+                                maxSize: 10 * 1024 * 1024,
+                                message: 'Please choose a pdf file with a size between 1M and 10M.'
                             }
                         }
                     }
-                })
-                .on('success.form.bv', function (e) {
-                    // Prevent form submission
-                    e.preventDefault();
+                }
+            })
+            .on('success.form.bv', function (e) {
+                // Prevent form submission
+                e.preventDefault();
 
-                    // Get the form instance
-                    var $form = $(e.target);
+                // Get the form instance
+                var $form = $(e.target);
 
-                    // Get the BootstrapValidator instance
-                    var bv = $form.data('bootstrapValidator');
+                // Get the BootstrapValidator instance
+                var bv = $form.data('bootstrapValidator');
 
-                    // Use Ajax to submit form data
-                    $.post('AdminLogin', $form.serialize(), function (result) {
-                        console.log(result);
-                    }, 'json');
-                });
+                // Use Ajax to submit form data
+                $.post('AdminLogin', $form.serialize(), function (result) {
+                    console.log(result);
+                }, 'json');
+            });
     });
 </script>
 </body>
