@@ -8,6 +8,7 @@ import org.junit.Test;
  * <p>Authors: Heller Song (HellerSong@Outlook.com)</p>
  **/
 public class TestStrOM {
+
 	@Test
 	public void test_convert_word_upper_to_title() {
 		// All will convert like this: "FirstName", "UserGroup"
