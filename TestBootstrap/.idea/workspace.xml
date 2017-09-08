@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e8c390e-1e00-4781-be2f-3c4c0722cc6a" name="Default" comment="TestGrammar &gt; Add new test for navigation.">
+    <list default="true" id="0e8c390e-1e00-4781-be2f-3c4c0722cc6a" name="Default" comment="TestGrammar &gt; Add new test of Model dialog to project.">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestDevDeep/.idea/artifacts/TestDevDeep_war_exploded.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestDevDeep/.idea/misc.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestDevDeep/.idea/modules.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestDevDeep/.idea/workspace.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestDevDeep/TestDevDeep.iml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../TestDevDeep/web/WEB-INF/web.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TestGrammar/user/test-js-grammar.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../DevLibrary/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../DevLibrary/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../DevLibrary/DevLib/DevLib.iml" afterPath="$PROJECT_DIR$/../DevLibrary/DevLib/DevLib.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../DevLibrary/DevLib/test/com/hstdd/test/utils/TestStrOM.java" afterPath="$PROJECT_DIR$/../DevLibrary/DevLib/test/com/hstdd/test/utils/TestStrOM.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestGrammar/user/ModalDialog.html" afterPath="$PROJECT_DIR$/TestGrammar/user/ModalDialog.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestGrammar/user/test-transition.html" afterPath="$PROJECT_DIR$/TestGrammar/user/test-transition.html" />
     </list>
     <ignored path="TestBootstrap.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1219,14 +1213,7 @@
       <workItem from="1504066469047" duration="2685000" />
       <workItem from="1504759227930" duration="107000" />
       <workItem from="1504759381063" duration="1697000" />
-      <workItem from="1504885937185" duration="3273000" />
-    </task>
-    <task id="LOCAL-00013" summary="create new XxxInformant">
-      <created>1465522180833</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1465522180833</updated>
+      <workItem from="1504885937185" duration="3381000" />
     </task>
     <task id="LOCAL-00014" summary="create new XxxInformant">
       <created>1465522259249</created>
@@ -1564,7 +1551,14 @@
       <option name="project" value="LOCAL" />
       <updated>1503074558837</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="TestGrammar &gt; Add new test of Model dialog to project.">
+      <created>1504889584881</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1504889584883</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1600,7 +1594,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="700135000" />
+    <option name="totallyTimeSpent" value="700243000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1613,10 +1607,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.60306805" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1644,7 +1638,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.60373646" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32546705" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1685,7 +1678,8 @@
     <MESSAGE value="TestGrammar &gt; Format test tooltip code style." />
     <MESSAGE value="TestGrammar &gt; add new show msg, thumbnail, progress bar, alert to test demo code." />
     <MESSAGE value="TestGrammar &gt; add new list group, media list to test demo code." />
-    <option name="LAST_COMMIT_MESSAGE" value="TestGrammar &gt; add new list group, media list to test demo code." />
+    <MESSAGE value="TestGrammar &gt; Add new test of Model dialog to project." />
+    <option name="LAST_COMMIT_MESSAGE" value="TestGrammar &gt; Add new test of Model dialog to project." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
