@@ -23,12 +23,17 @@
     </div>
 
     <!--The notification alert with close button-->
-    <div class="alert alert-danger alert-dismissable" role="alert">
+    <div class="alert alert-danger alert-dismissable fade in" id="my_alert" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times</span>
         </button>
         <strong>Warning! </strong>Better check yourself, you're not looking too good.
     </div>
+    <script>
+        $('#my_alert').on('close.bs.alert', function () {
+            console.log('Alert close action.');
+        })
+    </script>
 
     <!--The notification alert with link inline-->
     <div class="alert alert-info" role="alert">

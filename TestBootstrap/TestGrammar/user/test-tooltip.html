@@ -19,15 +19,22 @@
 
     <br>
 
-    <div>
+    <div class="container">
         <button class="btn btn-primary" data-toggle="tooltip" data-original-title="My Tooltip" data-placement="bottom"
                 data-animation="true">Demo
         </button>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <button class="btn btn-default" data-toggle="popover" title="MyTitle" data-content="This is Content" data-trigger="focus">Popover</button>
     </div>
 </div>
 <script>
     $(function () {
         $('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="popover"]').popover();
     });
 </script>
 </body>
