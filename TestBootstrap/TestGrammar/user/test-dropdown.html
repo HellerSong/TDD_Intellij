@@ -9,33 +9,36 @@
     <script type="text/javascript" src="../js/jquery.js"></script>
     <script type="text/javascript" src="../js/bootstrap.js"></script>
     <script>
-        $('.dropdown-menu li a').click(function () {
-            alert($(this).html());
+        $(window).ready(function(){
+            $('.dropdown-menu a').click(function (e) {
+                alert($(this).html());
+                e.preventDefault();
+            });
         });
     </script>
 </head>
 <body>
 <div class="container">
     <!-- The dropdown menu example -->
-    <div class="dropdown">
-        <div class="btn-group">
-            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Web Dev</button>
-            <!--It will add class="open" to dropdown-menu when user click the data-toggle="dropdown" button. -->
-            <!--It will remove class="open" when user click it again. -->
-            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
-                <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-right">
-                <li class="dropdown-header">Web Page</li>
-                <li><a href="javascript: void(0)">HTML5</a></li>
-                <li><a href="javascript: void(0)">CSS</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Web JS</li>
-                <li><a href="javascript: void(0)">JavaScript</a></li>
-                <li><a href="javascript: void(0)">JQuery</a></li>
-            </ul>
-        </div>
+    <h1>Web Dropdown:</h1>
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary">Web Dev</button>
+        <!--It will add class="open" to dropdown-menu when user click the data-toggle="dropdown" button. -->
+        <!--It will remove class="open" when user click it again. -->
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-right">
+            <li class="dropdown-header">Web Page</li>
+            <li><a href="javascript:">HTML5</a></li>
+            <li><a href="javascript:">CSS</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">Web JS</li>
+            <li><a href="javascript:">JavaScript</a></li>
+            <li><a href="javascript:">JQuery</a></li>
+        </ul>
     </div>
+
 
     <!-- The menu of dropping up -->
     <div style="margin-top: 70px">
@@ -45,8 +48,8 @@
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu">
-                <li><a href="javascript: void(0)">HTML5</a></li>
-                <li><a href="javascript: void(0)">CSS</a></li>
+                <li><a href="javascript:">HTML5</a></li>
+                <li><a href="javascript:">CSS</a></li>
             </ul>
         </div>
     </div>
@@ -55,7 +58,7 @@
     <div class="dropdown pull-right">
         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-            Dropup
+            Drop Up
             <span class="caret"></span>
         </button>
         <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
