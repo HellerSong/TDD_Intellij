@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Dropdown</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script>
+        $(window).ready(function(){
+            $('.dropdown-menu a').click(function (e) {
+                alert($(this).html());
+                e.preventDefault();
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+    <!-- The dropdown menu example -->
+    <h1>Web Dropdown:</h1>
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary">Web Dev</button>
+        <!--It will add class="open" to dropdown-menu when user click the data-toggle="dropdown" button. -->
+        <!--It will remove class="open" when user click it again. -->
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-right">
+            <li class="dropdown-header">Web Page</li>
+            <li><a href="javascript:">HTML5</a></li>
+            <li><a href="javascript:">CSS</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">Web JS</li>
+            <li><a href="javascript:">JavaScript</a></li>
+            <li><a href="javascript:">JQuery</a></li>
+        </ul>
+    </div>
+
+
+    <!-- The menu of dropping up -->
+    <div style="margin-top: 70px">
+        <div class="dropdown dropup">
+            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
+                Web Dev &nbsp;
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:">HTML5</a></li>
+                <li><a href="javascript:">CSS</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- The menu of dropping down right align -->
+    <div class="dropdown pull-right">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+            Drop Up
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>

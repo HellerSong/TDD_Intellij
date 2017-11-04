@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         id="WebApp_ID" version="2.5">
+    <display-name>12309</display-name>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <filter>
+        <description>判断后台是否登录</description>
+        <filter-name>CheckLoginFilter</filter-name>
+        <filter-class>com.web.CheckLoginFilter</filter-class>
+        <init-param>
+            <param-name>sessionKeyName</param-name>
+            <param-value>currentAdmin</param-value>
+        </init-param>
+        <init-param>
+            <param-name>redirectUrl</param-name>
+            <param-value>/admin/Login.html</param-value>
+        </init-param>
+        <init-param>
+            <param-name>notCheckUrlList</param-name>
+            <param-value>/admin/Login.html;/admin/AdminLogin;</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CheckLoginFilter</filter-name>
+        <url-pattern>/admin/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <description>后台管理员登录</description>
+        <servlet-name>AdminLogin</servlet-name>
+        <servlet-class>com.servlet.AdminLogin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLogin</servlet-name>
+        <url-pattern>/admin/AdminLogin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>后台管理员登出</description>
+        <servlet-name>AdminLogout</servlet-name>
+        <servlet-class>com.servlet.AdminLogout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLogout</servlet-name>
+        <url-pattern>/admin/AdminLogout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>后台加载线索列表</description>
+        <servlet-name>AdminLoadClueList</servlet-name>
+        <servlet-class>com.servlet.AdminLoadClueList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoadClueList</servlet-name>
+        <url-pattern>/admin/AdminLoadClueList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>后台加载线索用于编辑</description>
+        <servlet-name>AdminLoadClue</servlet-name>
+        <servlet-class>com.servlet.AdminLoadClue</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoadClue</servlet-name>
+        <url-pattern>/admin/AdminLoadClue</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>后台加载附件</description>
+        <servlet-name>AdminLoadAttach</servlet-name>
+        <servlet-class>com.servlet.AdminLoadAttach</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoadAttach</servlet-name>
+        <url-pattern>/admin/AdminLoadAttach</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>后台删除线索</description>
+        <servlet-name>AdminDeleteClue</servlet-name>
+        <servlet-class>com.servlet.AdminDeleteClue</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminDeleteClue</servlet-name>
+        <url-pattern>/admin/AdminDeleteClue</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>后台保存线索信息</description>
+        <servlet-name>AdminSaveClue</servlet-name>
+        <servlet-class>com.servlet.AdminSaveClue</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminSaveClue</servlet-name>
+        <url-pattern>/admin/AdminSaveClue</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>后台保存线索附件</description>
+        <servlet-name>AdminSaveClueFile</servlet-name>
+        <servlet-class>com.servlet.AdminSaveClueFile</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminSaveClueFile</servlet-name>
+        <url-pattern>/admin/AdminSaveClueFile</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>加载所有下拉框</description>
+        <servlet-name>LoadDropdown</servlet-name>
+        <servlet-class>com.servlet.LoadDropdown</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoadDropdown</servlet-name>
+        <url-pattern>/admin/LoadDropdown</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>加载所有带“全部”选项值的搜索下拉框</description>
+        <servlet-name>LoadSearchDropdown</servlet-name>
+        <servlet-class>com.servlet.LoadSearchDropdown</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoadSearchDropdown</servlet-name>
+        <url-pattern>/admin/LoadSearchDropdown</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>后台加载角色列表</description>
+        <servlet-name>AdminLoadRoleList</servlet-name>
+        <servlet-class>com.servlet.AdminLoadRoleList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoadRoleList</servlet-name>
+        <url-pattern>/admin/AdminLoadRoleList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>后台加载用户列表</description>
+        <servlet-name>AdminLoadOrgmemberinfoList</servlet-name>
+        <servlet-class>com.servlet.AdminLoadOrgmemberinfoList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoadOrgmemberinfoList</servlet-name>
+        <url-pattern>/admin/AdminLoadOrgmemberinfoList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>后台加载组织结构列表</description>
+        <servlet-name>AdminLoadOrgStructureList</servlet-name>
+        <servlet-class>com.servlet.AdminLoadOrgStructureList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoadOrgStructureList</servlet-name>
+        <url-pattern>/admin/AdminLoadOrgStructureList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>加载所有二级分类的搜索下拉框</description>
+        <servlet-name>LoadTreeDropdown</servlet-name>
+        <servlet-class>com.servlet.LoadTreeDropdown</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoadTreeDropdown</servlet-name>
+        <url-pattern>/admin/LoadTreeDropdown</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>后台判断是否为首条或末条线索</description>
+        <servlet-name>AdminFirstOrLastClue</servlet-name>
+        <servlet-class>com.servlet.AdminFirstOrLastClue</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminFirstOrLastClue</servlet-name>
+        <url-pattern>/admin/AdminFirstOrLastClue</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>获取上一条或下一条线索ID</description>
+        <servlet-name>AdminGetClueId</servlet-name>
+        <servlet-class>com.servlet.AdminGetClueId</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminGetClueId</servlet-name>
+        <url-pattern>/admin/AdminGetClueId</url-pattern>
+    </servlet-mapping>
+</web-app>

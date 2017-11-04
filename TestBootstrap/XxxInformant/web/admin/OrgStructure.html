@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>举报网后台 - 组织结构</title>
+    <link rel="stylesheet" type="text/css" href="../css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../css/icon.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+    <!-- Self using files -->
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+<div class="main-content">
+    <form class="orgStructureList-search-form">
+        <table border="0" width="100%">
+            <tr>
+                <!--<td class="label">用户名:</td>
+                <td><input type="text" class="easyui-textbox" name="keyword" data-options="prompt:'请输入查询关键字'"
+                           style="width:100%;height:26px;"></td>
+                <td width="20">&nbsp;</td>-->
+                <td class="label">单位类型:</td>
+                <td><select class="easyui-combobox" id="OwnerID" name="OwnerID"
+                            style="width:100%;height:26px;">
+                    <option value="0" selected>全部</option>
+                    <option value="a100000">本院其他部门</option>
+                    <option value="a200000">其它中央国家机关（其它省直机关）</option>
+                    <option value="a300000">下级其它机关</option>
+                    <option value="a400000">下级检察院</option>
+                </select>
+                </td>
+                <!--<td width="20">&nbsp;</td>
+                <td class="label">角色:</td>
+                <td>
+                    <select class="easyui-combobox" name="JBKJXSLY_CLZT" style="width:100%;height:26px;">
+                        <option value="0" selected>全部</option>
+                        <option value="1">待处理</option>
+                        <option value="2">已处理</option>
+                    </select>
+                </td>-->
+                <td width="20">&nbsp;</td>
+                <td>
+                    <div class="cluelist-search-btn-group">
+                        <a class="easyui-linkbutton" data-options="iconCls:'icon-search'"
+                           onclick="submitOrgStructureListSearchForm()">搜索</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="cluelist-search-btn-group">
+                        <a class="easyui-linkbutton" data-options="iconCls:'icon-clear'"
+                           onclick="resetOrgStructureListSearchForm()">重置</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="cluelist-search-btn-group">
+                        <a class="easyui-linkbutton" data-options="iconCls:'icon-add'" onclick="alert('功能即将发布！')">新建</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div><img src="../images/double.jpg"/></div>
+    <br/>
+    <div class="clueList-datagrid-content">
+        <table class="easyui-datagrid" id="orgStructureList_Dg"></table>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        queryOrgStructure(1, 20);
+    });
+</script>
+</body>
+</html>

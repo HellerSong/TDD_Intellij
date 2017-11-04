@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Alert</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container">
+    <!--The "value" is text for input display-->
+    <input class="btn btn-default" value="alert" type="button" onclick="alert('Welcome! Press OK to continue...');"/>
+    <input class="btn btn-default" value="confirm" type="button" onclick="confirm('Are you sure ?');"/>
+    <input class="btn btn-default" value="prompt" type="button"
+           onclick="var name = prompt('Please Input Your Name: ','Default Name Value'); alert(name); "/>
+
+    <!--The notification alert-->
+    <div class="alert alert-success" role="alert">
+        <strong>Well done! </strong>You successfully read this important alert message.
+    </div>
+
+    <!--The notification alert with close button-->
+    <div class="alert alert-danger alert-dismissable fade in" id="my_alert" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times</span>
+        </button>
+        <strong>Warning! </strong>Better check yourself, you're not looking too good.
+    </div>
+    <script>
+        $('#my_alert').on('close.bs.alert', function () {
+            console.log('Alert close action.');
+        })
+    </script>
+
+    <!--The notification alert with link inline-->
+    <div class="alert alert-info" role="alert">
+        Actually I want to know what are you doing now? <a href="#" class="alert-link">Hello, How are you?</a>
+    </div>
+</div>
+</body>
+</html>

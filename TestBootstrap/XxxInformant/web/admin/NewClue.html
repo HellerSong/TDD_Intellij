@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>举报网后台 - 新建界面</title>
+    <link rel="stylesheet" type="text/css" href="../css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../css/icon.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+    <!-- Self using files -->
+    <link rel="stylesheet" href="../css/admin.css">
+    <script type="text/javascript" src="../js/admin/newClue.js"></script>
+</head>
+<body>
+<div class="main-content">
+    <div class="newClue-box">
+        <div class="newClue-title">
+            <span>举报线索情况</span>
+        </div>
+        <form id="newClue_formXS">
+            <table class="newClue-table" border="0" width="100%">
+                <tr>
+                    <td class="label"><span class="span-must-fill">*</span>举报方式：</td>
+                    <td width="100"><select class="easyui-combobox" id="cbJBKJXSLY_LYFS" name="JBKJXSLY_LYFS"
+                                            style="width: 100%;"></select>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td class="label">举报种类：</td>
+                    <td width="100"><select class="easyui-combobox" id="cbJBKJXSLY_LYZL" name="JBKJXSLY_LYZL"
+                                            style="width: 100%;"></select>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td class="label">主体类别：</td>
+                    <td width="100"><select class="easyui-combobox" id="cbJBKJXSLY_BJBRZTLB" name="JBKJXSLY_BJBRZTLB"
+                                            style="width: 100%;"></select>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td class="label">线索编号：</td>
+                    <td width="100"><input class="easyui-textbox" type="text" name="JBKJXSLY_XH"
+                                           style="width: 100%;" readonly></td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="label">受理日期：</td>
+                    <td width="100"><input class="easyui-datebox" name="JBKJXSLY_SLRQ" style="width: 100%;"></td>
+                    <td>&nbsp;</td>
+                    <td class="label">转交人：</td>
+                    <td width="100"><input class="easyui-textbox" type="text" name="JBKJXSLY_ZJR"
+                                           style="width: 100%;"></td>
+                    <td>&nbsp;</td>
+                    <td class="label">转交单位：</td>
+                    <td width="100" colspan="3"><select class="easyui-combotree" id="cbJBKJXSLY_ZJDW"
+                                                        name="JBKJXSLY_ZJDW"
+                                                        style="width: 100%;"></select>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="newClue-box">
+        <div class="newClue-title">
+            <span>举报人基本情况</span>
+        </div>
+        <form id="newClue_formJBR">
+            <div id="newClue_jbrTabs" style="height:auto;"></div>
+            <div id="newClue_jbrTabTools">
+                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'"
+                   onclick="addJbrTab()"></a>
+                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-remove'"
+                   onclick="removeJbrTab()"></a>
+            </div>
+        </form>
+    </div>
+    <div class="newClue-box">
+        <div class="newClue-title">
+            <span>被举报人基本情况</span>
+        </div>
+        <form id="newClue_formBJBR_Part1">
+            <div id="newClue_bjbrTabs" style="height:auto;"></div>
+            <div id="newClue_bjbrTabTools">
+                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'"
+                   onclick="addBjbrTab()"></a>
+                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-remove'"
+                   onclick="removeBjbrTab()"></a>
+            </div>
+
+        </form>
+        <form id="newClue_formBJBR_Part2" style="margin-top: 35px;">
+            <table class="newClue-table" border="0" width="100%">
+                <tr>
+                    <td class="label">举报关键字：</td>
+                    <td colspan="10">
+                        <input class="easyui-textbox" name="JBKJXSLY_Keywords" style="width:848px;"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="label"><span class="span-must-fill">*</span>举报内容：</td>
+                    <td colspan="10">
+                        <input class="easyui-textbox" name="JBKJXSLY_SYZY" data-options="multiline:true"
+                               style="width:848px;height:70px;"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="label"><span class="span-must-fill">*</span>举报内容摘要：</td>
+                    <td colspan="10">
+                        <input class="easyui-textbox" name="JBKJXSLY_NRZY" data-options="multiline:true"
+                               style="width:848px;height:50px;"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <ul class="newClue-attachment">
+            <li>
+                <a href="javascript:;" class="newClue-attachment-select-file">选择附件
+                    <input id="newClue_fileUpload" type="file" name="files[]" multiple
+                           onchange="updateFileSelection()"/>
+                </a>
+            </li>
+            <li class="newClue-attachment-view"><a href="javascript:;" onclick="viewFilesOnServer()">查看附件(0)</a></li>
+        </ul>
+    </div>
+    <div class="newClue-box">
+        <div class="newClue-title">
+            <span>办理情况</span>
+        </div>
+        <form id="newClue_formCL">
+            <table class="newClue-table" border="0" width="100%">
+                <tr>
+                    <td class="label"><span class="span-must-fill">*</span>处理方式：</td>
+                    <td width="100"><select class="easyui-combobox" id="cbCLFS" name="CLFS"
+                                            style="width: 100%;"></select>
+                    </td>
+                    <td width="20">&nbsp;</td>
+                    <td class="label">转往单位：</td>
+                    <td width="100"><select class="easyui-combobox limit-height" id="cbZWDW" name="ZWDW"
+                                            style="width: 100%;"></select>
+                    </td>
+                    <td width="20">&nbsp;</td>
+                    <td class="label">抄送单位：</td>
+                    <td width="100"><select class="easyui-combobox limit-height" id="cbCSDW" name="CSDW"
+                                            style="width: 100%;"></select>
+                    </td>
+                    <td width="20">&nbsp;</td>
+                    <td class="label">编号：</td>
+                    <td width="100"><input class="easyui-textbox" type="text" name="JBKJXSLY_XH"
+                                           style="width: 100%;" readonly/></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="label">处理类型：</td>
+                    <td width="100"><select class="easyui-combobox" id="cbJBKJXSLY_JYLX" name="JBKJXSLY_JYLX"
+                                            style="width: 100%;"></select></td>
+                    <td width="20">&nbsp;</td>
+                    <td class="label">承办人：</td>
+                    <td width="100"><input class="easyui-textbox" type="text" name="CBR" style="width: 100%;"/></td>
+                    <td width="20">&nbsp;</td>
+                    <td class="label">承办日期：</td>
+                    <td width="100"><input class="easyui-datebox" type="text" name="CBRCLRQ" style="width: 100%;"/></td>
+                    <td width="20">&nbsp;</td>
+                    <td class="label">机要号：</td>
+                    <td width="100"><input class="easyui-textbox" type="text" name="JBKJXSLY_XJWH"
+                                           style="width: 100%;"/></td>
+                </tr>
+            </table>
+            <table class="newClue-table" border="0">
+                <tr>
+                    <td class="label">举报检察干警违法违纪：</td>
+                    <td>
+                        <input type="radio" name="JBKJXSLY_JBJCGJWFWJ" id="JBKJXSLY_JBJCGJWFWJ_YES" checked="checked"
+                               value="1"/>
+                        <label for="JBKJXSLY_JBJCGJWFWJ_YES">&nbsp;是&nbsp;&nbsp;</label>
+                        <input type="radio" name="JBKJXSLY_JBJCGJWFWJ" id="JBKJXSLY_JBJCGJWFWJ_NO" value="0"/>
+                        <label for="JBKJXSLY_JBJCGJWFWJ_NO">&nbsp;否</label>
+                    </td>
+                </tr>
+            </table>
+            <table class="newClue-table" border="0" width="100%">
+                <tr>
+                    <td class="label"><span class="span-must-fill">*</span>承办人意见：</td>
+                    <td colspan="7">
+                        <input class="easyui-textbox" name="JBZRYJ" data-options="multiline:true"
+                               style="width:825px;height:70px;"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label" rowspan="2">处领导批示：</td>
+                    <td rowspan="2">
+                        <input class="easyui-textbox" name="CZYJ" data-options="multiline:true"
+                               style="width:300px;height:60px;"/>
+                    </td>
+                    <td class="label">批示日期：</td>
+                    <td width="100"><input class="easyui-datebox" type="text" name="CZSPRQ" style="width: 100%;"/></td>
+                    <td width="240">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="label" rowspan="2">举报中心领导批示：</td>
+                    <td rowspan="2"><input class="easyui-textbox" name="TZYJ" data-options="multiline:true"
+                                           style="width:300px;height:60px;"/></td>
+                    <td class="label">批示日期：</td>
+                    <td width="100"><input class="easyui-datebox" type="text" name="TZSPRQ" style="width: 100%;"/></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="label" rowspan="2">检察长批示：</td>
+                    <td rowspan="2"><input class="easyui-textbox" name="JCZPS" data-options="multiline:true"
+                                           style="width:300px;height:60px;"/></td>
+                    <td class="label">批示日期：</td>
+                    <td width="100"><input class="easyui-datebox" type="text" name="JCZPSRQ" style="width: 100%;"/></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="7">
+                        <img src="../images/double.jpg" style="width: 100%;margin-top: 14px;margin-bottom: 14px;"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label"><span class="span-must-fill">*</span>处理情况：</td>
+                    <td colspan="7"><input class="easyui-textbox" name="JBKJXSLY_CLQK" data-options="multiline:true"
+                                           style="width:825px;height:70px;"/></td>
+                </tr>
+                <tr>
+                    <td class="label" rowspan="2">网站回复：</td>
+                    <td rowspan="2"><input class="easyui-textbox" name="JBKJXSLY_JDDD" data-options="multiline:true"
+                                           style="width:300px;height:60px;"/></td>
+                    <td class="label">回复日期：</td>
+                    <td width="100"><input class="easyui-datebox" type="text" name="JBKJXSLY_HFRQ"
+                                           style="width: 100%;"/></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="label">备注：</td>
+                    <td colspan="7"><input class="easyui-textbox" name="JBKJXSLY_BZ" data-options="multiline:true"
+                                           style="width:825px;height:70px;"/></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="newClue-submit">
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-ok'" onclick="submitNewClueForm()">提交</a>
+        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'"
+           onclick="closeNewClueForm()">取消</a>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Modal Dialog</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2>Modal Dialogs</h2>
+    <!--Normal Modal Dialog Example-->
+    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#my_normal_modal">Show Normal Modal Dialog</button>
+    <div id="my_normal_modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">TIPS FOR PARENTS</h4>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>TEACHING TEENS TO DRIVE</li>
+                        <li>Provide lots of in-car, “passenger seat” supervision.</li>
+                        <li>Start off with small trips – less then five miles away – to build up their confidence.</li>
+                        <li>Provide a safe car for teens to drive: easy to maneuver, with airbags and good tires.</li>
+                        <li>Give your teen gentle, constructive critiques of their driving, and keep your temper in
+                            check.
+                        </li>
+                        <li>Set realistic goals, expectations, and consequences for your teen driver. If you make
+                            rules, stick to them.
+                        </li>
+                        <li>Make sure your teen knows exactly what to do in the event of an accident.</li>
+                        <li>Pick up a current driver’s guide from your DMV. Study it with your teen and point out when
+                            they are obeying these rules on the road. If they aren’t, gently point that out to correct
+                            them.
+                        </li>
+                        <li>Set a good example. If you run red and yellow lights, speed down the highway at 75 MPH,
+                            weave in and out of traffic, take chances on the road, ride the bumper of the car in front
+                            of you,
+                            scream at other drivers, or exhibit other signs of road rage, you’re showing your teen that
+                            the rules don’t count – and this can be fatal.
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" style="text-decoration: none;">
+                        <button type="button" class="btn btn-success">I agreen</button>
+                    </a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Dialog with Text Passing-->
+    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#my_text_modal" data-whatever="@temp">Show Modal Dialog @temp</button>
+    <div id="my_text_modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">New Message</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label">Recipient</label>
+                            <input class="form-control" type="text" id="recipient-name">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success">I agreen</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+       $('#my_text_modal').on('show.bs.modal', function (event) {
+           var button = $(event.relatedTarget);
+           var passingText = button.data('whatever');
+           var modal = $(this);
+           modal.find('.modal-title').text("New Message to " + passingText);
+           modal.find('.modal-body input').val(passingText);
+       })
+    </script>
+</div>
+</body>
+</html>

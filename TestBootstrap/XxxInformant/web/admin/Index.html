@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>举报网后台 - 首页</title>
+    <link rel="stylesheet" type="text/css" href="../css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../css/icon.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.session.js"></script>
+    <script type="text/javascript" src="../js/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="../js/jquery.upload.js"></script>
+    <!-- Self using files -->
+    <link rel="stylesheet" href="../css/admin.css">
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/admin/index.js"></script>
+    <script type="text/javascript" src="../js/admin/clueList.js"></script>
+    <script type="text/javascript" src="../js/admin/newClue.js"></script>
+    <script type="text/javascript" src="../js/admin/viewAttach.js"></script>
+    <script type="text/javascript" src="../js/admin/roleList.js"></script>
+    <script type="text/javascript" src="../js/admin/orgmemberinfoList.js"></script>
+    <script type="text/javascript" src="../js/admin/orgStructureList.js"></script>
+</head>
+<body>
+<div class="index-head">
+    <div class="logo left"><img src="../images/index_1_03.png"/></div>
+    <div class="username right">
+        <span>欢迎您，用户 <strong id="index_currentAdminName">2016417</strong></span>
+        <span><a href="AdminLogout">安全退出</a></span><span class="index-icon-off"></span>
+    </div>
+</div>
+<div class="index-head-time">
+    <span class="index-head-time-value">日期：2016年4月26日  星期二  22：10</span>
+    <span><img src="../images/index_1_14.png"/></span>
+</div>
+<div class="content">
+    <div class="left sideBar">
+        <div><img src="../images/index_1_18.png"/></div>
+        <div class="sdmenu">
+            <span>举报业务</span>
+            <div class="index-underline"><img src="../images/boder-bottom.jpg"/></div>
+            <ul title="举报业务">
+                <li><a href="#" title="Notice.html" name="notice">系统通知</a></li>
+                <li><a href="#" title="Law.html" name="law">法规规章</a></li>
+                <li><a href="#" title="ClueList.html" name="ALL">全库线索检索</a></li>
+                <li><a href="#" title="ClueList.html" name="XS" class="focus">线索处理中心</a></li>
+                <li><a href="#" title="ClueList.html" name="CF">重复举报线索</a></li>
+                <li><a href="#" title="ClueList.html" name="JCGJ">检察干警违法违纪处理中心</a></li>
+                <li><a href="#" title="ClueList.html" name="TJJ">厅局级线索处理中心</a></li>
+                <li><a href="#" title="ClueList.html" name="SBJ">省部级线索处理中心</a></li>
+                <li><a href="#" title="Report.html" name="report">统计报表</a></li>
+            </ul>
+            <span>管理模块</span>
+            <div class="index-underline"><img src="../images/boder-bottom.jpg"/></div>
+            <ul title="管理模块">
+                <li><a href="javascript:;" title="OrgStructure.html">组织结构</a></li>
+                <li><a href="#" title="OrgMemberList.html">组织成员</a></li>
+                <li><a href="#" title="RoleAccess.html">权限角色</a></li>
+            </ul>
+        </div>
+        <div><img src="../images/index_1_31.png"/></div>
+    </div>
+    <div class="right main">
+        <div class="index-main-title">
+            <div class="left">
+                <a href="javascript:;">举报业务</a>&nbsp;>&nbsp;<a href="#">线索处理中心</a>
+            </div>
+
+            <div class="right" hidden>
+                <span class="index-edit-btn-group" hidden>
+                    <a href="javascript:;" onclick="loadClueDataFirst()">首条</a>
+                    <a href="javascript:;" onclick="loadClueDataPrevious()">上一条</a>
+                    <a href="javascript:;" onclick="loadClueDataNext()">下一条</a>
+                    <a href="javascript:;" onclick="loadClueDataLast()">未条</a>
+                </span>
+                <a data-options="iconCls:'icon-print'" onclick="storeNewClueForm()">打印</a>
+                <a data-options="iconCls:'icon-save'" onclick="storeNewClueForm()">暂存</a>
+                <a data-options="iconCls:'icon-ok'" onclick="submitNewClueForm()">提交</a>
+                <a href="#" data-options="iconCls:'icon-cancel'" onclick="closeNewClueForm()">取消</a>
+            </div>
+        </div>
+        <div class="index-main-content"></div>
+        <div class="index-main-bottom"><img src="../images/layout.jpg"/></div>
+    </div>
+</div>
+</body>
+</html>

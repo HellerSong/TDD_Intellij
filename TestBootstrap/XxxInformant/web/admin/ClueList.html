@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>举报网后台 - 线索管理</title>
+    <link rel="stylesheet" type="text/css" href="../css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../css/icon.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+    <!-- Self using files -->
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+<div class="main-content">
+    <form class="clueList-search-form">
+        <table border="0" width="100%">
+            <tr>
+                <td class="label">关键字:</td>
+                <td><input type="text" class="easyui-textbox" name="keyword" data-options="prompt:'请输入查询关键字'"
+                           style="width:100%;height:26px;"></td>
+                <td width="20">&nbsp;</td>
+                <td class="label">举报方式:</td>
+                <td><select class="easyui-combobox" id="cbSearchJBKJXSLY_LYFS" name="JBKJXSLY_LYFS"
+                            style="width:100%;height:26px;">
+                    <option value="0" selected>全部</option>
+                </select>
+                </td>
+                <td width="20">&nbsp;</td>
+                <td class="label">处理状态:</td>
+                <td>
+                    <select class="easyui-combobox" name="JBKJXSLY_CLZT" style="width:100%;height:26px;">
+                        <option value="0" selected>全部</option>
+                        <option value="1">待处理</option>
+                        <option value="2">已处理</option>
+                    </select>
+                </td>
+                <td width="20">&nbsp;</td>
+                <td>
+                    <div class="cluelist-search-btn-group">
+                        <a class="easyui-linkbutton" data-options="iconCls:'icon-search'"
+                           onclick="submitClueListSearchForm()">搜索</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="cluelist-search-btn-group">
+                        <a class="easyui-linkbutton" data-options="iconCls:'icon-clear'"
+                           onclick="resetClueListSearchForm()">重置</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">受理日期(起):</td>
+                <td><input class="easyui-datebox" name="JBKJXSLY_SLRQ_Start" data-options="prompt:'开始时间'"
+                           style="width:100%;height:26px;"></td>
+                <td width="20">&nbsp;</td>
+                <td class="label">受理日期(止):</td>
+                <td><input class="easyui-datebox" name="JBKJXSLY_SLRQ_End" data-options="prompt:'结束时间'"
+                           style="width:100%;height:26px;"></td>
+                <td width="20">&nbsp;</td>
+                <td class="label">案发地区:</td>
+                <td>
+                    <select class="easyui-combobox" id="cbSearchJBKJXSLY_AFDQ" name="JBKJXSLY_AFDQ"
+                            style="width:100%;height:26px;">
+                        <option value="0" selected>全部</option>
+                    </select>
+                </td>
+                <td width="20">&nbsp;</td>
+                <td colspan="2">
+                    <div class="cluelist-search-btn-group">
+                        <a class="easyui-linkbutton" data-options="iconCls:'icon-filter'">更多检索</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div><img src="../images/double.jpg"/></div>
+    <div class="clueList-action-btn-group">
+        <a href="#NewClue" class="easyui-linkbutton" data-options="iconCls:'icon-add'"
+           onclick="loadNewCluePage()">新建</a>
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-remove'" onclick="deleteAllSelectedRows()">删除</a>
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-down'">导入</a>
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-up'">导出</a>
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-sum'">批处理</a>
+    </div>
+    <div class="clueList-datagrid-content">
+        <table class="easyui-datagrid" id="clueList_Dg"></table>
+    </div>
+</div>
+</body>
+</html>

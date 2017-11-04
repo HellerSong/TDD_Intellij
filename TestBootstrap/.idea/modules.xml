@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TestAbcTemplate/TestAbcTemplate.iml" filepath="$PROJECT_DIR$/TestAbcTemplate/TestAbcTemplate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestBootgrid/TestBootgrid.iml" filepath="$PROJECT_DIR$/TestBootgrid/TestBootgrid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestBootstrap.iml" filepath="$PROJECT_DIR$/TestBootstrap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestChart/TestChart.iml" filepath="$PROJECT_DIR$/TestChart/TestChart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestDatetimePicker/TestDatetimePicker.iml" filepath="$PROJECT_DIR$/TestDatetimePicker/TestDatetimePicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestEasyUI/TestEasyUI.iml" filepath="$PROJECT_DIR$/TestEasyUI/TestEasyUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestFileUpload/TestFileUpload.iml" filepath="$PROJECT_DIR$/TestFileUpload/TestFileUpload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestGrammar/TestGrammar.iml" filepath="$PROJECT_DIR$/TestGrammar/TestGrammar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestNavigation/TestNavigation.iml" filepath="$PROJECT_DIR$/TestNavigation/TestNavigation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestSelect/TestSelect.iml" filepath="$PROJECT_DIR$/TestSelect/TestSelect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestTreeView/TestTreeView.iml" filepath="$PROJECT_DIR$/TestTreeView/TestTreeView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestValidator/TestValidator.iml" filepath="$PROJECT_DIR$/TestValidator/TestValidator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XxxInformant/XxxInformant.iml" filepath="$PROJECT_DIR$/XxxInformant/XxxInformant.iml" />
+    </modules>
+  </component>
+</project>

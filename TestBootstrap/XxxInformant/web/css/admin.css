@@ -1,0 +1,398 @@
+@charset "UTF-8";
+
+body {
+    font-family: "Microsoft YaHei UI", serif;
+}
+
+.span-must-fill {
+    color: red;
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
+    float: left;
+    padding-top: 3px;
+}
+
+.index-head, .index-head-time {
+    margin: 0 0;
+    padding-right: 16px;
+}
+
+.index-head {
+    width: auto;
+    height: 123px;
+    background: url(../images/index_1_01.png) repeat-x;
+}
+
+.index-head-time {
+    background: url(../images/index_1_11.png) repeat-x;
+    height: 35px;
+    font-size: 12px;
+    color: #017ad3;
+    padding-top: 8px;
+}
+
+.index-head-time span {
+    float: right;
+    margin-left: 5px;
+}
+
+.index-head-time-value {
+    margin-top: 2px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.index-underline {
+    margin-top: 5px;
+}
+
+.a:link {
+    text-decoration: none;
+}
+
+.a:hover {
+    text-decoration: none;
+}
+
+.a:visited {
+    text-decoration: none;
+}
+
+.username {
+    margin-top: 5px;
+    color: white;
+}
+
+.username span {
+    font-size: 12px;
+}
+
+.username span a:link {
+    color: #FFF;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.username span a:hover {
+    color: #FFF;
+    text-decoration: underline;
+    padding-left: 10px;
+}
+
+.username span a:visited {
+    color: #FFF;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.index-icon-off {
+    background: url(../images/index_1_06.jpg) no-repeat;
+    width: 17px;
+    height: 15px;
+    display: block;
+    float: right;
+    margin-top: 5px;
+    margin-left: 2px;
+}
+
+.content {
+    width: 1300px;
+    margin: 5px auto;
+}
+
+.sideBar {
+    width: 258px;
+}
+
+.sdmenu {
+    background: url(../images/index_1_20.png) repeat-y;
+    text-align: left;
+    overflow: hidden;
+    margin-top: -5px;
+}
+
+.sdmenu span {
+    background: url(../images/sdmenu.jpg) no-repeat;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 8px 100px 10px 30px;
+    margin-left: 30px;
+}
+
+.sdmenu ul {
+    margin-left: -20px;
+    margin-top: 5px
+}
+
+.sdmenu ul li {
+    font-size: 12px;
+    list-style: none;
+    border-bottom: dotted 1px #CCC;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    text-align: left
+}
+
+.sdmenu ul li a:link {
+    background: url(../images/sdlink.png) no-repeat;
+    width: 197px;
+    height: 28px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding-left: 35px;
+    padding-top: 5px
+}
+
+.sdmenu ul li a:hover {
+    background: url(../images/sdhover.png) no-repeat;
+    width: 197px;
+    height: 28px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    color: #185f91;
+    padding-left: 35px;
+    padding-top: 5px
+}
+
+.sdmenu ul li a:visited {
+    background: url(../images/sdlink.png) no-repeat;
+    width: 197px;
+    height: 28px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding-left: 35px;
+    padding-top: 5px
+}
+
+.sdmenu ul li a.focus {
+    background: url(../images/sdhover.png) no-repeat;
+    width: 197px;
+    height: 28px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    color: #185f91;
+    padding-left: 35px;
+    padding-top: 5px
+}
+
+.main {
+    width: 1025px;
+}
+
+.index-main-title {
+    background: url(../images/index_1_12.png) no-repeat;
+    overflow: hidden;
+    padding-top: 11px;
+    font-size: 14px;
+    color: #0061c8;
+    padding-bottom: 11px;
+    padding-left: 25px
+}
+
+.index-main-title a {
+    color: #0061c8;
+    text-decoration: none;
+}
+
+.index-main-title .right a {
+    width: 80px;
+    margin-right: 14px;
+}
+
+.index-main-content {
+    border-left: solid 1px #c8dbf6;
+    border-right: solid 1px #c8dbf6;
+    overflow: hidden;
+    font-size: 12px;
+    padding: 14px 21px;
+    border-bottom: none;
+    margin: -5px 0 0 0;
+}
+
+.index-main-bottom {
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* NewClue.html Page Style */
+.newClue-title {
+    width: 993px;
+    background: url(../images/title1.jpg) no-repeat;
+    color: #0061c8;
+    letter-spacing: 4px;
+    padding-top: 6px;
+    padding-bottom: 8px;
+}
+
+.newClue-title span {
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.newClue-box {
+    border-left: solid 1px #c8dbf6;
+    border-right: solid 1px #c8dbf6;
+    overflow: hidden;
+    border-bottom: solid 1px #c8dbf6;
+    margin: 0 0 20px 0;
+}
+
+.newClue-attachment {
+    width: 160px;
+    float: right;
+    margin-top: 10px;
+    padding-right: 14px;
+}
+
+.newClue-attachment li {
+    list-style: none;
+    float: left;
+    margin-right: 0;
+}
+
+.newClue-attachment li a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.newClue-attachment-select-file {
+    position: relative;
+    display: inline-block;
+    background: url(../images/upload.jpg) no-repeat;
+    border: 0;
+    border-radius: 9px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+    margin-right: 21px;
+}
+
+.newClue-attachment-select-file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
+
+.newClue-attachment-select-file a {
+    color: #FFFFFF;
+}
+
+.newClue-attachment-view {
+    padding-top: 6px;
+}
+
+.newClue-attachment-view a {
+    color: #4ec0fa;
+}
+
+.newClue-submit {
+    text-align: center;
+    margin-top: 25px
+}
+
+.newClue-submit a {
+    width: 60px;
+    margin-right: 14px;
+}
+
+.newClue-table {
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.newClue-table td.label {
+    font-weight: bold;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+#newClue_jbrTabs input, #newClue_jbrTabs textarea {
+    border: 1px solid #95B8E7;
+}
+
+#newClue_bjbrTabs input, #newClue_bjbrTabs textarea {
+    border: 1px solid #95B8E7;
+}
+
+#newClue_jbrTabs .combo input {
+    border: 0;
+}
+
+#newClue_bjbrTabs .combo input {
+    border: 0;
+}
+
+/*ClueList.html Page Style*/
+.clueList-action-btn-group {
+    margin: 14px 0;
+}
+
+.clueList-action-btn-group a {
+    width: 80px;
+}
+
+.cluelist-search-btn-group {
+    margin: 7px 0;
+}
+
+.cluelist-search-btn-group a {
+    width: 80px;
+}
+
+.clueList-datagrid-content {
+    height: 558px;
+}
+
+.datagrid-header-row {
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-top: 2px;
+}
+
+.clueList-search-form table td.label {
+    font-weight: bold;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+.clueList-datagrid-content a:link {
+    color: #017ad3;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px
+}
+
+.clueList-datagrid-content a:hover {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: underline
+}
+
+.clueList-datagrid-content a:visited {
+    color: #017ad3;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px
+}
+

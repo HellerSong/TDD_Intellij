@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Carousel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container">
+    <div id="carouselContainer" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li class="active" data-target="#carouselContainer" data-slide-to="0">1</li>
+            <li data-target="#carouselContainer" data-slide-to="1">2</li>
+            <li data-target="#carouselContainer" data-slide-to="2">3</li>
+        </ol>
+
+        <div class="carousel-inner">
+            <div class="item active">
+                <a href="#"><img src="../images/carousel01.jpg" alt="carousel01"></a>
+                <div class="carousel-caption">
+                    <h1>Carousel 01 Demo</h1>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#"><img src="../images/carousel02.jpg" alt="carousel02"></a>
+                <div class="carousel-caption">
+                    <h1>Carousel 02 Demo</h1>
+                </div>
+            </div>
+            <div class="item">
+                <a href="#"><img src="../images/carousel03.jpg" alt="carousel03"></a>
+                <div class="carousel-caption">
+                    <h1>Carousel 03 Demo</h1>
+                </div>
+            </div>
+        </div>
+
+        <a class="left carousel-control" href="#carouselContainer" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carouselContainer" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+</div>
+<script>
+    $('.carousel').carousel({
+        interval: 2000
+    });
+    $('#carouselContainer').on('slide.bs.carousel', function () {
+        console.log('slide');
+    })
+</script>
+</body>
+</html>

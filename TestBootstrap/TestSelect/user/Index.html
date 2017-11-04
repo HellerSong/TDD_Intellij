@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>User Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap-select.css">
+    <script type="text/javascript" src="../js/bootstrap-select.js"></script>
+    <!-- Self using files -->
+    <link rel="stylesheet" href="../css/user.css">
+    <script type="text/javascript" src="../js/user/index.js"></script>
+</head>
+<body>
+<div class="container">
+    <fieldset>
+        <legend>Test</legend>
+        <select class="selectpicker show-menu-arrow show-tick" name="demoSelect" title="">
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+            <option data-divider="true"></option>
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+        </select>
+        <select class="selectpicker" data-live-search="true">
+            <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+            <option data-tokens="mustard">Burger, Shake and a Smile</option>
+            <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+        </select>
+
+        <select class="selectpicker" title="OPT Group Select">
+            <optgroup label="Picnic">
+                <option>Mustard</option>
+                <option>Ketchup</option>
+                <option>Relish</option>
+            </optgroup>
+            <optgroup label="Camping">
+                <option>Tent</option>
+                <option>Flashlight</option>
+                <option>Toilet Paper</option>
+            </optgroup>
+        </select>
+    </fieldset>
+</div>
+<script>
+    $('.selectpicker').selectpicker({
+        style: 'btn-warning'
+    });
+</script>
+</body>
+</html>

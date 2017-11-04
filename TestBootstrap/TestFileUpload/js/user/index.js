@@ -1,0 +1,4 @@
+//// Initialize
+$(function () {
+    // Code Content...
+});

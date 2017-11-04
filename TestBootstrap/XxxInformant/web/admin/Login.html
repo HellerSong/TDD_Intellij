@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>举报网后台 - 登陆</title>
+    <link rel="stylesheet" type="text/css" href="../css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../css/icon.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.session.js"></script>
+    <!-- Self using files -->
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/adminlogin.css">
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/admin/login.js"></script>
+</head>
+<body>
+<div class="login-content">
+    <div class="index-head">
+        <div class="logo left"><img src="../images/index_1_03.png"/></div>
+    </div>
+    <div class="index-head-time">
+        <span class="index-head-time-value">日期：2016年4月26日   星期二  22：10</span>
+        <span><img src="../images/index_1_14.png"/></span>
+    </div>
+    <div class="login">
+        <div class="lg_box2">
+            <div class="lg_title">举报线索管理中心登录</div>
+            <div style="clear:both"></div>
+            <div class="nonono">
+                <form class="login-form">
+                    <table width="400" border="0" class="color">
+                        <tr>
+                            <td width="31" class="color"><img src="../images/username.jpg"/></td>
+                            <td width="65" class="fonts color">用户名：</td>
+                            <td width="290" class="color">
+                                <input type="text" name="loginId"
+                                       style="width:285px; height:37px; border:#CCC solid 1px; line-height:34px; font-size:18px;"
+                                       class="color"/>
+                            </td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <td class="color"><img src="../images/password.jpg"/></td>
+                            <td class="fonts color">密码：</td>
+                            <td class="color">
+                                <input type="password" name="pwd"
+                                       style="width:285px; height:37px; border:#CCC solid 1px; line-height:34px; font-size:18px;"
+                                       class="color"/>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <div class="forget_password"><a href="javascript:;" onclick="forgetPasswrod()">忘记密码？</a></div>
+                <div style="clear:both"></div>
+                <div class="login-btn-group">
+                    <a href="javascript:;" onclick="submitLoginForm()">登录</a>
+                    <a href="javascript:;" onclick="resetLoginForm()">重置</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

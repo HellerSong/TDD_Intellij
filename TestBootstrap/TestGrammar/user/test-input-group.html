@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Input Group</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <style>
+        .input-group {
+            padding-top: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h3>Test Input Group Demo:</h3>
+
+    <div class="input-group">
+        <span class="input-group-addon">$</span>
+        <input type="text" class="form-control" placeholder="Amount to the nearest dollar">
+        <span class="input-group-addon">.00</span>
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-addon">
+            <input title="" type="checkbox">
+        </span>
+        <input type="text" class="form-control" placeholder="Check box">
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-addon">
+            <input title="" type="radio">
+        </span>
+        <input type="text" class="form-control" placeholder="Radio box">
+    </div>
+
+    <!--Single button input group-->
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for...">
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Go!</button>
+        </span>
+    </div>
+
+    <!--Multiple buttons input group-->
+    <div class="input-group">
+        <div class="input-group-btn">
+            <button type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-bold"></span>
+            </button>
+            <button type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-italic"></span>
+            </button>
+        </div>
+        <input type="text" class="form-control" placeholder="Multiple Button">
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Transition</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <style>
+        .trans-div {
+            width: 100px;
+            height: 100px;
+            background-color: darkgreen;
+            border-radius: 0;
+            transition: width, border-radius .6s ease .1s;
+            -moz-transition: width, border-radius .6s ease .1s; /* Firefox 4 */
+            -webkit-transition: width, border-radius .6s ease .1s; /* Safari and Chrome */
+            -o-transition: width, border-radius .6s ease .1s; /* Opera */
+        }
+        .trans-div:hover {
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        a {
+            color: red;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: green;
+            transition: color 1s linear;
+        }
+    </style>
+
+    <!--Bind the "transitionend" event-->
+    <script>
+        $(document).ready(function () {
+            $('.trans-div').bind('transitionend', function () {
+                this.style.backgroundColor = "orange";
+                //this.innerHTML = "Transition Triggered -- Transition End";
+            })
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+    <h3>Transition</h3>
+    <div class="trans-div"></div>
+
+    <a href="#">Hyperlink Test</a>
+</div>
+
+</body>
+</html>

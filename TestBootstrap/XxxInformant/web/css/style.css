@@ -1,0 +1,468 @@
+@charset "gb2312";
+/* CSS Document */
+.head {
+    width: auto;
+    height: 123px;
+    background: url(../images/index_1_01.png) repeat-x;
+}
+
+.main1 {
+    width: 1300px;
+    margin: 0 auto
+}
+
+.left {
+    float: left
+}
+
+.right {
+    float: right
+}
+
+.color1 {
+    color: #FFF
+}
+
+.common1 {
+    margin-top: 10px
+}
+
+.common2 {
+    margin-bottom: 10px
+}
+
+.a:link {
+    text-decoration: none
+}
+
+.a:hover {
+    text-decoration: none
+}
+
+.a:visited {
+    text-decoration: none
+}
+
+.input1 {
+    height: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: url(../images/text_bj.jpg) repeat-x;
+    border: 1px #d5d3d3 solid;
+    margin-right: 10px;
+}
+
+.input2 {
+    height: 25px;
+    background: url(../images/text_bj.jpg) repeat-x;
+    border: 1px #d5d3d3 solid;
+    margin-right: 10px;
+}
+
+.input3 {
+    height: 25px;
+    width: 130px;
+    background: url(../images/text_bj.jpg) repeat-x;
+    border: 1px #d5d3d3 solid;
+}
+
+.input4 {
+    height: 25px;
+    width: 180px;
+    background: url(../images/text_bj.jpg) repeat-x;
+    border: 1px #d5d3d3 solid;
+}
+
+.input5 {
+    height: 25px;
+    width: 90px;
+    background: url(../images/text_bj.jpg) repeat-x;
+    border: 1px #d5d3d3 solid;
+}
+
+.input6 {
+    height: 110px;
+    width: 810px;
+    background: url(../images/text_bj.jpg) repeat-x;
+    border: 1px #d5d3d3 solid;
+}
+
+.input7 {
+    height: 95px;
+    width: 350px;
+    background: url(../images/text_bj.jpg) repeat-x;
+    border: 1px #d5d3d3 solid;
+}
+
+.font1 {
+    font-size: 12px;
+    color: #000;
+    font-family: "Î¢ÈíÑÅºÚ"
+}
+
+.username {
+    margin-top: 5px;
+}
+
+.username span {
+    font-family: "Î¢ÈíÑÅºÚ";
+    font-size: 12px;
+}
+
+.username span a:link {
+    color: #FFF;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.username span a:hover {
+    color: #FFF;
+    text-decoration: underline;
+    padding-left: 10px;
+}
+
+.username span a:visited {
+    color: #FFF;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.icon_off {
+    background: url(../images/index_1_06.jpg) no-repeat;
+    width: 17px;
+    height: 15px;
+    display: block;
+    float: right;
+    margin-top: 1px;
+    margin-left: 2px;
+}
+
+.time {
+    background: url(../images/index_1_11.png) repeat-x;
+    height: 35px;
+    font-size: 12px;
+    color: #017ad3;
+    font-family: "Î¢ÈíÑÅºÚ";
+    padding-top: 8px;
+}
+
+.time span {
+    float: right;
+    margin-left: 5px;
+}
+
+.content {
+    width: 1300px;
+    margin: 10px auto;
+}
+
+.sideBar {
+    width: 258px;
+}
+
+.sdmenu {
+    background: url(../images/index_1_20.png) repeat-y;
+    text-align: left;
+    font-family: "Î¢ÈíÑÅºÚ";
+    overflow: hidden
+}
+
+.sdmenu span {
+    background: url(../images/sdmenu.jpg) no-repeat;
+    font-size: 14px;
+    font-weight: normal;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    padding-left: 30px;
+    padding-right: 100px;
+    margin-left: 30px;
+}
+
+.sdmenu ul {
+    margin-left: -20px;
+    margin-top: 5px
+}
+
+.sdmenu ul li {
+    font-size: 12px;
+    text-align: center;
+    list-style: none;
+    border-bottom: dotted 1px #CCC;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    text-align: left
+}
+
+.sdmenu ul li a:link {
+    background: url(../images/sdlink.png) no-repeat;
+    width: 197px;
+    height: 28px;
+    overflow: hidden;
+    display: block;
+    padding-top: 3px;
+    text-decoration: none;
+    color: #000;
+    padding-left: 35px;
+    padding-top: 5px
+}
+
+.sdmenu ul li a:hover {
+    background: url(../images/sdhover.png) no-repeat;
+    width: 197px;
+    height: 28px;
+    overflow: hidden;
+    display: block;
+    padding-top: 3px;
+    text-decoration: none;
+    color: #185f91;
+    padding-left: 35px;
+    padding-top: 5px
+}
+
+.sdmenu ul li a:visited {
+    background: url(../images/sdlink.png) no-repeat;
+    width: 197px;
+    height: 28px;
+    overflow: hidden;
+    display: block;
+    padding-top: 3px;
+    text-decoration: none;
+    color: #000;
+    padding-left: 35px;
+    padding-top: 5px
+}
+
+.main {
+    width: 1025px;
+}
+
+.title {
+    background: url(../images/index_1_12.png) no-repeat;
+    overflow: hidden;
+    padding-top: 11px;
+    font-size: 14px;
+    font-family: "Î¢ÈíÑÅºÚ";
+    color: #0061c8;
+    padding-bottom: 11px;
+    padding-left: 25px
+}
+
+.title a {
+    color: #0061c8;
+    text-decoration: none;
+}
+
+.layout {
+    border-left: solid 1px #c8dbf6;
+    border-right: solid 1px #c8dbf6;
+    overflow: hidden;
+    font-size: 12px;
+    padding-bottom: 50px;
+    border-bottom: none
+}
+
+.layout table {
+    margin-top: 10px
+}
+
+.all {
+    width: 985px;
+    margin: 0 auto
+}
+
+.search {
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 20px
+}
+
+.search a {
+    color: #FFF;
+    background: #4ec0fa;
+    overflow: hidden;
+    text-decoration: none;
+    letter-spacing: 2px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 3px;
+    padding-top: 3px
+}
+
+.new_word {
+    margin-top: 30px;
+    font-family: "Î¢ÈíÑÅºÚ";;
+    margin-bottom: 15px
+}
+
+.new_word a:link {
+    border: solid 1px #5e5e5e;
+    color: #5e5e5e;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    text-decoration: none;
+    margin-right: 10px
+}
+
+.new_word a:hover {
+    border: solid 1px #0292dc;
+    color: #0292dc;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    text-decoration: none;
+    margin-right: 10px
+}
+
+.new_word a:visited {
+    border: solid 1px #5e5e5e;
+    color: #5e5e5e;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    text-decoration: none;
+    margin-right: 10px
+}
+
+table.main2 {
+    border-collapse: collapse;
+    border: #c8dcf6 solid 1px;
+    text-align: center
+}
+
+table.main2 th {
+    border: 1px solid #c8dcf6;
+    height: 35px
+}
+
+table.main2 td {
+    border: 1px solid #c8dcf6;
+}
+
+.main2 a:link {
+    color: #000;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px
+}
+
+.main2 a:hover {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: underline
+}
+
+.main2 a:visited {
+    color: #000;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px
+}
+
+/*ÐÂ½¨´°¿Ú*/
+.title2 {
+    width: 984px;
+    background: url(../images/title1.jpg) no-repeat;
+    color: #0061c8;
+    letter-spacing: 4px;
+    padding-top: 6px;
+    padding-bottom: 8px;
+}
+
+.title2 span {
+    padding-left: 10px;
+    font-family: "Î¢ÈíÑÅºÚ";
+    font-size: 14px;
+}
+
+.box1 {
+    border-left: solid 1px #c8dbf6;
+    border-right: solid 1px #c8dbf6;
+    width: 982px;
+    overflow: hidden;
+    border-bottom: solid 1px #c8dbf6;
+    padding-bottom: 15px;
+    margin-top: 20px
+}
+
+.box2 {
+    width: 945px;
+    margin: 0 auto
+}
+
+.box_tab {
+    margin-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.box_tab a:link {
+    width: 83px;
+    height: 24px;
+    background: url(../images/boxtablink.jpg) repeat-x;
+    color: #5c5c5c;
+    text-decoration: none;
+    margin-right: 15px;
+    overflow: hidden;
+    display: block;
+    float: left;
+    padding-top: 5px
+}
+
+.box_tab a:hover {
+    width: 83px;
+    height: 24px;
+    background: url(../images/boxtab.jpg) repeat-x;
+    color: #FFF;
+    text-decoration: none;
+    margin-right: 15px;
+    overflow: hidden;
+    display: block;
+    float: left;
+    padding-top: 5px
+}
+
+.box_tab a:visited {
+    width: 83px;
+    height: 24px;
+    background: url(../images/boxtablink.jpg) repeat-x;
+    color: #FFF;
+    text-decoration: none;
+    margin-right: 15px;
+    overflow: hidden;
+    display: block;
+    float: left;
+    padding-top: 5px
+}
+
+.fujian {
+    width: 250px;
+    float: right;
+    margin-top: 20px
+}
+
+.fujian li {
+    list-style: none;
+    float: left
+}
+
+.submit {
+    text-align: center;
+    margin-top: 25px
+}
+
+.submit a {
+    color: #FFF;
+    background: #2185f6;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: "Î¢ÈíÑÅºÚ";
+    text-decoration: none
+}
