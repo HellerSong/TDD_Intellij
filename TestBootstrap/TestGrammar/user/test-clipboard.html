@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Clipboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script>
+        function doCopy() {
+            var text = document.createElement("input");
+            $(text).insertAfter('body').focus().hide();
+            text.innerHTML = "This is my test data." ;
+            text.select();
+
+            try {
+                var successful = document.execCommand('copy')
+                var msg = successful ? 'successfully' : 'unsuccessfully'
+                console.log('text copied ' + msg)
+            } catch (err) {
+                console.log('Unable to copy text')
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <button class="btn-primary" onclick="doCopy()">Copy</button>
+    </div>
+</body>
+</html>
