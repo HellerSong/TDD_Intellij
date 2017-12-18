@@ -15,13 +15,7 @@
             text.innerHTML = "This is my test data." ;
             text.select();
 
-            try {
-                var successful = document.execCommand('copy')
-                var msg = successful ? 'successfully' : 'unsuccessfully'
-                console.log('text copied ' + msg)
-            } catch (err) {
-                console.log('Unable to copy text')
-            }
+            document.execCommand('copy');
         }
     </script>
 </head>
